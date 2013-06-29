@@ -218,7 +218,7 @@ jQuery(window).load(function(){
 			return $links;
 		}
 		$links[] = '<a href="http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/contact-us-page-contact-people/" target="_blank">'.__('Documentation', 'cup_cp').'</a>';
-		$links[] = '<a href="https://a3rev.com/forums/forum/wordpress-plugins/contact-us-page-contact-people/" target="_blank">'.__('Support', 'cup_cp').'</a>';
+		$links[] = '<a href="http://wordpress.org/support/plugin/contact-us-page-contact-people/" target="_blank">'.__('Support', 'cup_cp').'</a>';
 		return $links;
 	}
 }
