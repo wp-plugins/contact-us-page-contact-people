@@ -146,7 +146,7 @@ On WordPress  – with any theme.
 	* Conflict with Themes that use jQuery Masonry. Replaced plugins global .masonry class with custom #people_contact_container .mansonry class
 	* Profiles Grid View layout in IE7 and IE8 on themes with JQuery Masonry. Moved style sheet from footer to header and updated browser_body_class() function
 	* Warning: Cannot modify header information when creating or editing profiles.Removed session_start and added add_action('init') Now uses the correct wp_redirect().
-* Teaks:
+* Tweaks:
 	* Add link to the Pro Version Live Demo to the plugins Yellow Box on the admin dashboard. 
 
 = 1.0.0 - 2013/06/27 =
