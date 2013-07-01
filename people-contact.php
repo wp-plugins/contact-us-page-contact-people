@@ -2,7 +2,7 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.0.0
+Version: 1.0.1
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.3
@@ -27,8 +27,9 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 define( 'PEOPLE_CONTACT_PATH', dirname(__FILE__));
 define( 'PEOPLE_CONTACT_TEMPLATE_PATH', PEOPLE_CONTACT_PATH . '/templates' );
 define( 'PEOPLE_CONTACT_FOLDER', dirname(plugin_basename(__FILE__)) );
+define( 'PEOPLE_CONTACT_URL', WP_CONTENT_URL.'/plugins/'.PEOPLE_CONTACT_FOLDER);
+define( 'PEOPLE_CONTACT_DIR', WP_CONTENT_DIR.'/plugins/'.PEOPLE_CONTACT_FOLDER);
 define( 'PEOPLE_CONTACT_NAME', plugin_basename(__FILE__) );
-define( 'PEOPLE_CONTACT_URL', plugins_url().'/'.PEOPLE_CONTACT_FOLDER );
 define( 'PEOPLE_CONTACT_TEMPLATE_URL', PEOPLE_CONTACT_URL . '/templates' );
 define( 'PEOPLE_CONTACT_CSS_URL', PEOPLE_CONTACT_URL . '/assets/css' );
 define( 'PEOPLE_CONTACT_JS_URL', PEOPLE_CONTACT_URL . '/assets/js' );

@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,5 +141,17 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.1 - 2013/07/01 =
+* Fixes:
+	* Conflict with Themes that use jQuery Masonry. Replaced plugins global .masonry class with custom #people_contact_container .mansonry class
+	* Profiles Grid View layout in IE7 and IE8 on themes with JQuery Masonry. Moved style sheet from footer to header and updated browser_body_class() function
+	* Warning: Cannot modify header information when creating or editing profiles.Removed session_start and added add_action('init') Now uses the correct wp_redirect(). 
+
 = 1.0.0 - 2013/06/27 =
 * First working release
+
+
+== Upgrade Notice ==
+
+= 1.0.1 =
+Update your plugin now for 3 Bug Fixes to initial release.

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A3 Projects PRO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-28 09:40+0700\n"
-"PO-Revision-Date: 2013-06-28 09:41+0700\n"
+"POT-Creation-Date: 2013-07-01 12:50+0700\n"
+"PO-Revision-Date: 2013-07-01 12:50+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -90,14 +90,6 @@ msgstr ""
 
 #: admin/classes/class-grid-view-panel.php:29
 msgid "Grid View Contact Icons"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:24
-msgid "Profile Successfully updated."
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:37
-msgid "Profile Successfully created."
 msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:46
@@ -213,8 +205,16 @@ msgstr ""
 msgid "Enter Form Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:20
+#: admin/classes/class-people-contact-manager-panel.php:19
 msgid "Profile Successfully deleted."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:21
+msgid "Profile Successfully updated."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:23
+msgid "Profile Successfully created."
 msgstr ""
 
 #: admin/classes/class-people-contact-manager-panel.php:34
@@ -705,7 +705,7 @@ msgstr ""
 #: classes/class-people-contact-functions.php:84
 #: classes/class-people-contact-functions.php:167
 #: classes/class-people-contact.php:153
-#: widgets/class-people-contact-widgets.php:406
+#: widgets/class-people-contact-widgets.php:404
 msgid "Message"
 msgstr ""
 
@@ -838,74 +838,82 @@ msgid "Insert multiple Contact Profiles via shortcodes."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:306
-msgid "View this plugins"
+msgid "View Pro Version"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:306
+msgid "Live Demo"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:307
+msgid "View this plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:307
 msgid "documentation"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:308
 msgid "Visit this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:308
 msgid "support forum"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:308
+#: classes/class-people-contact-functions.php:309
 msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:311
+#: classes/class-people-contact-functions.php:312
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:312
+#: classes/class-people-contact-functions.php:313
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:315
+#: classes/class-people-contact-functions.php:316
 msgid "Help spread the Word about this plugin"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:316
+#: classes/class-people-contact-functions.php:317
 msgid "Things you can do to help others find this plugin"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:318
+#: classes/class-people-contact-functions.php:319
 msgid "Rate this plugin 5"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:318
+#: classes/class-people-contact-functions.php:319
 msgid "on WordPress.org"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:319
+#: classes/class-people-contact-functions.php:320
 msgid "Mark the plugin as a fourite"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:320
+#: classes/class-people-contact-functions.php:321
 msgid "Follow a3rev on facebook"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:321
+#: classes/class-people-contact-functions.php:322
 msgid "Follow a3rev on Twitter"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:330
+#: classes/class-people-contact-functions.php:331
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:330
+#: classes/class-people-contact-functions.php:331
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:220
+#: classes/class-people-contact-hook.php:218
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:221
+#: classes/class-people-contact-hook.php:219
 msgid "Support"
 msgstr ""
 
@@ -934,7 +942,7 @@ msgid "Send"
 msgstr ""
 
 #: classes/class-people-contact.php:279
-#: classes/class-people-contact.php:487
+#: classes/class-people-contact.php:455
 msgid "Click Here"
 msgstr ""
 
@@ -1081,31 +1089,31 @@ msgstr ""
 msgid "<strong>Thanks!</strong> Your email was successfully sent."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:330
+#: widgets/class-people-contact-widgets.php:328
 msgid "Your email was successfully sent."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:344
+#: widgets/class-people-contact-widgets.php:342
 msgid "Phone:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:349
+#: widgets/class-people-contact-widgets.php:347
 msgid "Fax:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:354
+#: widgets/class-people-contact-widgets.php:352
 msgid "Mobile:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:359
+#: widgets/class-people-contact-widgets.php:357
 msgid "Email:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:381
+#: widgets/class-people-contact-widgets.php:379
 msgid "There was an error submitting the form."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:449
+#: widgets/class-people-contact-widgets.php:447
 msgid "Title:"
 msgstr ""
 

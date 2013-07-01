@@ -9,11 +9,10 @@
  */
 class People_Contact_AddNew
 {
-	public static function admin_screen_add_edit(){
-		global $people_contact_location_map_settings;
-		if(isset($_POST['update_contact'])){
-			@session_start();
-			
+	public static function profile_form_action() {
+		if ( !is_admin() ) return ;
+		
+		if(isset($_POST['update_contact'])){			
 			$contacts = get_option('contact_arr');
 			
 			$contacts[$_POST['key']] = $_REQUEST['contact_arr'];
@@ -21,12 +20,10 @@ class People_Contact_AddNew
 			$contacts[$_POST['key']]['c_avatar'] = $_REQUEST['c_avatar'];
 			
 			update_option('contact_arr',$contacts);
-			$_SESSION['people_contact_message'] = '<div class="updated" id=""><p>'.__('Profile Successfully updated.', 'cup_cp').'</p></div>';
-			wp_redirect( 'admin.php?page=people-contact-manager', 301 );
-			exit;
+			wp_redirect( 'admin.php?page=people-contact-manager&edited_profile=true', 301 );
+			exit();
 		
 		} elseif(isset($_POST['add_new_contact'])){
-			@session_start();
 			$contacts = get_option('contact_arr');
 			if(!is_array($contacts) && count($contacts) <= 0 ){
 				$contacts = array();
@@ -34,10 +31,13 @@ class People_Contact_AddNew
 			$_REQUEST['contact_arr']['c_avatar'] = $_REQUEST['c_avatar'];
 			$contacts[] = $_REQUEST['contact_arr'];
 			update_option('contact_arr',$contacts);
-			$_SESSION['people_contact_message'] = '<div class="updated" id=""><p>'.__('Profile Successfully created.', 'cup_cp').'</p></div>';
-			wp_redirect( 'admin.php?page=people-contact-manager', 301 );
-			exit;
+			wp_redirect( 'admin.php?page=people-contact-manager&created_profile=true', 301 );
+			exit();
 		}
+	}
+	
+	public static function admin_screen_add_edit(){
+		global $people_contact_location_map_settings;
 		
 		$contacts = get_option('contact_arr');
 	

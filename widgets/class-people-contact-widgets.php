@@ -302,8 +302,6 @@ class People_Contact_Widget extends WP_Widget {
             <?php } ?>
             <div style="clear:both;"></div>
 			<?php 
-			wp_register_style( 'people_contact_style_widget', PEOPLE_CONTACT_CSS_URL.'/widget.css' );
-			wp_enqueue_style( 'people_contact_style_widget' );
 			$geocoords = $people_contact_widget_maps['widget_location']; 
 			?>
 			<?php if ($geocoords != '') { ?>

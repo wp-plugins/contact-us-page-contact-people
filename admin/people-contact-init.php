@@ -3,7 +3,7 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_version', '1.0.0');
+	update_option('a3rev_wp_people_contact_version', '1.0.1');
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
 	
@@ -48,16 +48,21 @@ add_action( 'plugins_loaded', array( 'People_Contact_Functions', 'plugins_loaded
 // Add text on right of Visit the plugin on Plugin manager page
 add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra_links'), 10, 2 );
 
+	add_action('init', array('People_Contact_AddNew', 'profile_form_action') );
+
 	
 	add_action( 'admin_menu', array( 'People_Contact_Hook_Filter', 'register_admin_screen' ),12 );
-	
+		
 	// Include style into header
-	add_action( 'get_header', array( 'People_Contact_Hook_Filter', 'add_style_header') );
+	add_action('get_header', array('People_Contact_Hook_Filter', 'add_style_header') );
+	
+	// Add Custom style on frontend
+	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'include_customized_style'), 11);
 	
 	// Add script to fix for IE
 	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'fix_window_console_ie') );
 	
-	add_filter( 'body_class',array( 'People_Contact_Hook_Filter', 'browser_body_class') );
+	add_filter( 'body_class', array( 'People_Contact_Hook_Filter', 'browser_body_class') );
 	
 	//Ajax Sort Contact
 	add_action('wp_ajax_people_update_orders', array( 'People_Contact_Hook_Filter', 'people_update_orders') );
@@ -73,5 +78,5 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		add_action('admin_footer', array('People_Contact_Hook_Filter', 'admin_footer_scripts'));
 	}
 	
-	update_option('a3rev_wp_people_contact_version', '1.0.0');
+	update_option('a3rev_wp_people_contact_version', '1.0.1');
 ?>

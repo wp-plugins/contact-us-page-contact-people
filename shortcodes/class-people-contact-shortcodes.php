@@ -115,7 +115,7 @@ class People_Contact_Shortcode{
 		global $people_contact;
 		extract( shortcode_atts( array(), $atts ) );
 		$contacts = get_option('contact_arr');
-		return $people_contact->create_contact_maps($contacts);
+		return '<div id="people_contacts_container">'.$people_contact->create_contact_maps($contacts).'</div>';
 	}
 	
 }

@@ -56,6 +56,10 @@ class People_Contact_Hook_Filter
 		wp_enqueue_style( 'people_contact_style', PEOPLE_CONTACT_CSS_URL.'/style.css' );
 	}
 	
+	public static function include_customized_style() { 
+		include( PEOPLE_CONTACT_DIR. '/templates/customized_style.php' );
+	}
+	
 	public static function fix_window_console_ie() {
 	?>
     <script type="text/javascript">
@@ -73,7 +77,7 @@ class People_Contact_Hook_Filter
     <?php	
 	}
 	
-	public static function browser_body_class() {
+	public static function browser_body_class( $classes = '') {
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
  
 		if($is_lynx) $classes[] = 'lynx';
@@ -103,13 +107,7 @@ class People_Contact_Hook_Filter
 		} else { $classes[] = 'unknown'; }
  
 		if( $is_iphone ) $classes[] = 'iphone';
- 
-		// Alternative style body class.
-		$style = get_option( 'woo_alt_stylesheet', 'default' );
-		$style = str_replace( '.css', '', $style );
-		if ( '' != $style ) {
-			$classes[] = 'alt-style-' . esc_attr( $style );
-		}
+		
 		return $classes;
 
 	}

@@ -303,6 +303,7 @@ class People_Contact_Functions
 		$html .= '<li>9. '.__("Insert multiple Contact Profiles via shortcodes.", 'cup_cp').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
+		$html .= '<h3>'.__('View Pro Version', 'cup_cp').' <a href="http://demo.a3rev.com/plugins/contact-us-page/" target="_blank">'.__('Live Demo', 'cup_cp').'</a></h3>';
 		$html .= '<h3>'.__('View this plugins', 'cup_cp').' <a href="http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/contact-us-page-contact-people/" target="_blank">'.__('documentation', 'cup_cp').'</a></h3>';
 		$html .= '<h3>'.__('Visit this plugins', 'cup_cp').' <a href="https://a3rev.com/forums/forum/wordpress-plugins/contact-us-page-contact-people/" target="_blank">'.__('support forum', 'cup_cp').'</a></h3>';
 		$html .= '<h3>'.__('More FREE a3rev WordPress plugins', 'cup_cp').'</h3>';

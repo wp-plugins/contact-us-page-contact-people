@@ -10,7 +10,6 @@
 class People_Contact_Manager_Panel
 {	
 	public static function admin_screen () {
-		@session_start();
 		global $people_contact_grid_view_icon;
 		$message = '';
 		if( isset($_GET['action']) && $_GET['action'] == 'del' && isset($_GET['id']) && $_GET['id'] >= 0){
@@ -18,9 +17,10 @@ class People_Contact_Manager_Panel
 			unset($contacts[$_GET['id']]);
 			update_option('contact_arr',$contacts);
 			$message = '<div class="updated" id=""><p>'.__('Profile Successfully deleted.', 'cup_cp').'</p></div>';
-		} elseif (isset($_SESSION['people_contact_message'])) {
-			$message = $_SESSION['people_contact_message'];
-			unset($_SESSION['people_contact_message']);
+		} elseif ( isset($_GET['edited_profile']) ) {
+			$message = '<div class="updated" id=""><p>'.__('Profile Successfully updated.', 'cup_cp').'</p></div>';
+		} elseif ( isset($_GET['created_profile']) ) {
+			$message = '<div class="updated" id=""><p>'.__('Profile Successfully created.', 'cup_cp').'</p></div>';
 		}
 		
 		$url = get_bloginfo('wpurl')."/wp-admin/admin.php";
