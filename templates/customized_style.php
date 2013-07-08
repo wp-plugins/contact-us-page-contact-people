@@ -2,7 +2,7 @@
 <?php
 global $people_contact_grid_view_style;
 ?>
-#people_contacts_container .people_item .people-entry-item{
+#people_contacts_container .people_item .people-entry-item, .people_item .people-entry-item{
 	background-color:<?php echo $people_contact_grid_view_style['grid_view_item_background'];?>;
 	border:<?php echo $people_contact_grid_view_style['grid_view_item_border_width'];?>px <?php echo $people_contact_grid_view_style['grid_view_item_border_style'];?> <?php echo $people_contact_grid_view_style['grid_view_item_border_color'];?>;
 	padding:<?php echo $people_contact_grid_view_style['grid_view_item_padding_tb'];?>px <?php echo $people_contact_grid_view_style['grid_view_item_padding_lr'];?>px;

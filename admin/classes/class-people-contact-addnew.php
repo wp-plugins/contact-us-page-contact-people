@@ -128,6 +128,15 @@ class People_Contact_AddNew
 			  </tbody>
 			</table>
             
+            <fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
+                <table class="form-table" style="margin-bottom:0;">
+                <tr valign="top">
+				  <th scope="row"><label for="c_website"><?php _e('Website', 'cup_cp') ?></label></th>
+				  <td><input disabled="disabled" type="text" class="regular-text" value="http://" id="c_website" name="contact_arr[c_website]" /></td>
+				</tr>
+                </table>
+            </fieldset>
+            
             <h3><?php _e('Location Address', 'cup_cp'); ?></h3>
             <p><?php _e("&lt;empty&gt; Profile location does not show on the map.", ''); ?></p>
 			<table class="form-table" style="margin-bottom:0;">
@@ -160,7 +169,6 @@ class People_Contact_AddNew
                   
                   <input disabled="disabled" type="text" class="regular-text" value="" id="c_shortcode" name="contact_arr[c_shortcode]"></td>
 				</tr>
-			  </tbody>
 			</table>
 		</fieldset>                
             

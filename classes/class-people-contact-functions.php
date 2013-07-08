@@ -316,8 +316,8 @@ class People_Contact_Functions
 		$html .= '<h3>'.__('Help spread the Word about this plugin', 'cup_cp').'</h3>';
 		$html .= '<p>'.__("Things you can do to help others find this plugin", 'cup_cp');
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>* <a href="#" target="_blank">'.__('Rate this plugin 5', 'cup_cp').' <img src="'.PEOPLE_CONTACT_IMAGE_URL.'/stars.png" align="top" /> '.__('on WordPress.org', 'cup_cp').'</a></li>';
-		$html .= '<li>* <a href="#" target="_blank">'.__('Mark the plugin as a fourite', 'cup_cp').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/contact-us-page-contact-people/" target="_blank">'.__('Rate this plugin 5', 'cup_cp').' <img src="'.PEOPLE_CONTACT_IMAGE_URL.'/stars.png" align="top" /> '.__('on WordPress.org', 'cup_cp').'</a></li>';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/contact-us-page-contact-people/" target="_blank">'.__('Mark the plugin as a fourite', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://www.facebook.com/a3revolution/" target="_blank">'.__('Follow a3rev on facebook', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="https://twitter.com/a3rev/" target="_blank">'.__('Follow a3rev on Twitter', 'cup_cp').'</a></li>';
 		$html .= '</ul>';

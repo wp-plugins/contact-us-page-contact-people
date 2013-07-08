@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -140,6 +140,12 @@ On WordPress  – with any theme.
 
 
 == Changelog ==
+
+= 1.0.2 - 2013/07/08 =
+* Tweaks:
+	* Plugin support URL's updated.
+	* Pro Version live demo completed.
+	* Relaunch of Pro Version 7 Day Free Trail.
 
 = 1.0.1 - 2013/07/01 =
 * Fixes:

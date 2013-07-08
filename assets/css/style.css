@@ -2,31 +2,31 @@
 /* CSS Document */
 
 /* LAYOUT */
-#people_contacts_container .people_box_content{ width:100%;}
-#people_contacts_container .people_box_content .people_item{width:100%;}
-#people_contacts_container .people_box_content .people_item{margin-bottom:1.5em !important;}
+#people_contacts_container .people_box_content, .people_box_content{ width:100%;}
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{width:100%;}
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{margin-bottom:1.5em !important;}
 
 @media only screen and (min-width: 768px)  {
-	#people_contacts_container .people_box_content .people_item{float:left !important;margin-right:2% !important;}
-	#people_contacts_container .people_box_content .people_item.masonry-brick{float:none !important;margin-right:auto !important;}
+	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{float:left !important;margin-right:2% !important;}
+	#people_contacts_container .people_box_content .people_item.masonry-brick, .people_box_content .people_item.masonry-brick{float:none !important;margin-right:auto !important;}
 	
-	#people_contacts_container .ie9 .people_box_content .people_item{float:left !important;margin-right:2% !important;}
-	#people_contacts_container .ie9 .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
+	.ie9 #people_contacts_container .people_box_content .people_item, .ie9 .people_box_content .people_item{float:left !important;margin-right:2% !important;}
+	.ie9 #people_contacts_container .people_box_content .people_item.masonry-brick, .ie9 .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
 	
-	#people_contacts_container .people_box_content.pcol1{ width:100%;}
-	#people_contacts_container .people_box_content.pcol1 .people_item{width:100%;}
+	#people_contacts_container .people_box_content.pcol1, .people_box_content.pcol1{ width:100%;}
+	#people_contacts_container .people_box_content.pcol1 .people_item, .people_box_content.pcol1 .people_item{width:100%;}
 	
-	#people_contacts_container .people_box_content.pcol2{width:102%;}
-	#people_contacts_container .people_box_content.pcol2 .people_item{width:48%;}
+	#people_contacts_container .people_box_content.pcol2, .people_box_content.pcol2{width:102%;}
+	#people_contacts_container .people_box_content.pcol2 .people_item, .people_box_content.pcol2 .people_item{width:48%;}
 
-	#people_contacts_container .people_box_content.pcol3{width:102.3%;}
-	#people_contacts_container .people_box_content.pcol3 .people_item{width:31%;}
+	#people_contacts_container .people_box_content.pcol3, .people_box_content.pcol3{width:102.3%;}
+	#people_contacts_container .people_box_content.pcol3 .people_item, .people_box_content.pcol3 .people_item{width:31%;}
 	
-	#people_contacts_container .people_box_content.pcol4{width:102%;}
-	#people_contacts_container .people_box_content.pcol4 .people_item{width:23%;}
+	#people_contacts_container .people_box_content.pcol4, .people_box_content.pcol4{width:102%;}
+	#people_contacts_container .people_box_content.pcol4 .people_item, .people_box_content.pcol4 .people_item{width:23%;}
 
-	#people_contacts_container .people_box_content.pcol5{width:102%;}
-	#people_contacts_container .people_box_content.pcol5 .people_item{width:18%;}
+	#people_contacts_container .people_box_content.pcol5, .people_box_content.pcol5{width:102%;}
+	#people_contacts_container .people_box_content.pcol5 .people_item, .people_box_content.pcol5 .people_item{width:18%;}
 	
 	#people_contacts_container .masonry, #people_contacts_container .masonry .masonry-brick {
 	  -webkit-transition-duration: 0.7s;
@@ -91,15 +91,15 @@
 }
 
 /* PEOPLE ITEM */
-#people_contacts_container .people-entry-item{
+#people_contacts_container .people-entry-item, .people-entry-item{
 	border:1px solid #dbdbdb;
 	padding:5px;
 	-moz-box-shadow: 0 0 5px #dbdbdb !important;
 	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
 	box-shadow: 0 0 5px #dbdbdb !important;
 }
-#people_contacts_container .p_content_left{width:29%;float:left;text-align:center;}
-#people_contacts_container .p_content_left img{
+#people_contacts_container .people-entry-item .p_content_left, .people-entry-item .p_content_left{width:29%;float:left;text-align:center;}
+#people_contacts_container .people-entry-item .p_content_left img, .people-entry-item .p_content_left img{
 	background:#FFF !important;
 	border:1px solid #dbdbdb;
 	padding:2px;
@@ -112,10 +112,10 @@
 	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
 	box-shadow: 0 0 5px #dbdbdb !important;
 }
-#people_contacts_container .p_content_right{width:67%;float:right;}
-#people_contacts_container .p_item_title{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
-#people_contacts_container .p_item_name{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
-#people_contacts_container .p_content_right img{
+#people_contacts_container .people-entry-item .p_content_right, .people-entry-item .p_content_right{width:67%;float:right;}
+#people_contacts_container .people-entry-item .p_item_title, .people-entry-item .p_item_title{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
+#people_contacts_container .people-entry-item .p_item_name, .people-entry-item .p_item_name{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
+#people_contacts_container .people-entry-item .p_content_right img, .people-entry-item .p_content_right img{
 	border:none !important;
 	border-radius: 0px !important;
 	-moz-border-radius: 0px !important;
@@ -127,9 +127,9 @@
 	max-width:21px;
 	vertical-align: text-bottom;
 }
-#people_contacts_container .p_icon_email img{vertical-align: sub !important;}
-#people_contacts_container .p_content_right p, #people_contacts_container .p_content_right a{font-size:12px;}
-#people_contacts_container .p_title{margin:0 !important;}
+#people_contacts_container .people-entry-item .p_icon_email img, .people-entry-item .p_icon_email img{vertical-align: sub !important;}
+#people_contacts_container .people-entry-item .p_content_right p, #people_contacts_container .people-entry-item .p_content_right a, .people-entry-item .p_content_right p, .people-entry-item .p_content_right a{font-size:12px;}
+#people_contacts_container .people-entry-item .p_title, .people-entry-item .p_title{margin:0 !important;}
 
 /* MAPS */
 body #people_contacts_container #map_canvas img{

@@ -79,7 +79,9 @@ class People_Contact_Shortcode{
 				    echo '<option value="">'.__('Please select...', 'cup_cp').'</option>';	
 					if( is_array($contacts) && count($contacts) > 0 ){
 						foreach ($contacts as $key=>$value) {
-							echo '<option value="'.$key.'">'.esc_attr( stripslashes($value['c_name'])).'</option>';
+							$profile_name =  trim( esc_attr( stripslashes($value['c_name']) ) );
+							if ($profile_name == '') $profile_name = trim( esc_attr( stripslashes($value['c_title']) ) ); 
+							echo '<option value="'.$key.'">'.$profile_name.'</option>';
 						}
 					} 
 				?>

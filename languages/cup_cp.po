@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A3 Projects PRO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-01 12:50+0700\n"
-"PO-Revision-Date: 2013-07-01 12:50+0700\n"
+"POT-Creation-Date: 2013-07-08 13:56+0700\n"
+"PO-Revision-Date: 2013-07-08 13:56+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -165,43 +165,50 @@ msgid "Mobile"
 msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:131
+#: admin/classes/class-people-contact-addnew.php:163
+msgid "Upgrade to"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:131
+#: admin/classes/class-people-contact-addnew.php:163
+msgid "Pro Version"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:131
+#: admin/classes/class-people-contact-addnew.php:163
+msgid "to activate"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:134
+msgid "Website"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:140
 msgid "Location Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:132
+#: admin/classes/class-people-contact-addnew.php:141
 msgid "&lt;empty&gt; Profile location does not show on the map."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:136
+#: admin/classes/class-people-contact-addnew.php:145
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:94
 msgid "Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:140
+#: admin/classes/class-people-contact-addnew.php:149
 msgid "Latitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:144
+#: admin/classes/class-people-contact-addnew.php:153
 msgid "Longitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:154
-msgid "Upgrade to"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:154
-msgid "Pro Version"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:154
-msgid "to activate"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:155
+#: admin/classes/class-people-contact-addnew.php:164
 msgid "3RD Party Contact Form Shortcode for this profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:158
+#: admin/classes/class-people-contact-addnew.php:167
 msgid "Enter Form Shortcode"
 msgstr ""
 
@@ -549,57 +556,65 @@ msgstr ""
 msgid "We recommend that you create a new sidebar and assign it to the Contact Us Page. If you do you can then add the Contact Widget to that sidebar and it will only show on the Contact Us page. We recommend you install this plugin <a href=\"http://wordpress.org/plugins/woosidebars/\" target=\"_blank\">WooSidebars</a> and use it to create the custom sidebar."
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:60
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:61
 msgid "Upload Custom Default Profile Image"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:61
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:62
 msgid "Upload custom 'No Image' image, .jpg or.png format, 150px by 150px recommended size."
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:64
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:66
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:65
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:67
 msgid "Default Profile Image"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:71
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:72
 msgid "Upload Custom Contact Icons"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:72
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:73
 msgid "Delete default icons. Upload custom icons, transparent .png format, 16px by 16px recommended size."
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:75
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:76
 msgid "Phone icon"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:77
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:78
 msgid "Icon Phone"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:81
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:82
 msgid "Fax icon"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:83
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:84
 msgid "Icon Fax"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:87
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:88
 msgid "Mobile icon"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:89
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:90
 msgid "Icon Mobile"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:93
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:94
 msgid "Email icon"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:95
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:96
 msgid "Icon Email"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:100
+msgid "Website icon"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:102
+msgid "Icon Website"
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:80
@@ -909,11 +924,11 @@ msgstr ""
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:218
+#: classes/class-people-contact-hook.php:201
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:219
+#: classes/class-people-contact-hook.php:202
 msgid "Support"
 msgstr ""
 
@@ -962,63 +977,63 @@ msgstr ""
 msgid "Please select..."
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Alignment"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "None"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Left - wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Left - no wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Center"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Right - wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Right - no wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:89
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Horizontal aliginment of grid item"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:90
+#: shortcodes/class-people-contact-shortcodes.php:92
 msgid "Box width"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:93
 msgid "Padding"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:92
+#: shortcodes/class-people-contact-shortcodes.php:94
 msgid "Above"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:93
+#: shortcodes/class-people-contact-shortcodes.php:95
 msgid "Below"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:94
+#: shortcodes/class-people-contact-shortcodes.php:96
 msgid "Left"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:95
+#: shortcodes/class-people-contact-shortcodes.php:97
 msgid "Right"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:101
+#: shortcodes/class-people-contact-shortcodes.php:103
 msgid "Insert Shortcode"
 msgstr ""
 

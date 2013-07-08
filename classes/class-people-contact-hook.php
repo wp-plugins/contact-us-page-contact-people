@@ -19,23 +19,6 @@ class People_Contact_Hook_Filter
 	public static function register_admin_screen () {
 		global $query_string, $current_user;
 		$current_user_id = $current_user->user_login;
-		
-		if(isset( $_POST['people_contact_updated_settings'] )){
-			update_option('zoom_level',$_POST['zoom_level']);
-			update_option('map_type',$_POST['map_type']);
-			update_option('map_height',$_POST['map_height']);
-			update_option('map_width',$_POST['map_width']);
-			update_option('map_width_type',$_POST['map_width_type']);
-			update_option('center_address',$_POST['center_address']);
-			update_option('grid_view_col',$_POST['grid_view_col']);
-			update_option('team_title',$_POST['team_title']);
-			if(isset($_POST['hide_maps_frontend'])){
-				update_option('hide_maps_frontend',1);
-			}else{
-				update_option('hide_maps_frontend',0);
-			}
-			$_REQUEST['msg'] = 'Settings Saved.';
-		}
 	
 		$contact_manager = add_menu_page( __('Contact Us', 'cup_cp'), __('Contact Us', 'cup_cp'), 'manage_options', 'people-contact-manager', array( 'People_Contact_Manager_Panel', 'admin_screen' ), PEOPLE_CONTACT_IMAGE_URL.'/option-icon-maps.png', '27.222');
 		

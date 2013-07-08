@@ -3,7 +3,7 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_version', '1.0.1');
+	update_option('a3rev_wp_people_contact_version', '1.0.2');
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
 	
@@ -78,5 +78,5 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		add_action('admin_footer', array('People_Contact_Hook_Filter', 'admin_footer_scripts'));
 	}
 	
-	update_option('a3rev_wp_people_contact_version', '1.0.1');
+	update_option('a3rev_wp_people_contact_version', '1.0.2');
 ?>
