@@ -142,7 +142,7 @@ On WordPress  – with any theme.
 == Changelog ==
 
 = 1.0.2 - 2013/07/08 =
-* Tweaks:
+* Tweaks :
 	* Plugin support URL's updated.
 	* Pro Version live demo completed.
 	* Relaunch of Pro Version 7 Day Free Trail.
