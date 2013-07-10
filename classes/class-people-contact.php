@@ -67,8 +67,7 @@ class People_Contact {
 		check_ajax_referer( 'ajax-popup-contact', 'security' );
 		global $people_contact_contact_forms_settings;
 		global $people_contact_grid_view_icon;
-		$contacts = get_option('contact_arr');
-		$data = $contacts[$_REQUEST['contact_id']];
+		$data = People_Contact_Profile_Data::get_row( $_REQUEST['contact_id'], '', 'ARRAY_A' );
 		?>
 		<script type="text/javascript">
 		jQuery(document).ready(function ($) {
@@ -258,7 +257,7 @@ class People_Contact {
 							$value['c_latitude'] = $geodata->results[0]->geometry->location->lat;
 							$value['c_longitude'] = $geodata->results[0]->geometry->location->lng;	
 						}
-		echo $notes."['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$key.",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."']";
+		echo $notes."['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$value['id'].",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."']";
 						$notes = ',';
 					}
 				}
@@ -452,7 +451,7 @@ class People_Contact {
 				
 				
 	
-					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email" href="'.$key.'">'.__('Click Here', 'cup_cp').'</a></p>';
+					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email" href="'.$value['id'].'">'.__('Click Here', 'cup_cp').'</a></p>';
 					$html .= '</span>';
 				
 				$html .= '</div>';

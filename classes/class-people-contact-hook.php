@@ -185,12 +185,11 @@ jQuery(window).load(function(){
 	public static function people_update_orders() {
 		check_ajax_referer( 'people_update_orders', 'security' );
 		$updateRecordsArray  = $_REQUEST['recordsArray'];
-		$new_contact = array();
-		$contacts = get_option('contact_arr');
+		$i = 0;
 		foreach ($updateRecordsArray as $recordIDValue) {
-			$new_contact[$recordIDValue] = $contacts[$recordIDValue];
+			$i++;
+			People_Contact_Profile_Data::update_order($recordIDValue, $i);
 		}
-		update_option('contact_arr',$new_contact);
 		die();
 	}
 	

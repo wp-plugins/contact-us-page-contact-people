@@ -331,5 +331,21 @@ class People_Contact_Functions
 		$html .= '<div id="a3_plugin_shortcode_extensions">'.__("Upgrading to the", 'cup_cp').' <a target="_blank" href="'.PEOPLE_CONTACT_AUTHOR_URI.'">'.__('Pro Version', 'cup_cp').'</a> '.__("activates this shortcode feature as well.", 'cup_cp').'</div>';
 		return $html;	
 	}
+	
+	public static function upgrade_to_1_0_3() {
+		$contacts = get_option('contact_arr');
+		if ( is_array($contacts) && count($contacts) > 0 ) {
+			$i = 0;
+			foreach ( $contacts as $key => $value ) {
+				$i++;
+				$new_value = array();
+				foreach ( $value as $key => $field ) {
+					$new_value[$key] = esc_attr( stripslashes( $field ) );
+				}
+				$new_value['c_order'] = $i;
+				People_Contact_Profile_Data::insert_row( $new_value );
+			}
+		}
+	}
 }
 ?>

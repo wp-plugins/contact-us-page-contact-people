@@ -66,7 +66,7 @@ class People_Contact_Shortcode{
 	}
 	
 	public function people_contact_generator_popup() {
-		$contacts = get_option('contact_arr');
+		$contacts = People_Contact_Profile_Data::get_results('', 'c_order ASC', '', 'ARRAY_A');
 		?>
 		<div id="people-contact-wrap" style="display:none">
         <div id="a3_plugin_shortcode_upgrade_area"><?php echo People_Contact_Functions::extension_shortcode(); ?>
@@ -81,7 +81,7 @@ class People_Contact_Shortcode{
 						foreach ($contacts as $key=>$value) {
 							$profile_name =  trim( esc_attr( stripslashes($value['c_name']) ) );
 							if ($profile_name == '') $profile_name = trim( esc_attr( stripslashes($value['c_title']) ) ); 
-							echo '<option value="'.$key.'">'.$profile_name.'</option>';
+							echo '<option value="'.$value['id'].'">'.$profile_name.'</option>';
 						}
 					} 
 				?>
@@ -116,7 +116,7 @@ class People_Contact_Shortcode{
 	public function people_contacts_html( $atts ) {
 		global $people_contact;
 		extract( shortcode_atts( array(), $atts ) );
-		$contacts = get_option('contact_arr');
+		$contacts = People_Contact_Profile_Data::get_results('', 'c_order ASC', '', 'ARRAY_A');
 		return '<div id="people_contacts_container">'.$people_contact->create_contact_maps($contacts).'</div>';
 	}
 	

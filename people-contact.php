@@ -2,7 +2,7 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.0.2
+Version: 1.0.3
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.3
@@ -36,6 +36,7 @@ define( 'PEOPLE_CONTACT_JS_URL', PEOPLE_CONTACT_URL . '/assets/js' );
 define( 'PEOPLE_CONTACT_IMAGE_URL', PEOPLE_CONTACT_URL . '/assets/images' );
 if(!defined("PEOPLE_CONTACT_AUTHOR_URI"))
     define("PEOPLE_CONTACT_AUTHOR_URI", "http://a3rev.com/shop/contact-us-page-contact-people/");
+include('classes/data/class-profiles-data.php');
 
 include('classes/class-people-contact-functions.php');
 include('classes/class-people-contact-hook.php');
@@ -97,6 +98,9 @@ function people_contact_uninstall() {
 		delete_option('a3rev_wp_people_contact_version');
 		
 		delete_option('a3_people_contact_clean_on_deletion');
+		
+		global $wpdb;
+		$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'cup_cp_profiles');
 		
 	}
 }

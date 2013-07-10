@@ -13,9 +13,7 @@ class People_Contact_Manager_Panel
 		global $people_contact_grid_view_icon;
 		$message = '';
 		if( isset($_GET['action']) && $_GET['action'] == 'del' && isset($_GET['id']) && $_GET['id'] >= 0){
-			$contacts = get_option('contact_arr');
-			unset($contacts[$_GET['id']]);
-			update_option('contact_arr',$contacts);
+			People_Contact_Profile_Data::delete_row( $_GET['id'] );
 			$message = '<div class="updated" id=""><p>'.__('Profile Successfully deleted.', 'cup_cp').'</p></div>';
 		} elseif ( isset($_GET['edited_profile']) ) {
 			$message = '<div class="updated" id=""><p>'.__('Profile Successfully updated.', 'cup_cp').'</p></div>';
@@ -24,7 +22,7 @@ class People_Contact_Manager_Panel
 		}
 		
 		$url = get_bloginfo('wpurl')."/wp-admin/admin.php";
-		$contacts = get_option('contact_arr');
+		$my_contacts = People_Contact_Profile_Data::get_results('', 'c_order ASC', '', 'ARRAY_A');
 		?>
         <div id="htmlForm">
         <div style="clear:both"></div>
@@ -49,25 +47,25 @@ class People_Contact_Manager_Panel
 			</thead>
 			<tbody>
 			<?php 
-			if(is_array($contacts) && count($contacts) > 0 ){
+			if ( is_array($my_contacts) && count($my_contacts) > 0 ) {
 				$i = 0;
-				foreach($contacts as $key=>$value){
+				foreach ( $my_contacts as $value ) {
 					$i++;
-					if($value['c_avatar'] != ''){
+					if ( $value['c_avatar'] != '') {
 						$src = $value['c_avatar'];
 					} else {
 						$src = $people_contact_grid_view_icon['default_profile_image'];
 					}
 					?>
-			  <tr id="recordsArray_<?php echo $key; ?>">
+			  <tr id="recordsArray_<?php echo $value['id']; ?>">
 				<td style="cursor:pointer;" valign="middle"><img src="<?php echo PEOPLE_CONTACT_IMAGE_URL; ?>/updown.png" style="cursor:pointer" /></td>
 				<td valign="middle" class="no"><span class="number_item"><?php echo $i;?></span></td>
-				<td valign="middle" class="avatar" align="center"><img src="<?php echo $src?>" style="border:1px solid #CCC;padding:2px;background:#FFF;width:32px;" /></td>
-				<td valign="middle" style="text-align:left;" class="name"><?php esc_attr_e( stripslashes( $value['c_name']));?></td>
-				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_email']));?></td>
-				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_phone']));?></td>
-				<td valign="middle" class="address"><?php esc_attr_e( stripslashes( $value['c_address']));?></td>
-				<td valign="middle" class="control" align="center"><a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo $url;?>?page=people-contact&action=edit&id=<?php echo $key;?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo $url;?>?page=people-contact-manager&action=del&id=<?php echo $key;?>" onclick="if(!confirm('<?php _e('Are you sure delete this profile?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
+				<td valign="middle" class="avatar" align="center"><img src="<?php echo $src; ?>" style="border:1px solid #CCC;padding:2px;background:#FFF;width:32px;" /></td>
+				<td valign="middle" style="text-align:left;" class="name"><?php esc_attr_e( stripslashes( $value['c_name']) );?></td>
+				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_email']) );?></td>
+				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_phone']) );?></td>
+				<td valign="middle" class="address"><?php esc_attr_e( stripslashes( $value['c_address']) );?></td>
+				<td valign="middle" class="control" align="center"><a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo $url;?>?page=people-contact&action=edit&id=<?php echo $value['id']; ?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo $url;?>?page=people-contact-manager&action=del&id=<?php echo $value['id'];?>" onclick="if(!confirm('<?php _e('Are you sure delete this profile?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
 			  </tr>
 			  <?php
 				}

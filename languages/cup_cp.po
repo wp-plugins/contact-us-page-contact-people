@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A3 Projects PRO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-08 13:56+0700\n"
-"PO-Revision-Date: 2013-07-08 13:56+0700\n"
+"POT-Creation-Date: 2013-07-10 16:27+0700\n"
+"PO-Revision-Date: 2013-07-10 16:28+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -92,168 +92,176 @@ msgstr ""
 msgid "Grid View Contact Icons"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:46
+#: admin/classes/class-people-contact-addnew.php:37
 msgid "Create"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:47
+#: admin/classes/class-people-contact-addnew.php:38
 msgid "Add New Profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:58
+#: admin/classes/class-people-contact-addnew.php:49
 msgid "Cancel"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:64
+#: admin/classes/class-people-contact-addnew.php:56
 msgid "Edit Profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:75
+#: admin/classes/class-people-contact-addnew.php:67
 msgid "Update"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:88
+#: admin/classes/class-people-contact-addnew.php:80
 msgid "Profile Details"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:89
-#: admin/classes/class-people-contact-addnew.php:109
+#: admin/classes/class-people-contact-addnew.php:81
+#: admin/classes/class-people-contact-addnew.php:101
 msgid "&lt;empty&gt; fields don't show on front end."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:93
+#: admin/classes/class-people-contact-addnew.php:85
 msgid "Title / Position"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:97
-#: admin/classes/class-people-contact-manager-panel.php:43
+#: admin/classes/class-people-contact-addnew.php:89
+#: admin/classes/class-people-contact-manager-panel.php:41
 msgid "Name"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:101
-#: admin/classes/class-people-contact-addnew.php:103
+#: admin/classes/class-people-contact-addnew.php:93
+#: admin/classes/class-people-contact-addnew.php:95
 msgid "Profile Image"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:103
+#: admin/classes/class-people-contact-addnew.php:95
 msgid "Image format .jpg, .png, 150px by 150px recommended size."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:108
+#: admin/classes/class-people-contact-addnew.php:100
 msgid "Contact Details"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:113
-#: admin/classes/class-people-contact-manager-panel.php:44
+#: admin/classes/class-people-contact-addnew.php:105
+#: admin/classes/class-people-contact-manager-panel.php:42
 msgid "Email"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:117
-#: admin/classes/class-people-contact-manager-panel.php:45
+#: admin/classes/class-people-contact-addnew.php:109
+#: admin/classes/class-people-contact-manager-panel.php:43
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:101
 msgid "Phone"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:121
+#: admin/classes/class-people-contact-addnew.php:113
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:108
 msgid "Fax"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:125
+#: admin/classes/class-people-contact-addnew.php:117
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:115
 msgid "Mobile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:131
-#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:123
+#: admin/classes/class-people-contact-addnew.php:161
 msgid "Upgrade to"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:131
-#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:123
+#: admin/classes/class-people-contact-addnew.php:161
 msgid "Pro Version"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:131
-#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:123
+#: admin/classes/class-people-contact-addnew.php:161
 msgid "to activate"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:134
+#: admin/classes/class-people-contact-addnew.php:126
 msgid "Website"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:140
+#: admin/classes/class-people-contact-addnew.php:130
+msgid "About"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:138
 msgid "Location Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:141
+#: admin/classes/class-people-contact-addnew.php:139
 msgid "&lt;empty&gt; Profile location does not show on the map."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:145
+#: admin/classes/class-people-contact-addnew.php:143
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:94
 msgid "Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:149
+#: admin/classes/class-people-contact-addnew.php:147
 msgid "Latitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:153
+#: admin/classes/class-people-contact-addnew.php:151
 msgid "Longitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:164
+#: admin/classes/class-people-contact-addnew.php:162
 msgid "3RD Party Contact Form Shortcode for this profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:167
+#: admin/classes/class-people-contact-addnew.php:163
+msgid "Add a unique Contact Form for this profile. Enter the Contact Form 7 or Gravity Forms shortcode for that form. 3rd Party Contact Form must be activated in Setting > People Contact Forms."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:166
 msgid "Enter Form Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:19
+#: admin/classes/class-people-contact-manager-panel.php:17
 msgid "Profile Successfully deleted."
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:21
+#: admin/classes/class-people-contact-manager-panel.php:19
 msgid "Profile Successfully updated."
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:23
+#: admin/classes/class-people-contact-manager-panel.php:21
 msgid "Profile Successfully created."
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:34
+#: admin/classes/class-people-contact-manager-panel.php:32
 msgid "Profiles"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:34
+#: admin/classes/class-people-contact-manager-panel.php:32
 msgid "Add New"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:41
+#: admin/classes/class-people-contact-manager-panel.php:39
 msgid "No"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:46
+#: admin/classes/class-people-contact-manager-panel.php:44
 #: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:121
 msgid "Location"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:70
+#: admin/classes/class-people-contact-manager-panel.php:68
 msgid "Edit"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:70
+#: admin/classes/class-people-contact-manager-panel.php:68
 msgid "Delete"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:70
+#: admin/classes/class-people-contact-manager-panel.php:68
 msgid "Are you sure delete this profile?"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:77
+#: admin/classes/class-people-contact-manager-panel.php:75
 msgid "No Profile"
 msgstr ""
 
@@ -719,7 +727,7 @@ msgstr ""
 
 #: classes/class-people-contact-functions.php:84
 #: classes/class-people-contact-functions.php:167
-#: classes/class-people-contact.php:153
+#: classes/class-people-contact.php:152
 #: widgets/class-people-contact-widgets.php:404
 msgid "Message"
 msgstr ""
@@ -924,11 +932,11 @@ msgstr ""
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:201
+#: classes/class-people-contact-hook.php:200
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:202
+#: classes/class-people-contact-hook.php:201
 msgid "Support"
 msgstr ""
 
@@ -940,24 +948,24 @@ msgstr ""
 msgid "Contact from"
 msgstr ""
 
-#: classes/class-people-contact.php:121
+#: classes/class-people-contact.php:120
 msgid "This email will be delivered to"
 msgstr ""
 
-#: classes/class-people-contact.php:139
+#: classes/class-people-contact.php:138
 msgid "E-mail"
 msgstr ""
 
-#: classes/class-people-contact.php:148
+#: classes/class-people-contact.php:147
 msgid "Subject"
 msgstr ""
 
-#: classes/class-people-contact.php:157
+#: classes/class-people-contact.php:156
 msgid "Send"
 msgstr ""
 
-#: classes/class-people-contact.php:279
-#: classes/class-people-contact.php:455
+#: classes/class-people-contact.php:278
+#: classes/class-people-contact.php:454
 msgid "Click Here"
 msgstr ""
 

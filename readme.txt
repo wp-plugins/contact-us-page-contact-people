@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.5.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,15 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.3 - 2013/07/10 =
+* Features :
+	* Added support for use of special characters in Profile Fields.
+	* Added support for use of Cyrillic Symbols in Profile Fields.
+	* Added support for Chinese Characters in Profile Fields.
+* Fixes :
+	* All profiles lost with input errors. Convert save profile in array to save profile in table. Upgrade auto converts existing profiles from array to new table.
+	* Google map show correct center of profile address when edit a Profile, before it use Center Address option in Contact Us -> Settings -> Contact Page tab -> Location Map subtab to make it as center for map when edit a Profile.
+
 = 1.0.2 - 2013/07/08 =
 * Tweaks :
 	* Plugin support URL's updated.
@@ -160,6 +169,10 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.3 =
+Important Update! Major bug fix. Please upgrade to this version now to fix this and have support added for special characters, Cyrillic Symbols and Chinese Characters.
+
 
 = 1.0.1 =
 Update your plugin now for 3 Bug Fixes to initial release.

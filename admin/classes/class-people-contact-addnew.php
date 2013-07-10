@@ -12,35 +12,26 @@ class People_Contact_AddNew
 	public static function profile_form_action() {
 		if ( !is_admin() ) return ;
 		
-		if(isset($_POST['update_contact'])){			
-			$contacts = get_option('contact_arr');
+		if ( isset( $_POST['update_contact'] ) ) {			
+						
+			$_REQUEST['contact_arr']['c_avatar'] = $_REQUEST['c_avatar'];
 			
-			$contacts[$_POST['key']] = $_REQUEST['contact_arr'];
-			
-			$contacts[$_POST['key']]['c_avatar'] = $_REQUEST['c_avatar'];
-			
-			update_option('contact_arr',$contacts);
+			People_Contact_Profile_Data::update_row($_REQUEST['contact_arr']);
 			wp_redirect( 'admin.php?page=people-contact-manager&edited_profile=true', 301 );
 			exit();
 		
-		} elseif(isset($_POST['add_new_contact'])){
-			$contacts = get_option('contact_arr');
-			if(!is_array($contacts) && count($contacts) <= 0 ){
-				$contacts = array();
-			}
+		} elseif ( isset( $_POST['add_new_contact'] ) ) {
 			$_REQUEST['contact_arr']['c_avatar'] = $_REQUEST['c_avatar'];
-			$contacts[] = $_REQUEST['contact_arr'];
-			update_option('contact_arr',$contacts);
+			People_Contact_Profile_Data::insert_row($_REQUEST['contact_arr']);
+			
 			wp_redirect( 'admin.php?page=people-contact-manager&created_profile=true', 301 );
 			exit();
 		}
 	}
 	
-	public static function admin_screen_add_edit(){
+	public static function admin_screen_add_edit() {
 		global $people_contact_location_map_settings;
-		
-		$contacts = get_option('contact_arr');
-	
+			
         $url = get_bloginfo('wpurl')."/wp-admin/admin.php";
 		$bt_type = 'add_new_contact';
 		$bt_value = __('Create', 'cup_cp');
@@ -57,10 +48,11 @@ class People_Contact_AddNew
 		$latlng_center = $latlng = $center_lat.','.$center_lng;
 		$bt_cancel = '<a class="button" href="admin.php?page=people-contact-manager">'.__('Cancel', 'cup_cp').'</a>';
 		
-		$data = array('c_title' => '', 'c_name' => '', 'c_email' => '', 'c_phone' => '', 'c_fax' => '', 'c_mobile' => '', 'c_address' => '', 'c_latitude' => '', 'c_longitude' => '', 'c_shortcode' => '', 'c_avatar' => '');
-		if(isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id']) && $_GET['id'] >= 0){
+		$data = array('c_title' => '', 'c_name' => '', 'c_email' => '', 'c_phone' => '', 'c_fax' => '', 'c_mobile' => '', 'c_website' => '', 'c_address' => '', 'c_latitude' => '', 'c_longitude' => '', 'c_shortcode' => '', 'c_avatar' => '', 'c_about' => '');
+		
+		if (isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id']) && $_GET['id'] >= 0) {
 			$bt_type = 'update_contact';
-			$data = $contacts[$_GET['id']];
+			$data = People_Contact_Profile_Data::get_row( $_GET['id'], '', 'ARRAY_A' );
 			$title = __('Edit Profile', 'cup_cp');
 			if ( (trim($data['c_latitude']) == '' || trim($data['c_longitude']) == '' ) && trim($data['c_address']) != '') {
 				$googleapis_url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($data['c_address']).'&sensor=false';
@@ -70,7 +62,7 @@ class People_Contact_AddNew
 				$data['c_longitude'] = $geodata->results[0]->geometry->location->lng;	
 			}
 			if ( trim($data['c_latitude']) != '' && trim($data['c_longitude']) != '' ) {
-				$latlng = $data['c_latitude'].','.$data['c_longitude'];
+				$latlng_center = $latlng = $data['c_latitude'].','.$data['c_longitude'];
 			}
 			$bt_value = __('Update', 'cup_cp');
 		}
@@ -83,7 +75,7 @@ class People_Contact_AddNew
           <div style="clear:both;"></div>
 		  <div class="contact_manager">
 			<form action="" name="add_conact" id="add_contact" method="post">
-			<input type="hidden" value="<?php echo $_GET['id'];?>" id="key" name="key">
+			<input type="hidden" value="<?php echo $_GET['id'];?>" id="profile_id" name="contact_arr[profile_id]">
             <div class="col-left">
             <h3><?php _e('Profile Details', 'cup_cp'); ?></h3>
             <p><?php _e("&lt;empty&gt; fields don't show on front end.", ''); ?></p>
@@ -107,7 +99,7 @@ class People_Contact_AddNew
 			</table>
 			<h3><?php _e('Contact Details', 'cup_cp'); ?></h3>
             <p><?php _e("&lt;empty&gt; fields don't show on front end.", ''); ?></p>
-			<table class="form-table" style="margin-bottom:0;">
+			<table class="form-table" style="margin-bottom:0;" width="100%">
 			  <tbody>
 				<tr valign="top">
 				  <th scope="row"><label for="c_email"><?php _e('Email', 'cup_cp') ?></label></th>
@@ -134,7 +126,13 @@ class People_Contact_AddNew
 				  <th scope="row"><label for="c_website"><?php _e('Website', 'cup_cp') ?></label></th>
 				  <td><input disabled="disabled" type="text" class="regular-text" value="http://" id="c_website" name="contact_arr[c_website]" /></td>
 				</tr>
-                </table>
+                <tr valign="top">
+				  <th scope="row"><label for="c_website"><?php _e('About', 'cup_cp') ?></label></th>
+				  <td class="forminp">
+                  	<?php wp_editor('', 'c_about', array('textarea_name' => 'contact_arr[c_about]', 'wpautop' => true, 'textarea_rows' => 8 ) ); ?>
+                  </td>
+				</tr>
+			</table>
             </fieldset>
             
             <h3><?php _e('Location Address', 'cup_cp'); ?></h3>
@@ -162,6 +160,7 @@ class People_Contact_AddNew
 		</style>
         <fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
             <h3><?php _e('3RD Party Contact Form Shortcode for this profile', 'cup_cp'); ?></h3>
+            <p><?php _e('Add a unique Contact Form for this profile. Enter the Contact Form 7 or Gravity Forms shortcode for that form. 3rd Party Contact Form must be activated in Setting > People Contact Forms.', 'cup_cp'); ?></p>
             <table class="form-table" style="margin-bottom:0;">
             <tr valign="top">
 				  <th scope="row"><label for="c_shortcode"><?php _e('Enter Form Shortcode', 'cup_cp') ?></label></th>
