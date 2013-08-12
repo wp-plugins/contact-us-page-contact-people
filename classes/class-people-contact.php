@@ -79,7 +79,7 @@ class People_Contact {
 			});
 			$("#c_submit").click(function (){
 				
-				var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+				var reg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 				var c_name = $("#c_name").val();
 				var c_subject = $("#c_subject").val();
 				var c_email = $("#c_email").val();
@@ -257,7 +257,7 @@ class People_Contact {
 							$value['c_latitude'] = $geodata->results[0]->geometry->location->lat;
 							$value['c_longitude'] = $geodata->results[0]->geometry->location->lng;	
 						}
-		echo $notes."['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$value['id'].",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."']";
+		echo $notes."['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$value['id'].",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."','".trim(esc_attr( stripslashes( $value['c_email'])))."']";
 						$notes = ',';
 					}
 				}
@@ -275,7 +275,8 @@ class People_Contact {
 					if (sites[9] != '') infotext += '<p><span class="p_icon_fax"><img src="<?php echo $fax_icon;?>" style="width:auto;height:auto" /></span> '+sites[9]+'</p>';
 					if (sites[10] != '') infotext += '<p><span class="p_icon_mobile"><img src="<?php echo $mobile_icon;?>" style="width:auto;height:auto" /></span> '+sites[10]+'</p>';
 					
-					infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email_map" target="_blank" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php _e('Click Here', 'cup_cp'); ?></a></p></div></div>';
+					if (sites[11] != '') infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email_map" target="_blank" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php _e('Click Here', 'cup_cp'); ?></a></p>';
+					infotext += '</div></div>';
 					var marker = new google.maps.Marker({
 						position: siteLatLng,
 						map: map,
@@ -293,24 +294,26 @@ class People_Contact {
 					current_object.find(".people-entry-item").mouseout(function(i){
 						infowindow.close();
 					});
-			
-					google.maps.event.addListener(marker, "click", function () {
-					var c_id = this.c_id;
-					var url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
-						jQuery.fancybox({
-							'maxWidth' : 450,
-							'maxHeight' : 546,
-							'width':'60%',
-							'height':'80%',
-							'fitToView'	: true,
-							'autoSize' : true,
-							'autoDimensions': true,
-							'type': 'ajax',
-							'content': url
-						});
-						
-						return false;
-					})
+					
+					if (sites[11] != '') {
+						google.maps.event.addListener(marker, "click", function () {
+						var c_id = this.c_id;
+						var url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
+							jQuery.fancybox({
+								'maxWidth' : 450,
+								'maxHeight' : 546,
+								'width':'60%',
+								'height':'80%',
+								'fitToView'	: true,
+								'autoSize' : true,
+								'autoDimensions': true,
+								'type': 'ajax',
+								'content': url
+							});
+							
+							return false;
+						})
+					}
 					
 					google.maps.event.addListener(marker, 'mouseout', function() {
 					   //infowindow.close();
@@ -449,10 +452,11 @@ class People_Contact {
 				$html .= '<p style="margin-bottom:5px;"><span class="p_icon_mobile"><img src="'.$mobile_icon.'" style="width:auto;height:auto" /></span> '. esc_attr( stripslashes($value['c_mobile'] ) ).'</p>';
 				}
 				
-				
+				if ( trim($value['c_email']) != '') {
 	
 					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email" href="'.$value['id'].'">'.__('Click Here', 'cup_cp').'</a></p>';
-					$html .= '</span>';
+				}
+				$html .= '</span>';
 				
 				$html .= '</div>';
 				$html .= '<div style="clear:both;"></div>';

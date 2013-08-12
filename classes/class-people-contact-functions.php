@@ -21,6 +21,7 @@ class People_Contact_Functions
 		People_Contact_Page_Settings_Panel::get_settings();
 		People_Contact_Page_Location_Map_Panel::get_settings();
 		People_Contact_Page_Contact_Forms_Panel::get_settings();
+		People_Contact_Popup_Style_Panel::get_settings();
 	
 		People_Contact_Grid_View_Layout_Panel::get_settings();
 		People_Contact_Grid_View_Style_Panel::get_settings();

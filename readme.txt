@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
-Tested up to: 3.5.2
-Stable tag: 1.0.3
+Tested up to: 3.6
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,14 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.4 - 2013/08/12 =  
+* Tweaks :
+	* Tested for full compatibility with WordPress v3.6.0
+* Fixes :
+	* Fixed email icon and click here link text no longer show on profile grid when no email address is entered for the profile.
+	* Fixed script validate email for default contact form. Old script conflicted with WordPress 3.6.0 jQuery 1.10.2. Conflict caused the popup tools to break. 
+	* Added box-sizing:content-box class attribute for compatibility with new WordPress Twenty Thirteen default theme.
+
 = 1.0.3 - 2013/07/10 =
 * Features :
 	* Added support for use of special characters in Profile Fields.
@@ -170,9 +178,11 @@ On WordPress  – with any theme.
 
 == Upgrade Notice ==
 
+= 1.0.4 =
+Update now for 100% compatibility with WordPress v3.6.0. Includes 3 bug fixes - 3 New 3RD Party Contact form features, 1 new Default Form feature.
+
 = 1.0.3 =
 Important Update! Major bug fix. Please upgrade to this version now to fix this and have support added for special characters, Cyrillic Symbols and Chinese Characters.
-
 
 = 1.0.1 =
 Update your plugin now for 3 Bug Fixes to initial release.

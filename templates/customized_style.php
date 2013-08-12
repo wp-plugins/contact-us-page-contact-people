@@ -1,4 +1,432 @@
 <style>
+@charset "UTF-8";
+/* CSS Document */
+
+/* LAYOUT */
+#people_contacts_container .people_box_content, .people_box_content{ width:100%;}
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{width:100%;}
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{margin-bottom:1.5em !important;}
+
+@media only screen and (min-width: 768px)  {
+	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{float:left !important;margin-right:2% !important;}
+	#people_contacts_container .people_box_content .people_item.masonry-brick, .people_box_content .people_item.masonry-brick{float:none !important;margin-right:auto !important;}
+	
+	.ie9 #people_contacts_container .people_box_content .people_item, .ie9 .people_box_content .people_item{float:left !important;margin-right:2% !important;}
+	.ie9 #people_contacts_container .people_box_content .people_item.masonry-brick, .ie9 .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
+	
+	#people_contacts_container .people_box_content.pcol1, .people_box_content.pcol1{ width:100%;}
+	#people_contacts_container .people_box_content.pcol1 .people_item, .people_box_content.pcol1 .people_item{width:100%;}
+	
+	#people_contacts_container .people_box_content.pcol2, .people_box_content.pcol2{width:102%;}
+	#people_contacts_container .people_box_content.pcol2 .people_item, .people_box_content.pcol2 .people_item{width:48%;}
+
+	#people_contacts_container .people_box_content.pcol3, .people_box_content.pcol3{width:102.3%;}
+	#people_contacts_container .people_box_content.pcol3 .people_item, .people_box_content.pcol3 .people_item{width:31%;}
+	
+	#people_contacts_container .people_box_content.pcol4, .people_box_content.pcol4{width:102%;}
+	#people_contacts_container .people_box_content.pcol4 .people_item, .people_box_content.pcol4 .people_item{width:23%;}
+
+	#people_contacts_container .people_box_content.pcol5, .people_box_content.pcol5{width:102%;}
+	#people_contacts_container .people_box_content.pcol5 .people_item, .people_box_content.pcol5 .people_item{width:18%;}
+	
+	#people_contacts_container .masonry, #people_contacts_container .masonry .masonry-brick {
+	  -webkit-transition-duration: 0.7s;
+		 -moz-transition-duration: 0.7s;
+		  -ms-transition-duration: 0.7s;
+		   -o-transition-duration: 0.7s;
+			  transition-duration: 0.7s;
+	}
+	
+	#people_contacts_container .masonry {
+	  -webkit-transition-property: height, width;
+		 -moz-transition-property: height, width;
+		  -ms-transition-property: height, width;
+		   -o-transition-property: height, width;
+			  transition-property: height, width;
+	}
+	
+	#people_contacts_container .masonry .masonry-brick {
+	  -webkit-transition-property: left, right, top;
+		 -moz-transition-property: left, right, top;
+		  -ms-transition-property: left, right, top;
+		   -o-transition-property: left, right, top;
+			  transition-property: left, right, top;
+	}
+	
+	/**** Transitions ****/
+
+	#people_contacts_container .transitions-enabled.masonry,
+	#people_contacts_container .transitions-enabled.masonry .masonry-brick {
+	  -webkit-transition-duration: 0.7s;
+		 -moz-transition-duration: 0.7s;
+		  -ms-transition-duration: 0.7s;
+		   -o-transition-duration: 0.7s;
+			  transition-duration: 0.7s;
+	}
+	
+	#people_contacts_container .transitions-enabled.masonry {
+	  -webkit-transition-property: height, width;
+		 -moz-transition-property: height, width;
+		  -ms-transition-property: height, width;
+		   -o-transition-property: height, width;
+			  transition-property: height, width;
+	}
+	
+	#people_contacts_container .transitions-enabled.masonry  .masonry-brick {
+	  -webkit-transition-property: left, right, top;
+		 -moz-transition-property: left, right, top;
+		  -ms-transition-property: left, right, top;
+		   -o-transition-property: left, right, top;
+			  transition-property: left, right, top;
+	}
+	
+	
+	/* disable transitions on container */
+	#people_contacts_container .infinite-scroll.masonry {
+	  -webkit-transition-property: none;
+		 -moz-transition-property: none;
+		  -ms-transition-property: none;
+		   -o-transition-property: none;
+			  transition-property: none;
+	}
+}
+
+/* PEOPLE ITEM */
+#people_contacts_container .people-entry-item, .people-entry-item{
+	border:1px solid #dbdbdb;
+	padding:5px;
+	-moz-box-shadow: 0 0 5px #dbdbdb !important;
+	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
+	box-shadow: 0 0 5px #dbdbdb !important;
+}
+#people_contacts_container .people-entry-item .p_content_left, .people-entry-item .p_content_left{width:29%;float:left;text-align:center;}
+#people_contacts_container .people-entry-item .p_content_left img, .people-entry-item .p_content_left img{
+	background:#FFF !important;
+	border:1px solid #dbdbdb;
+	padding:2px;
+	width:64px;
+	max-width:100% !important;
+	border-radius: 200px !important;
+	-moz-border-radius: 200px !important;
+	-webkit-border-radius: 200px !important;
+	-moz-box-shadow: 0 0 5px #dbdbdb !important;
+	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
+	box-shadow: 0 0 5px #dbdbdb !important;
+}
+#people_contacts_container .people-entry-item .p_content_right, .people-entry-item .p_content_right{width:67%;float:right;}
+#people_contacts_container .people-entry-item .p_item_title, .people-entry-item .p_item_title{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
+#people_contacts_container .people-entry-item .p_item_name, .people-entry-item .p_item_name{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
+#people_contacts_container .people-entry-item .p_content_right img, .people-entry-item .p_content_right img{
+	border:none !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-box-shadow: 0 0 0px #FFFFFF !important;
+	-webkit-box-shadow: 0 0 0px #FFFFFF !important;
+	box-shadow: 0 0 0px #FFFFFF !important;
+	background:none !important;
+	max-width:21px;
+	vertical-align: text-bottom;
+}
+#people_contacts_container .people-entry-item .p_icon_email img, .people-entry-item .p_icon_email img{vertical-align: sub !important;}
+#people_contacts_container .people-entry-item .p_content_right p, #people_contacts_container .people-entry-item .p_content_right a, .people-entry-item .p_content_right p, .people-entry-item .p_content_right a{font-size:12px;}
+#people_contacts_container .people-entry-item .p_title, .people-entry-item .p_title{margin:0 !important;}
+
+/* MAPS */
+body #people_contacts_container #map_canvas img{
+	background-color:transparent !important;max-width:100000em !important;max-height:100000em !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-box-shadow: 0 0 0px #FFFFFF !important;
+	-webkit-box-shadow: 0 0 0px #FFFFFF !important;
+	box-shadow: 0 0 0px #FFFFFF !important;
+}
+#people_contacts_container #map_canvas, #people_contacts_container #single_map_responsinator img {
+    border: 0 solid #E6E6E6 !important;
+    max-width: 1000000px !important;
+	background:none !important;
+}
+
+#people_contacts_container .infowindow p {
+    font-size: 12px !important;
+    line-height: 1em !important;
+    margin-bottom: 5px !important;
+}
+#people_contacts_container .infowindow {
+	width:300px;
+}
+#people_contacts_container .infowindow p {
+    margin:0em;
+}
+#people_contacts_container .infowindow .info_title{
+	font-weight:bold;font-size:13px;text-transform: uppercase;margin-bottom:0.5em;
+}
+#people_contacts_container .infowindow .info_title2{
+	font-weight:bold;font-size:12px;text-transform: uppercase;
+}
+#people_contacts_container .infowindow .info_avatar{
+	width:54px;float:left;margin-right:10px;margin-bottom:10px;clear:bottom;min-height:105px;
+}
+body #people_contacts_container #map_canvas .infowindow p img{
+	border:none !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-box-shadow: 0 0 0px #FFFFFF !important;
+	-webkit-box-shadow: 0 0 0px #FFFFFF !important;
+	box-shadow: 0 0 0px #FFFFFF !important;
+	background:none !important;
+	max-width:21px;
+	vertical-align: text-bottom;
+}
+body #people_contacts_container #map_canvas .infowindow .info_avatar{text-align:center;}
+body #people_contacts_container #map_canvas .infowindow .info_avatar img{
+	padding:2px;
+	width:46px;
+	max-width:80% !important;
+	border-radius: 200px !important;
+	-moz-border-radius: 200px !important;
+	-webkit-border-radius: 200px !important;
+	-moz-box-shadow: 0 0 5px #dbdbdb !important;
+	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
+	box-shadow: 0 0 5px #dbdbdb !important;
+}
+
+/* POPUP */
+.custom_contact_popup table tr td, .custom_contact_popup table tr th{padding:0 0 10px !important;}
+.custom_contact_popup .avatar img{
+	border:1px solid #dbdbdb;
+	padding:2px;
+	width:64px;
+	max-width:100% !important;
+	border-radius: 200px !important;
+	-moz-border-radius: 200px !important;
+	-webkit-border-radius: 200px !important;
+	-moz-box-shadow: 0 0 5px #dbdbdb !important;
+	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
+	box-shadow: 0 0 5px #dbdbdb !important;
+	
+	position: relative;
+	left:3px;
+}
+.custom_contact_popup .profile span{
+	font-size:18px;
+	font-weight:bold;
+	float:left;
+	width:100%;
+	margin-bottom:0.5em;
+	position:relative;
+	top:-2px;
+}
+.tip{margin-bottom:1em;font-size:13px;}
+
+.custom_contact_popup table tr.top_title td{padding:0 !important;vertical-align:top;}
+.custom_contact_popup table tr.top_title td h1.title {
+    font-size: 28px!important;
+    line-height: 28px!important;
+    margin-bottom: 5px!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 0 !important;
+    text-transform: uppercase;
+}
+.custom_contact_popup table tr.top_title td h3 {
+    font-size: 14px!important;
+    margin-bottom: 5px!important;
+    text-transform: uppercase!important;
+	line-height:1 !important;
+}
+.custom_contact_popup table tr.top_title td span {
+    font-size: 14px!important;
+    font-weight: normal!important;
+    line-height: 14px!important;
+    margin-bottom: 0!important;
+    text-transform: uppercase!important;
+}
+.custom_contact_popup table tr td label {
+    float: left;
+    font-size: 13px;
+    min-width: 120px;
+    position: relative;
+    top: 0px;
+}
+.custom_contact_popup table tr td input[type="text"], .custom_contact_popup table tr td textarea {
+	width:97.3% !important;
+}
+.custom_contact_popup tr td input.error, .custom_contact_popup tr td textarea.error{
+	border:1px solid #CC0000 !important;
+}
+.custom_contact_popup .thankyou{
+	color:green !important;
+	text-align:center;
+}
+.custom_contact_popup h2.error{
+	color:#CC0000 !important;
+	text-align:center;
+}
+.custom_contact_popup {
+    padding: 0 2px;
+    position: relative;
+}
+.custom_contact_popup .ajax-wait {
+    background: url("../images/ajax-loader2.gif") no-repeat scroll center center #FFF;
+    display: none;
+    height: 100%;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+	opacity:0.7;
+}
+body * .custom_contact_popup table tbody tr th, body * .custom_contact_popup table tbody tr td {
+    border: none !important;
+}
+body * .custom_contact_popup table{
+	border:none !important;
+	margin:0 !important;
+}
+.custom_contact_popup .gfield_required{color:#CC0000 !important;}
+@media only screen and (max-width: 767px)  {
+	.custom_contact_popup {margin:auto;float:none !important;}
+	#fancybox-content{width:100% !important;border:none !important;}
+	#fancybox-wrap{padding:0 !important;}
+}
+
+
+/* Contact Us Widget */
+/*Custom Contact*/
+.people_contact_widget .entry img, .people_contact_widget #map_canvas, #single_map_people_contact img {
+    border: 0 solid #E6E6E6 !important;
+    max-width: 1000000px !important;
+	background:none !important;
+}
+/*Form*/
+.people_contact_widget .inputError{
+	border-color:#cc0000;
+}
+.people_contact_widget ol.forms{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.people_contact_widget ol.forms li{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.people_contact_widget ol.forms li label, .people_contact_widget .gform_wrapper .top_label .gfield_label{
+	width:100%;
+	display:block;
+	font-weight:normal !important;
+	font-size:12px;
+}
+.people_contact_widget .gform_wrapper .gfield_required {
+    color: #CC0000 !important;
+    margin-left: 4px;
+}
+.people_contact_widget ol.forms li input[type="text"], .people_contact_widget ol.forms li textarea, .people_contact_widget .gform_wrapper input[type="text"], .people_contact_widget .gform_wrapper select, .people_contact_widget .gform_wrapper textarea, .people_contact_widget .gform_wrapper .top_label input.large, .people_contact_widget .gform_wrapper .top_label select.large, .people_contact_widget .gform_wrapper .top_label textarea.textarea{
+    display: block;
+    width: 95% !important;
+	padding:5px !important;
+}
+body .people_contact_widget .gform_wrapper .ginput_complex .ginput_right input[type="text"],body .people_contact_widget .gform_wrapper .ginput_complex .ginput_left input[type="text"]{ width: 88% !important;}
+
+.people_contact_widget ol.forms li input#sendCopy{margin-left:0;}
+.people_contact_widget ol.forms li span.error {
+    color: #CC0000;
+    font-size: 11px;
+    position: relative;
+    top: -1em;
+}
+.people_contact_widget span.require{color: #CC0000;}
+.people_contact_widget .entry_contact_content p{clear:both;}
+.people_contact_widget .gform_wrapper {
+    margin: 0;
+    max-width: 100% !important;
+    overflow: inherit;
+	width:100%;
+}
+.people_contact_widget .gform_wrapper .ginput_complex, .people_contact_widget .gform_wrapper .ginput_complex .ginput_left, .people_contact_widget .gform_wrapper .ginput_complex .ginput_right, .people_contact_widget .gform_wrapper .ginput_complex .ginput_full {
+    overflow: inherit !important;
+}
+
+.people_contact_widget .gform_wrapper .field_name_first input, .people_contact_widget .gform_wrapper .ginput_complex .ginput_left input {
+	 width: 88% !important;
+}
+.people_contact_widget .gform_wrapper .ginput_complex input, .people_contact_widget .gform_wrapper .ginput_complex select {
+    width: 91.2% !important;
+}
+.people_contact_widget .gform_wrapper .gform_footer {
+    clear: both;
+    margin: 0px 0 0;
+    padding: 0;
+}
+.people_contact_widget .gform_wrapper .gform_footer input{margin-bottom:0;}
+.people_contact_widget .gform_wrapper .gform_footer img.gform_ajax_spinner{top:-15px !important;position:relative;}
+
+.people_contact_widget .gform_wrapper li.gfield.gfield_error.gfield_contains_required {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+}
+
+.people_contact_widget .gform_wrapper .gform_body li.gfield.gfield_error, .people_contact_widget .gform_wrapper .gform_body li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning{
+    background-color: none !important;
+    border: 0px solid #C89797 !important;
+    margin-bottom: 0px !important;
+    padding: 0!important;
+	background:none !important;
+}
+.people_contact_widget .gform_wrapper .top_label .gfield_error {
+    width: 100% !important;
+}
+.people_contact_widget .gform_wrapper .ginput_container + .gfield_description.validation_message {
+    margin-top: 0px !important;
+}
+.people_contact_widget .gform_wrapper .top_label .gfield_description.validation_message, .people_contact_widget .gform_wrapper .gfield_description.validation_message {
+    color: #CC0000;
+    padding: 0 !important;
+    position: relative;
+    top: -10px;
+}
+.people_contact_widget .gform_wrapper .validation_error {
+    color: #cc0000;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 1.5em;
+    margin-bottom: 16px;
+}
+.people_contact_widget .gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label, .people_contact_widget .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
+    margin-top: 0 !important;
+	color:inherit !important;
+}
+
+.people_contact_widget .gform_wrapper .ginput_complex label, .people_contact_widget .gform_wrapper .gfield_time_hour label, .people_contact_widget .gform_wrapper .gfield_time_minute label, .people_contact_widget .gform_wrapper .gfield_date_month label, .people_contact_widget .gform_wrapper .gfield_date_day label, .people_contact_widget .gform_wrapper .gfield_date_year label, .people_contact_widget .gform_wrapper .instruction {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.5pt;
+    margin: 3px 0;
+    position: relative;
+    top: -5px !important;
+}
+.people_contact_widget .gform_wrapper li.gfield_error input[type="text"],.people_contact_widget .gform_wrapper li.gfield_error textarea{border-color:#cc0000;}
+.people_contact_widget #office-location,.content_before_maps,.content_after_maps,#single_map_people_contact{margin-bottom:10px;}
+.people_contact_widget #office-location ul li span{margin-right:3px;}
+.people_contact_widget #office-location ul li span img{
+	vertical-align:middle;
+	background-color:transparent !important;max-width:100000em !important;max-height:100000em !important;
+	border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	-webkit-border-radius: 0px !important;
+	-moz-box-shadow: 0 0 0px #FFFFFF !important;
+	-webkit-box-shadow: 0 0 0px #FFFFFF !important;
+	box-shadow: 0 0 0px #FFFFFF !important;
+}
+.people_widget_shortcode{margin-bottom:10px;}
+.people_contact_widget form input[type="submit"],.people_contact_widget form input[type="button"]{margin-top:10px;}
+
 <?php
 global $people_contact_grid_view_style;
 ?>
@@ -25,5 +453,17 @@ if($people_contact_grid_view_style['grid_view_item_shadow'] == 1){
 <?php
 }
 ?>
+}
+
+/* Email Inquiry Form Style */
+.custom_contact_popup * {
+	box-sizing:content-box !important;
+	-moz-box-sizing:content-box !important;
+	-webkit-box-sizing:content-box !important;	
+}
+.custom_contact_popup h1 {
+	clear:none !important;
+	margin-top:0px !important;
+	margin-bottom:5px !important;
 }
 </style>

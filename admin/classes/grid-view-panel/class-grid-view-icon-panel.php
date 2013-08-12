@@ -19,7 +19,9 @@ class People_Contact_Grid_View_Icon_Panel
 			'grid_view_icon_fax'							=> PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png',
 			'grid_view_icon_mobile'							=> PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png',
 			'grid_view_icon_email'							=> PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png',
+			'grid_view_email_text'							=> __('Click Here', 'cup_cp'),
 			'grid_view_icon_website'						=> PEOPLE_CONTACT_IMAGE_URL.'/p_icon_website.png',
+			'grid_view_website_text'						=> __('Visit Website', 'cup_cp'),
 		);
 		
 		return $default_settings;
@@ -97,9 +99,21 @@ class People_Contact_Grid_View_Icon_Panel
                   </td>
 			</tr>
             <tr valign="top">
+				  <th scope="row"><label for="grid_view_email_text"><?php _e("Email Link Text", 'cup_cp'); ?></label></th>
+				  <td>
+                  <input disabled="disabled" type="text" id="grid_view_email_text" name="<?php echo $option_name; ?>[grid_view_email_text]" value="<?php echo $grid_view_email_text;?>" style="width:300px" /> <span class="description"><?php _e('Set hyperlink text that shows to the right of the Email icon.', 'cup_cp'); ?> <?php _e('Default', 'cup_cp'); ?> '<code><?php echo $default_settings['grid_view_email_text'] ?></code>'</span>
+                  </td>
+			</tr>
+            <tr valign="top">
 				  <th scope="row"><label for="grid_view_icon_website"><?php _e("Website icon", 'cup_cp'); ?></label></th>
 				  <td>
                   <?php echo People_Contact_Uploader::upload_input_fields( $option_name, 'grid_view_icon_website', __('Icon Website', 'cup_cp'), $grid_view_icon_website, '', '236px' ); ?>
+                  </td>
+			</tr>
+            <tr valign="top">
+				  <th scope="row"><label for="grid_view_website_text"><?php _e("Website Link Text", 'cup_cp'); ?></label></th>
+				  <td>
+                  <input disabled="disabled" type="text" id="grid_view_website_text" name="<?php echo $option_name; ?>[grid_view_website_text]" value="<?php echo $grid_view_website_text;?>" style="width:300px" /> <span class="description"><?php _e('Set hyperlink text that shows to the right of the Website icon.', 'cup_cp'); ?> <?php _e('Default', 'cup_cp'); ?> '<code><?php echo $default_settings['grid_view_website_text'] ?></code>'</span>
                   </td>
 			</tr>
 		</table>

@@ -195,7 +195,6 @@ body #people_contacts_container #map_canvas .infowindow .info_avatar img{
 /* POPUP */
 .custom_contact_popup table tr td, .custom_contact_popup table tr th{padding:0 0 10px !important;}
 .custom_contact_popup .avatar img{
-	background:#FFF !important;
 	border:1px solid #dbdbdb;
 	padding:2px;
 	width:64px;
@@ -211,7 +210,6 @@ body #people_contacts_container #map_canvas .infowindow .info_avatar img{
 	left:3px;
 }
 .custom_contact_popup .profile span{
-	font-family:Droid Sans, sans-serif;
 	font-size:18px;
 	font-weight:bold;
 	float:left;
@@ -291,7 +289,7 @@ body * .custom_contact_popup table{
 }
 .custom_contact_popup .gfield_required{color:#CC0000 !important;}
 @media only screen and (max-width: 767px)  {
-	.custom_contact_popup {max-width:90%;margin:auto;float:none !important;}
+	.custom_contact_popup {margin:auto;float:none !important;}
 	#fancybox-content{width:100% !important;border:none !important;}
 	#fancybox-wrap{padding:0 !important;}
 }

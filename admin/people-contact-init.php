@@ -3,13 +3,14 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_version', '1.0.3');
+	update_option('a3rev_wp_people_contact_version', '1.0.4');
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
 	People_Contact_Profile_Data::install_database();
 	People_Contact_Page_Settings_Panel::set_settings_default();
 	People_Contact_Page_Location_Map_Panel::set_settings_default();
 	People_Contact_Page_Contact_Forms_Panel::set_settings_default();
+	People_Contact_Popup_Style_Panel::set_settings_default();
 	People_Contact_Grid_View_Layout_Panel::set_settings_default();
 	People_Contact_Grid_View_Style_Panel::set_settings_default();
 	People_Contact_Grid_View_Icon_Panel::set_settings_default();
@@ -54,7 +55,7 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 	add_action( 'admin_menu', array( 'People_Contact_Hook_Filter', 'register_admin_screen' ),12 );
 		
 	// Include style into header
-	add_action('get_header', array('People_Contact_Hook_Filter', 'add_style_header') );
+	//add_action('get_header', array('People_Contact_Hook_Filter', 'add_style_header') );
 	
 	// Add Custom style on frontend
 	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'include_customized_style'), 11);
@@ -85,5 +86,5 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		update_option('a3rev_wp_people_contact_version', '1.0.3');
 	}
 	
-	update_option('a3rev_wp_people_contact_version', '1.0.3');
+	update_option('a3rev_wp_people_contact_version', '1.0.4');
 ?>

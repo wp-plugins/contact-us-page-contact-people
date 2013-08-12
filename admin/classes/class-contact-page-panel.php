@@ -26,7 +26,8 @@ class People_Contact_Page_Panel
         	<ul class="subsubsub">
             	<li><a href="#contact-page-settings" class="current"><?php _e('Settings', 'cup_cp'); ?></a> | </li>
                 <li><a href="#contact-page-location-map"><?php _e('Location Map', 'cup_cp'); ?></a> | </li>
-                <li><a href="#contact-page-contact-forms"><?php _e('People Contact Forms', 'cup_cp'); ?></a></li>
+                <li><a href="#contact-page-contact-forms"><?php _e('People Contact Forms', 'cup_cp'); ?></a> | </li>
+                <li><a href="#contact-popup-style"><?php _e('Contact Pop-Up Style', 'cup_cp'); ?></a></li>
 			</ul>
             <br class="clear">
             
@@ -39,6 +40,11 @@ class People_Contact_Page_Panel
             <div class="section" id="contact-page-contact-forms">
             	<div class="pro_feature_fields">
             	<?php People_Contact_Page_Contact_Forms_Panel::panel_page(); ?>
+                </div>
+            </div>
+            <div class="section" id="contact-popup-style">
+            	<div class="pro_feature_fields">
+            	<?php People_Contact_Popup_Style_Panel::panel_page(); ?>
                 </div>
             </div>
 		</div>

@@ -18,6 +18,8 @@ class People_Contact_Page_Contact_Forms_Panel {
 			'send_copy'								=> 'no',
 			'contact_form_type_other'				=> 0,
 			'contact_form_type_shortcode'			=> '',
+			
+			'contact_form_3rd_open_type'			=> 'new_page',
 		);
 		
 		return $default_settings;
@@ -102,6 +104,13 @@ class People_Contact_Page_Contact_Forms_Panel {
 		    	<td class="forminp">    
                     <input disabled="disabled" type="text" id="contact_form_type_shortcode" class="map_option" name="<?php echo $option_name; ?>[contact_form_type_shortcode]" value='' style="width:300px" /> <span class="description"><?php _e('Enter Shortcode from Gavity Forms or Contact Form 7', 'cup_cp');?></span>
 				</td>
+			</tr>
+            <tr valign="top">
+				<th class="titledesc" scope="rpw"><label><?php _e('Custom Form Open Options', 'cup_cp'); ?></label></th>
+				<td class="forminp">
+                	<label><input disabled="disabled" type="radio" name="<?php echo $option_name; ?>[contact_form_3rd_open_type]" value="new_page" checked="checked" /> <?php _e('Open contact form on new page', 'cup_cp'); ?> - <?php _e('new window', 'cup_cp'); ?>. <span class="description">(<?php _e('Default', 'cup_cp');?>)</span></label><br />
+                    <label><input disabled="disabled" type="radio" name="<?php echo $option_name; ?>[contact_form_3rd_open_type]" value="new_page_same_window" /> <?php _e('Open contact form on new page', 'cup_cp'); ?> - <?php _e('same window', 'cup_cp'); ?>.</label><br />
+                    <label><input disabled="disabled" type="radio" name="<?php echo $option_name; ?>[contact_form_3rd_open_type]" value="popup" /> <?php _e('Open contact form by Pop-up', 'cup_cp'); ?>.</label>
 			</tr>
 		</table>
         <h3><?php _e('People Contact Form Page', 'cup_cp'); ?></h3>

@@ -14,7 +14,7 @@ class People_Contact_Grid_View_Layout_Panel
 {
 	public static function get_settings_default() {
 		$default_settings = array(
-			'grid_view_team_title'							=> 'Team Contacts',
+			'grid_view_team_title'					=> 'Team Contacts',
 			'grid_view_col'							=> 2,
 		);
 		
