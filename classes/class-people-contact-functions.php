@@ -25,6 +25,7 @@ class People_Contact_Functions
 	
 		People_Contact_Grid_View_Layout_Panel::get_settings();
 		People_Contact_Grid_View_Style_Panel::get_settings();
+		People_Contact_Grid_View_Image_Style_Panel::get_settings();
 		People_Contact_Grid_View_Icon_Panel::get_settings();
 		
 		People_Contact_Widget_Settings_Panel::get_settings();

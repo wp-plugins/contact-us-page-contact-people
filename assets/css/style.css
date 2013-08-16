@@ -2,16 +2,20 @@
 /* CSS Document */
 
 /* LAYOUT */
+#people_contacts_container .people_box_content *, .people_box_content * {
+	box-sizing:content-box !important;
+	-moz-box-sizing:content-box !important;
+	-webkit-box-sizing:content-box !important;
+}
 #people_contacts_container .people_box_content, .people_box_content{ width:100%;}
-#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{width:100%;}
 #people_contacts_container .people_box_content .people_item, .people_box_content .people_item{margin-bottom:1.5em !important;}
 
 @media only screen and (min-width: 768px)  {
 	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{float:left !important;margin-right:2% !important;}
 	#people_contacts_container .people_box_content .people_item.masonry-brick, .people_box_content .people_item.masonry-brick{float:none !important;margin-right:auto !important;}
 	
-	.ie9 #people_contacts_container .people_box_content .people_item, .ie9 .people_box_content .people_item{float:left !important;margin-right:2% !important;}
-	.ie9 #people_contacts_container .people_box_content .people_item.masonry-brick, .ie9 .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
+	.ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item{float:left !important;margin-right:2% !important;}
+	.ie #people_contacts_container .people_box_content .people_item.masonry-brick, .ie .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
 	
 	#people_contacts_container .people_box_content.pcol1, .people_box_content.pcol1{ width:100%;}
 	#people_contacts_container .people_box_content.pcol1 .people_item, .people_box_content.pcol1 .people_item{width:100%;}
@@ -111,6 +115,10 @@
 	-moz-box-shadow: 0 0 5px #dbdbdb !important;
 	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
 	box-shadow: 0 0 5px #dbdbdb !important;
+	
+	box-sizing:border-box !important;
+	-moz-box-sizing:border-box !important;
+	-webkit-box-sizing:border-box !important;
 }
 #people_contacts_container .people-entry-item .p_content_right, .people-entry-item .p_content_right{width:67%;float:right;}
 #people_contacts_container .people-entry-item .p_item_title, .people-entry-item .p_item_title{margin:0 0 10px !important;padding:0 !important;line-height:1em !important;}
@@ -183,13 +191,17 @@ body #people_contacts_container #map_canvas .infowindow .info_avatar{text-align:
 body #people_contacts_container #map_canvas .infowindow .info_avatar img{
 	padding:2px;
 	width:46px;
-	max-width:80% !important;
+	max-width:100% !important;
 	border-radius: 200px !important;
 	-moz-border-radius: 200px !important;
 	-webkit-border-radius: 200px !important;
 	-moz-box-shadow: 0 0 5px #dbdbdb !important;
 	-webkit-box-shadow: 0 0 5px #dbdbdb !important;
 	box-shadow: 0 0 5px #dbdbdb !important;
+	
+	box-sizing:border-box !important;
+	-moz-box-sizing:border-box !important;
+	-webkit-box-sizing:border-box !important;
 }
 
 /* POPUP */
@@ -208,6 +220,10 @@ body #people_contacts_container #map_canvas .infowindow .info_avatar img{
 	
 	position: relative;
 	left:3px;
+	
+	box-sizing:border-box !important;
+	-moz-box-sizing:border-box !important;
+	-webkit-box-sizing:border-box !important;
 }
 .custom_contact_popup .profile span{
 	font-size:18px;
@@ -292,6 +308,16 @@ body * .custom_contact_popup table{
 	.custom_contact_popup {margin:auto;float:none !important;}
 	#fancybox-content{width:100% !important;border:none !important;}
 	#fancybox-wrap{padding:0 !important;}
+	
+	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{
+		width:100% !important;
+		margin-left:0 !important;
+		margin-right:0 !important;
+	}
+	
+	.ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item{
+		width:100% !important;
+	}
 }
 
 

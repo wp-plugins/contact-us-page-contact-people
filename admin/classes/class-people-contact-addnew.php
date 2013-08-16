@@ -92,7 +92,7 @@ class People_Contact_AddNew
 				<tr valign="top">
 				  <th scope="row"><label for="c_avatar"><?php _e('Profile Image', 'cup_cp') ?></label></th>
 				  <td>
-                  <?php echo People_Contact_Uploader::upload_input_fields('contact_arr', 'c_avatar', __('Profile Image', 'cup_cp'), $data['c_avatar'], '<div class="description">'.__("Image format .jpg, .png, 150px by 150px recommended size.", 'cup_cp').'</div>', '236px' ); ?>
+                  <?php echo People_Contact_Uploader::upload_input_fields('contact_arr', 'c_avatar', __('Profile Image', 'cup_cp'), $data['c_avatar'], '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>', '236px' ); ?>
                   </td>
 				</tr>
         	  </tbody>

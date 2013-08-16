@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,12 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.5 - 2013/08/16 =
+* Tweaks :
+	* Updated admin panel help text to reflect the new Profile Grid View layout and Profile image style features available in Pro version. 
+* Fixes :
+	* Grid View always displays 1 column - 100% wide in IE7 and IE8. Made required custom .CSS stylesheet tweaks just so dear old IE can render modern responsive styles.
+
 = 1.0.4 - 2013/08/12 =  
 * Tweaks :
 	* Tested for full compatibility with WordPress v3.6.0
@@ -177,6 +183,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.5 =
+Update now for render in IE7, IE8 bug fix. 
 
 = 1.0.4 =
 Update now for 100% compatibility with WordPress v3.6.0. Includes 3 bug fixes - 3 New 3RD Party Contact form features, 1 new Default Form feature.

@@ -2,7 +2,7 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.0.4
+Version: 1.0.5
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.3
@@ -45,6 +45,7 @@ include('uploader/class-uploader.php');
 
 include('admin/classes/grid-view-panel/class-grid-view-layout-panel.php');
 include('admin/classes/grid-view-panel/class-grid-view-style-panel.php');
+include('admin/classes/grid-view-panel/class-grid-view-image-style-panel.php');
 include('admin/classes/grid-view-panel/class-grid-view-icon-panel.php');
 include('admin/classes/class-grid-view-panel.php');
 

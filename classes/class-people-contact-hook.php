@@ -60,7 +60,9 @@ class People_Contact_Hook_Filter
     <?php	
 	}
 	
-	public static function browser_body_class( $classes = '') {
+	public static function browser_body_class( $classes, $class = '' ) {
+		if ( !is_array($classes) ) $classes = array();
+		
 		global $is_lynx, $is_gecko, $is_IE, $is_opera, $is_NS4, $is_safari, $is_chrome, $is_iphone;
  
 		if($is_lynx) $classes[] = 'lynx';

@@ -61,7 +61,7 @@ class People_Contact_Grid_View_Icon_Panel
 				
 		?>
         <h3><?php _e('Upload Custom Default Profile Image', 'cup_cp'); ?></h3>
-        <p><?php _e("Upload custom 'No Image' image, .jpg or.png format, 150px by 150px recommended size.", 'cup_cp'); ?></p>
+        <p><?php _e("Upload custom 'No Image' image, .jpg or.png format.", 'cup_cp'); ?></p>
 		<table class="form-table">
         	<tr valign="top">
 				  <th scope="row"><label for="default_profile_image"><?php _e("Default Profile Image", 'cup_cp'); ?></label></th>

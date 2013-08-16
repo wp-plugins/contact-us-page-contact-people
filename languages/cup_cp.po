@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: A3 Projects PRO\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-12 11:19+0700\n"
-"PO-Revision-Date: 2013-08-12 11:19+0700\n"
+"POT-Creation-Date: 2013-08-16 12:51+0700\n"
+"PO-Revision-Date: 2013-08-16 12:51+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -45,13 +45,13 @@ msgstr ""
 
 #: admin/classes/class-contact-page-panel.php:55
 #: admin/classes/class-contact-widget-panel.php:50
-#: admin/classes/class-grid-view-panel.php:51
+#: admin/classes/class-grid-view-panel.php:57
 msgid "Save changes"
 msgstr ""
 
 #: admin/classes/class-contact-page-panel.php:56
 #: admin/classes/class-contact-widget-panel.php:51
-#: admin/classes/class-grid-view-panel.php:52
+#: admin/classes/class-grid-view-panel.php:58
 msgid "Reset Settings"
 msgstr ""
 
@@ -85,7 +85,7 @@ msgid "Grid View Settings Successfully reseted."
 msgstr ""
 
 #: admin/classes/class-grid-view-panel.php:27
-msgid "People Grid Layout"
+msgid "Profile Grid Layout"
 msgstr ""
 
 #: admin/classes/class-grid-view-panel.php:28
@@ -93,6 +93,10 @@ msgid "Grid View Styles"
 msgstr ""
 
 #: admin/classes/class-grid-view-panel.php:29
+msgid "Profile Image Style"
+msgstr ""
+
+#: admin/classes/class-grid-view-panel.php:30
 msgid "Grid View Contact Icons"
 msgstr ""
 
@@ -140,7 +144,7 @@ msgid "Profile Image"
 msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:95
-msgid "Image format .jpg, .png, 150px by 150px recommended size."
+msgid "Image format .jpg, .png"
 msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:100
@@ -663,7 +667,7 @@ msgid "Upload Custom Default Profile Image"
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:64
-msgid "Upload custom 'No Image' image, .jpg or.png format, 150px by 150px recommended size."
+msgid "Upload custom 'No Image' image, .jpg or.png format."
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:67
@@ -735,20 +739,133 @@ msgstr ""
 msgid "Set hyperlink text that shows to the right of the Website icon."
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:80
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:67
+msgid "Presentation Style"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:70
+msgid "Rounded Border"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:71
+msgid "Square Border"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:72
+msgid "Flat Image"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:78
+msgid "Custom Styling"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:81
+msgid "Image Background Colour"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:83
+msgid "Shows in Image Padding area or if image is transparent. Default"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:88
+msgid "Image Padding"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:90
+msgid "Overall size of image reduced by the size of padding set here."
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:95
+msgid "Image Border weight"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:113
+msgid "Image Border style"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:132
+msgid "Image Border colour"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:140
+#: admin/classes/grid-view-panel/class-grid-view-style-panel.php:156
+msgid "Enable/Disable Shadow"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:142
+msgid "Check to enable Image shadow effect."
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-image-style-panel.php:147
+msgid "Image shadow colour"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:17
+msgid "Team Contacts"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:90
 msgid "Grid View Layout"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:83
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:93
 msgid "Grid View Title"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:89
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:99
 msgid "Grid View Column"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:93
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:103
 msgid "column"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:113
+msgid "Profile Image Position"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:115
+msgid "Image Top - Content Bottom"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:116
+msgid "Image Left - Content Right"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:117
+msgid "Content Left - Image Right"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:121
+msgid "Thumbnail Image Wide"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:131
+msgid "Fix Image Height"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:133
+msgid "Check to activate. Wide of image auto scaled to original proportion of tall."
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:137
+msgid "Image Fixed Height in Grid View"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:139
+msgid "Max height of image. Example set 200px and will fix image container at 200px with image aligned to the top. Default"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:143
+msgid "Show Profile Title Position"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:146
+msgid "Above the image"
+msgstr ""
+
+#: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:147
+msgid "Below the image"
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-style-panel.php:66
@@ -791,10 +908,6 @@ msgstr ""
 msgid "Create rounded corner style, Square is Default"
 msgstr ""
 
-#: admin/classes/grid-view-panel/class-grid-view-style-panel.php:156
-msgid "Enable/Disable Shadow"
-msgstr ""
-
 #: admin/classes/grid-view-panel/class-grid-view-style-panel.php:158
 msgid "Check to enable Grid View shadow effect."
 msgstr ""
@@ -803,244 +916,244 @@ msgstr ""
 msgid "Grid View shadow colour"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:40
-#: classes/class-people-contact-functions.php:116
+#: classes/class-people-contact-functions.php:41
+#: classes/class-people-contact-functions.php:117
 msgid "Thanks for your contact - we'll be in touch with you as soon as possible!"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:54
-#: classes/class-people-contact-functions.php:148
+#: classes/class-people-contact-functions.php:55
+#: classes/class-people-contact-functions.php:149
 msgid "[Copy]:"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:62
+#: classes/class-people-contact-functions.php:63
 msgid "Profile Name"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:68
+#: classes/class-people-contact-functions.php:69
 msgid "Contact Name"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:74
+#: classes/class-people-contact-functions.php:75
 msgid "Contact Email Address"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:80
+#: classes/class-people-contact-functions.php:81
 msgid "Contact Phone"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:85
-#: classes/class-people-contact-functions.php:168
+#: classes/class-people-contact-functions.php:86
+#: classes/class-people-contact-functions.php:169
 #: classes/class-people-contact.php:152
 #: widgets/class-people-contact-widgets.php:404
 msgid "Message"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:162
+#: classes/class-people-contact-functions.php:163
 msgid "Email Address"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:226
+#: classes/class-people-contact-functions.php:227
 msgid "Arial"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:227
+#: classes/class-people-contact-functions.php:228
 msgid "Verdana"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:228
+#: classes/class-people-contact-functions.php:229
 msgid "Trebuchet"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:229
+#: classes/class-people-contact-functions.php:230
 msgid "Georgia"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:230
+#: classes/class-people-contact-functions.php:231
 msgid "Times New Roman"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:231
+#: classes/class-people-contact-functions.php:232
 msgid "Tahoma"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:232
+#: classes/class-people-contact-functions.php:233
 msgid "Palatino"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:233
+#: classes/class-people-contact-functions.php:234
 msgid "Helvetica*"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:234
+#: classes/class-people-contact-functions.php:235
 msgid "Calibri*"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:235
+#: classes/class-people-contact-functions.php:236
 msgid "Myriad Pro*"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:236
+#: classes/class-people-contact-functions.php:237
 msgid "Lucida"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:237
+#: classes/class-people-contact-functions.php:238
 msgid "Arial Black"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:238
+#: classes/class-people-contact-functions.php:239
 msgid "Gill Sans*"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:239
+#: classes/class-people-contact-functions.php:240
 msgid "Geneva*"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:240
+#: classes/class-people-contact-functions.php:241
 msgid "Impact"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:241
+#: classes/class-people-contact-functions.php:242
 msgid "Courier"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:242
+#: classes/class-people-contact-functions.php:243
 msgid "Century Gothic"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:279
+#: classes/class-people-contact-functions.php:280
 msgid "Contact Page Widgets area."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:291
+#: classes/class-people-contact-functions.php:292
 msgid "Upgrade available for Extra Functionality"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:292
+#: classes/class-people-contact-functions.php:293
 msgid "<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:293
+#: classes/class-people-contact-functions.php:294
 msgid "Contact Us Page - Contact People Pro"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:293
+#: classes/class-people-contact-functions.php:294
 msgid "Features"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:296
+#: classes/class-people-contact-functions.php:297
 msgid "Full profile contact integration with Contact Form 7 plugin."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:297
+#: classes/class-people-contact-functions.php:298
 msgid "Full profile contact integration with Gravity Forms plugin."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:298
+#: classes/class-people-contact-functions.php:299
 msgid "Create a global (applies to all) contact form for profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:299
+#: classes/class-people-contact-functions.php:300
 msgid "Add unique contact forms for individual profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:300
+#: classes/class-people-contact-functions.php:301
 msgid "WYSIWYG editor for styling profile contact grid view."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:301
+#: classes/class-people-contact-functions.php:302
 msgid "Upload custom icons - 'No Image' and contact icons."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:302
+#: classes/class-people-contact-functions.php:303
 msgid "People Contact Profile Shortcode feature."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:303
+#: classes/class-people-contact-functions.php:304
 msgid "Insert Contact Profile Grids to WordPress pages or posts."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:304
+#: classes/class-people-contact-functions.php:305
 msgid "Insert multiple Contact Profiles via shortcodes."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:308
 msgid "View Pro Version"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:308
 msgid "Live Demo"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:308
+#: classes/class-people-contact-functions.php:309
 msgid "View this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:308
+#: classes/class-people-contact-functions.php:309
 msgid "documentation"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:309
+#: classes/class-people-contact-functions.php:310
 msgid "Visit this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:309
+#: classes/class-people-contact-functions.php:310
 msgid "support forum"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:310
+#: classes/class-people-contact-functions.php:311
 msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:313
+#: classes/class-people-contact-functions.php:314
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:314
+#: classes/class-people-contact-functions.php:315
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:317
+#: classes/class-people-contact-functions.php:318
 msgid "Help spread the Word about this plugin"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:318
+#: classes/class-people-contact-functions.php:319
 msgid "Things you can do to help others find this plugin"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:320
+#: classes/class-people-contact-functions.php:321
 msgid "Rate this plugin 5"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:320
+#: classes/class-people-contact-functions.php:321
 msgid "on WordPress.org"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:321
+#: classes/class-people-contact-functions.php:322
 msgid "Mark the plugin as a fourite"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:322
+#: classes/class-people-contact-functions.php:323
 msgid "Follow a3rev on facebook"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:323
+#: classes/class-people-contact-functions.php:324
 msgid "Follow a3rev on Twitter"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:332
+#: classes/class-people-contact-functions.php:333
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:332
+#: classes/class-people-contact-functions.php:333
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:200
+#: classes/class-people-contact-hook.php:202
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:201
+#: classes/class-people-contact-hook.php:203
 msgid "Support"
 msgstr ""
 
