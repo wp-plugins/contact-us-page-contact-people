@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,14 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.6 - 2013/08/22 =
+* Features :
+	* Added new @media beak points for a superior Grid View display in mobile phone and tablet when viewing in portrait or landscape.
+* Fixes :
+	* Grid View Responsive style not rendering true in IE8 on some themes. 
+	* Changed add_action( 'wp_head', array to add_action( 'get_header', array
+	* Moved respond-ie.js script so that it loads from the header instead of the footer
+
 = 1.0.5 - 2013/08/16 =
 * Tweaks :
 	* Updated admin panel help text to reflect the new Profile Grid View layout and Profile image style features available in Pro version. 
@@ -183,6 +191,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.6 =
+Recommended Upgrade. New improved Mobile and Tablet display and 1 IE7 and IE8 render bug fix. 
 
 = 1.0.5 =
 Update now for render in IE7, IE8 bug fix. 

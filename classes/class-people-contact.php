@@ -358,8 +358,6 @@ class People_Contact {
 		</script>
     	<?php
 		wp_enqueue_script( 'jquery-masonry', PEOPLE_CONTACT_JS_URL.'/masonry/jquery.masonry.min.js');
-		global $is_IE;
-		if($is_IE){ wp_enqueue_script( 'respondjs', PEOPLE_CONTACT_JS_URL . '/respond-ie.js' ); }
 		
 		wp_register_script( 'jquery_modernizr', PEOPLE_CONTACT_JS_URL.'/masonry/modernizr-transitions.js');
     	wp_enqueue_script( 'jquery_modernizr' );
@@ -368,6 +366,9 @@ class People_Contact {
         jQuery(window).load(function(){
 			var grid_view_col = <?php echo $grid_view_col;?>;
 			var screen_width = jQuery('body').width(); 
+			if(screen_width <= 750 && screen_width >= 481 ){
+				grid_view_col = 2;
+			}
 			jQuery('.people_box_content').imagesLoaded(function(){
 				jQuery(this).masonry({
 					itemSelector: '.people_item',
@@ -379,6 +380,9 @@ class People_Contact {
 		jQuery(window).resize(function() {
 			var grid_view_col = <?php echo $grid_view_col;?>;
 			var screen_width = jQuery('body').width(); 
+			if(screen_width <= 750 && screen_width >= 481 ){
+				grid_view_col = 2;
+			}
 			jQuery('.people_box_content').imagesLoaded(function(){
 				jQuery(this).masonry({
 					itemSelector: '.people_item',

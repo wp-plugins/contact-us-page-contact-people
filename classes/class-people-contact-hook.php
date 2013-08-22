@@ -97,6 +97,11 @@ class People_Contact_Hook_Filter
 
 	}
 	
+	public static function frontend_header_scripts() {
+		global $is_IE;
+		if($is_IE){ wp_enqueue_script( 'respondjs', PEOPLE_CONTACT_JS_URL . '/respond-ie.js' ); }	
+	}
+	
 	public static function contact_manager_load_only_script(){
 		wp_enqueue_script('jquery-ui-sortable');
 	}

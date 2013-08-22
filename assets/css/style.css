@@ -7,30 +7,49 @@
 	-moz-box-sizing:content-box !important;
 	-webkit-box-sizing:content-box !important;
 }
-#people_contacts_container .people_box_content, .people_box_content{ width:100%;}
-#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{margin-bottom:1.5em !important;}
-
+#people_contacts_container .people_box_content, .people_box_content {
+	width:100%;
+}
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item {
+	margin-bottom:1.5em !important;
+	float:left;
+}
+#people_contacts_container .people_box_content.pcol1, .people_box_content.pcol1 {
+	width:100% !important;
+}
+#people_contacts_container .people_box_content.pcol1 .people_item, .people_box_content.pcol1 .people_item {
+	width:100%;
+}
+#people_contacts_container .people_box_content.pcol2, .people_box_content.pcol2 {
+	width:102% !important;
+}
+#people_contacts_container .people_box_content.pcol2 .people_item, .people_box_content.pcol2 .people_item {
+	width:48%;
+}
+#people_contacts_container .people_box_content.pcol3, .people_box_content.pcol3 {
+	width:102.3% !important;
+}
+#people_contacts_container .people_box_content.pcol3 .people_item, .people_box_content.pcol3 .people_item {
+	width:31%;
+}
+#people_contacts_container .people_box_content.pcol4, .people_box_content.pcol4 {
+	width:102% !important;
+}
+#people_contacts_container .people_box_content.pcol4 .people_item, .people_box_content.pcol4 .people_item {
+	width:23%;
+}
+#people_contacts_container .people_box_content.pcol5, .people_box_content.pcol5 {
+	width:102% !important;
+}
+#people_contacts_container .people_box_content.pcol5 .people_item, .people_box_content.pcol5 .people_item {
+	width:18%;
+}
 @media only screen and (min-width: 768px)  {
 	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{float:left !important;margin-right:2% !important;}
 	#people_contacts_container .people_box_content .people_item.masonry-brick, .people_box_content .people_item.masonry-brick{float:none !important;margin-right:auto !important;}
 	
 	.ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item{float:left !important;margin-right:2% !important;}
 	.ie #people_contacts_container .people_box_content .people_item.masonry-brick, .ie .people_box_content .people_item.masonry-brick{float:none !important;margin-right:0 !important;margin-left:0 !important;}
-	
-	#people_contacts_container .people_box_content.pcol1, .people_box_content.pcol1{ width:100%;}
-	#people_contacts_container .people_box_content.pcol1 .people_item, .people_box_content.pcol1 .people_item{width:100%;}
-	
-	#people_contacts_container .people_box_content.pcol2, .people_box_content.pcol2{width:102%;}
-	#people_contacts_container .people_box_content.pcol2 .people_item, .people_box_content.pcol2 .people_item{width:48%;}
-
-	#people_contacts_container .people_box_content.pcol3, .people_box_content.pcol3{width:102.3%;}
-	#people_contacts_container .people_box_content.pcol3 .people_item, .people_box_content.pcol3 .people_item{width:31%;}
-	
-	#people_contacts_container .people_box_content.pcol4, .people_box_content.pcol4{width:102%;}
-	#people_contacts_container .people_box_content.pcol4 .people_item, .people_box_content.pcol4 .people_item{width:23%;}
-
-	#people_contacts_container .people_box_content.pcol5, .people_box_content.pcol5{width:102%;}
-	#people_contacts_container .people_box_content.pcol5 .people_item, .people_box_content.pcol5 .people_item{width:18%;}
 	
 	#people_contacts_container .masonry, #people_contacts_container .masonry .masonry-brick {
 	  -webkit-transition-duration: 0.7s;
@@ -304,20 +323,38 @@ body * .custom_contact_popup table{
 	margin:0 !important;
 }
 .custom_contact_popup .gfield_required{color:#CC0000 !important;}
-@media only screen and (max-width: 767px)  {
-	.custom_contact_popup {margin:auto;float:none !important;}
-	#fancybox-content{width:100% !important;border:none !important;}
-	#fancybox-wrap{padding:0 !important;}
-	
-	#people_contacts_container .people_box_content .people_item, .people_box_content .people_item{
-		width:100% !important;
-		margin-left:0 !important;
-		margin-right:0 !important;
-	}
-	
-	.ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item{
-		width:100% !important;
-	}
+@media only screen and (max-width: 767px) {
+ .custom_contact_popup {
+margin:auto;
+float:none !important;
+}
+ #fancybox-content {
+width:100% !important;
+border:none !important;
+}
+ #fancybox-wrap {
+padding:0 !important;
+}
+ #people_contacts_container .people_box_content .people_item, .people_box_content .people_item {
+	width:100% !important;
+ 	margin-left:0 !important;
+	 margin-right:0 !important;
+}
+ .ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item {
+ width:100% !important;
+}
+}
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+#people_contacts_container .people_box_content .people_item, .people_box_content .people_item {
+	width:48% !important;
+	float:left !important;
+	margin-right:1.9% !important;
+}
+ .ie #people_contacts_container .people_box_content .people_item, .ie .people_box_content .people_item {
+ 	width:48% !important;
+	float:left !important;
+	margin-right:1.9% !important;
+}
 }
 
 
