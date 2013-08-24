@@ -286,14 +286,17 @@ class People_Contact {
 						c_id: sites[5]/*,
 						icon :  "/images/market.png"*/
 					});
-					current_object.find(".people-entry-item").mouseover(function(i){
-						infowindow.setContent(marker.html);
-						infowindow.open(map, marker);
-					});
 					
-					current_object.find(".people-entry-item").mouseout(function(i){
-						infowindow.close();
-					});
+					if ( typeof(sites[1]) != 'undefined' && sites[1] != '' && typeof(sites[2]) != 'undefined' && sites[2] != '' ) {
+						current_object.find(".people-entry-item").mouseover(function(i){
+							infowindow.setContent(marker.html);
+							infowindow.open(map, marker);
+						});
+						
+						current_object.find(".people-entry-item").mouseout(function(i){
+							infowindow.close();
+						});
+					}
 					
 					if (sites[11] != '') {
 						google.maps.event.addListener(marker, "click", function () {
@@ -315,13 +318,15 @@ class People_Contact {
 						})
 					}
 					
-					google.maps.event.addListener(marker, 'mouseout', function() {
-					   //infowindow.close();
-					});
-					google.maps.event.addListener(marker, "mouseover", function () {
-						infowindow.setContent(this.html);
-						infowindow.open(map, this);
-					});
+					if ( typeof(sites[1]) != 'undefined' && sites[1] != '' && typeof(sites[2]) != 'undefined' && sites[2] != '' ) {
+						google.maps.event.addListener(marker, 'mouseout', function() {
+						   //infowindow.close();
+						});
+						google.maps.event.addListener(marker, "mouseover", function () {
+							infowindow.setContent(this.html);
+							infowindow.open(map, this);
+						});
+					}
 				});
 			}
 			<?php } ?>

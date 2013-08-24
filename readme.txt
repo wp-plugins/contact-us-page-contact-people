@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,11 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.7 - 2013/08/24 =
+* Fixes :
+	* Added script to check if Longitude and latitude have been created for Location address for each profile. If no long and Lat found for a profile, its pop-up on Google map does not show on mouse over.
+	* Map not showing in Chrome when any profile has no Location Address. Undefined Long and Lat where causing the map to not show in Google Chrome when mouse over a profile with no address.
+
 = 1.0.6 - 2013/08/22 =
 * Features :
 	* Added new @media beak points for a superior Grid View display in mobile phone and tablet when viewing in portrait or landscape.
@@ -191,6 +196,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.7 =
+Upgrade now for 2 important profiles with no Location Address bug fixes.
 
 = 1.0.6 =
 Recommended Upgrade. New improved Mobile and Tablet display and 1 IE7 and IE8 render bug fix. 
