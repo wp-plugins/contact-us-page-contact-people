@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -78,7 +78,7 @@ This great feature enables you to add any profile contact extract (Grid View) to
 
 * English (default) - always included.
 *.po file (cup_cp.po) in languages folder for translations.
-* If you do a translation for your site please send it to us for inclusion in the plugin language folder. We'll acknowledge your work here. [Go here](http://a3rev.com/contact/) to send your translation files to us.
+* If you do a translation for your site please send it to us for inclusion in the plugin language folder. We'll acknowledge your work here. [Go here](http://a3rev.com/contact-us-page/) to send your translation files to us.
 
 = Plugin Resources =
 
@@ -141,6 +141,12 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.8 - 2013/08/28 =
+* Fixes :
+	* Added call wp_enqueue_script('jquery'); from add_action('get_header') to fix Google Map loading issue on some sites.
+* Tweak :
+	* Added correct URL for submit translations on plugins description.
+
 = 1.0.7 - 2013/08/24 =
 * Fixes :
 	* Added script to check if Longitude and latitude have been created for Location address for each profile. If no long and Lat found for a profile, its pop-up on Google map does not show on mouse over.
@@ -196,6 +202,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.8 =
+Upgrade your plugin now for a Google Map not loading on some sites bug fix.
 
 = 1.0.7 =
 Upgrade now for 2 important profiles with no Location Address bug fixes.

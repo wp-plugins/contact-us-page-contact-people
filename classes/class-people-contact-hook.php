@@ -98,6 +98,8 @@ class People_Contact_Hook_Filter
 	}
 	
 	public static function frontend_header_scripts() {
+		wp_enqueue_script('jquery');
+		
 		global $is_IE;
 		if($is_IE){ wp_enqueue_script( 'respondjs', PEOPLE_CONTACT_JS_URL . '/respond-ie.js' ); }	
 	}
