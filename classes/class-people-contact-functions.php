@@ -290,24 +290,36 @@ class People_Contact_Functions
 		$html .= '<div id="a3_plugin_panel_extensions">';
 		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.PEOPLE_CONTACT_IMAGE_URL.'/a3logo.png" /></a>';
 		$html .= '<h3>'.__('Upgrade available for Extra Functionality', 'cup_cp').'</h3>';
-		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version", 'cup_cp').':</p>';
-		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'.__('Contact Us Page - Contact People Pro', 'cup_cp').'</a> '.__('Features', 'cup_cp').':</h3>';
+		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins", 'cup_cp').':</p>';
+		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'.__('Contact Us Page - Contact People Pro', 'cup_cp').'</a></h3>';
+		$html .= '<h3>'.__('Pro Version Features', 'cup_cp').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>1. '.__("Full profile contact integration with Contact Form 7 plugin.", 'cup_cp').'</li>';
-		$html .= '<li>2. '.__('Full profile contact integration with Gravity Forms plugin.', 'cup_cp').'</li>';
-		$html .= '<li>3. '.__("Create a global (applies to all) contact form for profiles.", 'cup_cp').'</li>';
-		$html .= '<li>4. '.__('Add unique contact forms for individual profiles.', 'cup_cp').'</li>';
-		$html .= '<li>5. '.__('WYSIWYG editor for styling profile contact grid view.', 'cup_cp').'</li>';
-		$html .= '<li>6. '.__("Upload custom icons - 'No Image' and contact icons.", 'cup_cp').'</li>';
-		$html .= '<li>7. '.__("People Contact Profile Shortcode feature.", 'cup_cp').'</li>';
-		$html .= '<li>8. '.__("Insert Contact Profile Grids to WordPress pages or posts.", 'cup_cp').'</li>';
-		$html .= '<li>9. '.__("Insert multiple Contact Profiles via shortcodes.", 'cup_cp').'</li>';
+		$html .= '<li>1. '.__("Profile Contact Grid WYSIWYG Style & Layout editor.", 'cup_cp').'</li>';
+		$html .= '<li>2. '.__("Upload custom icons - 'No Image' and contact icons.", 'cup_cp').'</li>';
+		$html .= '<li>3. '.__("Profile Short Description feature.", 'cup_cp').'</li>';
+		$html .= '<li>4. '.__('Individual Profile Contact Profile Shortcode feature.', 'cup_cp').'</li>';
+		$html .= '<li>5. '.__('Create custom contact form for Profiles.', 'cup_cp').'</li>';
+		$html .= '<li>6. '.__("Integration with Contact Form 7 & Gravity Forms.", 'cup_cp').'</li>';
+		$html .= '<li>7. '.__("Add unique contact forms for individual profiles.", 'cup_cp').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '<h3>'.__('View Pro Version', 'cup_cp').' <a href="http://demo.a3rev.com/plugins/contact-us-page/" target="_blank">'.__('Live Demo', 'cup_cp').'</a></h3>';
+		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_ULTIMATE_URI.'" target="_blank">'.__('Contact People Ultimate', 'cup_cp').'</a></h3>';
+		$html .= '<h3>'.__('Ultimate Version Features', 'cup_cp').':</h3>';
+		$html .= '<p>';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>1. '.__("Includes all Contact Us Page Pro features plus.", 'cup_cp').'</li>';
+		$html .= '<li>2. '.__("Groups - Create groups and assign Profiles to groups.", 'cup_cp').'</li>';
+		$html .= '<li>3. '.__("Add Groups to posts and page via shortcode.", 'cup_cp').'</li>';
+		$html .= '<li>4. '.__('Show Group with or without Google map.', 'cup_cp').'</li>';
+		$html .= '<li>5. '.__('Set Group Column layout display.', 'cup_cp').'</li>';
+		$html .= '<li>6. '.__("Show or don't show Group title.", 'cup_cp').'</li>';
+		$html .= '<li>7. '.__("Sort Profile Order within groups.", 'cup_cp').'</li>';
+		$html .= '<li>8. '.__("Show multiple groups on the same page.", 'cup_cp').'</li>';
+		$html .= '</ul>';
+		$html .= '</p>';
 		$html .= '<h3>'.__('View this plugins', 'cup_cp').' <a href="http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/contact-us-page-contact-people/" target="_blank">'.__('documentation', 'cup_cp').'</a></h3>';
-		$html .= '<h3>'.__('Visit this plugins', 'cup_cp').' <a href="https://a3rev.com/forums/forum/wordpress-plugins/contact-us-page-contact-people/" target="_blank">'.__('support forum', 'cup_cp').'</a></h3>';
+		$html .= '<h3>'.__('Visit this plugins', 'cup_cp').' <a href="http://wordpress.org/support/plugin/contact-us-page-contact-people/" target="_blank">'.__('support forum', 'cup_cp').'</a></h3>';
 		$html .= '<h3>'.__('More FREE a3rev WordPress plugins', 'cup_cp').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
@@ -315,22 +327,19 @@ class People_Contact_Functions
 		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'cup_cp').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '<h3>'.__('Help spread the Word about this plugin', 'cup_cp').'</h3>';
-		$html .= '<p>'.__("Things you can do to help others find this plugin", 'cup_cp');
-		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>* <a href="http://wordpress.org/plugins/contact-us-page-contact-people/" target="_blank">'.__('Rate this plugin 5', 'cup_cp').' <img src="'.PEOPLE_CONTACT_IMAGE_URL.'/stars.png" align="top" /> '.__('on WordPress.org', 'cup_cp').'</a></li>';
-		$html .= '<li>* <a href="http://wordpress.org/plugins/contact-us-page-contact-people/" target="_blank">'.__('Mark the plugin as a fourite', 'cup_cp').'</a></li>';
-		$html .= '<li>* <a href="http://www.facebook.com/a3revolution/" target="_blank">'.__('Follow a3rev on facebook', 'cup_cp').'</a></li>';
-		$html .= '<li>* <a href="https://twitter.com/a3rev/" target="_blank">'.__('Follow a3rev on Twitter', 'cup_cp').'</a></li>';
-		$html .= '</ul>';
-		$html .= '</p>';
 		$html .= '</div>';
 		return $html;
 	}
 	
-	function extension_shortcode() {
+	public static function extension_shortcode() {
 		$html = '';
 		$html .= '<div id="a3_plugin_shortcode_extensions">'.__("Upgrading to the", 'cup_cp').' <a target="_blank" href="'.PEOPLE_CONTACT_AUTHOR_URI.'">'.__('Pro Version', 'cup_cp').'</a> '.__("activates this shortcode feature as well.", 'cup_cp').'</div>';
+		return $html;	
+	}
+	
+	public static function ultimate_extension_shortcode() {
+		$html = '';
+		$html .= '<div id="a3_plugin_shortcode_extensions">'.__("Upgrading to the", 'cup_cp').' <a target="_blank" href="'.PEOPLE_CONTACT_ULTIMATE_URI.'">'.__('Ultimate Version', 'cup_cp').'</a> '.__("activates this shortcode feature as well.", 'cup_cp').'</div>';
 		return $html;	
 	}
 	

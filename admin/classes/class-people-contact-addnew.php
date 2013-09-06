@@ -32,7 +32,6 @@ class People_Contact_AddNew
 	public static function admin_screen_add_edit() {
 		global $people_contact_location_map_settings;
 			
-        $url = get_bloginfo('wpurl')."/wp-admin/admin.php";
 		$bt_type = 'add_new_contact';
 		$bt_value = __('Create', 'cup_cp');
 		$title = __('Add New Profile', 'cup_cp');
@@ -71,7 +70,7 @@ class People_Contact_AddNew
         <div style="clear:both"></div>
 		<div class="wrap">
         
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php echo $title;?></h2>
+        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php echo $title;?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-6" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
           <div style="clear:both;"></div>
 		  <div class="contact_manager">
 			<form action="" name="add_conact" id="add_contact" method="post">
@@ -176,6 +175,32 @@ class People_Contact_AddNew
 			  <div class="maps_content" style="padding:10px 0px;">
 			    <div id="map_canvas" style="width:100%;float:left;height:500px"></div>
               </div>
+              <div style="clear:both"></div>
+              <div style="float:right; width:340px;">
+              <style>
+				#a3_plugin_meta_upgrade_area_box { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:10px; position:relative; margin-top:10px; }
+				#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
+				</style>
+				<fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_ULTIMATE_URI; ?>" target="_blank"><?php _e('Ultimate Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
+              <h3 style="margin-top:0px;"><?php _e('Assign Profile to Groups', 'cup_cp'); ?></h3>
+              <p><?php _e('Profile is automatically assigned to the Contact Us Page. Use this setting to also assign the profile to one or more Groups.', 'cup_cp'); ?></p>
+              <div class="categories_selection">
+              <?php
+			  	$all_categories = array ( array('id' => 1, 'category_name' => __('Profile Group', 'cup_cp') ) );
+				if ( is_array($all_categories) && count($all_categories) > 0 ) {
+					foreach ( $all_categories as $category_data ) {
+				?>
+                	<div><label><input disabled="disabled" type="checkbox" name="categories_assign[]" value="<?php echo $category_data['id']; ?>" /> <?php esc_attr_e( stripslashes( $category_data['category_name'] ) ); ?></label></div>
+                <?php
+					}
+				} else {
+					_e('No Groups', 'cup_cp');	
+				}
+			  ?>
+              </div>
+              </fieldset>
+              </div>
+              <div style="clear:both"></div>
 			</div>   
             <div style="clear:both"></div>
 			<script type="text/javascript" >

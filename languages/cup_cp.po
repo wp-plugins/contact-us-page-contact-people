@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: A3 Projects PRO\n"
+"Project-Id-Version: Contact Us page - Contact people LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-16 12:51+0700\n"
-"PO-Revision-Date: 2013-08-16 12:51+0700\n"
+"POT-Creation-Date: 2013-09-06 17:53+0700\n"
+"PO-Revision-Date: 2013-09-06 17:53+0700\n"
 "Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,7 @@ msgid "Contact Widget Successfully reseted."
 msgstr ""
 
 #: admin/classes/class-contact-widget-panel.php:28
-msgid "Contact Infomation"
+msgid "Contact Information"
 msgstr ""
 
 #: admin/classes/class-contact-widget-panel.php:29
@@ -100,132 +100,272 @@ msgstr ""
 msgid "Grid View Contact Icons"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:37
-msgid "Create"
+#: admin/classes/class-people-category-manager-panel.php:49
+#: admin/classes/class-people-category-manager-panel.php:108
+#: admin/classes/class-people-category-manager-panel.php:148
+#: admin/classes/class-people-contact-addnew.php:189
+msgid "Profile Group"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:38
-msgid "Add New Profile"
+#: admin/classes/class-people-category-manager-panel.php:51
+#: admin/classes/class-people-category-manager-panel.php:167
+msgid "Groups"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:49
-msgid "Cancel"
+#: admin/classes/class-people-category-manager-panel.php:51
+#: admin/classes/class-people-contact-manager-panel.php:31
+msgid "Add New"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:56
-msgid "Edit Profile"
+#: admin/classes/class-people-category-manager-panel.php:51
+#: admin/classes/class-people-category-manager-panel.php:116
+#: admin/classes/class-people-category-manager-panel.php:152
+#: admin/classes/class-people-contact-addnew.php:73
+#: admin/classes/class-people-contact-manager-panel.php:31
+#: admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php:63
+#: admin/classes/contact-page-panel/class-contact-page-location-map-panel.php:88
+#: admin/classes/contact-page-panel/class-contact-page-settings-panel.php:99
+#: admin/classes/contact-page-panel/class-contact-popup-style-panel.php:61
+#: admin/classes/contact-widget-panel/class-contact-widget-email-contact-form-panel.php:96
+#: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:89
+#: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:113
+msgid "View Docs"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:67
-msgid "Update"
+#: admin/classes/class-people-category-manager-panel.php:54
+msgid "Create Groups, assign Profiles to Groups and insert the Group into any Post or Page by Shortcode."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:80
-msgid "Profile Details"
+#: admin/classes/class-people-category-manager-panel.php:59
+#: admin/classes/class-people-category-manager-panel.php:130
+#: admin/classes/class-people-category-manager-panel.php:161
+#: admin/classes/class-people-contact-manager-panel.php:38
+msgid "No"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:81
-#: admin/classes/class-people-contact-addnew.php:101
-msgid "&lt;empty&gt; fields don't show on front end."
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:85
-msgid "Title / Position"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:89
-#: admin/classes/class-people-contact-manager-panel.php:41
+#: admin/classes/class-people-category-manager-panel.php:60
+#: admin/classes/class-people-category-manager-panel.php:163
+#: admin/classes/class-people-contact-addnew.php:88
+#: admin/classes/class-people-contact-manager-panel.php:40
 msgid "Name"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:93
-#: admin/classes/class-people-contact-addnew.php:95
-msgid "Profile Image"
+#: admin/classes/class-people-category-manager-panel.php:61
+msgid "Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:95
-msgid "Image format .jpg, .png"
+#: admin/classes/class-people-category-manager-panel.php:62
+#: admin/classes/class-people-category-manager-panel.php:152
+#: admin/classes/class-people-contact-manager-panel.php:31
+msgid "Profiles"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:100
-msgid "Contact Details"
+#: admin/classes/class-people-category-manager-panel.php:63
+msgid "Activated"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:105
-#: admin/classes/class-people-contact-manager-panel.php:42
+#: admin/classes/class-people-category-manager-panel.php:81
+#: admin/classes/class-people-category-manager-panel.php:130
+msgid "Yes"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:82
+msgid "View Profiles"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:82
+#: admin/classes/class-people-contact-manager-panel.php:67
+msgid "Edit"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:82
+#: admin/classes/class-people-contact-manager-panel.php:67
+msgid "Delete"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:82
+msgid "Are you sure delete this category?"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:89
+#: admin/classes/class-people-contact-addnew.php:197
+msgid "No Groups"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:105
+#: admin/classes/class-people-contact-addnew.php:36
+msgid "Create"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:106
+msgid "Add New Group"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:112
+msgid "Edit Group"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:113
+#: admin/classes/class-people-contact-addnew.php:66
+msgid "Update"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:125
+msgid "Group Name"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:129
+msgid "Activate Shortcode"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:130
+msgid "Check Yes to add this Group to the list of Group shortcodes that can be inserted in Post or Pages by shortcode. Check No and the Group will not show in the Insert Shortcode drop down list of available Groups."
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:137
+#: admin/classes/class-people-contact-addnew.php:48
+msgid "Cancel"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:155
+msgid "Below are all of the Profiles currently assigned to this Group. Sort Profile order for this Group by drag and drop using the blue up - down arrow at the left of each Profile row."
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:164
+#: admin/classes/class-people-contact-addnew.php:104
+#: admin/classes/class-people-contact-manager-panel.php:41
 msgid "Email"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:109
-#: admin/classes/class-people-contact-manager-panel.php:43
+#: admin/classes/class-people-category-manager-panel.php:165
+#: admin/classes/class-people-contact-addnew.php:108
+#: admin/classes/class-people-contact-manager-panel.php:42
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:101
 msgid "Phone"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:113
+#: admin/classes/class-people-category-manager-panel.php:166
+#: admin/classes/class-people-contact-manager-panel.php:43
+#: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:121
+msgid "Location"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:173
+msgid "No Profile for This Group"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:37
+msgid "Add New Profile"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:55
+msgid "Edit Profile"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:79
+msgid "Profile Details"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:80
+#: admin/classes/class-people-contact-addnew.php:100
+msgid "&lt;empty&gt; fields don't show on front end."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:84
+msgid "Title / Position"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:92
+#: admin/classes/class-people-contact-addnew.php:94
+msgid "Profile Image"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:94
+msgid "Image format .jpg, .png"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:99
+msgid "Contact Details"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:112
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:108
 msgid "Fax"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:117
+#: admin/classes/class-people-contact-addnew.php:116
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:115
 msgid "Mobile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:123
-#: admin/classes/class-people-contact-addnew.php:161
+#: admin/classes/class-people-contact-addnew.php:122
+#: admin/classes/class-people-contact-addnew.php:160
+#: admin/classes/class-people-contact-addnew.php:184
 msgid "Upgrade to"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:123
-#: admin/classes/class-people-contact-addnew.php:161
+#: admin/classes/class-people-contact-addnew.php:122
+#: admin/classes/class-people-contact-addnew.php:160
 msgid "Pro Version"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:123
-#: admin/classes/class-people-contact-addnew.php:161
+#: admin/classes/class-people-contact-addnew.php:122
+#: admin/classes/class-people-contact-addnew.php:160
+#: admin/classes/class-people-contact-addnew.php:184
 msgid "to activate"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:126
+#: admin/classes/class-people-contact-addnew.php:125
 msgid "Website"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:130
+#: admin/classes/class-people-contact-addnew.php:129
 msgid "About"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:138
+#: admin/classes/class-people-contact-addnew.php:137
 msgid "Location Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:139
+#: admin/classes/class-people-contact-addnew.php:138
 msgid "&lt;empty&gt; Profile location does not show on the map."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:143
+#: admin/classes/class-people-contact-addnew.php:142
 #: admin/classes/contact-widget-panel/class-contact-widget-information-panel.php:94
 msgid "Address"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:147
+#: admin/classes/class-people-contact-addnew.php:146
 msgid "Latitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:151
+#: admin/classes/class-people-contact-addnew.php:150
 msgid "Longitude"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:162
+#: admin/classes/class-people-contact-addnew.php:161
 msgid "3RD Party Contact Form Shortcode for this profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:162
 msgid "Add a unique Contact Form for this profile. Enter the Contact Form 7 or Gravity Forms shortcode for that form. 3rd Party Contact Form must be activated in Setting > People Contact Forms."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:166
+#: admin/classes/class-people-contact-addnew.php:165
 msgid "Enter Form Shortcode"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:184
+msgid "Ultimate Version"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:185
+msgid "Assign Profile to Groups"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:186
+msgid "Profile is automatically assigned to the Contact Us Page. Use this setting to also assign the profile to one or more Groups."
 msgstr ""
 
 #: admin/classes/class-people-contact-manager-panel.php:17
@@ -240,36 +380,11 @@ msgstr ""
 msgid "Profile Successfully created."
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:32
-msgid "Profiles"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:32
-msgid "Add New"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:39
-msgid "No"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:44
-#: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:121
-msgid "Location"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:68
-msgid "Edit"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:68
-msgid "Delete"
-msgstr ""
-
-#: admin/classes/class-people-contact-manager-panel.php:68
+#: admin/classes/class-people-contact-manager-panel.php:67
 msgid "Are you sure delete this profile?"
 msgstr ""
 
-#: admin/classes/class-people-contact-manager-panel.php:75
+#: admin/classes/class-people-contact-manager-panel.php:74
 msgid "No Profile"
 msgstr ""
 
@@ -298,7 +413,7 @@ msgid "Default Contact Form"
 msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php:70
-msgid " Check to us the plugins default contact pop-up form."
+msgid " Check to use the plugins default contact pop-up form."
 msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php:74
@@ -340,7 +455,7 @@ msgid "3rd Party Contact Form"
 msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php:98
-msgid "Check to enable contact form from Gravity Forms or Contact Form 7. Form opens on a new page."
+msgid "Check to enable contact form from Gravity Forms or Contact Form 7."
 msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php:103
@@ -437,12 +552,12 @@ msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-location-map-panel.php:120
 #: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:148
-msgid "Map Width"
+msgid "Map Width Type"
 msgstr ""
 
-#: admin/classes/contact-page-panel/class-contact-page-location-map-panel.php:126
-#: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:154
-msgid "Map Width Type"
+#: admin/classes/contact-page-panel/class-contact-page-location-map-panel.php:129
+#: admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php:157
+msgid "Map Width"
 msgstr ""
 
 #: admin/classes/contact-page-panel/class-contact-page-location-map-panel.php:135
@@ -637,6 +752,7 @@ msgid "Text or HTML that will be output when you click on the map marker for you
 msgstr ""
 
 #: admin/classes/contact-widget-panel/class-contact-widget-settings-panel.php:81
+#: widgets/class-people-contact-widgets.php:15
 msgid "Contact Us Widget"
 msgstr ""
 
@@ -645,6 +761,7 @@ msgid "This plugin includes a Contact Us Widget. Use it to add Business / Organi
 msgstr ""
 
 #: admin/classes/contact-widget-panel/class-contact-widget-settings-panel.php:83
+#: classes/class-people-contact-functions.php:278
 msgid "Contact Page Sidebar"
 msgstr ""
 
@@ -653,8 +770,8 @@ msgid "We recommend that you create a new sidebar and assign it to the Contact U
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-icon-panel.php:22
-#: classes/class-people-contact.php:278
-#: classes/class-people-contact.php:457
+#: classes/class-people-contact.php:282
+#: classes/class-people-contact.php:473
 msgid "Click Here"
 msgstr ""
 
@@ -813,10 +930,12 @@ msgid "Grid View Title"
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:99
+#: shortcodes/class-people-contact-shortcodes.php:124
 msgid "Grid View Column"
 msgstr ""
 
 #: admin/classes/grid-view-panel/class-grid-view-layout-panel.php:103
+#: shortcodes/class-people-contact-shortcodes.php:129
 msgid "column"
 msgstr ""
 
@@ -1030,130 +1149,128 @@ msgid "Upgrade available for Extra Functionality"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:293
-msgid "<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version"
+msgid "<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:294
 msgid "Contact Us Page - Contact People Pro"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:294
-msgid "Features"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:297
-msgid "Full profile contact integration with Contact Form 7 plugin."
+#: classes/class-people-contact-functions.php:295
+msgid "Pro Version Features"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:298
-msgid "Full profile contact integration with Gravity Forms plugin."
+msgid "Profile Contact Grid WYSIWYG Style & Layout editor."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:299
-msgid "Create a global (applies to all) contact form for profiles."
-msgstr ""
-
-#: classes/class-people-contact-functions.php:300
-msgid "Add unique contact forms for individual profiles."
-msgstr ""
-
-#: classes/class-people-contact-functions.php:301
-msgid "WYSIWYG editor for styling profile contact grid view."
-msgstr ""
-
-#: classes/class-people-contact-functions.php:302
 msgid "Upload custom icons - 'No Image' and contact icons."
 msgstr ""
 
+#: classes/class-people-contact-functions.php:300
+msgid "Profile Short Description feature."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:301
+msgid "Individual Profile Contact Profile Shortcode feature."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:302
+msgid "Create custom contact form for Profiles."
+msgstr ""
+
 #: classes/class-people-contact-functions.php:303
-msgid "People Contact Profile Shortcode feature."
+msgid "Integration with Contact Form 7 & Gravity Forms."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:304
-msgid "Insert Contact Profile Grids to WordPress pages or posts."
+msgid "Add unique contact forms for individual profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:305
-msgid "Insert multiple Contact Profiles via shortcodes."
-msgstr ""
-
-#: classes/class-people-contact-functions.php:308
-msgid "View Pro Version"
+#: classes/class-people-contact-functions.php:307
+msgid "Contact People Ultimate"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:308
-msgid "Live Demo"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:309
-msgid "View this plugins"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:309
-msgid "documentation"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:310
-msgid "Visit this plugins"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:310
-msgid "support forum"
+msgid "Ultimate Version Features"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:311
-msgid "More FREE a3rev WordPress plugins"
+msgid "Includes all Contact Us Page Pro features plus."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:312
+msgid "Groups - Create groups and assign Profiles to groups."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:313
+msgid "Add Groups to posts and page via shortcode."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:314
-msgid "WordPress Email Template"
+msgid "Show Group with or without Google map."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:315
-msgid "Page View Count"
+msgid "Set Group Column layout display."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:316
+msgid "Show or don't show Group title."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:317
+msgid "Sort Profile Order within groups."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:318
-msgid "Help spread the Word about this plugin"
-msgstr ""
-
-#: classes/class-people-contact-functions.php:319
-msgid "Things you can do to help others find this plugin"
+msgid "Show multiple groups on the same page."
 msgstr ""
 
 #: classes/class-people-contact-functions.php:321
-msgid "Rate this plugin 5"
+msgid "View this plugins"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:321
-msgid "on WordPress.org"
+msgid "documentation"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:322
-msgid "Mark the plugin as a fourite"
+msgid "Visit this plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:322
+msgid "support forum"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:323
-msgid "Follow a3rev on facebook"
+msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:324
-msgid "Follow a3rev on Twitter"
+#: classes/class-people-contact-functions.php:326
+msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:333
+#: classes/class-people-contact-functions.php:327
+msgid "Page View Count"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:336
+#: classes/class-people-contact-functions.php:342
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:333
+#: classes/class-people-contact-functions.php:336
+#: classes/class-people-contact-functions.php:342
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:202
+#: classes/class-people-contact-hook.php:216
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:203
+#: classes/class-people-contact-hook.php:217
 msgid "Support"
 msgstr ""
 
@@ -1189,72 +1306,103 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:76
+#: shortcodes/class-people-contact-shortcodes.php:73
+msgid "Insert Single Profile"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:75
 msgid "Select people"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:79
+#: shortcodes/class-people-contact-shortcodes.php:78
+#: shortcodes/class-people-contact-shortcodes.php:114
+#: shortcodes/class-people-contact-shortcodes.php:127
 msgid "Please select..."
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Alignment"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "None"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Left - wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Left - no wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Center"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Right - wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Right - no wrap"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:91
+#: shortcodes/class-people-contact-shortcodes.php:90
 msgid "Horizontal aliginment of grid item"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:92
+#: shortcodes/class-people-contact-shortcodes.php:91
 msgid "Box width"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:93
+#: shortcodes/class-people-contact-shortcodes.php:92
 msgid "Padding"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:94
+#: shortcodes/class-people-contact-shortcodes.php:93
 msgid "Above"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:95
+#: shortcodes/class-people-contact-shortcodes.php:94
 msgid "Below"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:96
+#: shortcodes/class-people-contact-shortcodes.php:95
 msgid "Left"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:97
+#: shortcodes/class-people-contact-shortcodes.php:96
 msgid "Right"
 msgstr ""
 
-#: shortcodes/class-people-contact-shortcodes.php:103
+#: shortcodes/class-people-contact-shortcodes.php:102
+#: shortcodes/class-people-contact-shortcodes.php:141
 msgid "Insert Shortcode"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:109
+msgid "Insert Group"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:111
+msgid "Select Group"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:132
+msgid "Empty to use global settings."
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:134
+msgid "Check to enable google location map on this Group Page."
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:136
+msgid "Enable/Disable"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:136
+msgid "Check to show group title above Profiles."
 msgstr ""
 
 #: uploader/class-uploader.php:17

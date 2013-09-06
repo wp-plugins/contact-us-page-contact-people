@@ -60,7 +60,7 @@ class People_Contact_Grid_View_Icon_Panel
 		extract($customized_settings);
 				
 		?>
-        <h3><?php _e('Upload Custom Default Profile Image', 'cup_cp'); ?></h3>
+        <h3><?php _e('Upload Custom Default Profile Image', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-20" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
         <p><?php _e("Upload custom 'No Image' image, .jpg or.png format.", 'cup_cp'); ?></p>
 		<table class="form-table">
         	<tr valign="top">

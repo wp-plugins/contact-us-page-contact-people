@@ -86,7 +86,7 @@ class People_Contact_Widget_Information_Panel
 				
 		?>
      
-        <h3><?php _e('Add Contact Details', 'cup_cp'); ?></h3>
+        <h3><?php _e('Add Contact Details', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-23" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
         <p><?php _e("Add contact details to show in the widget, &lt;empty&gt; fields don't show on front end.", 'cup_cp'); ?></p>
 		<table class="form-table">
             

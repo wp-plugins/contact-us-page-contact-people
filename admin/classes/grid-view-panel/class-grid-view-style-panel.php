@@ -62,7 +62,7 @@ class People_Contact_Grid_View_Style_Panel
 		$df_border_style = array('solid'=>'Solid','dashed'=>'Dashed','dotted'=>'Dotted');
 				
 		?>
-        <h3><?php _e('Grid View Styles', 'cup_cp'); ?></h3>
+        <h3><?php _e('Grid View Styles', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-18" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
 		<p><?php _e('Create custom Style for People Grid View display on Contact Us page and profile inserted by shortcode on posts and pages.', 'cup_cp'); ?></p>
   
                   <table cellspacing="0" class="form-table">

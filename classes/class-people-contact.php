@@ -179,9 +179,13 @@ class People_Contact {
 			
 		$ajax_popup_contact = wp_create_nonce("ajax-popup-contact");
 		
-		$profile_email_page_link = '';
+		$unique_id = rand(100,10000);
+		
+		$profile_email_page_link = '#';
 		
 		$grid_view_col = $people_contact_grid_view_layout['grid_view_col'];
+		
+		$show_map = ( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ) ? 1 : 0 ;
 		
 		$phone_icon = $people_contact_grid_view_icon['grid_view_icon_phone'];
 		if( trim($phone_icon ) == '' ) $phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
@@ -217,28 +221,28 @@ class People_Contact {
 		?>
 		<script type="text/javascript">
 		<?php
-		if ( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ) {
+		if ( $show_map != 0 ) {
 			?>
 			var infowindow = null;
 			jQuery(document).ready(function() {
-				initialize();
+				initialize<?php echo $unique_id; ?>();
 			});
-			function initialize() {
+			function initialize<?php echo $unique_id; ?>() {
 				var centerMap = new google.maps.LatLng(<?php echo $latlng_center;?>);
 				var myOptions = {
 					zoom: <?php echo $zoom_level;?>,
 					center: centerMap,
 					mapTypeId: google.maps.MapTypeId.<?php echo $map_type;?>
 				}
-				var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-				setMarkers(map, sites);
+				var map = new google.maps.Map(document.getElementById("map_canvas<?php echo $unique_id; ?>"), myOptions);
+				setMarkers<?php echo $unique_id; ?>(map, sites);
 				infowindow = new google.maps.InfoWindow({
 					content: "loading..."
 				});
 				var bikeLayer = new google.maps.BicyclingLayer();
 				bikeLayer.setMap(map);
 			}
-			var sites = [
+			var sites<?php echo $unique_id; ?> = [
 				<?php
 				$i = 0;
 				if(is_array($contacts) && count($contacts) > 0 ){
@@ -264,9 +268,9 @@ class People_Contact {
 				?>
 			];
 		
-			function setMarkers(map, markers) {
+			function setMarkers<?php echo $unique_id; ?>(map, markers) {
 				var infotext = '';
-				jQuery("div.people_item").each(function(i) {
+				jQuery("div.people_item<?php echo $unique_id; ?>").each(function(i) {
 					var current_object = jQuery(this);
 					var sites = markers[i];
 					var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
@@ -275,7 +279,7 @@ class People_Contact {
 					if (sites[9] != '') infotext += '<p><span class="p_icon_fax"><img src="<?php echo $fax_icon;?>" style="width:auto;height:auto" /></span> '+sites[9]+'</p>';
 					if (sites[10] != '') infotext += '<p><span class="p_icon_mobile"><img src="<?php echo $mobile_icon;?>" style="width:auto;height:auto" /></span> '+sites[10]+'</p>';
 					
-					if (sites[11] != '') infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email_map" target="_blank" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php _e('Click Here', 'cup_cp'); ?></a></p>';
+					if (sites[11] != '') infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email<?php echo $unique_id; ?> direct_email_map" target="_blank" profile-id="'+sites[5]+'" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php _e('Click Here', 'cup_cp'); ?></a></p>';
 					infotext += '</div></div>';
 					var marker = new google.maps.Marker({
 						position: siteLatLng,
@@ -331,8 +335,8 @@ class People_Contact {
 			}
 			<?php } ?>
 			
-				jQuery(document).on("click", ".direct_email", function(){
-					var c_id2 = jQuery(this).attr("href");
+				jQuery(document).on("click", ".direct_email<?php echo $unique_id; ?>", function(){
+					var c_id2 = jQuery(this).attr("profile-id");
 					jQuery.fancybox.resize();
 					var url2='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id2+'&security=<?php echo $ajax_popup_contact;?>';
 						jQuery.fancybox({
@@ -349,15 +353,15 @@ class People_Contact {
 						return false;
 				});
 			
-			var popupWindow=null;
+			var popupWindow<?php echo $unique_id; ?>=null;
 
-			function profile_popup(url){
+			function profile_popup<?php echo $unique_id; ?>(url){
 				window.open(url,"_blank");
 			}
 			
-			function profile_parent_disable() {
-				if(popupWindow && !popupWindow.closed)
-				popupWindow.focus();
+			function profile_parent_disable<?php echo $unique_id; ?>() {
+				if(popupWindow<?php echo $unique_id; ?> && !popupWindow<?php echo $unique_id; ?>.closed)
+				popupWindow<?php echo $unique_id; ?>.focus();
 			}
 			
 		</script>
@@ -374,10 +378,10 @@ class People_Contact {
 			if(screen_width <= 750 && screen_width >= 481 ){
 				grid_view_col = 2;
 			}
-			jQuery('.people_box_content').imagesLoaded(function(){
+			jQuery('.people_box_content<?php echo $unique_id; ?>').imagesLoaded(function(){
 				jQuery(this).masonry({
-					itemSelector: '.people_item',
-					columnWidth: jQuery('.people_box_content').width()/grid_view_col,
+					itemSelector: '.people_item<?php echo $unique_id; ?>',
+					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col,
 					isAnimated: !Modernizr.csstransitions
 				});
 			});
@@ -388,10 +392,10 @@ class People_Contact {
 			if(screen_width <= 750 && screen_width >= 481 ){
 				grid_view_col = 2;
 			}
-			jQuery('.people_box_content').imagesLoaded(function(){
+			jQuery('.people_box_content<?php echo $unique_id; ?>').imagesLoaded(function(){
 				jQuery(this).masonry({
-					itemSelector: '.people_item',
-					columnWidth: jQuery('.people_box_content').width()/grid_view_col,
+					itemSelector: '.people_item<?php echo $unique_id; ?>',
+					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col,
 					isAnimated: !Modernizr.csstransitions
 				});
 			});
@@ -399,7 +403,7 @@ class People_Contact {
 		</script>
 		<?php
 		$html = '';
-		if( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ){
+		if( $show_map != 0 ){
 			$html .= '<div style="clear:both"></div>';
 			$html .= '<div class="people-entry">';
 			$html .= '<div style="clear:both"></div>';
@@ -422,16 +426,19 @@ class People_Contact {
 				$map_width_type = '%';
 			}
 		
-			$html .= '<div id="map_canvas" style="width: '.$map_width.$map_width_type.'; height: '.$map_height.'px;float:left;"></div>';
+			$html .= '<div id="map_canvas'.$unique_id.'" class="map_canvas_container" style="width: '.$map_width.$map_width_type.'; height: '.$map_height.'px;float:left;"></div>';
 			$html .= '<div style="clear:both;margin-bottom:0em;" class="custom_title"></div>';
 			$html .= '<div style="clear:both;height:15px;"></div>';
 			$html .= '</div>';
 		}
-		if( trim($people_contact_grid_view_layout['grid_view_team_title']) != '' ){
-			$html .= '<div class="custom_box_title"><h1 class="p_title">'.trim($people_contact_grid_view_layout['grid_view_team_title']).'</h1></div>';
+		
+		$grid_view_team_title = trim($people_contact_grid_view_layout['grid_view_team_title']);
+		
+		if ( $grid_view_team_title != '' ) {
+			$html .= '<div class="custom_box_title"><h1 class="p_title">'.$grid_view_team_title.'</h1></div>';
 		}
 		$html .= '<div style="clear:both;margin-bottom:1em;"></div>';
-		$html .= '<div class="people_box_content pcol'.$grid_view_col.'">';
+		$html .= '<div class="people_box_content people_box_content'.$unique_id.' pcol'.$grid_view_col.'">';
 		$i = 0;
 		if(is_array($contacts) && count($contacts) > 0 ){
 			$i++;
@@ -443,13 +450,13 @@ class People_Contact {
 					$src = $people_contact_grid_view_icon['default_profile_image'];
 				}
 						
-				$html .= '<div class="people_item">';
+				$html .= '<div class="people_item people_item'.$unique_id.'">';
 				$html .= '<div class="people-entry-item">';
 				$html .= '<div style="clear:both;"></div>';
 				$html .= '<div class="people-content-item">';
 				$html .= '<h3 class="p_item_title">'.esc_attr( stripslashes( $value['c_title'])).'</h3>';
-				$html .= '<span class="p_content_left"><img src="'.$src.'" /></span>';
-				$html .= '<span class="p_content_right">';
+				$html .= '<div class="p_content_left"><img src="'.$src.'" /></div>';
+				$html .= '<div class="p_content_right">';
 				$html .= '<h3 class="p_item_name">'.esc_attr( stripslashes( $value['c_name'])).'</h3>';
 				if ( trim($value['c_phone']) != '') {
 				$html .= '<p style="margin-bottom:5px;"><span class="p_icon_phone"><img src="'.$phone_icon.'" style="width:auto;height:auto" /></span> '. esc_attr( stripslashes( $value['c_phone'] ) ).'</p>';
@@ -463,9 +470,9 @@ class People_Contact {
 				
 				if ( trim($value['c_email']) != '') {
 	
-					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email" href="'.$value['id'].'">'.__('Click Here', 'cup_cp').'</a></p>';
+					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email'.$unique_id.'" profile-id="'.$value['id'].'" href="#'.$value['id'].'">'.__('Click Here', 'cup_cp').'</a></p>';
 				}
-				$html .= '</span>';
+				$html .= '</div>';
 				
 				$html .= '</div>';
 				$html .= '<div style="clear:both;"></div>';

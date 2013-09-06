@@ -58,7 +58,7 @@ class People_Contact_Popup_Style_Panel {
 		$fonts = People_Contact_Functions::get_font();
 				
 		?>
-        <h3><?php _e('Email Pop-up Font Styling', 'cup_cp'); ?></h3>
+        <h3><?php _e('Email Pop-up Font Styling', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-15" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
 		<table class="form-table">
 			<tr>
 				<th class="titledesc" scope="row"><label for="contact_popup_text_font"><?php _e('Font', 'cup_cp');?></label></th>

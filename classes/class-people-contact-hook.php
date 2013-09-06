@@ -25,11 +25,14 @@ class People_Contact_Hook_Filter
 		$profile = add_submenu_page('people-contact-manager', __( 'Profiles', 'cup_cp' ), __( 'Profiles', 'cup_cp' ), 'manage_options', 'people-contact-manager', array( 'People_Contact_Manager_Panel', 'admin_screen' ) );
 		
 		$add_new = add_submenu_page('people-contact-manager', __( 'Add New Profile', 'cup_cp' ), __( 'Add New Profile', 'cup_cp' ), 'manage_options', 'people-contact', array( 'People_Contact_AddNew', 'admin_screen_add_edit' ) );
-		//$grid_view_style_css = add_submenu_page('people-contact-manager', __( 'Grid View Style', 'cup_cp' ), __( 'Grid View Style', 'cup_cp' ), 'manage_options', 'people-contact-style-css', array( &$this, 'grid_view_style_css' ) );
+		
+		$categories_page = add_submenu_page('people-contact-manager', __( 'Groups', 'cup_cp' ), __( 'Groups', 'cup_cp' ), 'manage_options', 'people-category-manager', array( 'People_Category_Manager_Panel', 'admin_screen' ) );
+		
 		$settings = add_submenu_page('people-contact-manager', __( 'Settings', 'cup_cp' ), __( 'Settings', 'cup_cp' ), 'manage_options', 'people-contact-settings', array( 'People_Contact_Settings', 'settings_dashboard' ) );
 		add_action( "admin_print_scripts-" . $contact_manager, array( 'People_Contact_Hook_Filter', 'contact_manager_load_only_script') );
 		add_action( "admin_print_scripts-" . $profile, array( 'People_Contact_Hook_Filter', 'contact_manager_load_only_script') );
 		add_action( "admin_print_scripts-" . $add_new, array( 'People_Contact_Hook_Filter', 'add_new_load_only_script') );
+		add_action( "admin_print_scripts-" . $categories_page, array( 'People_Contact_Hook_Filter', 'category_manager_load_only_script') );
 		add_action( "admin_print_scripts-" . $settings, array( 'People_Contact_Hook_Filter', 'settings_load_only_script') );
 		//add_action( "admin_print_scripts-" . $grid_view_style_css, array( &$this, 'contact_manager_load_only') );
 	
@@ -105,6 +108,10 @@ class People_Contact_Hook_Filter
 	}
 	
 	public static function contact_manager_load_only_script(){
+		wp_enqueue_script('jquery-ui-sortable');
+	}
+	
+	public static function category_manager_load_only_script() {
 		wp_enqueue_script('jquery-ui-sortable');
 	}
 	

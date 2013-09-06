@@ -85,7 +85,7 @@ class People_Contact_Page_Location_Map_Panel {
 		
 		$pages = get_pages('title_li=&orderby=name');
 		?>
-        <h3><?php _e('Location Map Settings', 'cup_cp'); ?></h3>
+        <h3><?php _e('Location Map Settings', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-13" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
 		<table class="form-table">
             
             <tr valign="top">
@@ -117,18 +117,18 @@ class People_Contact_Page_Location_Map_Panel {
 				</td>
 			</tr>
             <tr valign="top">
-		    	<th class="titledesc" scope="row"><label for="map_width"><?php _e( 'Map Width', 'cup_cp' );?></label></th>
-		    	<td class="forminp">                    
-                    <input type="text" value="<?php esc_attr_e( stripslashes( $map_width ) ); ?>" name="<?php echo $option_name; ?>[map_width]" id="map_width" style="width:120px;"  />
-				</td>
-			</tr>
-            <tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="map_width_type"><?php _e( 'Map Width Type', 'cup_cp' );?></label></th>
 		    	<td class="forminp">                    
                     <select class="chzn-select" style="width:120px;" id="map_width_type" name="<?php echo $option_name; ?>[map_width_type]">
 						<option value="percent" selected="selected">%</option>
                         <option value="px" <?php selected( $map_width_type, 'px' ); ?>>px</option>
 					</select>
+				</td>
+			</tr>
+            <tr valign="top">
+		    	<th class="titledesc" scope="row"><label for="map_width"><?php _e( 'Map Width', 'cup_cp' );?></label></th>
+		    	<td class="forminp">                    
+                    <input type="text" value="<?php esc_attr_e( stripslashes( $map_width ) ); ?>" name="<?php echo $option_name; ?>[map_width]" id="map_width" style="width:120px;"  />
 				</td>
 			</tr>
             <tr valign="top">

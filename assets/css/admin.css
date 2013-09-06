@@ -42,3 +42,18 @@ width:59%;
 margin-top:5px;
 }
 }
+
+.categories_selection {
+	border:1px solid #DFDFDF;
+	background: #FFF;
+	padding:8px 10px;
+	width:300px;
+	max-height:200px;
+	overflow:auto;
+}
+.a3-view-docs-button {
+	background-color: #FFFFE0 !important;
+    border: 1px solid #E6DB55 !important;
+	text-shadow:none !important;
+	font-weight:normal !important;
+}

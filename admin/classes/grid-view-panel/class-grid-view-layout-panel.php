@@ -87,7 +87,7 @@ class People_Contact_Grid_View_Layout_Panel
 		extract($customized_settings);
 				
 		?>
-        <h3><?php _e('Grid View Layout', 'cup_cp'); ?></h3>
+        <h3><?php _e('Grid View Layout', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-17" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
 		<table class="form-table">
         	<tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="grid_view_team_title"><?php _e( 'Grid View Title', 'cup_cp' );?></label></th>

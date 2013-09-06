@@ -60,14 +60,14 @@ class People_Contact_Page_Contact_Forms_Panel {
 		$pages = get_pages('title_li=&orderby=name');
 		
 		?>
-        <h3><?php _e('Default People Contact Forms', 'cup_cp'); ?></h3>
+        <h3><?php _e('Default People Contact Forms', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-14" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
         <p><?php _e('The People contact form set here applies to every profile. Create a unique contact form for a profile by adding a contact form shortcode from Contact Form 7 or Gravity Forms on the Profiles edit page. <strong>Note:</strong> You must have the 3rd Party Contact Form setting enabled here to be able to do that.' ,'cup_cp'); ?></p>
 		<table class="form-table">
         	
             <tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="contact_form_type_other_default"><?php _e( 'Default Contact Form', 'cup_cp' );?></label></th>
 		    	<td class="forminp">   
-                    <label><input disabled="disabled" type="radio" checked="checked" value="0" id="contact_form_type_other_default" name="<?php echo $option_name; ?>[contact_form_type_other]" /> <span class=""><?php _e(' Check to us the plugins default contact pop-up form.', 'cup_cp');?></span></label>
+                    <label><input disabled="disabled" type="radio" checked="checked" value="0" id="contact_form_type_other_default" name="<?php echo $option_name; ?>[contact_form_type_other]" /> <span class=""><?php _e(' Check to use the plugins default contact pop-up form.', 'cup_cp');?></span></label>
 				</td>
 			</tr>
         	<tr valign="top">
@@ -95,7 +95,7 @@ class People_Contact_Page_Contact_Forms_Panel {
             <tr valign="top">
 		    	<th class="titledesc" scope="row"><label for="contact_form_type_other"><?php _e( '3rd Party Contact Form', 'cup_cp' );?></label></th>
 		    	<td class="forminp">   
-                    <label><input disabled="disabled" type="radio" value="1" id="contact_form_type_other" name="<?php echo $option_name; ?>[contact_form_type_other]" /> <span class=""><?php _e('Check to enable contact form from Gravity Forms or Contact Form 7. Form opens on a new page.', 'cup_cp');?></span></label>
+                    <label><input disabled="disabled" type="radio" value="1" id="contact_form_type_other" name="<?php echo $option_name; ?>[contact_form_type_other]" /> <span class=""><?php _e('Check to enable contact form from Gravity Forms or Contact Form 7.', 'cup_cp');?></span></label>
 				</td>
 			</tr>
             

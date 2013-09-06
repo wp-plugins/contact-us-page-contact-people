@@ -61,7 +61,7 @@ class People_Contact_Grid_View_Image_Style_Panel
 		$df_border_style = array('solid'=>'Solid','dashed'=>'Dashed','dotted'=>'Dotted');
 				
 		?>
-		<h3><?php _e('Profile Image Style', 'cup_cp'); ?></h3>  
+		<h3><?php _e('Profile Image Style', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-19" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>  
                   <table cellspacing="0" class="form-table">
                     <tr>
                         <th class="titledesc" scope="row"><label for="item_image_border_type"><?php _e('Presentation Style','cup_cp'); ?></label></th>

@@ -96,7 +96,7 @@ class People_Contact_Page_Settings_Panel {
 		$pages = get_pages('title_li=&orderby=name');
 		$contact_us_page_id = get_option('contact_us_page_id');
 		?>
-        <h3><?php _e('Contact Us Page', 'cup_cp'); ?></h3>
+        <h3><?php _e('Contact Us Page', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-12" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
         <p><?php _e('A "Contact Us Page" was auto created on activation of the plugin. It contains the shortcode [people_contacts] required to show the contact us page. If it was not or you want to change it, create a new page, add the shortcode and then set it here.'); ?></p>
         <table class="form-table">
             <tr valign="top">

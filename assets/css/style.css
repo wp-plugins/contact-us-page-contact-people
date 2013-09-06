@@ -159,7 +159,7 @@
 #people_contacts_container .people-entry-item .p_title, .people-entry-item .p_title{margin:0 !important;}
 
 /* MAPS */
-body #people_contacts_container #map_canvas img{
+body #people_contacts_container #map_canvas img, body #people_contacts_container .map_canvas_container img{
 	background-color:transparent !important;max-width:100000em !important;max-height:100000em !important;
 	border-radius: 0px !important;
 	-moz-border-radius: 0px !important;
@@ -168,7 +168,7 @@ body #people_contacts_container #map_canvas img{
 	-webkit-box-shadow: 0 0 0px #FFFFFF !important;
 	box-shadow: 0 0 0px #FFFFFF !important;
 }
-#people_contacts_container #map_canvas, #people_contacts_container #single_map_responsinator img {
+#people_contacts_container #map_canvas, #people_contacts_container .map_canvas_container, #people_contacts_container #single_map_responsinator img {
     border: 0 solid #E6E6E6 !important;
     max-width: 1000000px !important;
 	background:none !important;
@@ -194,7 +194,7 @@ body #people_contacts_container #map_canvas img{
 #people_contacts_container .infowindow .info_avatar{
 	width:54px;float:left;margin-right:10px;margin-bottom:10px;clear:bottom;min-height:105px;
 }
-body #people_contacts_container #map_canvas .infowindow p img{
+body #people_contacts_container #map_canvas .infowindow p img, body #people_contacts_container .map_canvas_container .infowindow p img{
 	border:none !important;
 	border-radius: 0px !important;
 	-moz-border-radius: 0px !important;
@@ -206,8 +206,8 @@ body #people_contacts_container #map_canvas .infowindow p img{
 	max-width:21px;
 	vertical-align: text-bottom;
 }
-body #people_contacts_container #map_canvas .infowindow .info_avatar{text-align:center;}
-body #people_contacts_container #map_canvas .infowindow .info_avatar img{
+body #people_contacts_container #map_canvas .infowindow .info_avatar, body #people_contacts_container .map_canvas_container .infowindow .info_avatar{text-align:center;}
+body #people_contacts_container #map_canvas .infowindow .info_avatar img, body #people_contacts_container .map_canvas_container .infowindow .info_avatar img{
 	padding:2px;
 	width:46px;
 	max-width:100% !important;
@@ -360,7 +360,7 @@ padding:0 !important;
 
 /* Contact Us Widget */
 /*Custom Contact*/
-.people_contact_widget .entry img, .people_contact_widget #map_canvas, #single_map_people_contact img {
+.people_contact_widget .entry img, .people_contact_widget #map_canvas, .people_contact_widget .map_canvas_container, #single_map_people_contact img {
     border: 0 solid #E6E6E6 !important;
     max-width: 1000000px !important;
 	background:none !important;

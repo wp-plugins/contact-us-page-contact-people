@@ -25,7 +25,7 @@ class People_Contact_Widget_Panel
     	<div id="a3_plugin_panel_fields" class="a3_subsubsub_section">
         	<ul class="subsubsub">
             	<li><a href="#contact-widget-settings" class="current"><?php _e('Settings', 'cup_cp'); ?></a> | </li>
-            	<li><a href="#contact-widget-information"><?php _e('Contact Infomation', 'cup_cp'); ?></a> | </li>
+            	<li><a href="#contact-widget-information"><?php _e('Contact Information', 'cup_cp'); ?></a> | </li>
                 <li><a href="#contact-widget-email-contact-form"><?php _e('Email Contact Form', 'cup_cp'); ?></a> | </li>
                 <li><a href="#contact-widget-maps"><?php _e('Maps Settings', 'cup_cp'); ?></a></li>
 			</ul>

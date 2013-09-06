@@ -3,7 +3,7 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_version', '1.0.8');
+	update_option('a3rev_wp_people_contact_version', '1.0.9');
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
 	People_Contact_Profile_Data::install_database();
@@ -32,7 +32,7 @@ update_option('a3rev_wp_people_contact_plugin', 'contact_us_page_contact_people'
 function wp_people_contact_init() {
 	if ( get_option('a3rev_wp_people_contact_just_installed') ) {
 		delete_option('a3rev_wp_people_contact_just_installed');
-		wp_redirect( ( ( is_ssl() || force_ssl_admin() || force_ssl_login() ) ? str_replace( 'http:', 'https:', admin_url( 'admin.php?page=people-contact-manager' ) ) : str_replace( 'https:', 'http:', admin_url( 'admin.php?page=people-contact-manager' ) ) ) );
+		wp_redirect( admin_url( 'admin.php?page=people-contact-manager', 'relative' ) );
 		exit;
 	}
 	load_plugin_textdomain( 'cup_cp', false, PEOPLE_CONTACT_FOLDER.'/languages' );
@@ -77,7 +77,7 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 	$GLOBALS['people_contact_shortcode'] = new People_Contact_Shortcode();
 	
 	// Include script admin plugin
-	if ( in_array( basename ($_SERVER['PHP_SELF']), array('admin.php', 'edit.php') ) && isset( $_REQUEST['page'] ) && in_array( $_REQUEST['page'], array('people-contact-manager', 'people-contact', 'people-contact-settings') ) ) {
+	if ( in_array( basename ($_SERVER['PHP_SELF']), array('admin.php', 'edit.php') ) && isset( $_REQUEST['page'] ) && in_array( $_REQUEST['page'], array('people-contact-manager', 'people-contact', 'people-contact-settings', 'people-category-manager' ) ) ) {
 		add_action('admin_head', array('People_Contact_Hook_Filter', 'admin_header_script'));
 		add_action('admin_footer', array('People_Contact_Hook_Filter', 'admin_footer_scripts'));
 	}
@@ -96,5 +96,5 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		update_option('a3rev_wp_people_contact_version', '1.0.5');
 	}
 	
-	update_option('a3rev_wp_people_contact_version', '1.0.8');
+	update_option('a3rev_wp_people_contact_version', '1.0.9');
 ?>

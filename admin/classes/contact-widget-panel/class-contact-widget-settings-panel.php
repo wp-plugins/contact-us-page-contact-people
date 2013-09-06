@@ -78,7 +78,7 @@ class People_Contact_Widget_Settings_Panel
 				
 		?>
      
-        <h3><?php _e('Contact Us Widget', 'cup_cp'); ?></h3>
+        <h3><?php _e('Contact Us Widget', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-22" ><?php _e('View Docs', 'cup_cp'); ?></a></h3>
         <p><?php _e('This plugin includes a Contact Us Widget. Use it to add Business / Organization Details, information and a general Contact Us form to the Contact Us Page sidebar. All of the Widget settings are here on the Contact Widget tab. Use the plugins built in Contact Form or add a custom form by shortcode from a Contact Form plugin of your choice.', 'cup_cp'); ?></p>
 		<h3><?php _e('Contact Page Sidebar', 'cup_cp'); ?></h3>
         <p><?php _e('We recommend that you create a new sidebar and assign it to the Contact Us Page. If you do you can then add the Contact Widget to that sidebar and it will only show on the Contact Us page. We recommend you install this plugin <a href="http://wordpress.org/plugins/woosidebars/" target="_blank">WooSidebars</a> and use it to create the custom sidebar.', 'cup_cp'); ?></p>

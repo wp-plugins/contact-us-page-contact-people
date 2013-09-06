@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6
-Stable tag: 1.0.8
+Stable tag: 1.0.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,19 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.0.9 - 2013/09/06 =
+* Features :
+	* Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
+* Tweaks :
+	* Added new Contact People Ultimate feature Groups settings to admin panel. 
+	* Added new Profile sort arrow icons to Profiles.
+	* Fixed some typos and some minor feature sort on admin panel.
+	* Updated plugins Yellow sidebar content to show new Ultimate version features.
+	* Full plugins docs completed for all 3 plugin versions, Lite, Pro and Ultimate.
+* Fixes :
+	* Harden the plugins CSS output to prevent some theme CSS over-riding the Profile Grid layout settings
+	* Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
+
 = 1.0.8 - 2013/08/28 =
 * Fixes :
 	* Added call wp_enqueue_script('jquery'); from add_action('get_header') to fix Google Map loading issue on some sites.
@@ -202,6 +215,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+Upgrade now for great new 'Help' feature - links from each admin page straight to that section of the docs. Plus 5 new tweaks and 2 Bug Fixes.
 
 = 1.0.8 =
 Upgrade your plugin now for a Google Map not loading on some sites bug fix.
