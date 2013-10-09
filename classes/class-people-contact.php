@@ -121,7 +121,7 @@ class People_Contact {
 		<div style="clear:both;height:1em;"></div>
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		  <tr class="top_title">
-			<td width="80" class="avatar"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo $people_contact_grid_view_icon['default_profile_image'];}?>" width="60" /></td>
+			<td width="80" class="avatar"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';}?>" width="60" /></td>
 			<td class="profile"><h1 class="title"><?php echo bloginfo('name');?></h1><h3><?php esc_attr_e( stripslashes(  $data['c_title']) );?></h3><span><?php esc_attr_e( stripslashes( $data['c_name'] ) );?></span></td>
 		  </tr>
 		</table>
@@ -165,7 +165,7 @@ class People_Contact {
 	}
 	
 	public function create_contact_maps($contacts = array()){
-		global $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon, $people_contact_contact_forms_settings;
+		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon, $people_contact_contact_forms_settings;
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 		
 		$contact_us_page_id = get_option('contact_us_page_id');
@@ -183,18 +183,14 @@ class People_Contact {
 		
 		$profile_email_page_link = '#';
 		
-		$grid_view_col = $people_contact_grid_view_layout['grid_view_col'];
+		$grid_view_col = $people_contact_global_settings['grid_view_col'];
 		
 		$show_map = ( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ) ? 1 : 0 ;
 		
-		$phone_icon = $people_contact_grid_view_icon['grid_view_icon_phone'];
-		if( trim($phone_icon ) == '' ) $phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
-		$fax_icon = $people_contact_grid_view_icon['grid_view_icon_fax'];
-		if( trim($fax_icon ) == '' ) $fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
-		$mobile_icon = $people_contact_grid_view_icon['grid_view_icon_mobile'];
-		if( trim($mobile_icon ) == '' ) $mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
-		$email_icon = $people_contact_grid_view_icon['grid_view_icon_email'];
-		if( trim($email_icon ) == '' ) $email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
+		$phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
+		$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
+		$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
+		$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
 		
 		$center_address = 'Australia';
 		if ( $people_contact_location_map_settings['center_address'] != '') {
@@ -235,7 +231,7 @@ class People_Contact {
 					mapTypeId: google.maps.MapTypeId.<?php echo $map_type;?>
 				}
 				var map = new google.maps.Map(document.getElementById("map_canvas<?php echo $unique_id; ?>"), myOptions);
-				setMarkers<?php echo $unique_id; ?>(map, sites);
+				setMarkers<?php echo $unique_id; ?>(map, sites<?php echo $unique_id; ?>);
 				infowindow = new google.maps.InfoWindow({
 					content: "loading..."
 				});
@@ -252,7 +248,7 @@ class People_Contact {
 						if($value['c_avatar'] != ''){
 								$src = $value['c_avatar'];
 						}else{
-							$src = $people_contact_grid_view_icon['default_profile_image'];
+							$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
 						}
 						if ( (trim($value['c_latitude']) == '' || trim($value['c_longitude']) == '' ) && trim($value['c_address']) != '') {
 							$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($value['c_address']).'&sensor=false';
@@ -413,17 +409,19 @@ class People_Contact {
 			}else{
 				$map_height = $people_contact_location_map_settings['map_height'];
 			}
-			if($people_contact_location_map_settings['map_width'] <= 0){
-				$map_width = '100';
-			}else{
-				$map_width = $people_contact_location_map_settings['map_width'];
-			}
+			
 			$map_width_type = $people_contact_location_map_settings['map_width_type'];
 			
 			if($map_width_type == 'px'){
 				$map_width_type = 'px';
+				if($people_contact_location_map_settings['map_width_fixed'] <= 0){
+					$map_width = '100';
+				}else{
+					$map_width = $people_contact_location_map_settings['map_width_fixed'];
+				}
 			}else{
 				$map_width_type = '%';
+				$map_width = $people_contact_location_map_settings['map_width_responsive'];
 			}
 		
 			$html .= '<div id="map_canvas'.$unique_id.'" class="map_canvas_container" style="width: '.$map_width.$map_width_type.'; height: '.$map_height.'px;float:left;"></div>';
@@ -432,7 +430,7 @@ class People_Contact {
 			$html .= '</div>';
 		}
 		
-		$grid_view_team_title = trim($people_contact_grid_view_layout['grid_view_team_title']);
+		$grid_view_team_title = trim($people_contact_global_settings['grid_view_team_title']);
 		
 		if ( $grid_view_team_title != '' ) {
 			$html .= '<div class="custom_box_title"><h1 class="p_title">'.$grid_view_team_title.'</h1></div>';
@@ -447,7 +445,7 @@ class People_Contact {
 				if($value['c_avatar'] != ''){
 					$src = $value['c_avatar'];
 				}else{
-					$src = $people_contact_grid_view_icon['default_profile_image'];
+					$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
 				}
 						
 				$html .= '<div class="people_item people_item'.$unique_id.'">';

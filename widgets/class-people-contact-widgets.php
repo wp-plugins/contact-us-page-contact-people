@@ -30,13 +30,7 @@ class People_Contact_Widget extends WP_Widget {
 		$widget_maps_scroll = 'true';
 		$streetview = 'off';	
 		$map_height = $people_contact_widget_maps['widget_map_height'];
-		$map_width = $people_contact_widget_maps['widget_map_width'];
-		$map_width_type = $people_contact_widget_maps['widget_map_width_type'];
-		if($map_width_type == 'px'){
-			$map_width_type = 'px';
-		}else{
-			$map_width_type = '%';
-		}
+		
 		$zoom = $people_contact_widget_maps['widget_zoom_level'];
 		$type = $people_contact_widget_maps['widget_map_type'];
 		$marker_title = $people_contact_widget_information['widget_info_address'];
@@ -51,7 +45,7 @@ class People_Contact_Widget extends WP_Widget {
 		if(empty($map_height)) { $map_height = 150;}
 		wp_enqueue_script('maps-googleapis','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' );
 		?>
-		<div id="single_map_people_contact" style="width:<?php echo $map_width;?><?php echo $map_width_type;?>; height: <?php echo $map_height; ?>px"></div>
+		<div id="single_map_people_contact" style="width:100%; height: <?php echo $map_height; ?>px"></div>
 		<script src="<?php echo PEOPLE_CONTACT_JS_URL; ?>/markers.js" type="text/javascript"></script>
 		<script type="text/javascript">
 			jQuery(document).ready(function(){
@@ -313,14 +307,10 @@ class People_Contact_Widget extends WP_Widget {
             <?php } ?>
 			<?php
 			
-			$phone_icon = $people_contact_grid_view_icon['grid_view_icon_phone'];
-			if( trim($phone_icon ) == '' ) $phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
-			$fax_icon = $people_contact_grid_view_icon['grid_view_icon_fax'];
-			if( trim($fax_icon ) == '' ) $fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
-			$mobile_icon = $people_contact_grid_view_icon['grid_view_icon_mobile'];
-			if( trim($mobile_icon ) == '' ) $mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
-			$email_icon = $people_contact_grid_view_icon['grid_view_icon_email'];
-			if( trim($email_icon ) == '' ) $email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
+			$phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
+			$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
+			$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
+			$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
 			
 			if( isset( $emailSent ) && $emailSent == true ) { ?>
 	
@@ -365,7 +355,7 @@ class People_Contact_Widget extends WP_Widget {
 				<!-- /.location-twitter -->
 				<?php
 				
-				if( trim($people_contact_widget_email_contact_form['widget_input_shortcode']) != ''){
+				if( $people_contact_widget_email_contact_form['widget_show_contact_form'] != 1 && trim($people_contact_widget_email_contact_form['widget_input_shortcode']) != ''){
 					echo '<div class="clear" style="clear:both;"></div><div class="people_widget_shortcode">';
 					$widget_input_shortcode = htmlspecialchars_decode($people_contact_widget_email_contact_form['widget_input_shortcode']);
 					echo do_shortcode( $widget_input_shortcode );

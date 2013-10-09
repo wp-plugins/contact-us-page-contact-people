@@ -87,9 +87,9 @@ class People_Contact_Shortcode{
                 </select> <img class="people_contact_item_loader" style="display:none;" src="<?php echo PEOPLE_CONTACT_IMAGE_URL; ?>/ajax-loader.gif" border=0 />
             </p>
             
-            <p><label for="people_contact_align">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Alignment', 'cup_cp'); ?>:</label> <select style="width:100px" id="people_contact_align" name="people_contact_align"><option value="none" selected="selected"><?php _e('None', 'cup_cp'); ?></option><option value="left-wrap"><?php _e('Left - wrap', 'cup_cp'); ?></option><option value="left"><?php _e('Left - no wrap', 'cup_cp'); ?></option><option value="center"><?php _e('Center', 'cup_cp'); ?></option><option value="right-wrap"><?php _e('Right - wrap', 'cup_cp'); ?></option><option value="right"><?php _e('Right - no wrap', 'cup_cp'); ?></option></select> <span class="description"><?php _e('Horizontal aliginment of grid item', 'cup_cp'); ?></span></p>
-				<p><label for="people_contact_item_width">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Box width', 'cup_cp'); ?>:</label> <input disabled="disabled" style="width:100px;" size="10" id="people_contact_item_width" name="people_contact_item_width" type="text" value="300" />px</p>
-				<p><label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><?php _e('Padding', 'cup_cp'); ?></strong>:</label><br /> 
+            <p><label for="people_contact_align">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Card Alignment', 'cup_cp'); ?>:</label> <select style="width:100px" id="people_contact_align" name="people_contact_align"><option value="none" selected="selected"><?php _e('None', 'cup_cp'); ?></option><option value="left-wrap"><?php _e('Left - wrap', 'cup_cp'); ?></option><option value="left"><?php _e('Left - no wrap', 'cup_cp'); ?></option><option value="center"><?php _e('Center', 'cup_cp'); ?></option><option value="right-wrap"><?php _e('Right - wrap', 'cup_cp'); ?></option><option value="right"><?php _e('Right - no wrap', 'cup_cp'); ?></option></select> <span class="description"><?php _e('Wrap is text wrap like images', 'cup_cp'); ?></span></p>
+				<p><label for="people_contact_item_width">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Card Width', 'cup_cp'); ?>:</label> <input disabled="disabled" style="width:100px;" size="10" id="people_contact_item_width" name="people_contact_item_width" type="text" value="300" />px</p>
+				<p><label for="">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><?php _e('Card External Padding', 'cup_cp'); ?></strong>:</label><br /> 
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="people_contact_padding_top" style="width:auto; float:none"><?php _e('Above', 'cup_cp'); ?>:</label><input  disabled="disabled" style="width:50px;" size="10" id="people_contact_padding_top" name="people_contact_padding_top" type="text" value="10" />px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 	<label for="people_contact_padding_bottom" style="width:auto; float:none"><?php _e('Below', 'cup_cp'); ?>:</label> <input disabled="disabled" style="width:50px;" size="10" id="people_contact_padding_bottom" name="people_contact_padding_bottom" type="text" value="10" />px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 	<label for="people_contact_padding_left" style="width:auto; float:none"><?php _e('Left', 'cup_cp'); ?>:</label> <input disabled="disabled" style="width:50px;" size="10" id="people_contact_padding_left" name="people_contact_padding_left" type="text" value="0" />px &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -121,19 +121,20 @@ class People_Contact_Shortcode{
                     </select>
                 </p>
             
-                <p><label for="profile_category_column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Grid View Column', 'cup_cp'); ?>:</label> 
+                <p><label for="profile_category_column">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Profile Cards / Row', 'cup_cp'); ?>:</label> 
                 	<select style="width:100px" id="profile_category_column" name="profile_category_column">
                     <?php
-					echo '<option value="">'.__('Please select...', 'cup_cp').'</option>';	
-					for ( $column = 1; $column <= 5; $column++ ) {
-						echo '<option value="'.$column.'">'. $column. ' ' .__('column', 'cup_cp') .' </option>';
+					echo '<option value="">'.__('Please select...', 'cup_cp').'</option>';
+						echo '<option value="1">1 ' .__('Card', 'cup_cp') .' </option>';
+					for ( $column = 2; $column <= 5; $column++ ) {
+						echo '<option value="'.$column.'">'. $column. ' ' .__('Cards', 'cup_cp') .' </option>';
 					}
                     ?>
                     </select> <span class="description"><?php _e('Empty to use global settings.', 'cup_cp'); ?></span>
 				</p>
-                <p><label for="enable_google_map">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Enable/Disable Map', 'cup_cp'); ?>:</label> <input disabled="disabled" type="checkbox" id="enable_google_map" name="enable_google_map" value="1" <?php if ( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ) echo 'checked="checked"'; ?> /> <span><?php _e('Check to enable google location map on this Group Page.', 'cup_cp'); ?></span>
+                <p><label for="enable_google_map">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Google Map', 'cup_cp'); ?>:</label> <input disabled="disabled" type="checkbox" id="enable_google_map" name="enable_google_map" value="1" <?php if ( $people_contact_location_map_settings['hide_maps_frontend'] != 1 ) echo 'checked="checked"'; ?> /> <span><?php _e('Check to enable google location map for this group.', 'cup_cp'); ?></span>
                 </p>
-                <p><label for="people_show_group_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Enable/Disable', 'cup_cp'); ?>:</label> <input disabled="disabled" type="checkbox" id="people_show_group_title" name="people_show_group_title" value="1" checked="checked" /> <span><?php _e('Check to show group title above Profiles.', 'cup_cp'); ?></span>
+                <p><label for="people_show_group_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php _e('Group Title', 'cup_cp'); ?>:</label> <input disabled="disabled" type="checkbox" id="people_show_group_title" name="people_show_group_title" value="1" checked="checked" /> <span><?php _e('Check to show group title above Profiles.', 'cup_cp'); ?></span>
                 </p>
 				
 			</div>

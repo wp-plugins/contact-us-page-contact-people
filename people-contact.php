@@ -2,11 +2,11 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.1.0
+Version: 1.1.1
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.3
-Tested up to: 3.6
+Tested up to: 3.6.1
 License: GPLv2 or later
 */
 
@@ -40,36 +40,23 @@ if(!defined("PEOPLE_CONTACT_ULTIMATE_URI"))
     define("PEOPLE_CONTACT_ULTIMATE_URI", "http://a3rev.com/shop/contact-people-ultimate/");
 if(!defined("PEOPLE_CONTACT_DOCS_URI"))
     define("PEOPLE_CONTACT_DOCS_URI", "http://docs.a3rev.com/user-guides/plugins-extensions/wordpress/contact-us-page-contact-people/");
+
+include('admin/admin-ui.php');
+include('admin/admin-interface.php');
+
+include('admin/admin-pages/admin-settings-page.php');
+
+include('admin/admin-init.php');
+
 include('classes/data/class-profiles-data.php');
 
 include('classes/class-people-contact-functions.php');
 include('classes/class-people-contact-hook.php');
 include('classes/class-people-contact.php');
-include('uploader/class-uploader.php');
-
-include('admin/classes/grid-view-panel/class-grid-view-layout-panel.php');
-include('admin/classes/grid-view-panel/class-grid-view-style-panel.php');
-include('admin/classes/grid-view-panel/class-grid-view-image-style-panel.php');
-include('admin/classes/grid-view-panel/class-grid-view-icon-panel.php');
-include('admin/classes/class-grid-view-panel.php');
-
-include('admin/classes/contact-widget-panel/class-contact-widget-settings-panel.php');
-include('admin/classes/contact-widget-panel/class-contact-widget-information-panel.php');
-include('admin/classes/contact-widget-panel/class-contact-widget-email-contact-form-panel.php');
-include('admin/classes/contact-widget-panel/class-contact-widget-maps-panel.php');
-include('admin/classes/class-contact-widget-panel.php');
-
-
-include('admin/classes/contact-page-panel/class-contact-page-settings-panel.php');
-include('admin/classes/contact-page-panel/class-contact-page-location-map-panel.php');
-include('admin/classes/contact-page-panel/class-contact-page-contact-forms-panel.php');
-include('admin/classes/contact-page-panel/class-contact-popup-style-panel.php');
-include('admin/classes/class-contact-page-panel.php');
 
 include('admin/classes/class-people-contact-addnew.php');
 include('admin/classes/class-people-contact-manager-panel.php');
 include('admin/classes/class-people-category-manager-panel.php');
-include('admin/classes/class-people-contact-settings.php');
 
 include('shortcodes/class-people-contact-shortcodes.php');
 include('widgets/class-people-contact-widgets.php');
@@ -87,8 +74,11 @@ register_activation_hook(__FILE__, 'people_contact_install');
 function people_contact_uninstall() {
 	if ( get_option('a3_people_contact_clean_on_deletion') == 1 ) {
 		delete_option('people_contact_settings');
+		delete_option('people_contact_global_settings');
 		delete_option('people_contact_location_map_settings');
 		delete_option('people_contact_contact_forms_settings');
+		delete_option('people_contact_popup_style_settings');
+		
 		delete_option('people_contact_grid_view_style');
 		delete_option('people_contact_grid_view_layout');
 		delete_option('people_contact_grid_view_icon');

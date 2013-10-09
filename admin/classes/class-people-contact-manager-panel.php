@@ -28,7 +28,7 @@ class People_Contact_Manager_Panel
 		<div class="wrap">
         
         <?php echo $message; ?>
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php _e('Profiles', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-contact', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-5" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
+        <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-contact-manager"><br></div><h2><?php _e('Profiles', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-contact', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a></h2>
 		<div style="clear:both;height:5px;"></div>
 		<form name="contact_setting" method="post" action="">
 		  <table class="widefat post fixed sorttable people_table">
@@ -53,7 +53,7 @@ class People_Contact_Manager_Panel
 					if ( $value['c_avatar'] != '') {
 						$src = $value['c_avatar'];
 					} else {
-						$src = $people_contact_grid_view_icon['default_profile_image'];
+						$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
 					}
 					?>
 			  <tr id="recordsArray_<?php echo $value['id']; ?>">

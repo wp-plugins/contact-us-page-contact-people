@@ -39,7 +39,7 @@ class People_Category_Manager_Panel
 			People_Category_Manager_Panel::admin_categories();
 		}
 		?>
-        </div><div id="a3_plugin_panel_upgrade_area"><?php echo People_Contact_Functions::plugin_pro_notice(); ?></div></div>
+        </div><div id="a3_plugin_panel_upgrade_area"><div id="a3_plugin_panel_extensions"><?php echo People_Contact_Functions::plugin_pro_notice(); ?></div></div></div>
         </div>
         </div>
 		<?php
@@ -48,7 +48,7 @@ class People_Category_Manager_Panel
 	public static function admin_categories () {
 		$all_categories = array ( array('id' => 1, 'category_name' => __('Profile Group', 'cup_cp') ) );
 	?>
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php _e('Groups', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-category-manager&action=add_new', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-9" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
+        <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-category-manager"><br></div><h2><?php _e('Groups', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-category-manager&action=add_new', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a></h2>
 		<div style="clear:both;height:5px;"></div>
         <div class="pro_feature_fields">
         <div style="margin-bottom:5px;"><?php _e('Create Groups, assign Profiles to Groups and insert the Group into any Post or Page by Shortcode.', 'cup_cp'); ?></div>
@@ -113,8 +113,9 @@ class People_Category_Manager_Panel
 			$bt_value = __('Update', 'cup_cp');
 		}
 	?>
-		<div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php echo $title;?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-8" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
+		<div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-category-add"><br></div><h2><?php echo $title;?></h2>
 		<div style="clear:both;"></div>
+        <div class="a3rev_panel_container">
         <div class="pro_feature_fields">
 		<form action="<?php echo admin_url('admin.php?page=people-category-manager', 'relative');?>" method="post">
         	<?php if ( $category_id > 0 ) { ?><input type="hidden" value="<?php echo $category_id;?>" id="category_id" name="category_id"><?php } ?>
@@ -127,7 +128,18 @@ class People_Category_Manager_Panel
 				</tr>
 				<tr valign="top">
 				  <th scope="row"><label><?php _e('Activate Shortcode', 'cup_cp') ?></label></th>
-				  <td><label><input disabled="disabled" type="radio" checked="checked" value="1" name="publish" /> <?php _e('Yes', 'cup_cp'); ?></label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label><input disabled="disabled" type="radio" value="0" name="publish" /> <?php _e('No', 'cup_cp'); ?></label><div class="description"><?php _e('Check Yes to add this Group to the list of Group shortcodes that can be inserted in Post or Pages by shortcode. Check No and the Group will not show in the Insert Shortcode drop down list of available Groups.', 'cup_cp'); ?></div></td>
+				  <td>
+                  		<input
+								name="publish"
+                                id="publish"
+								class="a3rev-ui-onoff_checkbox"
+                                checked_label="<?php _e( 'YES', 'cup_cp' ); ?>"
+                                unchecked_label="<?php _e( 'NO', 'cup_cp' ); ?>"
+                                type="checkbox"
+								value="1"
+								<?php checked( $publish, 1 ); ?>
+								/>
+                  		<div class="description"><?php _e('Select Yes to add this Group to the list of Group shortcodes that can be inserted in Post or Pages by shortcode. Set No and the Group will not show in the Insert Shortcode drop down list of available Groups.', 'cup_cp'); ?></div></td>
 				</tr>
         	  </tbody>
 			</table>
@@ -136,6 +148,7 @@ class People_Category_Manager_Panel
             <input type="hidden" value="<?php echo $bt_type;?>" name="<?php echo $bt_type;?>" />
             <input disabled="disabled" type="submit" value="<?php echo $bt_value;?>" class="button-primary" id="add_edit_buttom" name="add_edit_buttom"> <a class="button" href="<?php echo admin_url('admin.php?page=people-category-manager', 'relative'); ?>"><?php _e('Cancel', 'cup_cp'); ?></a></p>
 		</form>     
+        </div>
         </div>       
     <?php
 	}
@@ -149,7 +162,7 @@ class People_Category_Manager_Panel
 		
 		?>
         
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2>"<?php echo esc_attr( stripslashes( $current_category['category_name'] ) ) ; ?>" <?php _e('Profiles', 'cup_cp'); ?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-10" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
+        <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-category-profiles-manager"><br></div><h2>"<?php echo esc_attr( stripslashes( $current_category['category_name'] ) ) ; ?>" <?php _e('Profiles', 'cup_cp'); ?></h2>
 		<div style="clear:both;height:5px;"></div>
         <div class="pro_feature_fields">
         <div style="margin-bottom:5px;"><?php _e('Below are all of the Profiles currently assigned to this Group. Sort Profile order for this Group by drag and drop using the blue up - down arrow at the left of each Profile row.', 'cup_cp'); ?></div>

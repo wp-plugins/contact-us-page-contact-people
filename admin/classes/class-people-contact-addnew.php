@@ -70,9 +70,9 @@ class People_Contact_AddNew
         <div style="clear:both"></div>
 		<div class="wrap">
         
-        <div class="icon32 icon32-posts-post" id="icon-edit"><br></div><h2><?php echo $title;?> <a class="add-new-h2 a3-view-docs-button" target="_blank" href="<?php echo PEOPLE_CONTACT_DOCS_URI;?>#section-6" ><?php _e('View Docs', 'cup_cp'); ?></a></h2>
+        <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-contact-addnew"><br></div><h2><?php echo $title;?></h2>
           <div style="clear:both;"></div>
-		  <div class="contact_manager">
+		  <div class="contact_manager a3rev_panel_container">
 			<form action="" name="add_conact" id="add_contact" method="post">
 			<input type="hidden" value="<?php echo $_GET['id'];?>" id="profile_id" name="contact_arr[profile_id]">
             <div class="col-left">
@@ -91,7 +91,10 @@ class People_Contact_AddNew
 				<tr valign="top">
 				  <th scope="row"><label for="c_avatar"><?php _e('Profile Image', 'cup_cp') ?></label></th>
 				  <td>
-                  <?php echo People_Contact_Uploader::upload_input_fields('contact_arr', 'c_avatar', __('Profile Image', 'cup_cp'), $data['c_avatar'], '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>', '236px' ); ?>
+                  <?php
+				  global $people_contact_uploader;
+				  ?>
+                  <?php echo $people_contact_uploader->upload_input( 'c_avatar', 'c_avatar', $data['c_avatar'], '', __('Profile Image', 'cup_cp'), '', 'width:236px;', '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>' ); ?>
                   </td>
 				</tr>
         	  </tbody>
@@ -158,8 +161,8 @@ class People_Contact_AddNew
 		#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
 		</style>
         <fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
-            <h3><?php _e('3RD Party Contact Form Shortcode for this profile', 'cup_cp'); ?></h3>
-            <p><?php _e('Add a unique Contact Form for this profile. Enter the Contact Form 7 or Gravity Forms shortcode for that form. 3rd Party Contact Form must be activated in Setting > People Contact Forms.', 'cup_cp'); ?></p>
+            <h3><?php _e('Contact Form Shortcode from another Plugin', 'cup_cp'); ?></h3>
+            <p><?php _e('Add a unique Contact Form for this profile. Supports Contact Form 7 or Gravity Forms plugin shortcodes. Feature must be activated in Settings > Contact Page > Profile Contact Forms.', 'cup_cp'); ?></p>
             <table class="form-table" style="margin-bottom:0;">
             <tr valign="top">
 				  <th scope="row"><label for="c_shortcode"><?php _e('Enter Form Shortcode', 'cup_cp') ?></label></th>
@@ -190,7 +193,18 @@ class People_Contact_AddNew
 				if ( is_array($all_categories) && count($all_categories) > 0 ) {
 					foreach ( $all_categories as $category_data ) {
 				?>
-                	<div><label><input disabled="disabled" type="checkbox" name="categories_assign[]" value="<?php echo $category_data['id']; ?>" /> <?php esc_attr_e( stripslashes( $category_data['category_name'] ) ); ?></label></div>
+                	<div style="float:left; width:100%; margin-bottom:10px;">
+                    	<input
+								name="categories_assign[]"
+								class="a3rev-ui-onoff_checkbox"
+                                checked_label="<?php _e( 'YES', 'cup_cp' ); ?>"
+                                unchecked_label="<?php _e( 'NO', 'cup_cp' ); ?>"
+                                type="checkbox"
+								value="<?php echo $category_data['id']; ?>"
+								/>
+                    	<?php esc_attr_e( stripslashes( $category_data['category_name'] ) ); ?>
+                	</div>
+                    <div style="clear:both"></div>
                 <?php
 					}
 				} else {

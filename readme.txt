@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
-Tested up to: 3.6
-Stable tag: 1.1.0
+Tested up to: 3.6.1
+Stable tag: 1.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,23 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.1.1 - 2013/10/09 =
+* Features :
+	* Upgraded the plugin to the newly developed a3rev admin panel app interface.
+	* New admin UI features check boxes replaced by switches, some dropdowns replaced by sliders.
+	* Added intuitive triggers for settings. Corresponding settings only show when a feature is activated.
+	* Replaced colour picker with new WordPress 3.6.0 colour picker. (Pro Version Feature)
+	* Added choice of 350 Google fonts to the existing 17 websafe fonts in all new single row font editor. (Pro Version Feature)
+	* New Border / Button shadow features. Create shadow external or internal, set wide of shadow. (Pro Version Feature)
+	* New on page instant previews for Fonts editor, create border and shadow style. (Pro Version Feature)
+* Tweaks :
+	* Changed Grid View tab name to Profile Cards to more accurately describe what the features on that tab are for. (Pro Version Feature)
+	* Complete audit and rewrite of the plugins admin description text for admin panel user interface.
+	* Removed ‘View Docs’ feature in this version until new docs are completed that accurately depict the new admin panel. 
+* Fixed :
+	* Map center marker not showing on first page load.
+	* Profiles Map marker not showing on mouse over. 
+
 = 1.1.0 - 2013/09/14 =
 * Fixes :
 	* Use browser protocol http or https on page load fix in v1.0.9 caused sites that use Minify plugins to crash on update. Updated style url and script url to fix Minify conflict.
@@ -220,6 +237,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.1 =
+Upgrade your plugin now for the all new a3rev admin panel app type interface plus Map Marker not showing bug fix.
 
 = 1.1.0 =
 Upgrade now for very important conflict with Minify bug fix.

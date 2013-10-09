@@ -6,7 +6,6 @@
  *
  * plugins_loaded()
  * create_page()
- * get_font()
  * people_contact_register_sidebar()
 
  */
@@ -17,21 +16,6 @@ class People_Contact_Functions
 	 * Set global variable when plugin loaded
 	 */
 	public static function plugins_loaded() {
-		
-		People_Contact_Page_Settings_Panel::get_settings();
-		People_Contact_Page_Location_Map_Panel::get_settings();
-		People_Contact_Page_Contact_Forms_Panel::get_settings();
-		People_Contact_Popup_Style_Panel::get_settings();
-	
-		People_Contact_Grid_View_Layout_Panel::get_settings();
-		People_Contact_Grid_View_Style_Panel::get_settings();
-		People_Contact_Grid_View_Image_Style_Panel::get_settings();
-		People_Contact_Grid_View_Icon_Panel::get_settings();
-		
-		People_Contact_Widget_Settings_Panel::get_settings();
-		People_Contact_Widget_Information_Panel::get_settings();
-		People_Contact_Widget_Email_Contact_Form_Panel::get_settings();
-		People_Contact_Widget_Maps_Panel::get_settings();
 		
 	}
 	
@@ -221,31 +205,7 @@ class People_Contact_Functions
 	public static function get_content_type() {
 		return 'text/html';
 	}
-	
-	public static function get_font() {
-		$fonts = array( 
-			'Arial, sans-serif'													=> __( 'Arial', 'cup_cp' ),
-			'Verdana, Geneva, sans-serif'										=> __( 'Verdana', 'cup_cp' ),
-			'Trebuchet MS, Tahoma, sans-serif'								=> __( 'Trebuchet', 'cup_cp' ),
-			'Georgia, serif'													=> __( 'Georgia', 'cup_cp' ),
-			'Times New Roman, serif'											=> __( 'Times New Roman', 'cup_cp' ),
-			'Tahoma, Geneva, Verdana, sans-serif'								=> __( 'Tahoma', 'cup_cp' ),
-			'Palatino, Palatino Linotype, serif'								=> __( 'Palatino', 'cup_cp' ),
-			'Helvetica Neue, Helvetica, sans-serif'							=> __( 'Helvetica*', 'cup_cp' ),
-			'Calibri, Candara, Segoe, Optima, sans-serif'						=> __( 'Calibri*', 'cup_cp' ),
-			'Myriad Pro, Myriad, sans-serif'									=> __( 'Myriad Pro*', 'cup_cp' ),
-			'Lucida Grande, Lucida Sans Unicode, Lucida Sans, sans-serif'	=> __( 'Lucida', 'cup_cp' ),
-			'Arial Black, sans-serif'											=> __( 'Arial Black', 'cup_cp' ),
-			'Gill Sans, Gill Sans MT, Calibri, sans-serif'					=> __( 'Gill Sans*', 'cup_cp' ),
-			'Geneva, Tahoma, Verdana, sans-serif'								=> __( 'Geneva*', 'cup_cp' ),
-			'Impact, Charcoal, sans-serif'										=> __( 'Impact', 'cup_cp' ),
-			'Courier, Courier New, monospace'									=> __( 'Courier', 'cup_cp' ),
-			'Century Gothic, sans-serif'										=> __( 'Century Gothic', 'cup_cp' ),
-		);
 		
-		return apply_filters('people_contact_fonts_support', $fonts );
-	}
-	
 	/**
 	 * Create Page
 	 */
@@ -285,9 +245,20 @@ class People_Contact_Functions
 		));
 	}
 	
+	public static function plugin_extension_start() {
+		global $people_contact_admin_init;
+		
+		$people_contact_admin_init->plugin_extension_start();
+	}
+	
+	public static function plugin_extension_end() {
+		global $people_contact_admin_init;
+		
+		$people_contact_admin_init->plugin_extension_end();
+	}
+	
 	public static function plugin_pro_notice() {
 		$html = '';
-		$html .= '<div id="a3_plugin_panel_extensions">';
 		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.PEOPLE_CONTACT_IMAGE_URL.'/a3logo.png" /></a>';
 		$html .= '<h3>'.__('Upgrade available for Extra Functionality', 'cup_cp').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins", 'cup_cp').':</p>';
@@ -327,7 +298,6 @@ class People_Contact_Functions
 		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'cup_cp').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '</div>';
 		return $html;
 	}
 	
