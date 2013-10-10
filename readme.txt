@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,12 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.1.2 - 2013/10/10 =
+* Tweaks:
+	* a3rev logo image now resizes to the size of the yellow sidebar in tablets and mobiles.
+* Fixes:
+	* App interface Radio switches not working properly on Android platform, replace removeProp() with removeAttr() function script
+
 = 1.1.1 - 2013/10/09 =
 * Features :
 	* Upgraded the plugin to the newly developed a3rev admin panel app interface.
@@ -237,6 +243,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Upgrade now for an admin panel app interface Radio Switch bug fix on the Android platform 
 
 = 1.1.1 =
 Upgrade your plugin now for the all new a3rev admin panel app type interface plus Map Marker not showing bug fix.

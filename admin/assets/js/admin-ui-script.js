@@ -112,7 +112,7 @@
 								onChange: function(elem, value) { 
 										var status = value.toString();
 										if ( status == 'true') {
-											$('input[name="' + input_name + '"]').not(current_item).removeProp('checked').removeAttr('checkbox-disabled').iphoneStyle("refresh");
+											$('input[name="' + input_name + '"]').not(current_item).removeAttr('checked').removeAttr('checkbox-disabled').iphoneStyle("refresh");
 										}
 										$('input[name="' + input_name + '"]').trigger("a3rev-ui-onoff_radio-switch", [elem.val(), status]);
 									},
