@@ -33,7 +33,7 @@ class People_Contact_Widget extends WP_Widget {
 		
 		$zoom = $people_contact_widget_maps['widget_zoom_level'];
 		$type = $people_contact_widget_maps['widget_map_type'];
-		$marker_title = $people_contact_widget_information['widget_info_address'];
+		$marker_title = addslashes( $people_contact_widget_information['widget_info_address'] );
 		if ( $zoom == '' ) { $zoom = 6; }   
 		$lang = '';
 		$locale = '';

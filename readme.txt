@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.3
 Tested up to: 3.6.1
-Stable tag: 1.1.2
+Stable tag: 1.1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -141,6 +141,10 @@ On WordPress  – with any theme.
 
 == Changelog ==
 
+= 1.1.2.1 - 2013/10/11 =
+* Fixes:
+	* Shortcode with " character not rendering on front end. Added array_map( array( $this, 'admin_stripslashes' ) , $current_settings )
+
 = 1.1.2 - 2013/10/10 =
 * Tweaks:
 	* a3rev logo image now resizes to the size of the yellow sidebar in tablets and mobiles.
@@ -243,6 +247,9 @@ On WordPress  – with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.2.1 =
+! Important. Urgent shortcode bug fix. Please update you plugin now for this fix.
 
 = 1.1.2 =
 Upgrade now for an admin panel app interface Radio Switch bug fix on the Android platform 

@@ -239,6 +239,7 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 			$current_settings = array_merge( $default_settings, $current_settings );
 			
 			$current_settings = apply_filters( $this->plugin_name . '_' . $option_name . '_get_settings' , $current_settings );
+			$current_settings = array_map( array( $this, 'admin_stripslashes' ), $current_settings );
 			
 			$$option_name = $current_settings;
 			
@@ -271,6 +272,11 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 				global $$id_attribute;
 				
 				$current_setting = get_option( $id_attribute, $value['default'] );
+				
+				if ( is_array( $current_setting ) )
+					$current_setting = array_map( array( $this, 'admin_stripslashes' ), $current_setting );
+				elseif ( ! is_null( $current_setting ) )
+					$current_setting = esc_attr( stripslashes( $current_setting ) );
 				
 				$$id_attribute = $current_setting;
 			}
