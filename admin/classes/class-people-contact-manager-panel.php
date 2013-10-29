@@ -64,7 +64,7 @@ class People_Contact_Manager_Panel
 				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_email']) );?></td>
 				<td valign="middle" class="phone"><?php esc_attr_e( stripslashes( $value['c_phone']) );?></td>
 				<td valign="middle" class="address"><?php esc_attr_e( stripslashes( $value['c_address']) );?></td>
-				<td valign="middle" align="center"><a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-contact&action=edit&id='.$value['id'], 'relative');?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-contact&action=del&id='.$value['id'], 'relative');?>" onclick="if(!confirm('<?php _e('Are you sure delete this profile?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
+				<td valign="middle" align="center"><a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-contact&action=edit&id='.$value['id'], 'relative');?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-contact-manager&action=del&id='.$value['id'], 'relative');?>" onclick="if(!confirm('<?php _e('Are you sure delete this profile?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
 			  </tr>
 			  <?php
 				}

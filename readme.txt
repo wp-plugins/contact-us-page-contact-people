@@ -2,9 +2,9 @@
 
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
-Requires at least: 3.3
-Tested up to: 3.6.1
-Stable tag: 1.1.2.1
+Requires at least: 3.5
+Tested up to: 3.7
+Stable tag: 1.1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,20 +19,20 @@ Contact Us Page - Contact People allows you transform your themes dull and borin
 The plugin when installed auto creates a stunning contact us page with these features:
 
 * Enable/Disable Google Location Map - Show main location and each profiles location on map.
-* Create unlimited Contact Profiles. Display each person, department, store or branch office  contact profile.
-* Features direct email submission from users to each contact profile.
+* Create unlimited Contact Profile Cards. Display each person, department, store or branch office on a profile card.
+* Features direct email submission from users to each contact profile card.
 * Email address never visible.
-* People Contact Profiles: Show as much or as little contact information as each individual desires/requires.
-* Department Contact Profile: Displace each departments contact profile, e.g. support, sales, admin.
-* Stores and branches local or world wide – Contact Profile and local on Google map.
+* Contact Profile cards: Show as much or as little contact information as each profile desires / requires.
+* Department Contact Profiles: Displace each departments contact profile, e.g. support, sales, admin.
+* Stores and branches local or world wide - show on Google map.
 * Add and edit profiles - Add profiles with all their contact details, profile image or add a department (e.g. Sales, Support, Despatch) or branch offices.
-* Contact Profiles show in Grid View on Contact us page. 
-* Contact Us Page is fully mobile responsive using JQuery masonry.
+* Contact Profiles show stylish Contact cards on the Contact us page. 
+* Contact Us Page dispaly is fully mobile responsive using JQuery masonry.
 * Fully cross browser compliant including IE7 to IE10.
-* Mobile device optimized – all tablets and phones. 
-* Sort position in Grid View display by drag and drop.
-* Set Grid View Column layout. Single to 5 column layout supported.
-* Mouse over profile and that contact profile auto shows as pop up on map marker.
+* Mobile device optimized, all tablets and phones. 
+* Sort profile card position on Contact us page by using drag and droping the Profiles admin menu.
+* Set the number of profile Cards to show per row. Display up to 5 Cards per row.
+* Mouse over profile card and that contact profile auto shows as pop up on map marker.
 * Click map marker to see contact profile as pop-up.
 * Click to email. Contact form with smooth email pop-up forms for easy and quick submission.
 * Pop-up submission success confirmation.
@@ -50,7 +50,7 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 
 = Pro Version Additional functionality =
 
-This plugin features a Pro version upgrade that adds extra functionality to the plugin. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
+This plugin features a Pro version and Ultimate version upgrades that add tonnes of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
 
 = Contact Form 7 & Gravity Forms Integration =
 
@@ -59,20 +59,33 @@ This plugin features a Pro version upgrade that adds extra functionality to the 
 * Add unique contact forms for profiles.
 * Use the power of these 2 great contact plugins to create unique contact forms. 
 
-= In-Plugin-Style for Grid View =
+= Profile Card Point and Click Layout and Style =
 
-* WYSIWYG editor for creating a unique style for the people / profile Grid View placeholders. Fully independent of any Theme’s style sheets.
-* Upload custom icons - ‘No Image’ and contact icons.
+* Point and Click editor for creating a unique Profile card style. Fully independent of any Themes style sheets.
+* Upload custom icons - Default image and contact icons.
 
 = People Contact Profile Shortcode =
 
-This great feature enables you to add any profile contact extract (Grid View) to ay post or page via the plugins shortcode function. Features:
+This great feature enables you to add any profile card to any post or page via the plugins shortcode function. Features:
 
-* Contact Profile shows in the sale Grid View format that is shows on the Contact Us page.
-* Add multiple Contact Profiles to a single page.
-* Set width in px for the Contact Profile Grid View placeholder.
-* Set Grid View Placeholder alignment on page, includes text wrap left or right.
-* Set Grid View  Placeholder padding top, bottom, left and right.
+* Contact Profile shows in the same Card style that is shows on the Contact Us page.
+* Add multiple Contact Profiles cards to a single page.
+* Set width in px for the Contact Profile Card.
+* Set Profile card alignment on page, includes text wrap left or right.
+* Set Profile card padding top, bottom, left and right.
+
+= Contact People Ultimate =
+The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations – just about any Grouping that you want to create
+
+* Create unlimited Groups and assign Profiles to Groups
+* Assign a single Profile to any number of Groups
+* Sort Profile order within each Group
+* Groups shortcode – Insert Groups in any page or post.
+* Insert multiple groups per pages or posts.
+* Shortcode point and click display editor.
+* Set the number of Profiles per row in each group
+* Show or don’t show Google map with Group
+* Show or don’t show Group title above Profiles
 
 = Localization =
 
@@ -85,19 +98,17 @@ This great feature enables you to add any profile contact extract (Grid View) to
 [PRO Version]( http://a3rev.com/shop/contact-us-page-contact-people/) |
 [Documentation](http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/email-inquiry-ultimatehttp://docs.a3rev.com/user-guides/plugins-extensions/wordpress/contact-us-page-contact-people/) |
 
-
 == Installation ==
 
 = Minimum Requirements =
 
-* WordPress 3.4.1
-* WooCommerce v2.0 and backwards.
+* WordPress 3.5
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
  
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us page – Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us page â€“ Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
 
 = Manual installation =
 
@@ -128,7 +139,7 @@ The manual installation method involves downloading our plugin and uploading it 
 
 7. Appearance > Widgets and add contact widget to sidebar.
 
-8. Appearance > Menus and add the Page – Contact Us page to your menu.
+8. Appearance > Menus and add the Page â€“ Contact Us page to your menu.
 
 9. Enjoy your dynamite looking contact us page.
 
@@ -136,117 +147,99 @@ The manual installation method involves downloading our plugin and uploading it 
 
 = When can I use this plugin? =
 
-On WordPress  – with any theme.
-
+On WordPress  â€“ with any theme.
 
 == Changelog ==
 
+= 1.1.2.2 - 2013/10/29 =
+* Tweak - Update a3rev Plugin Framework.
+* Fix - Updated Delete Profile URL, was preventing deletion of a profile.
+
 = 1.1.2.1 - 2013/10/11 =
-* Fixes:
-	* Shortcode with " character not rendering on front end. Added array_map( array( $this, 'admin_stripslashes' ) , $current_settings )
+* Fix - Shortcode with " character not rendering on front end. Added array_map( array( $this, 'admin_stripslashes' ) , $current_settings )
 
 = 1.1.2 - 2013/10/10 =
-* Tweaks:
-	* a3rev logo image now resizes to the size of the yellow sidebar in tablets and mobiles.
-* Fixes:
-	* App interface Radio switches not working properly on Android platform, replace removeProp() with removeAttr() function script
+* Tweak - a3rev logo image now resizes to the size of the yellow sidebar in tablets and mobiles.
+* Fix - App interface Radio switches not working properly on Android platform, replace removeProp() with removeAttr() function script
 
 = 1.1.1 - 2013/10/09 =
-* Features :
-	* Upgraded the plugin to the newly developed a3rev admin panel app interface.
-	* New admin UI features check boxes replaced by switches, some dropdowns replaced by sliders.
-	* Added intuitive triggers for settings. Corresponding settings only show when a feature is activated.
-	* Replaced colour picker with new WordPress 3.6.0 colour picker. (Pro Version Feature)
-	* Added choice of 350 Google fonts to the existing 17 websafe fonts in all new single row font editor. (Pro Version Feature)
-	* New Border / Button shadow features. Create shadow external or internal, set wide of shadow. (Pro Version Feature)
-	* New on page instant previews for Fonts editor, create border and shadow style. (Pro Version Feature)
-* Tweaks :
-	* Changed Grid View tab name to Profile Cards to more accurately describe what the features on that tab are for. (Pro Version Feature)
-	* Complete audit and rewrite of the plugins admin description text for admin panel user interface.
-	* Removed ‘View Docs’ feature in this version until new docs are completed that accurately depict the new admin panel. 
-* Fixed :
-	* Map center marker not showing on first page load.
-	* Profiles Map marker not showing on mouse over. 
+* Feature - Upgraded the plugin to the newly developed a3rev admin panel app interface.
+* Feature - New admin UI features check boxes replaced by switches, some dropdowns replaced by sliders.
+* Feature - Added intuitive triggers for settings. Corresponding settings only show when a feature is activated.
+* Feature - Replaced colour picker with new WordPress 3.6.0 colour picker. (Pro Version Feature)
+* Feature - Added choice of 350 Google fonts to the existing 17 websafe fonts in all new single row font editor. (Pro Version Feature)
+* Feature - New Border / Button shadow features. Create shadow external or internal, set wide of shadow. (Pro Version Feature)
+* Feature - New on page instant previews for Fonts editor, create border and shadow style. (Pro Version Feature)
+* Tweak - Changed Grid View tab name to Profile Cards to more accurately describe what the features on that tab are for. (Pro Version Feature)
+* Tweak - Complete audit and rewrite of the plugins admin description text for admin panel user interface.
+* Tweak - Removed View Docs feature in this version until new docs are completed that accurately depict the new admin panel. 
+* Fix - Map center marker not showing on first page load.
+* Fix - Profiles Map marker not showing on mouse over. 
 
 = 1.1.0 - 2013/09/14 =
-* Fixes :
-	* Use browser protocol http or https on page load fix in v1.0.9 caused sites that use Minify plugins to crash on update. Updated style url and script url to fix Minify conflict.
-	* Thanks to Roy Vella (USA) for reporting the issue and the wp-admin and ftp access to his site to find and fix the bug.
+* Fix - Use browser protocol http or https on page load fix in v1.0.9 caused sites that use Minify plugins to crash on update. Updated style url and script url to fix Minify conflict.
+* Credit - Thanks to Roy Vella (USA) for reporting the issue and the wp-admin and ftp access to his site to find and fix the bug.
 
 = 1.0.9 - 2013/09/06 =
-* Features :
-	* Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
-* Tweaks :
-	* Added new Contact People Ultimate feature Groups settings to admin panel. 
-	* Added new Profile sort arrow icons to Profiles.
-	* Fixed some typos and some minor feature sort on admin panel.
-	* Updated plugins Yellow sidebar content to show new Ultimate version features.
-	* Full plugins docs completed for all 3 plugin versions, Lite, Pro and Ultimate.
-* Fixes :
-	* Harden the plugins CSS output to prevent some theme CSS over-riding the Profile Grid layout settings
-	* Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
+* Twaek - Added 'View Docs' link from the top of each admin panel to that menus section on the plugins docs.
+* Tweak - Added new Contact People Ultimate feature Groups settings to admin panel. 
+* Tweak - Added new Profile sort arrow icons to Profiles.
+* Tweak - Fixed some typos and some minor feature sort on admin panel.
+* Tweak - Updated plugins Yellow sidebar content to show new Ultimate version features.
+* Tweak - Full plugins docs completed for all 3 plugin versions, Lite, Pro and Ultimate.
+* Tweak - Harden the plugins CSS output to prevent some theme CSS over-riding the Profile Grid layout settings
+* Fix - Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
 
 = 1.0.8 - 2013/08/28 =
-* Fixes :
-	* Added call wp_enqueue_script('jquery'); from add_action('get_header') to fix Google Map loading issue on some sites.
-* Tweak :
-	* Added correct URL for submit translations on plugins description.
+* Fix - Added call wp_enqueue_script('jquery'); from add_action('get_header') to fix Google Map loading issue on some sites.
+* Fix - Added correct URL for submit translations on plugins description.
 
 = 1.0.7 - 2013/08/24 =
-* Fixes :
-	* Added script to check if Longitude and latitude have been created for Location address for each profile. If no long and Lat found for a profile, its pop-up on Google map does not show on mouse over.
-	* Map not showing in Chrome when any profile has no Location Address. Undefined Long and Lat where causing the map to not show in Google Chrome when mouse over a profile with no address.
+* Fix - Added script to check if Longitude and latitude have been created for Location address for each profile. If no long and Lat found for a profile, its pop-up on Google map does not show on mouse over.
+* Fix - Map not showing in Chrome when any profile has no Location Address. Undefined Long and Lat where causing the map to not show in Google Chrome when mouse over a profile with no address.
 
 = 1.0.6 - 2013/08/22 =
-* Features :
-	* Added new @media beak points for a superior Grid View display in mobile phone and tablet when viewing in portrait or landscape.
-* Fixes :
-	* Grid View Responsive style not rendering true in IE8 on some themes. 
-	* Changed add_action( 'wp_head', array to add_action( 'get_header', array
-	* Moved respond-ie.js script so that it loads from the header instead of the footer
+* Tweak - Added new @media beak points for a superior Grid View display in mobile phone and tablet when viewing in portrait or landscape.
+* Fix - Grid View Responsive style not rendering true in IE8 on some themes. 
+* Fix - Changed add_action( 'wp_head', array to add_action( 'get_header', array
+* Fix - Moved respond-ie.js script so that it loads from the header instead of the footer
 
 = 1.0.5 - 2013/08/16 =
-* Tweaks :
-	* Updated admin panel help text to reflect the new Profile Grid View layout and Profile image style features available in Pro version. 
-* Fixes :
-	* Grid View always displays 1 column - 100% wide in IE7 and IE8. Made required custom .CSS stylesheet tweaks just so dear old IE can render modern responsive styles.
+* Tweak - Updated admin panel help text to reflect the new Profile Grid View layout and Profile image style features available in Pro version. 
+* Fix - Grid View always displays 1 column - 100% wide in IE7 and IE8. Made required custom .CSS stylesheet tweaks just so dear old IE can render modern responsive styles.
 
 = 1.0.4 - 2013/08/12 =  
-* Tweaks :
-	* Tested for full compatibility with WordPress v3.6.0
-* Fixes :
-	* Fixed email icon and click here link text no longer show on profile grid when no email address is entered for the profile.
-	* Fixed script validate email for default contact form. Old script conflicted with WordPress 3.6.0 jQuery 1.10.2. Conflict caused the popup tools to break. 
-	* Added box-sizing:content-box class attribute for compatibility with new WordPress Twenty Thirteen default theme.
+* Tweak - Tested for full compatibility with WordPress v3.6.0
+* Fix - Email icon and click here link text no longer show on profile grid when no email address is entered for the profile.
+* Fix - Script validate email for default contact form. Old script conflicted with WordPress 3.6.0 jQuery 1.10.2. Conflict caused the popup tools to break. 
+* Fix - Added box-sizing:content-box class attribute for compatibility with new WordPress Twenty Thirteen default theme.
 
 = 1.0.3 - 2013/07/10 =
-* Features :
-	* Added support for use of special characters in Profile Fields.
-	* Added support for use of Cyrillic Symbols in Profile Fields.
-	* Added support for Chinese Characters in Profile Fields.
-* Fixes :
-	* All profiles lost with input errors. Convert save profile in array to save profile in table. Upgrade auto converts existing profiles from array to new table.
-	* Google map show correct center of profile address when edit a Profile, before it use Center Address option in Contact Us -> Settings -> Contact Page tab -> Location Map subtab to make it as center for map when edit a Profile.
+* Tweak - Added support for use of special characters in Profile Fields.
+* Tweak - Added support for use of Cyrillic Symbols in Profile Fields.
+* Tweak - Added support for Chinese Characters in Profile Fields.
+* Fix - All profiles lost with input errors. Convert save profile in array to save profile in table. Upgrade auto converts existing profiles from array to new table.
+* Fix - Google map show correct center of profile address when edit a Profile, before it use Center Address option in Contact Us -> Settings -> Contact Page tab -> Location Map subtab to make it as center for map when edit a Profile.
 
 = 1.0.2 - 2013/07/08 =
-* Tweaks :
-	* Plugin support URL's updated.
-	* Pro Version live demo completed.
-	* Relaunch of Pro Version 7 Day Free Trail.
+* Tweak - Plugin support URL's updated.
+* Tweak - Pro Version live demo completed.
+* Tweak - Relaunch of Pro Version 7 Day Free Trail.
 
 = 1.0.1 - 2013/07/01 =
-* Fixes:
-	* Conflict with Themes that use jQuery Masonry. Replaced plugins global .masonry class with custom #people_contact_container .mansonry class
-	* Profiles Grid View layout in IE7 and IE8 on themes with JQuery Masonry. Moved style sheet from footer to header and updated browser_body_class() function
-	* Warning: Cannot modify header information when creating or editing profiles.Removed session_start and added add_action('init') Now uses the correct wp_redirect().
-* Tweaks:
-	* Add link to the Pro Version Live Demo to the plugins Yellow Box on the admin dashboard. 
-
+* Tweak - Add link to the Pro Version Live Demo to the plugins Yellow Box on the admin dashboard.
+* Fix - Conflict with Themes that use jQuery Masonry. Replaced plugins global .masonry class with custom #people_contact_container .mansonry class
+* Fix - Profiles Grid View layout in IE7 and IE8 on themes with JQuery Masonry. Moved style sheet from footer to header and updated browser_body_class() function
+* Fix - Warning: Cannot modify header information when creating or editing profiles.Removed session_start and added add_action('init') Now uses the correct wp_redirect().
+ 
 = 1.0.0 - 2013/06/27 =
 * First working release
 
 
 == Upgrade Notice ==
+
+= 1.1.2.2 =
+Upgrade now for 1 important bug fix and upgrades to the a3rev Plugin Framework.
 
 = 1.1.2.1 =
 ! Important. Urgent shortcode bug fix. Please update you plugin now for this fix.

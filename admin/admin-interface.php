@@ -238,8 +238,8 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 			if ( ! is_array( $current_settings ) ) $current_settings = array();
 			$current_settings = array_merge( $default_settings, $current_settings );
 			
-			$current_settings = apply_filters( $this->plugin_name . '_' . $option_name . '_get_settings' , $current_settings );
 			$current_settings = array_map( array( $this, 'admin_stripslashes' ), $current_settings );
+			$current_settings = apply_filters( $this->plugin_name . '_' . $option_name . '_get_settings' , $current_settings );
 			
 			$$option_name = $current_settings;
 			
@@ -277,6 +277,8 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 					$current_setting = array_map( array( $this, 'admin_stripslashes' ), $current_setting );
 				elseif ( ! is_null( $current_setting ) )
 					$current_setting = esc_attr( stripslashes( $current_setting ) );
+				
+				$current_setting = apply_filters( $this->plugin_name . '_' . $id_attribute . '_get_setting' , $current_setting );
 				
 				$$id_attribute = $current_setting;
 			}
@@ -736,6 +738,8 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 		$admin_message = '';
 		
 		if ( isset( $_POST['form_name_action'] ) && $_POST['form_name_action'] == $form_key ) {
+			do_action( $this->plugin_name . '-' . trim( $form_key ) . '_before_settings_save' );
+			
 			// Save settings action
 			if ( isset( $_POST['bt_save_settings'] ) ) {
 				$this->save_settings( $options, $option_name );
@@ -877,7 +881,7 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 				$description = str_replace( '[default_value_blur]', $value['default']['blur'], $description );
 				$description = str_replace( '[default_value_spread]', $value['default']['spread'], $description );
 				
-			} else {
+			} elseif ( $value['type'] != 'multiselect' ) {
 				$description = str_replace( '[default_value]', $value['default'], $description );
 			}
 	
