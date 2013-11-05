@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.5
-Tested up to: 3.7
-Stable tag: 1.1.2.2
+Tested up to: 3.7.1
+Stable tag: 1.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -147,9 +147,22 @@ The manual installation method involves downloading our plugin and uploading it 
 
 = When can I use this plugin? =
 
-On WordPress  â€“ with any theme.
+On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.3 - 2013/11/05 =
+* Tweak - Added new Email Inquiry main menu and moved all Email Form settings onto it.
+* Tweak - Imail Inquiry Menu tabs - Settings | Default Form | Custom Form | Pop-up Style.
+* Tweak - Pop-up tools wide under 520px shows 100% wide of the screen for mobiles in portrait or landscape. 
+* Tweak - Default Form breaks down for greatly enhanced display in tablets and mobiles.
+* Tweak - Default Form - added static 20px content padding that auto reduces to 5px in tablets and mobiles.
+* Tweak - Default From - vertical alignment of the text fields
+* Tweak - Default Form - changed the default form fonts on install from Bold to Normal.
+* Tweak - Default Form Success Message uses form custom background colour.
+* Tweak - Default Form Success Message Pop-up auto resizes to the tall of the content.
+* Tweak - Changed the plugins wp-admin sidebar icon.
+* Fix: Conflict with Google Library plugin that blocked Pop-Up from opening. 
 
 = 1.1.2.2 - 2013/10/29 =
 * Tweak - Update a3rev Plugin Framework.
@@ -237,6 +250,9 @@ On WordPress  â€“ with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+Scheduled major upgrade of mobile responsiveness of the Profiles email inquiry Default Form, Pop-up tools and success message plus 1 bug fix.
 
 = 1.1.2.2 =
 Upgrade now for 1 important bug fix and upgrades to the a3rev Plugin Framework.

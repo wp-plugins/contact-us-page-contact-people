@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <?php
 /*-----------------------------------------------------------------------------------
-Contact Page Popup Style Settings
+People Email Inquiry Global Settings
 
 TABLE OF CONTENTS
 
@@ -28,13 +28,13 @@ TABLE OF CONTENTS
 
 -----------------------------------------------------------------------------------*/
 
-class People_Contact_Popup_Style_Settings extends People_Contact_Admin_UI
+class People_Email_Inquiry_Global_Settings extends People_Contact_Admin_UI
 {
 	
 	/**
 	 * @var string
 	 */
-	private $parent_tab = 'contact-page';
+	private $parent_tab = 'settings';
 	
 	/**
 	 * @var array
@@ -45,19 +45,19 @@ class People_Contact_Popup_Style_Settings extends People_Contact_Admin_UI
 	 * @var string
 	 * You must change to correct option name that you are working
 	 */
-	public $option_name = 'people_contact_popup_style_settings';
+	public $option_name = 'people_email_inquiry_global_settings';
 	
 	/**
 	 * @var string
 	 * You must change to correct form key that you are working
 	 */
-	public $form_key = 'people_contact_popup_style_settings';
+	public $form_key = 'people_email_inquiry_global_settings';
 	
 	/**
 	 * @var string
 	 * You can change the order show of this sub tab in list sub tabs
 	 */
-	private $position = 4;
+	private $position = 1;
 	
 	/**
 	 * @var array
@@ -78,15 +78,16 @@ class People_Contact_Popup_Style_Settings extends People_Contact_Admin_UI
 		$this->subtab_init();
 		
 		$this->form_messages = array(
-				'success_message'	=> __( 'Contact Pop Up Style successfully saved.', 'cup_cp' ),
-				'error_message'		=> __( 'Error: Contact Pop Up Style can not save.', 'cup_cp' ),
-				'reset_message'		=> __( 'Contact Pop Up Style successfully reseted.', 'cup_cp' ),
+				'success_message'	=> __( 'Email Inquiry Settings successfully saved.', 'cup_cp' ),
+				'error_message'		=> __( 'Error: Email Inquiry Settings can not save.', 'cup_cp' ),
+				'reset_message'		=> __( 'Email Inquiry Settings successfully reseted.', 'cup_cp' ),
 			);
 			
 		add_action( $this->plugin_name . '_set_default_settings' , array( $this, 'set_default_settings' ) );
-		add_action( $this->plugin_name . '_get_all_settings' , array( $this, 'get_settings' ) );
 		
 		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_init' , array( $this, 'reset_default_settings' ) );
+		
+		add_action( $this->plugin_name . '_get_all_settings' , array( $this, 'get_settings' ) );
 		
 		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_start', array( $this, 'pro_fields_before' ) );
 		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_end', array( $this, 'pro_fields_after' ) );
@@ -146,9 +147,9 @@ class People_Contact_Popup_Style_Settings extends People_Contact_Admin_UI
 	public function subtab_data() {
 		
 		$subtab_data = array( 
-			'name'				=> 'contact-popup-style',
-			'label'				=> __( 'Contact Pop-Up Style', 'cup_cp' ),
-			'callback_function'	=> 'contact_page_popup_style_settings_form',
+			'name'				=> 'global-settings',
+			'label'				=> __( 'Settings', 'cup_cp' ),
+			'callback_function'	=> 'people_contact_email_inquiry_global_settings_form',
 		);
 		
 		if ( $this->subtab_data ) return $this->subtab_data;
@@ -191,30 +192,71 @@ class People_Contact_Popup_Style_Settings extends People_Contact_Admin_UI
      	$this->form_fields = apply_filters( $this->option_name . '_settings_fields', array(
 		
 			array(
-            	'name' 		=> __( 'Built-in Contact Form Style', 'cup_cp' ),
-                'type' 		=> 'heading',
+            	'name' => __( 'Contact Form Type', 'cup_cp' ),
+                'type' => 'heading',
            	),
 			array(  
-				'name' 		=> __( 'Font', 'cup_cp' ),
-				'id' 		=> 'contact_popup_text_font',
-				'type' 		=> 'typography',
-				'default'	=> array( 'size' => '12px', 'face' => 'Arial, sans-serif', 'style' => 'normal', 'color' => '#000000' )
+				'name' 		=> __( 'Plugins Default Contact Form', 'cup_cp' ),
+				'id' 		=> 'contact_form_type_other',
+				'class'		=> 'contact_form_type_other default_contact_form_type',
+				'type' 		=> 'onoff_radio',
+				'default' 	=> 0,
+				'onoff_options' => array(
+					array(
+						'val' 				=> 0,
+						'text' 				=> '',
+						'checked_label'		=> __( 'ON', 'cup_cp') ,
+						'unchecked_label' 	=> __( 'OFF', 'cup_cp') ,
+					),
+					
+				),			
+			),
+			array(  
+				'name' 		=> __( 'Create form by Shortcode', 'cup_cp' ),
+				'id' 		=> 'contact_form_type_other',
+				'class'		=> 'contact_form_type_other',
+				'type' 		=> 'onoff_radio',
+				'default' 	=> 0,
+				'onoff_options' => array(
+					array(
+						'val' 				=> 1,
+						'text' 				=> __( "Only Contact Form 7 or Gravity Forms shortcode will work here", 'cup_cp' ),
+						'checked_label'		=> __( 'ON', 'cup_cp') ,
+						'unchecked_label' 	=> __( 'OFF', 'cup_cp') ,
+					),
+					
+				),			
+			),
+			
+			array(
+            	'name' => __( 'Select a Pop-Up Tool', 'cup_cp' ),
+                'type' => 'heading',
+           	),
+			array(  
+				'name' 		=> __( "Pop-Up Tool", 'cup_cp' ),
+				'id' 		=> 'inquiry_popup_type',
+				'type' 		=> 'switcher_checkbox',
+				'default'	=> 'fb',
+				'checked_value'		=> 'fb',
+				'unchecked_value'	=> 'colorbox',
+				'checked_label'		=> __( 'FANCYBOX', 'cup_cp' ),
+				'unchecked_label' 	=> __( 'COLORBOX', 'cup_cp' ),
 			),
 			
         ));
 	}
 }
 
-global $contact_page_popup_style_settings;
-$contact_page_popup_style_settings = new People_Contact_Popup_Style_Settings();
+global $people_contact_email_inquiry_global_settings;
+$people_contact_email_inquiry_global_settings = new People_Email_Inquiry_Global_Settings();
 
 /** 
- * contact_page_popup_style_settings_form()
+ * people_email_inquiry_global_settings_form()
  * Define the callback function to show subtab content
  */
-function contact_page_popup_style_settings_form() {
-	global $contact_page_popup_style_settings;
-	$contact_page_popup_style_settings->settings_form();
+function people_contact_email_inquiry_global_settings_form() {
+	global $people_contact_email_inquiry_global_settings;
+	$people_contact_email_inquiry_global_settings->settings_form();
 }
 
 ?>

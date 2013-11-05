@@ -2,11 +2,11 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.1.2.2
+Version: 1.1.3
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.5
-Tested up to: 3.7
+Tested up to: 3.7.1
 License: GPLv2 or later
 */
 
@@ -44,6 +44,8 @@ if(!defined("PEOPLE_CONTACT_DOCS_URI"))
 include('admin/admin-ui.php');
 include('admin/admin-interface.php');
 
+
+include('admin/admin-pages/admin-email-inquiry-page.php');
 include('admin/admin-pages/admin-settings-page.php');
 
 include('admin/admin-init.php');
@@ -86,6 +88,14 @@ function people_contact_uninstall() {
 		delete_option('people_contact_widget_maps');
 		delete_option('people_contact_widget_information');
 		delete_option('people_contact_widget_email_contact_form');
+		
+		delete_option('people_email_inquiry_global_settings');
+		delete_option('people_email_inquiry_contact_form_settings');
+		delete_option('people_email_inquiry_popup_form_style');
+		delete_option('people_email_inquiry_contact_success');
+		delete_option('people_email_inquiry_3rd_contact_form_settings');
+		delete_option('people_email_inquiry_fancybox_popup_settings');
+		delete_option('people_email_inquiry_colorbox_popup_settings');
 		
 		delete_option('contact_arr');
 		delete_option('profile_email_page_id');

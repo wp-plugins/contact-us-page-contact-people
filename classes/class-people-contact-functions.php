@@ -20,9 +20,10 @@ class People_Contact_Functions
 	}
 	
 	public static function contact_to_people( $profile_data = array(), $send_copy_yourself = 1 ) {
-		global $people_contact_contact_forms_settings;
+		$contact_success = stripslashes( get_option( 'people_email_inquiry_contact_success', '' ) );
 		
-		$contact_success = __("Thanks for your contact - we'll be in touch with you as soon as possible!", 'cup_cp');
+		if ( trim( $contact_success ) != '') $contact_success = wpautop( wptexturize( $contact_success ) );
+		else $contact_success = __("Thanks for your contact - we'll be in touch with you as soon as possible!", 'cup_cp');
 		
 		$to_email = esc_attr( stripslashes( $profile_data['to_email'] ) );
 			

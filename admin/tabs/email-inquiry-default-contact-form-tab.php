@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <?php
 /*-----------------------------------------------------------------------------------
-Contact Page Tab
+People Email Inquiry Default Contact Form Tab
 
 TABLE OF CONTENTS
 
@@ -22,18 +22,18 @@ TABLE OF CONTENTS
 
 -----------------------------------------------------------------------------------*/
 
-class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
+class People_Email_Inquiry_Default_Contact_Form_Tab extends People_Contact_Admin_UI
 {	
 	/**
 	 * @var string
 	 */
-	private $parent_page = 'people-contact-settings';
+	private $parent_page = 'people-email-inquiry';
 	
 	/**
 	 * @var string
 	 * You can change the order show of this tab in list tabs
 	 */
-	private $position = 1;
+	private $position = 2;
 	
 	/**
 	 * @var array
@@ -74,9 +74,9 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 	public function tab_data() {
 		
 		$tab_data = array( 
-			'name'				=> 'contact-page',
-			'label'				=> __( 'Contact Page', 'cup_cp' ),
-			'callback_function'	=> 'people_contact_contact_page_tab_manager',
+			'name'				=> 'default-contact-form',
+			'label'				=> __( 'Default Form', 'cup_cp' ),
+			'callback_function'	=> 'people_email_inquiry_default_contact_form_tab_manager',
 		);
 		
 		if ( $this->tab_data ) return $this->tab_data;
@@ -103,8 +103,9 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 	public function settings_include() {
 		
 		// Includes Settings file
-		include_once( $this->admin_plugin_dir() . '/settings/contact-page-global-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/contact-page-location-map-settings.php' );
+		include_once( $this->admin_plugin_dir() . '/settings/email-inquiry/contact-form-global-settings.php' );
+		include_once( $this->admin_plugin_dir() . '/settings/email-inquiry/popup-form-style-settings.php' );
+		include_once( $this->admin_plugin_dir() . '/settings/email-inquiry/success-message-settings.php' );
 		
 	}
 	
@@ -113,6 +114,7 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 	/* Call tab layout from Admin Init 
 	/*-----------------------------------------------------------------------------------*/
 	public function tab_manager() {
+		
 		global $people_contact_admin_init;
 		
 		$people_contact_admin_init->admin_settings_tab( $this->parent_page, $this->tab_data() );
@@ -120,16 +122,16 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 	}
 }
 
-global $people_contact_contact_page_tab;
-$people_contact_contact_page_tab = new People_Contact_Contact_Page_Tab();
+global $people_email_inquiry_default_contact_form_tab;
+$people_email_inquiry_default_contact_form_tab = new People_Email_Inquiry_Default_Contact_Form_Tab();
 
 /** 
- * people_contact_grid_view_tab_manager()
+ * people_email_inquiry_default_contact_form_tab_manager()
  * Define the callback function to show tab content
  */
-function people_contact_contact_page_tab_manager() {
-	global $people_contact_contact_page_tab;
-	$people_contact_contact_page_tab->tab_manager();
+function people_email_inquiry_default_contact_form_tab_manager() {
+	global $people_email_inquiry_default_contact_form_tab;
+	$people_email_inquiry_default_contact_form_tab->tab_manager();
 }
 
 ?>

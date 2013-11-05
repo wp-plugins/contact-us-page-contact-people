@@ -4,7 +4,7 @@
  *
  * Examples and documentation at: http://fancybox.net
  *
- * Copyright © 2008 - 2010 Janis Skarnelis
+ * Copyright (c) 2008 - 2010 Janis Skarnelis
  * That said, it is hardly a one-person project. Many people have submitted bugs, code, and offered their advice freely. Their support is greatly appreciated.
  *
  * Version: 1.3.4 (11/11/2010)
@@ -14,6 +14,7 @@
  *   http://www.opensource.org/licenses/mit-license.php
  *   http://www.gnu.org/licenses/gpl.html
  */
+
 ;(function($) {
 	var tmp, loading, overlay, wrap, outer, content, close, title, nav_left, nav_right,
 
@@ -462,6 +463,10 @@
 
 		_format_title = function(title) {
 			if (title && title.length) {
+				if (currentOpts.titlePosition == 'float') {
+					return '<table id="fancybox-title-float-wrap" cellpadding="0" cellspacing="0"><tr><td id="fancybox-title-float-left"></td><td id="fancybox-title-float-main">' + title + '</td><td id="fancybox-title-float-right"></td></tr></table>';
+				}
+
 				return '<div id="fancybox-title-' + currentOpts.titlePosition + '">' + title + '</div>';
 			}
 
@@ -1040,12 +1045,12 @@
 		);
 
 		outer = $('<div id="fancybox-outer"></div>')
-			.append('')
+			.append('<div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div>')
 			.appendTo( wrap );
 
 		outer.append(
 			content = $('<div id="fancybox-content"></div>'),
-			close = $('<a id="fancybox-close">&times;</a>'),
+			close = $('<a id="fancybox-close"></a>'),
 			title = $('<div id="fancybox-title"></div>'),
 
 			nav_left = $('<a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a>'),
@@ -1090,7 +1095,7 @@
 	};
 
 	$.fn.fancybox.defaults = {
-		padding : 20,
+		padding : 10,
 		margin : 40,
 		opacity : false,
 		modal : false,
@@ -1112,7 +1117,7 @@
 
 		overlayShow : true,
 		overlayOpacity : 0.7,
-		overlayColor : '#000',
+		overlayColor : '#777',
 
 		titleShow : true,
 		titlePosition : 'float', // 'float', 'outside', 'inside' or 'over'
@@ -1149,19 +1154,3 @@
 	});
 
 })(jQuery);
-
-jQuery(function(){
-	
-	// Hide review form - it will be in a lightbox
-	jQuery('#review_form_wrapper').hide();
-	
-	// Lightbox
-	jQuery('a.zoom, a.show_review_form').fancybox({
-		'transitionIn'	:	'elastic',
-		'transitionOut'	:	'elastic',
-		'speedIn'		:	600, 
-		'speedOut'		:	200, 
-		'overlayShow'	:	true
-	});
-
-});

@@ -20,11 +20,11 @@ class People_Contact {
 	
 	public function init () {
 		//Add Ajax Send Email
-		add_action('wp_ajax_send_a_contact', array( &$this, 'send_a_contact'));
-		add_action('wp_ajax_nopriv_send_a_contact', array( &$this, 'send_a_contact'));
+		add_action('wp_ajax_send_a_contact', array( $this, 'send_a_contact'));
+		add_action('wp_ajax_nopriv_send_a_contact', array( $this, 'send_a_contact'));
 		//Add Ajax Action Client
-		add_action('wp_ajax_load_ajax_contact_form', array( &$this, 'load_ajax_contact_form') );
-		add_action('wp_ajax_nopriv_load_ajax_contact_form', array( &$this, 'load_ajax_contact_form') );
+		add_action('wp_ajax_load_ajax_contact_form', array( $this, 'load_ajax_contact_form') );
+		add_action('wp_ajax_nopriv_load_ajax_contact_form', array( $this, 'load_ajax_contact_form') );
 	}
 	
 	public function send_a_contact(){
@@ -36,9 +36,7 @@ class People_Contact {
 		$c_phone = trim($_REQUEST['c_phone']);
 		$c_message = trim($_REQUEST['c_message']);
 		
-		$send_copy = 0;
-		if ( isset($_REQUEST['send_copy']) )
-			$send_copy = 1;
+		$send_copy = $_REQUEST['send_copy'];
 				
 		if(trim($_REQUEST['c_subject']) != ''){
 			$subject = trim($_REQUEST['c_subject']). ' ' . __('from', 'cup_cp'). ' ' .get_bloginfo('name');
@@ -65,107 +63,66 @@ class People_Contact {
 	
 	public function load_ajax_contact_form() {
 		check_ajax_referer( 'ajax-popup-contact', 'security' );
-		global $people_contact_contact_forms_settings;
+		global $people_email_inquiry_popup_form_style;
 		global $people_contact_grid_view_icon;
-		$data = People_Contact_Profile_Data::get_row( $_REQUEST['contact_id'], '', 'ARRAY_A' );
-		?>
-		<script type="text/javascript">
-		jQuery(document).ready(function ($) {
-			$('input[type="text"]').focus(function (){
-				$(this).removeClass('error');
-			});
-			$('textarea').focus(function (){
-				$(this).removeClass('error');
-			});
-			$("#c_submit").click(function (){
-				
-				var reg = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-				var c_name = $("#c_name").val();
-				var c_subject = $("#c_subject").val();
-				var c_email = $("#c_email").val();
-				var c_phone = $("#c_phone").val();
-				var c_message = $("#c_message").val();
-				
-				if( $.trim(c_name).length <= 0 ){
-					$("#c_name").addClass('error');
-					return false;
-				}
-				
-				if(reg.test(c_email) == false) {
-					$("#c_email").addClass('error');
-					return false;
-				}
-				
-				if( $.trim(c_message).length <= 0 ){
-					$("#c_message").addClass('error');
-					return false;
-				}
-				
-				var wait = $('.ajax-wait');
-				wait.css('display','block');
-	
-				var form_data = $('#c_form').serialize();
-				var url = '<?php echo admin_url('admin-ajax.php', 'relative');?>?action=send_a_contact&security=<?php echo wp_create_nonce("send-a-contact");?>&'+form_data;
 		
-				$.post( url, '', function(response) {
-					$('#c_form').html(response);
-					wait.css('display','none');
-				});
-				return false;
-			});
-		});
-		</script>
-		<div class="custom_contact_popup" style="float:left;position:relative;z-index:1000000 !important">
+		$inquiry_contact_text_button = __('SEND', 'cup_cp');
+		
+		$inquiry_contact_button_class = '';
+		$inquiry_contact_form_class = '';
+		
+		$contact_id = $_REQUEST['contact_id'];
+		
+		$data = People_Contact_Profile_Data::get_row( $contact_id, '', 'ARRAY_A' );
+		?>
+		<div class="custom_contact_popup <?php echo $inquiry_contact_form_class; ?>">
+        <div style="padding:10px;">
 		<div style="clear:both"></div>
-		<p><?php _e('This email will be delivered to', 'cup_cp'); ?>:</p>
+		<div class="people_email_inquiry_contact_heading" ><?php echo $people_email_inquiry_popup_form_style['inquiry_contact_heading']; ?></div>
+		<div style="clear:both; margin-top:10px"></div>
+        <div class="people_email_inquiry_site_name"><?php echo $people_email_inquiry_popup_form_style['inquiry_form_site_name']; ?></div>
+        <div style="clear:both; margin-top:5px"></div>
+		<div style="float:left; margin-right:20px;" class="people_email_inquiry_default_image_container"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo $people_contact_grid_view_icon['default_profile_image'];}?>" width="80" /></div>
+        <div style="display:block; margin-bottom:10px; padding-left:22%;" class="people_email_inquiry_product_heading_container">
+			<div class="people_email_inquiry_profile_position"><?php esc_attr_e( stripslashes(  $data['c_title']) );?></div>
+            <div class="people_email_inquiry_profile_name"><?php esc_attr_e( stripslashes(  $data['c_name']) );?></div>
+        </div>
 		<div style="clear:both;height:1em;"></div>
-		<table width="100%" border="0" cellspacing="0" cellpadding="0">
-		  <tr class="top_title">
-			<td width="80" class="avatar"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';}?>" width="60" /></td>
-			<td class="profile"><h1 class="title"><?php echo bloginfo('name');?></h1><h3><?php esc_attr_e( stripslashes(  $data['c_title']) );?></h3><span><?php esc_attr_e( stripslashes( $data['c_name'] ) );?></span></td>
-		  </tr>
-		</table>
-		<div style="clear:both;height:1em;"></div>
-		<form id="c_form" name="c_form" action="" enctype="multipart/form-data" method="post">
-		<input type="hidden" value="<?php esc_attr_e( stripslashes( $data['c_email'] ) );?>" id="profile_email" name="profile_email" />
-        <input type="hidden" value="<?php esc_attr_e( stripslashes(  $data['c_title']) );?> <?php esc_attr_e( stripslashes( $data['c_name'] ) );?>" id="profile_name" name="profile_name" />
-		<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:0 !important">
-		  <tr>
-			<td width="100%"><label for="c_name" class="gfield_label"><?php _e('Name', 'cup_cp'); ?> <span class="gfield_required">*</span> :</label>
-			<input type="text" tabindex="1" value="" id="c_name" name="c_name"></td>
-		  </tr>
-		  <tr>
-			<td><label for="c_email" class="gfield_label"><?php _e('E-mail', 'cup_cp'); ?> <span class="gfield_required">*</span> :</label>
-			<input type="text" tabindex="1" value="" id="c_email" name="c_email"></td>
-		  </tr>
-		  <tr>
-			<td><label for="c_phone" class="gfield_label"><?php _e('Phone', 'cup_cp'); ?> <span class="gfield_required">*</span> :</label>
-			<input type="text" tabindex="1" value="" id="c_phone" name="c_phone"></td>
-		  </tr>
-		  
-		  <tr>
-			<td><label for="c_subject" class="gfield_label"><?php _e('Subject', 'cup_cp'); ?> :</label>
-			<input type="text" tabindex="1" value="" id="c_subject" name="c_subject"></td>
-		  </tr>
-		  
-		  <tr>
-			<td><label for="c_message" class="gfield_label"><?php _e('Message', 'cup_cp'); ?> <span class="gfield_required">*</span> :</label>
-			<textarea cols="50" rows="3" tabindex="6" class="textarea large" id="c_message" name="c_message"></textarea></td>
-		  </tr>
-		  <tr>
-			<td><input type="submit" tabindex="7" value="<?php _e('Send', 'cup_cp'); ?>" class="button c_submit" id="c_submit" name="c_submit"></td>
-		  </tr>
-		</table>
-		</form>
+        <div class="people_email_inquiry_content" id="people_email_inquiry_content_<?php echo $contact_id; ?>">
+        	<input type="hidden" value="<?php esc_attr_e( stripslashes( $data['c_email'] ) );?>" id="profile_email_<?php echo $contact_id; ?>" name="profile_email" />
+        	<input type="hidden" value="<?php esc_attr_e( stripslashes(  $data['c_title']) );?> <?php esc_attr_e( stripslashes( $data['c_name'] ) );?>" id="profile_name_<?php echo $contact_id; ?>" name="profile_name" />
+            <div class="people_email_inquiry_field">
+                <label class="people_email_inquiry_label" for="c_name_<?php echo $contact_id; ?>"><?php _e('Name', 'cup_cp'); ?> <span class="gfield_required">*</span></label> 
+                <input type="text" name="c_name" id="c_name_<?php echo $contact_id; ?>" value="" /></div>
+            <div class="people_email_inquiry_field">
+                <label class="people_email_inquiry_label" for="c_email_<?php echo $contact_id; ?>"><?php _e('Email', 'cup_cp'); ?> <span class="gfield_required">*</span></label>
+                <input type="text" name="c_email" id="c_email_<?php echo $contact_id; ?>" value="" /></div>
+            <div class="people_email_inquiry_field">
+                <label class="people_email_inquiry_label" for="c_phone_<?php echo $contact_id; ?>"><?php _e('Phone', 'cup_cp'); ?> <span class="gfield_required">*</span></label> 
+                <input type="text" name="c_phone" id="c_phone_<?php echo $contact_id; ?>" value="" /></div>
+            <div class="people_email_inquiry_field">
+                <label class="people_email_inquiry_label" for="c_subject_<?php echo $contact_id; ?>"><?php _e('Subject', 'cup_cp'); ?> </label> 
+                <input type="text" name="c_subject" id="c_subject_<?php echo $contact_id; ?>" value="" /></div>
+            <div class="people_email_inquiry_field">
+                <label class="people_email_inquiry_label" for="c_message_<?php echo $contact_id; ?>"><?php _e('Message', 'cup_cp'); ?> <span class="gfield_required">*</span></label> 
+                <textarea rows="3" name="c_message" id="c_message_<?php echo $contact_id; ?>"></textarea></div>
+            <div class="people_email_inquiry_field">
+                <a class="people_email_inquiry_form_button <?php echo $inquiry_contact_button_class; ?>" id="people_email_inquiry_bt_<?php echo $contact_id; ?>" contact_id="<?php echo $contact_id; ?>"><?php echo $inquiry_contact_text_button; ?></a>
+            </div>
+            <div style="clear:both"></div>
+        </div>
 		<div style="clear:both"></div>
-		<div class="ajax-wait">&nbsp;</div></div>
+		<div class="ajax-wait">&nbsp;</div>
+        </div>
+        </div>
 		<?php
 			
 		die();
 	}
 	
-	public function create_contact_maps($contacts = array()){
-		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon, $people_contact_contact_forms_settings;
+	public function create_contact_maps( $contacts = array() ) {
+		global $people_email_inquiry_fancybox_popup_settings;
+		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon;
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 		
 		$contact_us_page_id = get_option('contact_us_page_id');
@@ -174,7 +131,7 @@ class People_Contact {
 		
 		wp_enqueue_script( 'jquery' );
 		wp_enqueue_script('maps-googleapis','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' );
-		wp_enqueue_script( 'fancybox', PEOPLE_CONTACT_JS_URL . '/fancybox/fancybox' . $suffix . '.js', array( 'jquery' ), '1.6', true );
+		wp_enqueue_script( 'fancybox', PEOPLE_CONTACT_JS_URL . '/fancybox/fancybox'.$suffix.'.js', array(), false, true );
 		wp_enqueue_style( 'woocommerce_fancybox_styles', PEOPLE_CONTACT_JS_URL . '/fancybox/fancybox.css' );
 			
 		$ajax_popup_contact = wp_create_nonce("ajax-popup-contact");
@@ -301,19 +258,37 @@ class People_Contact {
 					if (sites[11] != '') {
 						google.maps.event.addListener(marker, "click", function () {
 						var c_id = this.c_id;
-						var url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
-							jQuery.fancybox({
-								'maxWidth' : 450,
-								'maxHeight' : 546,
-								'width':'60%',
-								'height':'80%',
-								'fitToView'	: true,
-								'autoSize' : true,
-								'autoDimensions': true,
-								'type': 'ajax',
-								'content': url
-							});
+							var ajax_url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
+							var popup_wide = 520;
+							var showclosebt = true;
+							if ( people_group_ei_getWidth<?php echo $unique_id; ?>()  <= 568 ) { 
+								popup_wide = '95%'; 
+								showclosebt = false;
+							}
 							
+							jQuery.fancybox({
+								href: ajax_url,
+								//content: ajax_url,
+								centerOnScroll : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_center_on_scroll'];?>,
+								transitionIn : '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_in'];?>', 
+								transitionOut: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_out'];?>',
+								easingIn: 'swing',
+								easingOut: 'swing',
+								speedIn : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_in'];?>,
+								speedOut : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_out'];?>,
+								width: popup_wide,
+								autoScale: true,
+								autoDimensions: true,
+								height: 500,
+								margin: 0,
+								maxWidth: "95%",
+								maxHeight: "90%",
+								padding: 10,
+								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
+								showCloseButton : showclosebt,
+								openEffect	: "none",
+								closeEffect	: "none"
+							});
 							return false;
 						})
 					}
@@ -331,20 +306,38 @@ class People_Contact {
 			}
 			<?php } ?>
 			
+				var ajax_url2<?php echo $unique_id; ?>='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&security=<?php echo $ajax_popup_contact;?>&contact_id=';
 				jQuery(document).on("click", ".direct_email<?php echo $unique_id; ?>", function(){
 					var c_id2 = jQuery(this).attr("profile-id");
-					jQuery.fancybox.resize();
-					var url2='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id2+'&security=<?php echo $ajax_popup_contact;?>';
+					
+						var showclosebt2 = true;
+						var popup_wide2 = 520;
+						if ( people_group_ei_getWidth<?php echo $unique_id; ?>()  <= 568 ) { 
+							popup_wide2 = '95%'; 
+							showclosebt2 = false;
+						}
 						jQuery.fancybox({
-							'maxWidth' : 450,
-							'maxHeight' : 546,
-							'width':'60%',
-							'height':'80%',
-							'fitToView'	: true,
-							'autoSize' : true,
-							'autoDimensions': true,
-							'type': 'ajax',
-							'content': url2
+								href: ajax_url2<?php echo $unique_id; ?>+c_id2,
+								//content: ajax_url,
+								centerOnScroll : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_center_on_scroll'];?>,
+								transitionIn : '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_in'];?>', 
+								transitionOut: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_out'];?>',
+								easingIn: 'swing',
+								easingOut: 'swing',
+								speedIn : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_in'];?>,
+								speedOut : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_out'];?>,
+								width: popup_wide2,
+								autoScale: true,
+								autoDimensions: true,
+								height: 500,
+								margin: 0,
+								maxWidth: "95%",
+								maxHeight: "90%",
+								padding: 10,
+								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
+								showCloseButton : showclosebt2,
+								openEffect	: "none",
+								closeEffect	: "none"
 						});
 						return false;
 				});
@@ -360,6 +353,19 @@ class People_Contact {
 				popupWindow<?php echo $unique_id; ?>.focus();
 			}
 			
+			function people_group_ei_getWidth<?php echo $unique_id; ?>() {
+				xWidth = null;
+				if(window.screen != null)
+				  xWidth = window.screen.availWidth;
+			
+				if(window.innerWidth != null)
+				  xWidth = window.innerWidth;
+			
+				if(document.body != null)
+				  xWidth = document.body.clientWidth;
+			
+				return xWidth;
+			}
 		</script>
     	<?php
 		wp_enqueue_script( 'jquery-masonry', PEOPLE_CONTACT_JS_URL.'/masonry/jquery.masonry.min.js');
