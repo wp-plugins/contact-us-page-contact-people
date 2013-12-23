@@ -2,11 +2,11 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.1.3
+Version: 1.1.4
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.5
-Tested up to: 3.7.1
+Tested up to: 3.8.0
 License: GPLv2 or later
 */
 
@@ -73,8 +73,8 @@ include('admin/people-contact-init.php');
 */
 register_activation_hook(__FILE__, 'people_contact_install');
 
-function people_contact_uninstall() {
-	if ( get_option('a3_people_contact_clean_on_deletion') == 1 ) {
+function people_contact_lite_uninstall() {
+	if ( get_option('a3_people_contact_lite_clean_on_deletion') == 1 ) {
 		delete_option('people_contact_settings');
 		delete_option('people_contact_global_settings');
 		delete_option('people_contact_location_map_settings');
@@ -104,14 +104,14 @@ function people_contact_uninstall() {
 		delete_option('contact_us_page_id');
 		delete_option('a3rev_wp_people_contact_version');
 		
-		delete_option('a3_people_contact_clean_on_deletion');
+		delete_option('a3_people_contact_lite_clean_on_deletion');
 		
 		global $wpdb;
 		$wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'cup_cp_profiles');
 		
 	}
 }
-if ( get_option('a3_people_contact_clean_on_deletion') == 1 ) {
-	register_uninstall_hook( __FILE__, 'people_contact_uninstall' );
+if ( get_option('a3_people_contact_lite_clean_on_deletion') == 1 ) {
+	register_uninstall_hook( __FILE__, 'people_contact_lite_uninstall' );
 }
 ?>

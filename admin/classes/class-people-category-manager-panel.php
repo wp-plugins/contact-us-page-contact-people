@@ -14,18 +14,11 @@ class People_Category_Manager_Panel
 		
 		?>
         <style>
-		#a3_plugin_panel_container { position:relative; margin-top:10px;}
-		#a3_plugin_panel_fields {width:65%; float:left;}
-		#a3_plugin_panel_upgrade_area { position:relative; margin-left: 65%; padding-left:10px; padding-top:40px;}
-		#a3_plugin_panel_extensions { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; color: #555555; margin: 0px; padding: 5px 10px; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8); background:#FFFBCC; }
-		.pro_feature_fields { margin-right: -12px; position: relative; z-index: 10; border:2px solid #E6DB55;-webkit-border-radius:10px 0 0 10px;-moz-border-radius:10px 0 0 10px;-o-border-radius:10px 0 0 10px; border-radius: 10px 0 0 10px; border-right: 2px solid #FFFFFF; padding:10px; }
-		.pro_feature_fields h3 { margin:8px 5px; }
-		.pro_feature_fields p { margin-left:5px; }
-		.pro_feature_fields  .form-table td, .pro_feature_fields .form-table th { padding:4px 10px; }
+		.pro_feature_fields { padding:10px; }
 		</style>
         <div id="htmlForm">
         <div style="clear:both"></div>
-		<div class="wrap">
+		<div class="wrap a3rev_panel_container a3rev_manager_panel_container">
         <div id="a3_plugin_panel_container"><div id="a3_plugin_panel_fields">
         <?php echo $message; ?>
 		<?php
@@ -56,12 +49,12 @@ class People_Category_Manager_Panel
 		  <table class="widefat post fixed sorttable people_table">
 			<thead>
 			  <tr>
-				<th width="2%" class="manage-column column-title" style="text-align:right;white-space:nowrap"><?php _e('No', 'cup_cp'); ?></th>
-				<th width="15%" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Name', 'cup_cp'); ?></th>
-				<th width="" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Shortcode', 'cup_cp'); ?></th>
-				<th width="5%" class="manage-column column-title" style="text-align:center;white-space:nowrap"><?php _e('Profiles', 'cup_cp'); ?></th>
-                <th width="6%" class="manage-column column-title" style="text-align:center;white-space:nowrap"><?php _e('Activated', 'cup_cp'); ?></th>
-				<th width="15%" style="text-align:center" class="manage-column column-title">&nbsp;</th>
+				<th width="25" class="manage-column column-number" style="text-align:right;white-space:nowrap"><?php _e('No', 'cup_cp'); ?></th>
+				<th width="15%" class="manage-column column-title" style="text-align:left;white-space:nowrap; width:15% !important;"><?php _e('Name', 'cup_cp'); ?></th>
+				<th width="40%" class="manage-column column-shortcode" style="text-align:left;white-space:nowrap"><?php _e('Shortcode', 'cup_cp'); ?></th>
+				<th width="55" class="manage-column column-profiles" style="text-align:center;white-space:nowrap"><?php _e('Profiles', 'cup_cp'); ?></th>
+                <th width="65" class="manage-column column-activated" style="text-align:center;white-space:nowrap"><?php _e('Activated', 'cup_cp'); ?></th>
+				<th width="100" style="text-align:center" class="manage-column column-actions">&nbsp;</th>
 			  </tr>
 			</thead>
 			<tbody>
@@ -74,12 +67,12 @@ class People_Category_Manager_Panel
 					$total_profiles = 0;
 			?>
 			  <tr>
-				<td valign="middle" class="no" style="text-align:right;"><span class="number_item"><?php echo $i;?></span></td>
-				<td valign="middle" style="text-align:left;" class="name"><?php esc_attr_e( stripslashes( $value['category_name']) );?></td>
-				<td valign="middle" class="">[people_group_contacts id="<?php echo $value['id'];?>" group_title="<?php esc_attr_e( stripslashes( $value['category_name']) );?>" column="3" show_map="1" show_group_title="1" ]</td>
-				<td valign="middle" style="text-align:center"><?php echo $total_profiles;?></td>
-                <td valign="middle" style="text-align:center"><?php _e('Yes', 'cup_cp'); ?></td>
-				<td valign="middle" class="" align="center"><a title="<?php _e('View Profiles', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=view-profile&id='.$value['id'], 'relative');?>"><?php _e('View Profiles', 'cup_cp'); ?></a> | <a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=edit&id='.$value['id'], 'relative');?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=del&id='.$value['id'], 'relative');?>" onclick="if(!confirm('<?php _e('Are you sure delete this category?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
+				<td valign="middle" class="no column-number" style="text-align:right;"><span class="number_item"><?php echo $i;?></span></td>
+				<td valign="middle" style="text-align:left;" class="name column-title"><?php esc_attr_e( stripslashes( $value['category_name']) );?></td>
+				<td valign="middle" class="column-shortcode">[people_group_contacts id="<?php echo $value['id'];?>" group_title="<?php esc_attr_e( stripslashes( $value['category_name']) );?>" column="3" show_map="1" show_group_title="1" ]</td>
+				<td valign="middle" class="column-profiles" style="text-align:center"><?php echo $total_profiles;?></td>
+                <td valign="middle" class="column-activated" style="text-align:center"><?php _e('Yes', 'cup_cp'); ?></td>
+				<td valign="middle" class="column-actions" align="center"><a title="<?php _e('View Profiles', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=view-profile&id='.$value['id'], 'relative');?>"><?php _e('View Profiles', 'cup_cp'); ?></a> | <a title="<?php _e('Edit', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=edit&id='.$value['id'], 'relative');?>"><?php _e('Edit', 'cup_cp'); ?></a> | <a title="<?php _e('Delete', 'cup_cp'); ?>" href="<?php echo admin_url('admin.php?page=people-category-manager&action=del&id='.$value['id'], 'relative');?>" onclick="if(!confirm('<?php _e('Are you sure delete this category?', 'cup_cp'); ?>')){return false;}else{return true;}"><?php _e('Delete', 'cup_cp'); ?></a></td>
 			  </tr>
 			  <?php
 				}
@@ -146,10 +139,10 @@ class People_Category_Manager_Panel
             <div style="clear:both"></div>
 			<p class="submit" style="margin-bottom:0;padding-bottom:0;">
             <input type="hidden" value="<?php echo $bt_type;?>" name="<?php echo $bt_type;?>" />
-            <input disabled="disabled" type="submit" value="<?php echo $bt_value;?>" class="button-primary" id="add_edit_buttom" name="add_edit_buttom"> <a class="button" href="<?php echo admin_url('admin.php?page=people-category-manager', 'relative'); ?>"><?php _e('Cancel', 'cup_cp'); ?></a></p>
-		</form>     
+            <input disabled="disabled" type="submit" value="<?php echo $bt_value;?>" class="button button-primary" id="add_edit_buttom" name="add_edit_buttom"> <input type="button" class="button" onclick="window.location='admin.php?page=people-category-manager'" value="<?php _e('Cancel', 'cup_cp'); ?>" /></p>
+		</form>
         </div>
-        </div>       
+	</div>           
     <?php
 	}
 	
@@ -170,20 +163,18 @@ class People_Category_Manager_Panel
 		  <table class="widefat post fixed sorttable people_table">
 			<thead>
 			  <tr>
-				<th width="30" class="manage-column column-title" style="text-align:left;white-space:nowrap"></th>
-				<th width="2%" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('No', 'cup_cp'); ?></th>
-				<th width="4%" class="manage-column column-title">&nbsp;</th>
+				<th width="25" class="manage-column column-number" style="text-align:left;white-space:nowrap"><?php _e('No', 'cup_cp'); ?></th>
 				<th width="10%" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Name', 'cup_cp'); ?></th>
-				<th width="18%" class="manage-column column-title" style="text-align:leftwhite-space:nowrap"><?php _e('Email', 'cup_cp'); ?></th>
-				<th width="8%" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Phone', 'cup_cp'); ?></th>
-				<th style="text-align:left" class="manage-column column-title"><?php _e('Location', 'cup_cp'); ?></th>
-                <th width="8%" class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Groups', 'cup_cp'); ?></th>
-				<th width="8%" style="text-align:center" class="manage-column column-title">&nbsp;</th>
+				<th width="18%" class="manage-column column-email" style="text-align:leftwhite-space:nowrap"><?php _e('Email', 'cup_cp'); ?></th>
+				<th width="8%" class="manage-column column-phone" style="text-align:left;white-space:nowrap"><?php _e('Phone', 'cup_cp'); ?></th>
+				<th width="15%" style="text-align:left" class="manage-column column-location"><?php _e('Location', 'cup_cp'); ?></th>
+                <th width="8%" class="manage-column column-categories" style="text-align:left;white-space:nowrap"><?php _e('Groups', 'cup_cp'); ?></th>
+				<th width="10" style="text-align:center" class="manage-column column-actions">&nbsp;</th>
 			  </tr>
 			</thead>
 			<tbody>
 			  <tr>
-				<td valign="middle" align="center" colspan="9"><?php _e('No Profile for This Group', 'cup_cp'); ?></td>
+				<td valign="middle" align="center" colspan="7"><?php _e('No Profile for This Group', 'cup_cp'); ?></td>
 			  </tr>
 			</tbody>
 		  </table>

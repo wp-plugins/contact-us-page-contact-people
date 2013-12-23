@@ -30,7 +30,7 @@ class People_Contact_Admin_UI
 	 * @var string
 	 * You must change to correct plugin name that you are working
 	 */
-	public $plugin_name = 'contact_us_page_contact_people';
+	public $plugin_name = 'contact_people_ultimate';
 	
 	/**
 	 * @var string
@@ -132,8 +132,8 @@ class People_Contact_Admin_UI
 	/* blue_message_box() */
 	/* Blue Message Box
 	/*-----------------------------------------------------------------------------------*/
-	public function blue_message_box( $message = '' ) {
-		$message = '<div class="a3rev_blue_message_box">' . $message . '</div>';
+	public function blue_message_box( $message = '', $width = '600px' ) {
+		$message = '<div class="a3rev_blue_message_box_container" style="width:'.$width.'"><div class="a3rev_blue_message_box">' . $message . '</div></div>';
 		$message = apply_filters( $this->plugin_name . '_blue_message_box', $message );
 		
 		return $message;

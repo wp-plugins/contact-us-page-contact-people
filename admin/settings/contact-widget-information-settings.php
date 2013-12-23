@@ -218,18 +218,20 @@ class People_Contact_Contact_Widget_Information_Settings extends People_Contact_
 			array(  
 				'name' 		=> __( 'Content before Map', 'cup_cp' ),
 				'desc'		=> __( "Content will show above map on widget. Leave &lt;empty&gt; to disable.", 'cup_cp' ),
-				'id' 		=> 'widget_content_before_maps',
+				'id' 		=> 'people_contact_widget_content_before_maps',
 				'type' 		=> 'wp_editor',
 				'default'	=> '',
 				'textarea_rows'	=> 15,
+				'separate_option'	=> true,
 			),
 			array(  
 				'name' 		=> __( 'Content after Map', 'cup_cp' ),
 				'desc'		=> __( "Content will show below map on widget. Leave &lt;empty&gt; to disable.", 'cup_cp' ),
-				'id' 		=> 'widget_content_after_maps',
+				'id' 		=> 'people_contact_widget_content_after_maps',
 				'type' 		=> 'wp_editor',
 				'default'	=> '',
 				'textarea_rows'	=> 15,
+				'separate_option'	=> true,
 			),
         ));
 	}

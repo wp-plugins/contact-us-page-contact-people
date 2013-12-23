@@ -141,9 +141,9 @@ class People_Contact_Profile_Data
 	
 	public static function reset_shortcode_to_global() {
 		global $wpdb;
-		global $people_contact_contact_forms_settings;
+		global $people_email_inquiry_3rd_contact_form_settings;
 		$table_name = $wpdb->prefix. "cup_cp_profiles";
-		$query = $wpdb->query("UPDATE {$table_name} SET c_shortcode='".$people_contact_contact_forms_settings['contact_form_type_shortcode']."' ");
+		$query = $wpdb->query("UPDATE {$table_name} SET c_shortcode='".$people_email_inquiry_3rd_contact_form_settings['contact_form_type_shortcode']."' ");
 	}
 
 	public static function update_items_order( $item_orders=array() ) {

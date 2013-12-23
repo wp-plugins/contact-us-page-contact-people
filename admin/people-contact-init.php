@@ -3,7 +3,10 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_version', '1.1.3');
+	update_option('a3rev_wp_people_contact_lite_version', '1.1.4');
+	update_option('a3rev_wp_people_contact_version', '1.1.4');
+	update_option('a3rev_wp_people_contact_ultimate_version', '1.0.5');
+	
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
 	People_Contact_Profile_Data::install_database();
@@ -35,6 +38,11 @@ add_action('init', 'wp_people_contact_init');
 //Resgister Sidebar
 add_action('init', array('People_Contact_Functions', 'people_contact_register_sidebar'),99);
 
+// Add custom style to dashboard
+add_action( 'admin_enqueue_scripts', array( 'People_Contact_Hook_Filter', 'a3_wp_admin' ) );
+
+// Add admin sidebar menu css
+add_action( 'admin_enqueue_scripts', array( 'People_Contact_Hook_Filter', 'admin_sidebar_menu_css' ) );
 
 // Load global settings when Plugin loaded
 add_action( 'plugins_loaded', array( 'People_Contact_Functions', 'plugins_loaded' ), 8 );
@@ -91,6 +99,10 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		add_action('admin_head', array('People_Contact_Hook_Filter', 'admin_header_script'));
 	}
 	
+	// Check upgrade functions
+add_action('plugins_loaded', 'a3_people_contact_lite_upgrade_plugin');
+function a3_people_contact_lite_upgrade_plugin () {
+	
 	// Upgrade to 1.0.3
 	if(version_compare(get_option('a3rev_wp_people_contact_version'), '1.0.3') === -1){
 		People_Contact_Profile_Data::install_database();
@@ -115,5 +127,16 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 		update_option('a3rev_wp_people_contact_version', '1.1.1');
 	}
 	
-	update_option('a3rev_wp_people_contact_version', '1.1.3');
+	// Upgrade to 1.1.4 for Lite version
+	if(version_compare(get_option('a3rev_wp_people_contact_version'), '1.1.4') === -1){
+		update_option('a3rev_wp_people_contact_version', '1.1.4');
+		
+		People_Contact_Functions::upgrade_to_lite_1_1_4();
+	}
+	
+	update_option('a3rev_wp_people_contact_lite_version', '1.1.4');
+	update_option('a3rev_wp_people_contact_version', '1.1.4');
+	update_option('a3rev_wp_people_contact_ultimate_version', '1.0.5');
+	
+}
 ?>

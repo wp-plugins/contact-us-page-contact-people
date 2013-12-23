@@ -45,7 +45,7 @@ class People_Contact_AddNew
 		$center_lat = $geodata->results[0]->geometry->location->lat;
 		$center_lng = $geodata->results[0]->geometry->location->lng;
 		$latlng_center = $latlng = $center_lat.','.$center_lng;
-		$bt_cancel = '<a class="button" href="admin.php?page=people-contact-manager">'.__('Cancel', 'cup_cp').'</a>';
+		$bt_cancel = '<input type="button" class="button" onclick="window.location=\'admin.php?page=people-contact-manager\'" value="'.__('Cancel', 'cup_cp').'" />';
 		
 		$data = array('c_title' => '', 'c_name' => '', 'c_email' => '', 'c_phone' => '', 'c_fax' => '', 'c_mobile' => '', 'c_website' => '', 'c_address' => '', 'c_latitude' => '', 'c_longitude' => '', 'c_shortcode' => '', 'c_avatar' => '', 'c_about' => '');
 		
@@ -72,7 +72,7 @@ class People_Contact_AddNew
         
         <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-contact-addnew"><br></div><h2><?php echo $title;?></h2>
           <div style="clear:both;"></div>
-		  <div class="contact_manager a3rev_panel_container">
+		  <div class="contact_manager a3rev_panel_container a3rev_custom_panel_container">
 			<form action="" name="add_conact" id="add_contact" method="post">
 			<input type="hidden" value="<?php echo $_GET['id'];?>" id="profile_id" name="contact_arr[profile_id]">
             <div class="col-left">
@@ -94,7 +94,7 @@ class People_Contact_AddNew
                   <?php
 				  global $people_contact_uploader;
 				  ?>
-                  <?php echo $people_contact_uploader->upload_input( 'c_avatar', 'c_avatar', $data['c_avatar'], '', __('Profile Image', 'cup_cp'), '', 'width:236px;', '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>' ); ?>
+                  <?php echo $people_contact_uploader->upload_input( 'c_avatar', 'c_avatar', $data['c_avatar'], '', __('Profile Image', 'cup_cp'), '', 'width:230px;', '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>' ); ?>
                   </td>
 				</tr>
         	  </tbody>
@@ -176,10 +176,10 @@ class People_Contact_AddNew
             </div>
 			<div class="col-right">
 			  <div class="maps_content" style="padding:10px 0px;">
-			    <div id="map_canvas" style="width:100%;float:left;height:500px"></div>
+			    <div id="map_canvas"></div>
               </div>
               <div style="clear:both"></div>
-              <div style="float:right; width:340px;">
+              <div class="categories_selection_container">
               <style>
 				#a3_plugin_meta_upgrade_area_box { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:10px; position:relative; margin-top:10px; }
 				#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
@@ -305,7 +305,7 @@ class People_Contact_AddNew
 			<div style="clear:both"></div>
 			<p class="submit" style="margin-bottom:0;padding-bottom:0;">
             <input type="hidden" value="<?php echo $bt_type;?>" name="<?php echo $bt_type;?>" />
-            <input type="submit" value="<?php echo $bt_value;?>" class="button-primary" id="add_edit_buttom" name="add_edit_buttom"> <?php echo $bt_cancel;?></p>
+            <input type="submit" value="<?php echo $bt_value;?>" class="button button-primary" id="add_edit_buttom" name="add_edit_buttom"> <?php echo $bt_cancel;?></p>
 			</form>
 		  </div>
 		  <div style="clear:both"></div>

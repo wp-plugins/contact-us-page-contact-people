@@ -7,7 +7,7 @@
  * plugins_loaded()
  * create_page()
  * people_contact_register_sidebar()
-
+ * upgrade_to_lite_1_1_4()
  */
 class People_Contact_Functions 
 {	
@@ -260,7 +260,7 @@ class People_Contact_Functions
 	
 	public static function plugin_pro_notice() {
 		$html = '';
-		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.PEOPLE_CONTACT_IMAGE_URL.'/a3logo.png" /></a>';
+		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><div class="a3-plugin-ui-icon a3-plugin-ui-a3-rev-logo"></div></a>';
 		$html .= '<h3>'.__('Upgrade available for Extra Functionality', 'cup_cp').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins", 'cup_cp').':</p>';
 		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'.__('Contact Us Page - Contact People Pro', 'cup_cp').'</a></h3>';
@@ -327,6 +327,17 @@ class People_Contact_Functions
 				$new_value['c_order'] = $i;
 				People_Contact_Profile_Data::insert_row( $new_value );
 			}
+		}
+	}
+	
+	public static function upgrade_to_lite_1_1_4() {
+		$people_contact_widget_information = get_option( 'people_contact_widget_information', array() );
+		
+		if ( is_array( $people_contact_widget_information ) ) {
+			if ( isset( $people_contact_widget_information['widget_content_before_maps'] ) ) 
+				update_option( 'people_contact_widget_content_before_maps', $people_contact_widget_information['widget_content_before_maps'] )	;
+			if ( isset( $people_contact_widget_information['widget_content_after_maps'] ) ) 
+				update_option( 'people_contact_widget_content_after_maps', $people_contact_widget_information['widget_content_after_maps'] )	;
 		}
 	}
 }

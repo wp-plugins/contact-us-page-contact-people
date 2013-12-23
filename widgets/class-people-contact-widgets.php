@@ -184,7 +184,7 @@ class People_Contact_Widget extends WP_Widget {
 
 	
 	public static function widget_contact_form($widget_id = 0){
-		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form;
+		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form, $people_contact_widget_content_before_maps, $people_contact_widget_content_after_maps;
 		
 		$enable_widget_send_copy = true;
 		if ( $people_contact_widget_email_contact_form['widget_send_copy'] == 'no') $enable_widget_send_copy = false;
@@ -291,8 +291,8 @@ class People_Contact_Widget extends WP_Widget {
 			//-->!]]>
 			</script>
             
-            <?php if ($people_contact_widget_information['widget_content_before_maps'] != '') { ?>        
-            <div class="content_before_maps"><?php echo htmlspecialchars_decode( wpautop(wptexturize(stripslashes($people_contact_widget_information['widget_content_before_maps']))) );?></div>
+            <?php if ($people_contact_widget_content_before_maps != '') { ?>        
+            <div class="content_before_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_before_maps ) ) );?></div>
             <?php } ?>
             <div style="clear:both;"></div>
 			<?php 
@@ -302,8 +302,8 @@ class People_Contact_Widget extends WP_Widget {
 			<?php People_Contact_Widget::widget_maps_contact_output("geocoords=$geocoords"); ?>
 			<?php } ?>
             <div style="clear:both;"></div>
-            <?php if ($people_contact_widget_information['widget_content_after_maps'] != '') { ?>
-            <div class="content_after_maps"><?php echo htmlspecialchars_decode( wpautop(wptexturize(stripslashes($people_contact_widget_information['widget_content_after_maps']))) );?></div>
+            <?php if ($people_contact_widget_content_after_maps != '') { ?>
+            <div class="content_after_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_after_maps ) ) );?></div>
             <?php } ?>
 			<?php
 			

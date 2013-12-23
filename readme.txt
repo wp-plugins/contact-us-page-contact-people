@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.5
-Tested up to: 3.7.1
-Stable tag: 1.1.3
+Tested up to: 3.8.0
+Stable tag: 1.1.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -48,6 +48,23 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 * Default widget email contact form
 * Add email contact from any plugin via shortcode.
 
+= Mobile Responsive App style admin interface =
+
+Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
+
+* 100% compatible with WordPress v3.8.0 admin interface.
+* Backward compatibility to WordPress v3.5.0
+* App style admin interface.
+* Admin app interface is fully mobile and tablet responsive.
+
+= Lite & Pro Version Admin Interface =
+
+All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. Pro Version features and settings are easy to spot on the admin dashboard as they are inside of a Yellow border. The Pro Version settings are all active on the admin panels so they can be used to get a great idea of how they work and what is available BUT the settings do not save when changes are saved and hence are not applied to the front end. Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+
+= Lite Version Support =
+
+As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
+
 = Pro Version Additional functionality =
 
 This plugin features a Pro version and Ultimate version upgrades that add tonnes of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
@@ -75,17 +92,17 @@ This great feature enables you to add any profile card to any post or page via t
 * Set Profile card padding top, bottom, left and right.
 
 = Contact People Ultimate =
-The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations – just about any Grouping that you want to create
+The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations â€“ just about any Grouping that you want to create
 
 * Create unlimited Groups and assign Profiles to Groups
 * Assign a single Profile to any number of Groups
 * Sort Profile order within each Group
-* Groups shortcode – Insert Groups in any page or post.
+* Groups shortcode â€“ Insert Groups in any page or post.
 * Insert multiple groups per pages or posts.
 * Shortcode point and click display editor.
 * Set the number of Profiles per row in each group
-* Show or don’t show Google map with Group
-* Show or don’t show Group title above Profiles
+* Show or donâ€™t show Google map with Group
+* Show or donâ€™t show Group title above Profiles
 
 = Localization =
 
@@ -108,7 +125,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
  
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us page â€“ Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us page, Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
 
 = Manual installation =
 
@@ -139,7 +156,7 @@ The manual installation method involves downloading our plugin and uploading it 
 
 7. Appearance > Widgets and add contact widget to sidebar.
 
-8. Appearance > Menus and add the Page â€“ Contact Us page to your menu.
+8. Appearance > Menus and add the Page Contact Us page to your menu.
 
 9. Enjoy your dynamite looking contact us page.
 
@@ -150,6 +167,15 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.4 - 2013/12/23 =
+* Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
+* Feature - a3rev framework 100% mobile and tablet responsive, portrait and landscape viewing.
+* Tweak - Upgraded dashboard switches and sliders to Vector based display that shows when WordPress version 3.8.0 is activated.
+* Tweak - Upgraded all plugin .jpg icons and images to Vector based display for full compatibility with new WordPress version.
+* Tweak - Yellow sidebar on Pro Version Menus does not show in Mobile screens to optimize admin panel screen space.
+* Tweak - Tested 100% compatible with WP 3.8.0
+* Fix - Upgraded array_textareas type for Padding, Margin settings on the a3rev plugin framework
 
 = 1.1.3 - 2013/11/05 =
 * Tweak - Added new Email Inquiry main menu and moved all Email Form settings onto it.
@@ -250,6 +276,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4 =
+Upgrade now for full a3rev Plugin Framework compatibility with WordPress version 3.8.0 and backwards. New admin interface full mobile and tablet responsive display.
 
 = 1.1.3 =
 Scheduled major upgrade of mobile responsiveness of the Profiles email inquiry Default Form, Pop-up tools and success message plus 1 bug fix.

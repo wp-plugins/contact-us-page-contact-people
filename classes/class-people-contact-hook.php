@@ -9,6 +9,8 @@
  * add_new_load_only_script()
  * admin_header_script()
  * people_update_orders()
+ * a3_wp_admin()
+ * admin_sidebar_menu_css()
  * plugin_extra_links()
  *
  */
@@ -18,7 +20,7 @@ class People_Contact_Hook_Filter
 		global $query_string, $current_user;
 		$current_user_id = $current_user->user_login;
 	
-		$contact_manager = add_menu_page( __('Contact Us', 'cup_cp'), __('Contact Us', 'cup_cp'), 'manage_options', 'people-contact-manager', array( 'People_Contact_Manager_Panel', 'admin_screen' ), PEOPLE_CONTACT_IMAGE_URL.'/icon-thumb.png', '27.222');
+		$contact_manager = add_menu_page( __('Contact Us', 'cup_cp'), __('Contact Us', 'cup_cp'), 'manage_options', 'people-contact-manager', array( 'People_Contact_Manager_Panel', 'admin_screen' ), null, '27.222');
 		
 		$profile = add_submenu_page('people-contact-manager', __( 'Profiles', 'cup_cp' ), __( 'Profiles', 'cup_cp' ), 'manage_options', 'people-contact-manager', array( 'People_Contact_Manager_Panel', 'admin_screen' ) );
 		
@@ -213,6 +215,14 @@ class People_Contact_Hook_Filter
 			People_Contact_Profile_Data::update_order($recordIDValue, $i);
 		}
 		die();
+	}
+	
+	public static function a3_wp_admin() {
+		wp_enqueue_style( 'a3rev-wp-admin-style', PEOPLE_CONTACT_CSS_URL . '/a3_wp_admin.css' );
+	}
+	
+	public static function admin_sidebar_menu_css() {
+		wp_enqueue_style( 'a3rev-people-contact-admin-sidebar-menu-style', PEOPLE_CONTACT_CSS_URL . '/admin_sidebar_menu.css' );
 	}
 	
 	public static function plugin_extra_links($links, $plugin_name) {
