@@ -168,14 +168,14 @@ On WordPress with any theme.
 
 == Changelog ==
 
-= 1.1.4 - 2013/12/23 =
+= 1.1.3 - 2013/12/23 =
 * Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
 * Feature - a3rev framework 100% mobile and tablet responsive, portrait and landscape viewing.
 * Tweak - Upgraded dashboard switches and sliders to Vector based display that shows when WordPress version 3.8.0 is activated.
 * Tweak - Upgraded all plugin .jpg icons and images to Vector based display for full compatibility with new WordPress version.
 * Tweak - Yellow sidebar on Pro Version Menus does not show in Mobile screens to optimize admin panel screen space.
 * Tweak - Tested 100% compatible with WP 3.8.0
-* Fix - Upgraded array_textareas type for Padding, Margin settings on the a3rev plugin framework
+* Fix - Upgraded array_textareas type for Padding, Margin settings on the a3rev plugin framework.
 
 = 1.1.3 - 2013/11/05 =
 * Tweak - Added new Email Inquiry main menu and moved all Email Form settings onto it.
