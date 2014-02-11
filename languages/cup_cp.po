@@ -2,182 +2,184 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Contact Us page - Contact people LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-23 17:30+0700\n"
-"PO-Revision-Date: 2013-12-23 17:30+0700\n"
-"Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
+"POT-Creation-Date: 2014-02-11 18:07+0700\n"
+"PO-Revision-Date: 2014-02-11 18:08+0700\n"
+"Last-Translator: \n"
 "Language-Team: a3rev\n"
+"Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ../\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: admin/admin-interface.php:125
+#: admin/admin-interface.php:127
 msgid "Settings successfully saved."
 msgstr ""
 
-#: admin/admin-interface.php:133
+#: admin/admin-interface.php:135
 msgid "Error: Settings can not save."
 msgstr ""
 
-#: admin/admin-interface.php:141
+#: admin/admin-interface.php:143
 msgid "Settings successfully reseted."
 msgstr ""
 
-#: admin/admin-interface.php:162
+#: admin/admin-interface.php:164
 msgid "Thin"
 msgstr ""
 
-#: admin/admin-interface.php:163
+#: admin/admin-interface.php:165
 msgid "Thin/Italic"
 msgstr ""
 
-#: admin/admin-interface.php:164
+#: admin/admin-interface.php:166
 msgid "Normal"
 msgstr ""
 
-#: admin/admin-interface.php:165
+#: admin/admin-interface.php:167
 msgid "Italic"
 msgstr ""
 
-#: admin/admin-interface.php:166
+#: admin/admin-interface.php:168
 msgid "Bold"
 msgstr ""
 
-#: admin/admin-interface.php:167
+#: admin/admin-interface.php:169
 msgid "Bold/Italic"
 msgstr ""
 
-#: admin/admin-interface.php:177
+#: admin/admin-interface.php:179
 msgid "Solid"
 msgstr ""
 
-#: admin/admin-interface.php:178
+#: admin/admin-interface.php:180
 msgid "Double"
 msgstr ""
 
-#: admin/admin-interface.php:179
+#: admin/admin-interface.php:181
 msgid "Dashed"
 msgstr ""
 
-#: admin/admin-interface.php:180
+#: admin/admin-interface.php:182
 msgid "Dotted"
 msgstr ""
 
-#: admin/admin-interface.php:181
+#: admin/admin-interface.php:183
 msgid "Groove"
 msgstr ""
 
-#: admin/admin-interface.php:182
+#: admin/admin-interface.php:184
 msgid "Ridge"
 msgstr ""
 
-#: admin/admin-interface.php:183
+#: admin/admin-interface.php:185
 msgid "Inset"
 msgstr ""
 
-#: admin/admin-interface.php:184
+#: admin/admin-interface.php:186
 msgid "Outset"
 msgstr ""
 
-#: admin/admin-interface.php:1293 admin/admin-interface.php:1383
-#: admin/admin-interface.php:1412
+#: admin/admin-interface.php:1296 admin/admin-interface.php:1386
+#: admin/admin-interface.php:1415
 #: admin/settings/contact-page-global-settings.php:246
 #: admin/settings/contact-page-location-map-settings.php:192
 #: admin/settings/contact-widget-email-contact-settings.php:212
 #: admin/settings/contact-widget-email-contact-settings.php:245
 #: admin/settings/contact-widget-maps-settings.php:192
-#: admin/settings/grid-view-layout-settings.php:210
-#: admin/settings/grid-view-layout-settings.php:216
-#: admin/settings/grid-view-layout-settings.php:222
-#: admin/settings/grid-view-layout-settings.php:254
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:220
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:226
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:232
 #: admin/settings/email-inquiry/global-settings.php:208
 #: admin/settings/email-inquiry/global-settings.php:224
+#: admin/settings/grid-view-layout-settings.php:210
+#: admin/settings/grid-view-layout-settings.php:216
+#: admin/settings/grid-view-layout-settings.php:222
+#: admin/settings/grid-view-layout-settings.php:254
 msgid "ON"
 msgstr ""
 
-#: admin/admin-interface.php:1294 admin/admin-interface.php:1384
-#: admin/admin-interface.php:1413
+#: admin/admin-interface.php:1297 admin/admin-interface.php:1387
+#: admin/admin-interface.php:1416
 #: admin/settings/contact-page-global-settings.php:247
 #: admin/settings/contact-page-location-map-settings.php:193
 #: admin/settings/contact-widget-email-contact-settings.php:213
 #: admin/settings/contact-widget-email-contact-settings.php:246
 #: admin/settings/contact-widget-maps-settings.php:193
-#: admin/settings/grid-view-layout-settings.php:211
-#: admin/settings/grid-view-layout-settings.php:217
-#: admin/settings/grid-view-layout-settings.php:223
-#: admin/settings/grid-view-layout-settings.php:255
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:221
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:227
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:233
 #: admin/settings/email-inquiry/global-settings.php:209
 #: admin/settings/email-inquiry/global-settings.php:225
+#: admin/settings/grid-view-layout-settings.php:211
+#: admin/settings/grid-view-layout-settings.php:217
+#: admin/settings/grid-view-layout-settings.php:223
+#: admin/settings/grid-view-layout-settings.php:255
 msgid "OFF"
 msgstr ""
 
-#: admin/admin-interface.php:1454
+#: admin/admin-interface.php:1457
 msgid "Width"
 msgstr ""
 
-#: admin/admin-interface.php:1456
+#: admin/admin-interface.php:1459
 msgid "Height"
 msgstr ""
 
-#: admin/admin-interface.php:1458
+#: admin/admin-interface.php:1461
 msgid "Hard Crop"
 msgstr ""
 
-#: admin/admin-interface.php:1536
+#: admin/admin-interface.php:1539
 msgid "-- Default Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1547
+#: admin/admin-interface.php:1550
 msgid "-- Google Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1588
+#: admin/admin-interface.php:1591
 msgid "Preview your customized typography settings"
 msgstr ""
 
-#: admin/admin-interface.php:1722 admin/admin-interface.php:1981
+#: admin/admin-interface.php:1725 admin/admin-interface.php:1984
 msgid "Preview your customized border settings"
 msgstr ""
 
-#: admin/admin-interface.php:1731 admin/admin-interface.php:1972
+#: admin/admin-interface.php:1734 admin/admin-interface.php:1975
 msgid "Rounded"
 msgstr ""
 
-#: admin/admin-interface.php:1732 admin/admin-interface.php:1973
+#: admin/admin-interface.php:1735 admin/admin-interface.php:1976
 msgid "Square"
 msgstr ""
 
-#: admin/admin-interface.php:1742 admin/admin-interface.php:1986
+#: admin/admin-interface.php:1745 admin/admin-interface.php:1989
 msgid "Top Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1762 admin/admin-interface.php:2006
+#: admin/admin-interface.php:1765 admin/admin-interface.php:2009
 msgid "Top Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1782 admin/admin-interface.php:2026
+#: admin/admin-interface.php:1785 admin/admin-interface.php:2029
 msgid "Bottom Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1802 admin/admin-interface.php:2046
+#: admin/admin-interface.php:1805 admin/admin-interface.php:2049
 msgid "Bottom Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1895
+#: admin/admin-interface.php:1898
 msgid "Preview your customized border styles settings"
 msgstr ""
 
-#: admin/admin-interface.php:2107
-#: admin/classes/class-people-category-manager-panel.php:129
+#: admin/admin-interface.php:2110
+#: admin/classes/class-people-category-manager-panel.php:144
 #: admin/classes/class-people-contact-addnew.php:200
 #: admin/settings/contact-widget-email-contact-settings.php:280
 #: admin/settings/email-inquiry/contact-form-global-settings.php:230
@@ -185,8 +187,8 @@ msgstr ""
 msgid "YES"
 msgstr ""
 
-#: admin/admin-interface.php:2108
-#: admin/classes/class-people-category-manager-panel.php:130
+#: admin/admin-interface.php:2111
+#: admin/classes/class-people-category-manager-panel.php:145
 #: admin/classes/class-people-contact-addnew.php:201
 #: admin/settings/contact-widget-email-contact-settings.php:281
 #: admin/settings/email-inquiry/contact-form-global-settings.php:231
@@ -194,45 +196,40 @@ msgstr ""
 msgid "NO"
 msgstr ""
 
-#: admin/admin-interface.php:2122
+#: admin/admin-interface.php:2125
 msgid "Horizontal Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2140
+#: admin/admin-interface.php:2143
 msgid "Vertical Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2158
+#: admin/admin-interface.php:2161
 msgid "Blur Distance"
 msgstr ""
 
-#: admin/admin-interface.php:2176
+#: admin/admin-interface.php:2179
 msgid "Spread Size"
 msgstr ""
 
-#: admin/admin-interface.php:2194
+#: admin/admin-interface.php:2197
 msgid "INNER"
 msgstr ""
 
-#: admin/admin-interface.php:2195
+#: admin/admin-interface.php:2198
 msgid "OUTER"
 msgstr ""
 
-#: admin/admin-interface.php:2213
+#: admin/admin-interface.php:2216
 msgid "Preview your customized box shadow settings"
 msgstr ""
 
-#: admin/admin-interface.php:2401
+#: admin/admin-interface.php:2405
 msgid "Save changes"
 msgstr ""
 
-#: admin/admin-interface.php:2402
+#: admin/admin-interface.php:2406
 msgid "Reset Settings"
-msgstr ""
-
-#: admin/people-contact-init.php:10
-#: admin/settings/contact-page-global-settings.php:219
-msgid "Contact Us Page"
 msgstr ""
 
 #: admin/admin-pages/admin-email-inquiry-page.php:63
@@ -250,137 +247,162 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:42
-#: admin/classes/class-people-category-manager-panel.php:101
-#: admin/classes/class-people-category-manager-panel.php:154
+#: admin/admin-ui.php:129
+#, php-format
+msgid "Settings inside this yellow border are %s Features."
+msgstr ""
+
+#: admin/admin-ui.php:131
+#, php-format
+msgid ""
+"Upgrade to the <a href=\"%s\" target=\"_blank\">%s</a> to activate these "
+"settings."
+msgstr ""
+
+#: admin/admin-ui.php:133 admin/admin-ui.php:135
+#: admin/classes/class-people-contact-addnew.php:125
+#: admin/classes/class-people-contact-addnew.php:163
+#: classes/class-people-contact-functions.php:323
+msgid "Pro Version"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:13
+#: admin/classes/class-people-contact-addnew.php:187
+#: classes/class-people-contact-functions.php:329
+msgid "Ultimate Version"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:55
+#: admin/classes/class-people-category-manager-panel.php:115
+#: admin/classes/class-people-category-manager-panel.php:169
 #: admin/classes/class-people-contact-addnew.php:192
 #: shortcodes/class-people-contact-shortcodes.php:72
 msgid "Profile Group"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:44
-#: admin/classes/class-people-category-manager-panel.php:171
+#: admin/classes/class-people-category-manager-panel.php:57
+#: admin/classes/class-people-category-manager-panel.php:187
 #: classes/class-people-contact-hook.php:29
 msgid "Groups"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:44
+#: admin/classes/class-people-category-manager-panel.php:57
 #: admin/classes/class-people-contact-manager-panel.php:31
 msgid "Add New"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:47
+#: admin/classes/class-people-category-manager-panel.php:61
 msgid ""
 "Create Groups, assign Profiles to Groups and insert the Group into any Post "
 "or Page by Shortcode."
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:52
-#: admin/classes/class-people-category-manager-panel.php:166
+#: admin/classes/class-people-category-manager-panel.php:66
+#: admin/classes/class-people-category-manager-panel.php:182
 #: admin/classes/class-people-contact-manager-panel.php:38
 msgid "No"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:53
-#: admin/classes/class-people-category-manager-panel.php:167
+#: admin/classes/class-people-category-manager-panel.php:67
+#: admin/classes/class-people-category-manager-panel.php:183
 #: admin/classes/class-people-contact-addnew.php:88
 #: admin/classes/class-people-contact-manager-panel.php:40
-#: classes/class-people-contact-functions.php:142
+#: classes/class-people-contact-functions.php:150
 #: classes/class-people-contact.php:95
 #: widgets/class-people-contact-widgets.php:376
 msgid "Name"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:54
+#: admin/classes/class-people-category-manager-panel.php:68
 msgid "Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:55
-#: admin/classes/class-people-category-manager-panel.php:158
+#: admin/classes/class-people-category-manager-panel.php:69
+#: admin/classes/class-people-category-manager-panel.php:173
 #: admin/classes/class-people-contact-manager-panel.php:31
 #: classes/class-people-contact-hook.php:25
 msgid "Profiles"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:56
+#: admin/classes/class-people-category-manager-panel.php:70
 msgid "Activated"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:74
+#: admin/classes/class-people-category-manager-panel.php:88
 msgid "Yes"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-category-manager-panel.php:89
 msgid "View Profiles"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-category-manager-panel.php:89
 #: admin/classes/class-people-contact-manager-panel.php:67
 msgid "Edit"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-category-manager-panel.php:89
 #: admin/classes/class-people-contact-manager-panel.php:67
 msgid "Delete"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-category-manager-panel.php:89
 msgid "Are you sure delete this category?"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:82
+#: admin/classes/class-people-category-manager-panel.php:96
 #: admin/classes/class-people-contact-addnew.php:211
 msgid "No Groups"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:98
+#: admin/classes/class-people-category-manager-panel.php:112
 #: admin/classes/class-people-contact-addnew.php:36
 msgid "Create"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:99
+#: admin/classes/class-people-category-manager-panel.php:113
 msgid "Add New Group"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:105
+#: admin/classes/class-people-category-manager-panel.php:119
 msgid "Edit Group"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:106
+#: admin/classes/class-people-category-manager-panel.php:120
 #: admin/classes/class-people-contact-addnew.php:66
 msgid "Update"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:119
+#: admin/classes/class-people-category-manager-panel.php:134
 msgid "Group Name"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:123
+#: admin/classes/class-people-category-manager-panel.php:138
 msgid "Activate Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:135
+#: admin/classes/class-people-category-manager-panel.php:150
 msgid ""
 "Select Yes to add this Group to the list of Group shortcodes that can be "
 "inserted in Post or Pages by shortcode. Set No and the Group will not show "
 "in the Insert Shortcode drop down list of available Groups."
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:142
+#: admin/classes/class-people-category-manager-panel.php:157
 #: admin/classes/class-people-contact-addnew.php:48
 #: shortcodes/class-people-contact-shortcodes.php:107
 #: shortcodes/class-people-contact-shortcodes.php:147
 msgid "Cancel"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:161
+#: admin/classes/class-people-category-manager-panel.php:177
 msgid ""
 "Below are all of the Profiles currently assigned to this Group. Sort Profile "
 "order for this Group by drag and drop using the blue up - down arrow at the "
 "left of each Profile row."
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:168
+#: admin/classes/class-people-category-manager-panel.php:184
 #: admin/classes/class-people-contact-addnew.php:107
 #: admin/classes/class-people-contact-manager-panel.php:41
 #: classes/class-people-contact.php:98
@@ -388,7 +410,7 @@ msgstr ""
 msgid "Email"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:169
+#: admin/classes/class-people-category-manager-panel.php:185
 #: admin/classes/class-people-contact-addnew.php:111
 #: admin/classes/class-people-contact-manager-panel.php:42
 #: admin/settings/contact-widget-information-settings.php:190
@@ -396,13 +418,13 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:170
+#: admin/classes/class-people-category-manager-panel.php:186
 #: admin/classes/class-people-contact-manager-panel.php:43
 #: admin/settings/contact-widget-maps-settings.php:198
 msgid "Location"
 msgstr ""
 
-#: admin/classes/class-people-category-manager-panel.php:177
+#: admin/classes/class-people-category-manager-panel.php:193
 msgid "No Profile for This Group"
 msgstr ""
 
@@ -459,12 +481,6 @@ msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:125
 #: admin/classes/class-people-contact-addnew.php:163
-#: classes/class-people-contact-functions.php:307
-msgid "Pro Version"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:125
-#: admin/classes/class-people-contact-addnew.php:163
 #: admin/classes/class-people-contact-addnew.php:187
 msgid "to activate"
 msgstr ""
@@ -511,11 +527,6 @@ msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:168
 msgid "Enter Form Shortcode"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:187
-#: classes/class-people-contact-functions.php:313
-msgid "Ultimate Version"
 msgstr ""
 
 #: admin/classes/class-people-contact-addnew.php:188
@@ -566,6 +577,11 @@ msgstr ""
 
 #: admin/includes/uploader/class-uploader.php:199
 msgid "Previously Uploaded"
+msgstr ""
+
+#: admin/people-contact-init.php:10
+#: admin/settings/contact-page-global-settings.php:219
+msgid "Contact Us Page"
 msgstr ""
 
 #: admin/settings/contact-page-global-settings.php:81
@@ -831,7 +847,7 @@ msgid ""
 msgstr ""
 
 #: admin/settings/contact-widget-global-settings.php:184
-#: classes/class-people-contact-functions.php:239
+#: classes/class-people-contact-functions.php:255
 msgid "Contact Page Sidebar"
 msgstr ""
 
@@ -929,296 +945,6 @@ msgid ""
 "location."
 msgstr ""
 
-#: admin/settings/grid-view-contact-icons-settings.php:81
-msgid "Profile Card Contact Icons successfully saved."
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:82
-msgid "Error: Profile Card Contact Icons can not save."
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:83
-msgid "Profile Card Contact Icons successfully reseted."
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:150
-msgid "Profile Card Contact Icons"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:194
-msgid "Upload Custom Default Profile Image"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:195
-msgid "Upload custom 'No Image' image, .jpg or.png format."
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:199
-msgid "Default Profile Image"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:205
-msgid "Upload Custom Contact Icons"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:206
-msgid ""
-"Delete default icons. Upload custom icons, transparent .png format, 16px by "
-"16px recommended size."
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:210
-msgid "Phone icon"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:216
-msgid "Fax icon"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:222
-msgid "Mobile icon"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:228
-msgid "Email icon"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:234
-msgid "Email Link Text"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:235
-msgid "Set hyperlink text that shows to the right of the Email icon. Default"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:238
-#: classes/class-people-contact.php:235 classes/class-people-contact.php:477
-msgid "Click Here"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:241
-msgid "Website icon"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:247
-msgid "Website Link Text"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:248
-msgid "Set hyperlink text that shows to the right of the Website icon. Default"
-msgstr ""
-
-#: admin/settings/grid-view-contact-icons-settings.php:251
-msgid "Visit Website"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:81
-msgid "Profile Image Style successfully saved."
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:82
-msgid "Error: Profile Image Style can not save."
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:83
-msgid "Profile Image Style successfully reseted."
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:150
-#: admin/settings/grid-view-image-style-settings.php:194
-msgid "Profile Image Style"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:198
-msgid "Presentation Style"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:203
-msgid "Rounded Border"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:204
-msgid "Square Border"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:205
-msgid "Flat Image"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:211
-msgid "Custom Styling"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:215
-msgid "Image Background Colour"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:216
-msgid "Shows in Image Padding area or if image is transparent. Default"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:222
-msgid "Image Padding"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:223
-msgid "Overall size of image reduced by the size of padding set here."
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:230
-msgid "Image Border"
-msgstr ""
-
-#: admin/settings/grid-view-image-style-settings.php:237
-msgid "Image Shadow"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:81
-msgid "Profile Card Layout successfully saved."
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:82
-msgid "Error: Profile Card Layout can not save."
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:83
-msgid "Profile Card Layout successfully reseted."
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:153
-msgid "Profile Card Type"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:197
-msgid "Select a Profile Card Type"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:201
-msgid "Profile Image Position"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:209
-msgid "Card Type 1. Image Left - Content Right"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:209
-#: admin/settings/email-inquiry/colorbox-popup-settings.php:240
-#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:219
-#: admin/settings/email-inquiry/fancybox-popup-settings.php:261
-#: admin/settings/email-inquiry/popup-form-style-settings.php:200
-#: admin/settings/email-inquiry/popup-form-style-settings.php:279
-#: admin/settings/email-inquiry/popup-form-style-settings.php:286
-#: admin/settings/email-inquiry/popup-form-style-settings.php:311
-#: admin/settings/email-inquiry/popup-form-style-settings.php:318
-#: admin/settings/email-inquiry/popup-form-style-settings.php:325
-msgid "Default"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:215
-msgid "Card Type 2. Content Left - Image Right"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:221
-msgid "Card Type 3. Image Top - Content Bottom"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:233
-msgid "Profile Image Wide"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:234
-msgid "Set as a percentage of total Profile Card wide."
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:247
-msgid "Fix Image Height"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:248
-msgid ""
-"Check to activate. Wide of image auto scaled to original proportion of tall."
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:258
-msgid "Image Fixed Height in Profile Card"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:259
-msgid ""
-"Max height of image. Example set 200px and will fix image container at 200px "
-"with image aligned to the top. Default"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:266
-msgid "Show Profile Title Position"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:272
-msgid "Above the image"
-msgstr ""
-
-#: admin/settings/grid-view-layout-settings.php:273
-msgid "Below the image"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:81
-msgid "Profile Card Style successfully saved."
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:82
-msgid "Error: Profile Card Style can not save."
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:83
-msgid "Profile Card Style successfully reseted."
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:150
-msgid "Profile Card Style"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:194
-msgid "Create a Custom Profile Card Design"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:198
-msgid "Profile Card content padding"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:204
-msgid "Top"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:209
-msgid "Bottom"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:215
-#: shortcodes/class-people-contact-shortcodes.php:99
-msgid "Left"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:221
-#: shortcodes/class-people-contact-shortcodes.php:100
-msgid "Right"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:227
-msgid "Profile Card background Colour"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:228
-msgid "Profile Card body background colour. Default"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:234
-msgid "Profile Card border"
-msgstr ""
-
-#: admin/settings/grid-view-style-settings.php:241
-msgid "Profile Card shadow"
-msgstr ""
-
 #: admin/settings/email-inquiry/colorbox-popup-settings.php:81
 msgid "Colorbox Pop-Up Settings successfully saved."
 msgstr ""
@@ -1297,6 +1023,19 @@ msgstr ""
 #: admin/settings/email-inquiry/colorbox-popup-settings.php:240
 #: admin/settings/email-inquiry/fancybox-popup-settings.php:261
 msgid "Select a colour or empty for no colour."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:240
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:219
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:261
+#: admin/settings/email-inquiry/popup-form-style-settings.php:200
+#: admin/settings/email-inquiry/popup-form-style-settings.php:279
+#: admin/settings/email-inquiry/popup-form-style-settings.php:286
+#: admin/settings/email-inquiry/popup-form-style-settings.php:311
+#: admin/settings/email-inquiry/popup-form-style-settings.php:318
+#: admin/settings/email-inquiry/popup-form-style-settings.php:325
+#: admin/settings/grid-view-layout-settings.php:209
+msgid "Default"
 msgstr ""
 
 #: admin/settings/email-inquiry/contact-form-global-settings.php:81
@@ -1678,6 +1417,283 @@ msgid ""
 "Thanks for your inquiry - we'll be in touch with you as soon as possible!"
 msgstr ""
 
+#: admin/settings/grid-view-contact-icons-settings.php:81
+msgid "Profile Card Contact Icons successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:82
+msgid "Error: Profile Card Contact Icons can not save."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:83
+msgid "Profile Card Contact Icons successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:150
+msgid "Profile Card Contact Icons"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:194
+msgid "Upload Custom Default Profile Image"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:195
+msgid "Upload custom 'No Image' image, .jpg or.png format."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:199
+msgid "Default Profile Image"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:205
+msgid "Upload Custom Contact Icons"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:206
+msgid ""
+"Delete default icons. Upload custom icons, transparent .png format, 16px by "
+"16px recommended size."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:210
+msgid "Phone icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:216
+msgid "Fax icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:222
+msgid "Mobile icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:228
+msgid "Email icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:234
+msgid "Email Link Text"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:235
+msgid "Set hyperlink text that shows to the right of the Email icon. Default"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:238
+#: classes/class-people-contact.php:235 classes/class-people-contact.php:474
+msgid "Click Here"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:241
+msgid "Website icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:247
+msgid "Website Link Text"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:248
+msgid "Set hyperlink text that shows to the right of the Website icon. Default"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:251
+msgid "Visit Website"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:81
+msgid "Profile Image Style successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:82
+msgid "Error: Profile Image Style can not save."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:83
+msgid "Profile Image Style successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:150
+#: admin/settings/grid-view-image-style-settings.php:194
+msgid "Profile Image Style"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:198
+msgid "Presentation Style"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:203
+msgid "Rounded Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:204
+msgid "Square Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:205
+msgid "Flat Image"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:211
+msgid "Custom Styling"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:215
+msgid "Image Background Colour"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:216
+msgid "Shows in Image Padding area or if image is transparent. Default"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:222
+msgid "Image Padding"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:223
+msgid "Overall size of image reduced by the size of padding set here."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:230
+msgid "Image Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:237
+msgid "Image Shadow"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:81
+msgid "Profile Card Layout successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:82
+msgid "Error: Profile Card Layout can not save."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:83
+msgid "Profile Card Layout successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:153
+msgid "Profile Card Type"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:197
+msgid "Select a Profile Card Type"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:201
+msgid "Profile Image Position"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:209
+msgid "Card Type 1. Image Left - Content Right"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:215
+msgid "Card Type 2. Content Left - Image Right"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:221
+msgid "Card Type 3. Image Top - Content Bottom"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:233
+msgid "Profile Image Wide"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:234
+msgid "Set as a percentage of total Profile Card wide."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:247
+msgid "Fix Image Height"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:248
+msgid ""
+"Check to activate. Wide of image auto scaled to original proportion of tall."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:258
+msgid "Image Fixed Height in Profile Card"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:259
+msgid ""
+"Max height of image. Example set 200px and will fix image container at 200px "
+"with image aligned to the top. Default"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:266
+msgid "Show Profile Title Position"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:272
+msgid "Above the image"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:273
+msgid "Below the image"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:81
+msgid "Profile Card Style successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:82
+msgid "Error: Profile Card Style can not save."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:83
+msgid "Profile Card Style successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:150
+msgid "Profile Card Style"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:194
+msgid "Create a Custom Profile Card Design"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:198
+msgid "Profile Card content padding"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:204
+msgid "Top"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:209
+msgid "Bottom"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:215
+#: shortcodes/class-people-contact-shortcodes.php:99
+msgid "Left"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:221
+#: shortcodes/class-people-contact-shortcodes.php:100
+msgid "Right"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:227
+msgid "Profile Card background Colour"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:228
+msgid "Profile Card body background colour. Default"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:234
+msgid "Profile Card border"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:241
+msgid "Profile Card shadow"
+msgstr ""
+
 #: admin/tabs/contact-page-tab.php:78
 msgid "Contact Page"
 msgstr ""
@@ -1699,13 +1715,13 @@ msgid "Profile Cards"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:26
-#: classes/class-people-contact-functions.php:102
+#: classes/class-people-contact-functions.php:110
 msgid ""
 "Thanks for your contact - we'll be in touch with you as soon as possible!"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:40
-#: classes/class-people-contact-functions.php:134
+#: classes/class-people-contact-functions.php:142
 msgid "[Copy]:"
 msgstr ""
 
@@ -1722,142 +1738,142 @@ msgid "Contact Phone"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:71
-#: classes/class-people-contact-functions.php:154
+#: classes/class-people-contact-functions.php:162
 #: classes/class-people-contact.php:107
 #: widgets/class-people-contact-widgets.php:394
 msgid "Message"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:148
+#: classes/class-people-contact-functions.php:156
 msgid "Email Address"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:241
+#: classes/class-people-contact-functions.php:257
 msgid "Contact Page Widgets area."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:264
+#: classes/class-people-contact-functions.php:280
 msgid "Upgrade available for Extra Functionality"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:265
+#: classes/class-people-contact-functions.php:281
 msgid ""
 "<strong>NOTE:</strong> All the functions inside the Yellow border are extra "
 "functionality that is only available by upgrading to one of 2 fully "
 "supported Pro Version plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:266
+#: classes/class-people-contact-functions.php:282
 msgid "Contact Us Page - Contact People Pro"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:267
+#: classes/class-people-contact-functions.php:283
 msgid "Pro Version Features"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:270
+#: classes/class-people-contact-functions.php:286
 msgid "Profile Contact Grid WYSIWYG Style & Layout editor."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:271
+#: classes/class-people-contact-functions.php:287
 msgid "Upload custom icons - 'No Image' and contact icons."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:272
+#: classes/class-people-contact-functions.php:288
 msgid "Profile Short Description feature."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:273
+#: classes/class-people-contact-functions.php:289
 msgid "Individual Profile Contact Profile Shortcode feature."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:274
+#: classes/class-people-contact-functions.php:290
 msgid "Create custom contact form for Profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:275
+#: classes/class-people-contact-functions.php:291
 msgid "Integration with Contact Form 7 & Gravity Forms."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:276
+#: classes/class-people-contact-functions.php:292
 msgid "Add unique contact forms for individual profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:279
+#: classes/class-people-contact-functions.php:295
 msgid "Contact People Ultimate"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:280
+#: classes/class-people-contact-functions.php:296
 msgid "Ultimate Version Features"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:283
+#: classes/class-people-contact-functions.php:299
 msgid "Includes all Contact Us Page Pro features plus."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:284
+#: classes/class-people-contact-functions.php:300
 msgid "Groups - Create groups and assign Profiles to groups."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:285
+#: classes/class-people-contact-functions.php:301
 msgid "Add Groups to posts and page via shortcode."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:286
+#: classes/class-people-contact-functions.php:302
 msgid "Show Group with or without Google map."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:287
+#: classes/class-people-contact-functions.php:303
 msgid "Set Group Column layout display."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:288
+#: classes/class-people-contact-functions.php:304
 msgid "Show or don't show Group title."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:289
+#: classes/class-people-contact-functions.php:305
 msgid "Sort Profile Order within groups."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:290
+#: classes/class-people-contact-functions.php:306
 msgid "Show multiple groups on the same page."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:293
+#: classes/class-people-contact-functions.php:309
 msgid "View this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:293
+#: classes/class-people-contact-functions.php:309
 msgid "documentation"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:294
+#: classes/class-people-contact-functions.php:310
 msgid "Visit this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:294
+#: classes/class-people-contact-functions.php:310
 msgid "support forum"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:295
+#: classes/class-people-contact-functions.php:311
 msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:298
+#: classes/class-people-contact-functions.php:314
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:299
+#: classes/class-people-contact-functions.php:315
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
-#: classes/class-people-contact-functions.php:313
+#: classes/class-people-contact-functions.php:323
+#: classes/class-people-contact-functions.php:329
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:307
-#: classes/class-people-contact-functions.php:313
+#: classes/class-people-contact-functions.php:323
+#: classes/class-people-contact-functions.php:329
 msgid "activates this shortcode feature as well."
 msgstr ""
 

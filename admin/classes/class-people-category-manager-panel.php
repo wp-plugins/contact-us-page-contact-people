@@ -9,12 +9,25 @@
  */
 class People_Category_Manager_Panel
 {	
+	public static function get_ultimate_version_name( $pro_version_name ) {
+		return __( 'Ultimate Version', 'wc_email_inquiry' );
+	}
+	
+	public static function get_ultimate_page_url( $pro_plugin_page_url ) {
+		global $people_contact_admin_init;
+		return $people_contact_admin_init->ultimate_plugin_page_url;
+	}
+	
 	public static function admin_screen () {
 		$message = '';
 		
+		global $people_contact_admin_init;
+		add_filter( $people_contact_admin_init->plugin_name . '_pro_version_name', array( 'People_Category_Manager_Panel', 'get_ultimate_version_name' ) );
+		add_filter( $people_contact_admin_init->plugin_name . '_pro_plugin_page_url', array( 'People_Category_Manager_Panel', 'get_ultimate_page_url' ) );
+		
 		?>
         <style>
-		.pro_feature_fields { padding:10px; }
+		.pro_feature_fields { padding:0 10px 10px; }
 		</style>
         <div id="htmlForm">
         <div style="clear:both"></div>
@@ -44,6 +57,7 @@ class People_Category_Manager_Panel
         <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-category-manager"><br></div><h2><?php _e('Groups', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-category-manager&action=add_new', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a></h2>
 		<div style="clear:both;height:5px;"></div>
         <div class="pro_feature_fields">
+        <?php global $people_contact_admin_init; $people_contact_admin_init->upgrade_top_message(true); ?>
         <div style="margin-bottom:5px;"><?php _e('Create Groups, assign Profiles to Groups and insert the Group into any Post or Page by Shortcode.', 'cup_cp'); ?></div>
 		<form name="contact_setting" method="post" action="">
 		  <table class="widefat post fixed sorttable people_table">
@@ -110,6 +124,7 @@ class People_Category_Manager_Panel
 		<div style="clear:both;"></div>
         <div class="a3rev_panel_container">
         <div class="pro_feature_fields">
+        <?php global $people_contact_admin_init; $people_contact_admin_init->upgrade_top_message(true); ?>
 		<form action="<?php echo admin_url('admin.php?page=people-category-manager', 'relative');?>" method="post">
         	<?php if ( $category_id > 0 ) { ?><input type="hidden" value="<?php echo $category_id;?>" id="category_id" name="category_id"><?php } ?>
             <h3><?php echo $title; ?></h3>
@@ -158,6 +173,7 @@ class People_Category_Manager_Panel
         <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-category-profiles-manager"><br></div><h2>"<?php echo esc_attr( stripslashes( $current_category['category_name'] ) ) ; ?>" <?php _e('Profiles', 'cup_cp'); ?></h2>
 		<div style="clear:both;height:5px;"></div>
         <div class="pro_feature_fields">
+        <?php global $people_contact_admin_init; $people_contact_admin_init->upgrade_top_message(true); ?>
         <div style="margin-bottom:5px;"><?php _e('Below are all of the Profiles currently assigned to this Group. Sort Profile order for this Group by drag and drop using the blue up - down arrow at the left of each Profile row.', 'cup_cp'); ?></div>
 		<form name="contact_setting" method="post" action="">
 		  <table class="widefat post fixed sorttable people_table">

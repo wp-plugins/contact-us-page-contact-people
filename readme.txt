@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.5
-Tested up to: 3.8.0
-Stable tag: 1.1.4
+Tested up to: 3.8.1
+Stable tag: 1.1.4.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -168,6 +168,19 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.1.4.1 - 2014/02/11 =
+* Tweak - Stricter sanitization of Default Form Message input field. Only allow input of plain text with auto paragraph on line break.
+* Tweak - Added function .replace(/^\s+|\s+$/g, '') to check form for empty spaces for required fields Name, Email and Phone.
+* Tweak - Default Form Success Message Pop-up auto resizes to whatever the tall of the success message content is.
+* Tweak - Added class .people_ei_cb for Colorbox Pop-up tool content custom background display.
+* Tweak - Added Custom encode to prevent email clients automatically adding a tag to URL's in form message.
+* Tweak - Updated Framework help text font for consistency.
+* Tweak - Added remove_all_filters('mce_external_plugins'); before call to wp_editor to remove extension scripts from other plugins.
+* Tweak - Added description text to the top of each Pro Version yellow border section
+* Tweak - Tested 100% compatible with WordPress version 3.8.1
+* Fix - Added public static function wpcf7_tg_pane_custom to fixed conflict with Contact Form 7 plugin that caused a fatal error.
+* Credit - Thanks to [Shoni Jaycox](http://blue-diamond-materials.com) Florida USA for alerting us to the issue.
+
 = 1.1.4 - 2013/12/23 =
 * Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
 * Feature - a3rev framework 100% mobile and tablet responsive, portrait and landscape viewing.
@@ -276,6 +289,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4.1 =
+Security upgrade. Please update now, 5 security Tweaks, 1 performance Tweak, 1 bug fix and full compatibility with WordPress Version 3.8.1.
 
 = 1.1.4 =
 Upgrade now for full a3rev Plugin Framework compatibility with WordPress version 3.8.0 and backwards. New admin interface full mobile and tablet responsive display.

@@ -260,12 +260,10 @@ class People_Contact {
 						var c_id = this.c_id;
 							var ajax_url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
 							var popup_wide = 520;
-							var showclosebt = true;
+
 							if ( people_group_ei_getWidth<?php echo $unique_id; ?>()  <= 568 ) { 
 								popup_wide = '95%'; 
-								showclosebt = false;
 							}
-							
 							jQuery.fancybox({
 								href: ajax_url,
 								//content: ajax_url,
@@ -282,10 +280,10 @@ class People_Contact {
 								height: 500,
 								margin: 0,
 								maxWidth: "95%",
-								maxHeight: "90%",
+								maxHeight: "80%",
 								padding: 10,
 								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
-								showCloseButton : showclosebt,
+								showCloseButton : true,
 								openEffect	: "none",
 								closeEffect	: "none"
 							});
@@ -310,11 +308,10 @@ class People_Contact {
 				jQuery(document).on("click", ".direct_email<?php echo $unique_id; ?>", function(){
 					var c_id2 = jQuery(this).attr("profile-id");
 					
-						var showclosebt2 = true;
+
 						var popup_wide2 = 520;
 						if ( people_group_ei_getWidth<?php echo $unique_id; ?>()  <= 568 ) { 
 							popup_wide2 = '95%'; 
-							showclosebt2 = false;
 						}
 						jQuery.fancybox({
 								href: ajax_url2<?php echo $unique_id; ?>+c_id2,
@@ -332,10 +329,10 @@ class People_Contact {
 								height: 500,
 								margin: 0,
 								maxWidth: "95%",
-								maxHeight: "90%",
+								maxHeight: "80%",
 								padding: 10,
 								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
-								showCloseButton : showclosebt2,
+								showCloseButton : true,
 								openEffect	: "none",
 								closeEffect	: "none"
 						});

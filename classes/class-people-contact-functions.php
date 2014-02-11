@@ -78,7 +78,15 @@ class People_Contact_Functions
 			$content = str_replace('[contact_name]', esc_attr( stripslashes( $profile_data['contact_name']) ), $content);
 			$content = str_replace('[contact_email]', esc_attr( stripslashes( $profile_data['contact_email']) ), $content);
 			$content = str_replace('[contact_phone]', esc_attr( stripslashes( $profile_data['contact_phone']) ), $content);
-			$content = str_replace('[message]', wpautop( stripslashes( $profile_data['message']) ), $content);
+			
+			$your_message 	= esc_attr( stripslashes( strip_tags( $profile_data['message'] ) ) );
+			$your_message 	= str_replace( '://', ':&#173;­//', $your_message );
+			$your_message 	= str_replace( '.com', '&#173;.com', $your_message );
+			$your_message 	= str_replace( '.net', '&#173;.net', $your_message );
+			$your_message 	= str_replace( '.info', '&#173;.info', $your_message );
+			$your_message 	= str_replace( '.org', '&#173;.org', $your_message );
+			$your_message 	= str_replace( '.au', '&#173;.au', $your_message );
+			$content 		= str_replace('[message]', wpautop( $your_message ), $content);
 			
 			$content = apply_filters('people_contact_contact_profile_content', $content, $profile_data );
 			
@@ -159,7 +167,15 @@ class People_Contact_Functions
 		  
 			$content = str_replace('[contact_name]', esc_attr( stripslashes( $contact_data['contact_name']) ), $content);
 			$content = str_replace('[contact_email]', esc_attr( stripslashes( $contact_data['contact_email']) ), $content);
-			$content = str_replace('[message]', wpautop( stripslashes( $contact_data['message']) ), $content);
+			
+			$your_message 	= esc_attr( stripslashes( strip_tags( $contact_data['message'] ) ) );
+			$your_message 	= str_replace( '://', ':&#173;­//', $your_message );
+			$your_message 	= str_replace( '.com', '&#173;.com', $your_message );
+			$your_message 	= str_replace( '.net', '&#173;.net', $your_message );
+			$your_message 	= str_replace( '.info', '&#173;.info', $your_message );
+			$your_message 	= str_replace( '.org', '&#173;.org', $your_message );
+			$your_message 	= str_replace( '.au', '&#173;.au', $your_message );
+			$content 		= str_replace('[message]', wpautop( $your_message ), $content);
 			
 			$content = apply_filters('people_contact_contact_site_content', $content, $contact_data );
 			
