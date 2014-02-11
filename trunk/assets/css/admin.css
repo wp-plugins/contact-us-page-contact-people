@@ -1,0 +1,101 @@
+.ui-autocomplete li a {
+	padding: 4px 5px !important;
+}
+.ui-autocomplete {
+	min-width:24.8em;
+}
+.contact_manager table tr td {
+	vertical-align:middle;
+}
+table input[type="text"] {
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
+	width:300px;
+}
+.ui-state-highlight {
+	background:#F6F6F6;
+	height:68px !important;
+	border:0px dotted #DDD !important;
+	display:block;
+	margin:0 !important;
+	padding:0 !important;
+}
+.people_table th, .people_table td {
+	vertical-align:middle !important;
+}
+.forminp{position:relative;}
+.widefat .control {
+    float: none !important;
+    padding-top: 0px;
+    position: relative !important;
+    right: 0px;
+    text-align: center !important;
+}
+
+.col-left {
+	float:left;
+	width:40%;
+}
+.col-right {
+	float:right;
+	width:50%;
+	margin-top:5px;
+}
+
+.contact_manager #map_canvas {
+	width:100%;
+	float:left;
+	height:500px;
+	border:1px solid #DFDFDF;
+}
+.categories_selection_container {
+	float:right; 
+	width:340px;
+}
+.categories_selection {
+	border:1px solid #DFDFDF;
+	background: #FFF;
+	padding:8px 10px 0;
+	width:300px;
+	max-height:200px;
+	overflow:auto;
+}
+
+@media screen and (max-width: 890px) {
+	.col-left {
+		width:48%;
+	}
+	.col-right {
+		width:50%;
+	}
+	.contact_manager #map_canvas {
+		height:300px;
+	}
+	.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
+		max-width:100%;
+	}
+}
+
+@media screen and ( max-width: 782px ) {
+	.col-left {
+		float:none;
+		width:100%;
+	}
+	.col-right {
+		float:none;
+		width:100%;
+		margin-top:0px;
+	}
+	.categories_selection_container {
+		float:none;
+		width:100%;	
+	}
+	.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
+		width:100% !important; 
+	}
+	.a3rev_manager_panel_container .column-email, .a3rev_manager_panel_container .column-phone, .a3rev_manager_panel_container .column-location, .a3rev_manager_panel_container .column-categories, .a3rev_manager_panel_container .column-profiles, .a3rev_manager_panel_container .column-activated {
+		display:none;	
+	}
+}

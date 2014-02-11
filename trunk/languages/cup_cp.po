@@ -1,0 +1,2075 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Contact Us page - Contact people LITE\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-23 17:30+0700\n"
+"PO-Revision-Date: 2013-12-23 17:30+0700\n"
+"Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
+"Language-Team: a3rev\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin-interface.php:125
+msgid "Settings successfully saved."
+msgstr ""
+
+#: admin/admin-interface.php:133
+msgid "Error: Settings can not save."
+msgstr ""
+
+#: admin/admin-interface.php:141
+msgid "Settings successfully reseted."
+msgstr ""
+
+#: admin/admin-interface.php:162
+msgid "Thin"
+msgstr ""
+
+#: admin/admin-interface.php:163
+msgid "Thin/Italic"
+msgstr ""
+
+#: admin/admin-interface.php:164
+msgid "Normal"
+msgstr ""
+
+#: admin/admin-interface.php:165
+msgid "Italic"
+msgstr ""
+
+#: admin/admin-interface.php:166
+msgid "Bold"
+msgstr ""
+
+#: admin/admin-interface.php:167
+msgid "Bold/Italic"
+msgstr ""
+
+#: admin/admin-interface.php:177
+msgid "Solid"
+msgstr ""
+
+#: admin/admin-interface.php:178
+msgid "Double"
+msgstr ""
+
+#: admin/admin-interface.php:179
+msgid "Dashed"
+msgstr ""
+
+#: admin/admin-interface.php:180
+msgid "Dotted"
+msgstr ""
+
+#: admin/admin-interface.php:181
+msgid "Groove"
+msgstr ""
+
+#: admin/admin-interface.php:182
+msgid "Ridge"
+msgstr ""
+
+#: admin/admin-interface.php:183
+msgid "Inset"
+msgstr ""
+
+#: admin/admin-interface.php:184
+msgid "Outset"
+msgstr ""
+
+#: admin/admin-interface.php:1293 admin/admin-interface.php:1383
+#: admin/admin-interface.php:1412
+#: admin/settings/contact-page-global-settings.php:246
+#: admin/settings/contact-page-location-map-settings.php:192
+#: admin/settings/contact-widget-email-contact-settings.php:212
+#: admin/settings/contact-widget-email-contact-settings.php:245
+#: admin/settings/contact-widget-maps-settings.php:192
+#: admin/settings/grid-view-layout-settings.php:210
+#: admin/settings/grid-view-layout-settings.php:216
+#: admin/settings/grid-view-layout-settings.php:222
+#: admin/settings/grid-view-layout-settings.php:254
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:220
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:226
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:232
+#: admin/settings/email-inquiry/global-settings.php:208
+#: admin/settings/email-inquiry/global-settings.php:224
+msgid "ON"
+msgstr ""
+
+#: admin/admin-interface.php:1294 admin/admin-interface.php:1384
+#: admin/admin-interface.php:1413
+#: admin/settings/contact-page-global-settings.php:247
+#: admin/settings/contact-page-location-map-settings.php:193
+#: admin/settings/contact-widget-email-contact-settings.php:213
+#: admin/settings/contact-widget-email-contact-settings.php:246
+#: admin/settings/contact-widget-maps-settings.php:193
+#: admin/settings/grid-view-layout-settings.php:211
+#: admin/settings/grid-view-layout-settings.php:217
+#: admin/settings/grid-view-layout-settings.php:223
+#: admin/settings/grid-view-layout-settings.php:255
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:221
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:227
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:233
+#: admin/settings/email-inquiry/global-settings.php:209
+#: admin/settings/email-inquiry/global-settings.php:225
+msgid "OFF"
+msgstr ""
+
+#: admin/admin-interface.php:1454
+msgid "Width"
+msgstr ""
+
+#: admin/admin-interface.php:1456
+msgid "Height"
+msgstr ""
+
+#: admin/admin-interface.php:1458
+msgid "Hard Crop"
+msgstr ""
+
+#: admin/admin-interface.php:1536
+msgid "-- Default Fonts --"
+msgstr ""
+
+#: admin/admin-interface.php:1547
+msgid "-- Google Fonts --"
+msgstr ""
+
+#: admin/admin-interface.php:1588
+msgid "Preview your customized typography settings"
+msgstr ""
+
+#: admin/admin-interface.php:1722 admin/admin-interface.php:1981
+msgid "Preview your customized border settings"
+msgstr ""
+
+#: admin/admin-interface.php:1731 admin/admin-interface.php:1972
+msgid "Rounded"
+msgstr ""
+
+#: admin/admin-interface.php:1732 admin/admin-interface.php:1973
+msgid "Square"
+msgstr ""
+
+#: admin/admin-interface.php:1742 admin/admin-interface.php:1986
+msgid "Top Left Corner"
+msgstr ""
+
+#: admin/admin-interface.php:1762 admin/admin-interface.php:2006
+msgid "Top Right Corner"
+msgstr ""
+
+#: admin/admin-interface.php:1782 admin/admin-interface.php:2026
+msgid "Bottom Right Corner"
+msgstr ""
+
+#: admin/admin-interface.php:1802 admin/admin-interface.php:2046
+msgid "Bottom Left Corner"
+msgstr ""
+
+#: admin/admin-interface.php:1895
+msgid "Preview your customized border styles settings"
+msgstr ""
+
+#: admin/admin-interface.php:2107
+#: admin/classes/class-people-category-manager-panel.php:129
+#: admin/classes/class-people-contact-addnew.php:200
+#: admin/settings/contact-widget-email-contact-settings.php:280
+#: admin/settings/email-inquiry/contact-form-global-settings.php:230
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:268
+msgid "YES"
+msgstr ""
+
+#: admin/admin-interface.php:2108
+#: admin/classes/class-people-category-manager-panel.php:130
+#: admin/classes/class-people-contact-addnew.php:201
+#: admin/settings/contact-widget-email-contact-settings.php:281
+#: admin/settings/email-inquiry/contact-form-global-settings.php:231
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:269
+msgid "NO"
+msgstr ""
+
+#: admin/admin-interface.php:2122
+msgid "Horizontal Shadow"
+msgstr ""
+
+#: admin/admin-interface.php:2140
+msgid "Vertical Shadow"
+msgstr ""
+
+#: admin/admin-interface.php:2158
+msgid "Blur Distance"
+msgstr ""
+
+#: admin/admin-interface.php:2176
+msgid "Spread Size"
+msgstr ""
+
+#: admin/admin-interface.php:2194
+msgid "INNER"
+msgstr ""
+
+#: admin/admin-interface.php:2195
+msgid "OUTER"
+msgstr ""
+
+#: admin/admin-interface.php:2213
+msgid "Preview your customized box shadow settings"
+msgstr ""
+
+#: admin/admin-interface.php:2401
+msgid "Save changes"
+msgstr ""
+
+#: admin/admin-interface.php:2402
+msgid "Reset Settings"
+msgstr ""
+
+#: admin/people-contact-init.php:10
+#: admin/settings/contact-page-global-settings.php:219
+msgid "Contact Us Page"
+msgstr ""
+
+#: admin/admin-pages/admin-email-inquiry-page.php:63
+#: admin/admin-pages/admin-email-inquiry-page.php:64
+msgid "Email Inquiry"
+msgstr ""
+
+#: admin/admin-pages/admin-settings-page.php:63
+#: admin/admin-pages/admin-settings-page.php:64
+#: admin/settings/contact-page-global-settings.php:150
+#: admin/settings/contact-widget-global-settings.php:135
+#: admin/settings/email-inquiry/contact-form-global-settings.php:151
+#: admin/settings/email-inquiry/global-settings.php:151
+#: admin/tabs/email-inquiry-settings-tab.php:78
+msgid "Settings"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:42
+#: admin/classes/class-people-category-manager-panel.php:101
+#: admin/classes/class-people-category-manager-panel.php:154
+#: admin/classes/class-people-contact-addnew.php:192
+#: shortcodes/class-people-contact-shortcodes.php:72
+msgid "Profile Group"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:44
+#: admin/classes/class-people-category-manager-panel.php:171
+#: classes/class-people-contact-hook.php:29
+msgid "Groups"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:44
+#: admin/classes/class-people-contact-manager-panel.php:31
+msgid "Add New"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:47
+msgid ""
+"Create Groups, assign Profiles to Groups and insert the Group into any Post "
+"or Page by Shortcode."
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:52
+#: admin/classes/class-people-category-manager-panel.php:166
+#: admin/classes/class-people-contact-manager-panel.php:38
+msgid "No"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:53
+#: admin/classes/class-people-category-manager-panel.php:167
+#: admin/classes/class-people-contact-addnew.php:88
+#: admin/classes/class-people-contact-manager-panel.php:40
+#: classes/class-people-contact-functions.php:142
+#: classes/class-people-contact.php:95
+#: widgets/class-people-contact-widgets.php:376
+msgid "Name"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:54
+msgid "Shortcode"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:55
+#: admin/classes/class-people-category-manager-panel.php:158
+#: admin/classes/class-people-contact-manager-panel.php:31
+#: classes/class-people-contact-hook.php:25
+msgid "Profiles"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:56
+msgid "Activated"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:74
+msgid "Yes"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:75
+msgid "View Profiles"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-contact-manager-panel.php:67
+msgid "Edit"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:75
+#: admin/classes/class-people-contact-manager-panel.php:67
+msgid "Delete"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:75
+msgid "Are you sure delete this category?"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:82
+#: admin/classes/class-people-contact-addnew.php:211
+msgid "No Groups"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:98
+#: admin/classes/class-people-contact-addnew.php:36
+msgid "Create"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:99
+msgid "Add New Group"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:105
+msgid "Edit Group"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:106
+#: admin/classes/class-people-contact-addnew.php:66
+msgid "Update"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:119
+msgid "Group Name"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:123
+msgid "Activate Shortcode"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:135
+msgid ""
+"Select Yes to add this Group to the list of Group shortcodes that can be "
+"inserted in Post or Pages by shortcode. Set No and the Group will not show "
+"in the Insert Shortcode drop down list of available Groups."
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:142
+#: admin/classes/class-people-contact-addnew.php:48
+#: shortcodes/class-people-contact-shortcodes.php:107
+#: shortcodes/class-people-contact-shortcodes.php:147
+msgid "Cancel"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:161
+msgid ""
+"Below are all of the Profiles currently assigned to this Group. Sort Profile "
+"order for this Group by drag and drop using the blue up - down arrow at the "
+"left of each Profile row."
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:168
+#: admin/classes/class-people-contact-addnew.php:107
+#: admin/classes/class-people-contact-manager-panel.php:41
+#: classes/class-people-contact.php:98
+#: widgets/class-people-contact-widgets.php:385
+msgid "Email"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:169
+#: admin/classes/class-people-contact-addnew.php:111
+#: admin/classes/class-people-contact-manager-panel.php:42
+#: admin/settings/contact-widget-information-settings.php:190
+#: classes/class-people-contact.php:101
+msgid "Phone"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:170
+#: admin/classes/class-people-contact-manager-panel.php:43
+#: admin/settings/contact-widget-maps-settings.php:198
+msgid "Location"
+msgstr ""
+
+#: admin/classes/class-people-category-manager-panel.php:177
+msgid "No Profile for This Group"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:37
+#: classes/class-people-contact-hook.php:27
+msgid "Add New Profile"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:55
+msgid "Edit Profile"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:79
+msgid "Profile Details"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:80
+#: admin/classes/class-people-contact-addnew.php:103
+msgid "&lt;empty&gt; fields don't show on front end."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:84
+msgid "Title / Position"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:92
+#: admin/classes/class-people-contact-addnew.php:97
+msgid "Profile Image"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:97
+msgid "Image format .jpg, .png"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:102
+msgid "Contact Details"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:115
+#: admin/settings/contact-widget-information-settings.php:196
+msgid "Fax"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:119
+#: admin/settings/contact-widget-information-settings.php:202
+msgid "Mobile"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:125
+#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:187
+msgid "Upgrade to"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:125
+#: admin/classes/class-people-contact-addnew.php:163
+#: classes/class-people-contact-functions.php:307
+msgid "Pro Version"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:125
+#: admin/classes/class-people-contact-addnew.php:163
+#: admin/classes/class-people-contact-addnew.php:187
+msgid "to activate"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:128
+msgid "Website"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:132
+msgid "About"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:140
+msgid "Location Address"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:141
+msgid "&lt;empty&gt; Profile location does not show on the map."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:145
+#: admin/settings/contact-widget-information-settings.php:184
+msgid "Address"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:149
+msgid "Latitude"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:153
+msgid "Longitude"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:164
+msgid "Contact Form Shortcode from another Plugin"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:165
+msgid ""
+"Add a unique Contact Form for this profile. Supports Contact Form 7 or "
+"Gravity Forms plugin shortcodes. Feature must be activated in Settings > "
+"Contact Page > Profile Contact Forms."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:168
+msgid "Enter Form Shortcode"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:187
+#: classes/class-people-contact-functions.php:313
+msgid "Ultimate Version"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:188
+msgid "Assign Profile to Groups"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:189
+msgid ""
+"Profile is automatically assigned to the Contact Us Page. Use this setting "
+"to also assign the profile to one or more Groups."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:17
+msgid "Profile Successfully deleted."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:19
+msgid "Profile Successfully updated."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:21
+msgid "Profile Successfully created."
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:67
+msgid "Are you sure delete this profile?"
+msgstr ""
+
+#: admin/classes/class-people-contact-manager-panel.php:74
+msgid "No Profile"
+msgstr ""
+
+#: admin/includes/uploader/class-uploader.php:149
+msgid "Upload"
+msgstr ""
+
+#: admin/includes/uploader/class-uploader.php:169
+msgid "View File"
+msgstr ""
+
+#: admin/includes/uploader/class-uploader.php:188
+msgid "Use this Image"
+msgstr ""
+
+#: admin/includes/uploader/class-uploader.php:189
+msgid "Use as"
+msgstr ""
+
+#: admin/includes/uploader/class-uploader.php:199
+msgid "Previously Uploaded"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:81
+msgid "Contact Page Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:82
+msgid "Error: Contact Page Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:83
+msgid "Contact Page Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:194
+msgid "Profile Cards Title"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:198
+msgid "Title Before Cards"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:201
+msgid "Team Contacts"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:204
+msgid "Profile Cards Per Row"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:208
+msgid "Cards Per Row"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:209
+msgid "Max 5 Cards per row"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:220
+msgid ""
+"A \"Contact Us Page\" was auto created on activation of the plugin. It "
+"contains the shortcode [people_contacts] required to show the contact us "
+"page. If it was not or you want to change it, create a new page, add the "
+"shortcode and then set it here."
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:224
+#: classes/class-people-contact-hook.php:23
+msgid "Contact Us"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:225
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:246
+msgid "Page contents:"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:234
+msgid "House Keeping :"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:238
+msgid "Clean up on Deletion"
+msgstr ""
+
+#: admin/settings/contact-page-global-settings.php:239
+msgid ""
+"On deletion (not deactivate) the plugin will completely remove all tables "
+"and data it created, leaving no trace it was ever here."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:81
+msgid "Profiles Location Map Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:82
+msgid "Error: Profiles Location Map Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:83
+msgid "Profiles Location MapSettings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:137
+msgid "Profiles Location Map"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:181
+msgid "Google Map Setting"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:185
+msgid "Show Map"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:186
+msgid "Show Profiles location map at top of the Contact Us Page."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:196
+#: admin/settings/contact-widget-maps-settings.php:205
+msgid "Zoom Level"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:205
+#: admin/settings/contact-widget-maps-settings.php:214
+msgid "Map Type"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:218
+msgid "Map Width Type"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:225
+msgid "Responsive"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:226
+msgid "Fixed Wide"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:259
+#: admin/settings/contact-widget-maps-settings.php:227
+msgid "Map Height"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:268
+msgid "Primary Location Address"
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:269
+msgid ""
+"Enter a Primary location address in a format that google can find. Example "
+"Street Number Street name Suburb, Town, postcode / zip code, Country. The "
+"map will open with this location as its center."
+msgstr ""
+
+#: admin/settings/contact-page-location-map-settings.php:273
+msgid "Center Address"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:81
+msgid "Email Contact Form Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:82
+msgid "Error: Email Contact Form Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:83
+msgid "Email Contact Form Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:154
+msgid "Email Contact Form"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:198
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:194
+msgid "Contact Form from another Plugin"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:199
+msgid ""
+"Create the widget contact us form by entering a shortcode from any contact "
+"form plugin."
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:203
+#: admin/settings/email-inquiry/global-settings.php:215
+msgid "Create form by Shortcode"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:224
+msgid "Form Shortcode"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:232
+#: admin/settings/email-inquiry/contact-form-global-settings.php:195
+msgid "Built-in Contact Form"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:236
+msgid "Use Default Form"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:254
+msgid "Email Settings"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:259
+#: admin/settings/email-inquiry/contact-form-global-settings.php:205
+msgid "\"From\" Name"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:260
+#: admin/settings/email-inquiry/contact-form-global-settings.php:206
+msgid "&lt;empty&gt; defaults to Site Title"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:266
+#: admin/settings/email-inquiry/contact-form-global-settings.php:212
+msgid "\"From\" Email Address"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:267
+#: admin/settings/contact-widget-email-contact-settings.php:291
+#: admin/settings/email-inquiry/contact-form-global-settings.php:213
+msgid "&lt;empty&gt; defaults to WordPress admin email address"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:273
+#: admin/settings/email-inquiry/contact-form-global-settings.php:223
+msgid "Send Copy to Sender"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:274
+#: admin/settings/email-inquiry/contact-form-global-settings.php:224
+msgid ""
+"Gives users a checkbox option to send a copy of the Inquiry email to "
+"themselves"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:285
+msgid "Email Delivery"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:290
+msgid "Inquiry Email goes to"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:298
+msgid "CC"
+msgstr ""
+
+#: admin/settings/contact-widget-email-contact-settings.php:299
+msgid "&lt;empty&gt; defaults to 'no copy sent' or add an email address"
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:81
+msgid "Contact Widget Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:82
+msgid "Error: Contact Widget Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:83
+msgid "Contact Widget Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:179
+#: widgets/class-people-contact-widgets.php:15
+msgid "Contact Us Widget"
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:180
+msgid ""
+"This plugin includes a Contact Us Widget. Use it to add Business / "
+"Organization Details, information and a general Contact Us form to the "
+"Contact Us Page sidebar. All of the Widget settings are here on the Contact "
+"Widget tab. Use the plugins built in Contact Form or add a custom form by "
+"shortcode from a Contact Form plugin of your choice."
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:184
+#: classes/class-people-contact-functions.php:239
+msgid "Contact Page Sidebar"
+msgstr ""
+
+#: admin/settings/contact-widget-global-settings.php:185
+msgid ""
+"We recommend that you create a new sidebar and assign it to the Contact Us "
+"Page. If you do you can then add the Contact Widget to that sidebar and it "
+"will only show on the Contact Us page. We recommend you install this plugin "
+"<a href=\"http://wordpress.org/plugins/woosidebars/\" target=\"_blank"
+"\">WooSidebars</a> and use it to create the custom sidebar."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:81
+msgid "Contact Information Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:82
+msgid "Error: Contact Information Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:83
+msgid "Contact Information Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:135
+msgid "Contact Information"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:179
+msgid "Add Contact Details"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:180
+msgid ""
+"Add contact details to show in the widget, &lt;empty&gt; fields don't show "
+"on front end."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:208
+msgid "Visible Email address"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:215
+msgid "Contact widget content"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:219
+msgid "Content before Map"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:220
+msgid "Content will show above map on widget. Leave &lt;empty&gt; to disable."
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:228
+msgid "Content after Map"
+msgstr ""
+
+#: admin/settings/contact-widget-information-settings.php:229
+msgid "Content will show below map on widget. Leave &lt;empty&gt; to disable."
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:81
+msgid "Contact Widget Maps Settings successfully saved."
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:82
+msgid "Error: Contact Widget Maps Settings can not save."
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:83
+msgid "Contact Widget Maps Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:137
+#: admin/settings/contact-widget-maps-settings.php:181
+msgid "Maps Settings"
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:185
+msgid "Enable/Disable Map"
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:186
+msgid "Check to enable a Google map on the Widget"
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:235
+msgid "Map Callout Text"
+msgstr ""
+
+#: admin/settings/contact-widget-maps-settings.php:236
+msgid ""
+"Text or HTML that will be output when you click on the map marker for your "
+"location."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:81
+msgid "Profile Card Contact Icons successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:82
+msgid "Error: Profile Card Contact Icons can not save."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:83
+msgid "Profile Card Contact Icons successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:150
+msgid "Profile Card Contact Icons"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:194
+msgid "Upload Custom Default Profile Image"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:195
+msgid "Upload custom 'No Image' image, .jpg or.png format."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:199
+msgid "Default Profile Image"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:205
+msgid "Upload Custom Contact Icons"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:206
+msgid ""
+"Delete default icons. Upload custom icons, transparent .png format, 16px by "
+"16px recommended size."
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:210
+msgid "Phone icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:216
+msgid "Fax icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:222
+msgid "Mobile icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:228
+msgid "Email icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:234
+msgid "Email Link Text"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:235
+msgid "Set hyperlink text that shows to the right of the Email icon. Default"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:238
+#: classes/class-people-contact.php:235 classes/class-people-contact.php:477
+msgid "Click Here"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:241
+msgid "Website icon"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:247
+msgid "Website Link Text"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:248
+msgid "Set hyperlink text that shows to the right of the Website icon. Default"
+msgstr ""
+
+#: admin/settings/grid-view-contact-icons-settings.php:251
+msgid "Visit Website"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:81
+msgid "Profile Image Style successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:82
+msgid "Error: Profile Image Style can not save."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:83
+msgid "Profile Image Style successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:150
+#: admin/settings/grid-view-image-style-settings.php:194
+msgid "Profile Image Style"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:198
+msgid "Presentation Style"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:203
+msgid "Rounded Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:204
+msgid "Square Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:205
+msgid "Flat Image"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:211
+msgid "Custom Styling"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:215
+msgid "Image Background Colour"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:216
+msgid "Shows in Image Padding area or if image is transparent. Default"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:222
+msgid "Image Padding"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:223
+msgid "Overall size of image reduced by the size of padding set here."
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:230
+msgid "Image Border"
+msgstr ""
+
+#: admin/settings/grid-view-image-style-settings.php:237
+msgid "Image Shadow"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:81
+msgid "Profile Card Layout successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:82
+msgid "Error: Profile Card Layout can not save."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:83
+msgid "Profile Card Layout successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:153
+msgid "Profile Card Type"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:197
+msgid "Select a Profile Card Type"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:201
+msgid "Profile Image Position"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:209
+msgid "Card Type 1. Image Left - Content Right"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:209
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:240
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:219
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:261
+#: admin/settings/email-inquiry/popup-form-style-settings.php:200
+#: admin/settings/email-inquiry/popup-form-style-settings.php:279
+#: admin/settings/email-inquiry/popup-form-style-settings.php:286
+#: admin/settings/email-inquiry/popup-form-style-settings.php:311
+#: admin/settings/email-inquiry/popup-form-style-settings.php:318
+#: admin/settings/email-inquiry/popup-form-style-settings.php:325
+msgid "Default"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:215
+msgid "Card Type 2. Content Left - Image Right"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:221
+msgid "Card Type 3. Image Top - Content Bottom"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:233
+msgid "Profile Image Wide"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:234
+msgid "Set as a percentage of total Profile Card wide."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:247
+msgid "Fix Image Height"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:248
+msgid ""
+"Check to activate. Wide of image auto scaled to original proportion of tall."
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:258
+msgid "Image Fixed Height in Profile Card"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:259
+msgid ""
+"Max height of image. Example set 200px and will fix image container at 200px "
+"with image aligned to the top. Default"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:266
+msgid "Show Profile Title Position"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:272
+msgid "Above the image"
+msgstr ""
+
+#: admin/settings/grid-view-layout-settings.php:273
+msgid "Below the image"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:81
+msgid "Profile Card Style successfully saved."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:82
+msgid "Error: Profile Card Style can not save."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:83
+msgid "Profile Card Style successfully reseted."
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:150
+msgid "Profile Card Style"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:194
+msgid "Create a Custom Profile Card Design"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:198
+msgid "Profile Card content padding"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:204
+msgid "Top"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:209
+msgid "Bottom"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:215
+#: shortcodes/class-people-contact-shortcodes.php:99
+msgid "Left"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:221
+#: shortcodes/class-people-contact-shortcodes.php:100
+msgid "Right"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:227
+msgid "Profile Card background Colour"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:228
+msgid "Profile Card body background colour. Default"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:234
+msgid "Profile Card border"
+msgstr ""
+
+#: admin/settings/grid-view-style-settings.php:241
+msgid "Profile Card shadow"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:81
+msgid "Colorbox Pop-Up Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:82
+msgid "Error: Colorbox Pop-Up Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:83
+msgid "Colorbox Pop-Up Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:149
+msgid "Colorbox Pop-Up"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:193
+msgid "Colorbox Pop-Up Settings"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:197
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:197
+msgid "Fix Position on Scroll"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:204
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:204
+msgid "Pop-up stays centered in screen while page scrolls behind it."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:211
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:211
+msgid "Pop-up scrolls up and down with the page."
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:218
+msgid "Open & Close Transition Effect"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:219
+msgid "Choose a pop-up opening & closing effect. Default - None"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:225
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:225
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:238
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "None"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:226
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:226
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:239
+msgid "Fade"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:227
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:227
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:240
+msgid "Elastic"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:231
+msgid "Opening & Closing Speed"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:232
+msgid "Milliseconds when open and close pop-up"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:239
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:260
+msgid "Background Overlay Colour"
+msgstr ""
+
+#: admin/settings/email-inquiry/colorbox-popup-settings.php:240
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:261
+msgid "Select a colour or empty for no colour."
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:81
+msgid "Default Form Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:82
+msgid "Error: Default Form Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:83
+msgid "Default Form Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:199
+msgid "Email 'From' Settings"
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:200
+msgid ""
+"The following options affect the sender (email address and name) used in "
+"Profile Email Inquiries."
+msgstr ""
+
+#: admin/settings/email-inquiry/contact-form-global-settings.php:219
+msgid "Sender 'Request A Copy'"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:81
+msgid "Custom Form Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:82
+msgid "Error: Custom Form Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:83
+msgid "Custom Form Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:150
+#: admin/tabs/email-inquiry-3rd-contact-form-tab.php:78
+msgid "Custom Form"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:195
+msgid ""
+"Create a contact form that applies to all Profiles by adding a form "
+"shortcode from the Contact Form 7 or Gravity Forms plugins."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:199
+msgid "Enter Global Form Shortcode"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:200
+msgid "Can add unique form shortcode on each profile."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:207
+msgid "Custom Form Open Options"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:212
+msgid "Form Open Options"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:219
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:225
+msgid "Open contact form on new page"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:219
+msgid "new window"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:225
+msgid "same window"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:231
+msgid "Open contact form by Pop-up"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:239
+msgid "Page For Displaying shortcode Forms"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:241
+msgid ""
+"A \"Profile Email Page\" was auto created on activation of the plugin. It "
+"contains the shortcode [profile_email_page] which is required to show the "
+"contact form created by shortcode for each profile. If it was not created or "
+"you want to change it, create a new page, add the shortcode and then set it "
+"here."
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:245
+msgid "Profile Contact Page"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:255
+msgid "Reset Profiles Contact Form Shortcodes"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:260
+msgid "Global Re-Set"
+msgstr ""
+
+#: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:261
+msgid ""
+"Set to Yes and Save Changes will reset all profiles that have a unique "
+"contact form shortcode to the form shortcode set on this page."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:81
+msgid "Fancybox Pop-Up Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:82
+msgid "Error: Fancybox Pop-Up Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:83
+msgid "Fancybox Pop-Up Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:149
+msgid "Fancybox Pop-Up"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:193
+msgid "Fancybox Pop-Up Settings"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:218
+msgid "Open Transition Effect"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:219
+msgid "Choose a pop-up opening effect. Default - None."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:231
+msgid "Close Transistion Effect"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:232
+msgid "Choose a pop-up closing effect. Default - None."
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:244
+msgid "Opening Speed"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:245
+msgid "Milliseconds when open pop-up"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:252
+msgid "Closing Speed"
+msgstr ""
+
+#: admin/settings/email-inquiry/fancybox-popup-settings.php:253
+msgid "Milliseconds when close pop-up"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:81
+msgid "Email Inquiry Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:82
+msgid "Error: Email Inquiry Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:83
+msgid "Email Inquiry Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:195
+msgid "Contact Form Type"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:199
+msgid "Plugins Default Contact Form"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:223
+msgid "Only Contact Form 7 or Gravity Forms shortcode will work here"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:232
+msgid "Select a Pop-Up Tool"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:236
+msgid "Pop-Up Tool"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:242
+msgid "FANCYBOX"
+msgstr ""
+
+#: admin/settings/email-inquiry/global-settings.php:243
+msgid "COLORBOX"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:81
+msgid "Default Form Style Settings successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:82
+msgid "Error: Default Form Style Settings can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:83
+msgid "Default Form Style Settings successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:151
+msgid "Default Form Style"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:195
+msgid "Form Background Colour"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:199
+#: admin/settings/email-inquiry/popup-form-style-settings.php:278
+#: admin/settings/email-inquiry/popup-form-style-settings.php:310
+msgid "Background Colour"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:207
+msgid "Form Heading Text"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:211
+msgid "Heading Text"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:214
+msgid "This email will be delivered to:"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:217
+msgid "Text Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:224
+msgid "Business / Organization Name"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:228
+msgid "Name Text"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:234
+msgid "Name Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:241
+msgid "Profile Title / Position"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:245
+msgid "Title / Position Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:252
+#: classes/class-people-contact-functions.php:48
+msgid "Profile Name"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:256
+msgid "Profile Name Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:263
+msgid "Form Content Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:267
+msgid "Content Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:274
+msgid "Form Input Field Style"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:285
+msgid "Font Colour"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:292
+msgid "Input Field Borders"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:299
+msgid "Form Send / Submit Button"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:303
+msgid "Send Button Title"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:304
+msgid "&lt;empty&gt; for default SEND"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:307
+#: classes/class-people-contact.php:69
+msgid "SEND"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:317
+msgid "Background Colour Gradient From"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:324
+msgid "Background Colour Gradient To"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:331
+msgid "Button Border"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:337
+msgid "Button Font"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:344
+msgid "Style Form With Theme CSS"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:348
+msgid "Form CSS Class"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:349
+msgid "&lt;empty&gt; for default or enter custom form CSS"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:355
+msgid "Button CSS Class"
+msgstr ""
+
+#: admin/settings/email-inquiry/popup-form-style-settings.php:356
+msgid "Enter your own button CSS class"
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:81
+msgid "Success Message successfully saved."
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:82
+msgid "Error: Success Message can not save."
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:83
+msgid "Success Message successfully reseted."
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:149
+#: admin/settings/email-inquiry/success-message-settings.php:197
+msgid "Success Message"
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:193
+msgid "Success Message Setup"
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:198
+msgid "Message that user will see after their Inquiry is sent."
+msgstr ""
+
+#: admin/settings/email-inquiry/success-message-settings.php:202
+msgid ""
+"Thanks for your inquiry - we'll be in touch with you as soon as possible!"
+msgstr ""
+
+#: admin/tabs/contact-page-tab.php:78
+msgid "Contact Page"
+msgstr ""
+
+#: admin/tabs/contact-widget-tab.php:78
+msgid "Contact Widget"
+msgstr ""
+
+#: admin/tabs/email-inquiry-default-contact-form-tab.php:78
+msgid "Default Form"
+msgstr ""
+
+#: admin/tabs/email-inquiry-popup-style-tab.php:78
+msgid "Pop-Up Style"
+msgstr ""
+
+#: admin/tabs/grid-view-tab.php:78
+msgid "Profile Cards"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:26
+#: classes/class-people-contact-functions.php:102
+msgid ""
+"Thanks for your contact - we'll be in touch with you as soon as possible!"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:40
+#: classes/class-people-contact-functions.php:134
+msgid "[Copy]:"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:54
+msgid "Contact Name"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:60
+msgid "Contact Email Address"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:66
+msgid "Contact Phone"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:71
+#: classes/class-people-contact-functions.php:154
+#: classes/class-people-contact.php:107
+#: widgets/class-people-contact-widgets.php:394
+msgid "Message"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:148
+msgid "Email Address"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:241
+msgid "Contact Page Widgets area."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:264
+msgid "Upgrade available for Extra Functionality"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:265
+msgid ""
+"<strong>NOTE:</strong> All the functions inside the Yellow border are extra "
+"functionality that is only available by upgrading to one of 2 fully "
+"supported Pro Version plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:266
+msgid "Contact Us Page - Contact People Pro"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:267
+msgid "Pro Version Features"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:270
+msgid "Profile Contact Grid WYSIWYG Style & Layout editor."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:271
+msgid "Upload custom icons - 'No Image' and contact icons."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:272
+msgid "Profile Short Description feature."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:273
+msgid "Individual Profile Contact Profile Shortcode feature."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:274
+msgid "Create custom contact form for Profiles."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:275
+msgid "Integration with Contact Form 7 & Gravity Forms."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:276
+msgid "Add unique contact forms for individual profiles."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:279
+msgid "Contact People Ultimate"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:280
+msgid "Ultimate Version Features"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:283
+msgid "Includes all Contact Us Page Pro features plus."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:284
+msgid "Groups - Create groups and assign Profiles to groups."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:285
+msgid "Add Groups to posts and page via shortcode."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:286
+msgid "Show Group with or without Google map."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:287
+msgid "Set Group Column layout display."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:288
+msgid "Show or don't show Group title."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:289
+msgid "Sort Profile Order within groups."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:290
+msgid "Show multiple groups on the same page."
+msgstr ""
+
+#: classes/class-people-contact-functions.php:293
+msgid "View this plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:293
+msgid "documentation"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:294
+msgid "Visit this plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:294
+msgid "support forum"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:295
+msgid "More FREE a3rev WordPress plugins"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:298
+msgid "WordPress Email Template"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:299
+msgid "Page View Count"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:313
+msgid "Upgrading to the"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:307
+#: classes/class-people-contact-functions.php:313
+msgid "activates this shortcode feature as well."
+msgstr ""
+
+#: classes/class-people-contact-hook.php:138
+msgid "Please enter your Name"
+msgstr ""
+
+#: classes/class-people-contact-hook.php:142
+msgid "Please enter valid Email address"
+msgstr ""
+
+#: classes/class-people-contact-hook.php:146
+msgid "Please enter your Phone"
+msgstr ""
+
+#: classes/class-people-contact-hook.php:150
+msgid "Please enter your Message"
+msgstr ""
+
+#: classes/class-people-contact-hook.php:232
+msgid "Documentation"
+msgstr ""
+
+#: classes/class-people-contact-hook.php:233
+msgid "Support"
+msgstr ""
+
+#: classes/class-people-contact.php:42
+msgid "from"
+msgstr ""
+
+#: classes/class-people-contact.php:44
+msgid "Contact from"
+msgstr ""
+
+#: classes/class-people-contact.php:104
+msgid "Subject"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:34
+msgid "Insert shortcode"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:34
+msgid "Contact"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:77
+msgid "Insert Single Profile"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:79
+msgid "Select people"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:82
+#: shortcodes/class-people-contact-shortcodes.php:118
+#: shortcodes/class-people-contact-shortcodes.php:131
+msgid "Please select..."
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Card Alignment"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Left - wrap"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Left - no wrap"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Center"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Right - wrap"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Right - no wrap"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:94
+msgid "Wrap is text wrap like images"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:95
+msgid "Card Width"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:96
+msgid "Card External Padding"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:97
+msgid "Above"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:98
+msgid "Below"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:106
+#: shortcodes/class-people-contact-shortcodes.php:146
+msgid "Insert Shortcode"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:113
+msgid "Insert Group"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:115
+msgid "Select Group"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:128
+msgid "Profile Cards / Row"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:132
+msgid "Card"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:134
+msgid "Cards"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:137
+msgid "Empty to use global settings."
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:139
+msgid "Google Map"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:139
+msgid "Check to enable google location map for this group."
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:141
+msgid "Group Title"
+msgstr ""
+
+#: shortcodes/class-people-contact-shortcodes.php:141
+msgid "Check to show group title above Profiles."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:14
+msgid ""
+"Use this widget to add Business / Organization details, contact details, "
+"information, location map and a general contact us form as a widget."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:201
+msgid "You forgot to enter your name."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:209
+msgid "You forgot to enter your email address."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:212
+msgid "You entered an invalid email address."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:220
+msgid "You forgot to enter your comments."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:230
+msgid "Contact Form Submission from"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:262
+msgid "You forgot to enter your"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:269
+msgid "You entered an invalid"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:280
+msgid "<strong>Thanks!</strong> Your email was successfully sent."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:318
+msgid "Your email was successfully sent."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:332
+msgid "Phone:"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:337
+msgid "Fax:"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:342
+msgid "Mobile:"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:347
+msgid "Email:"
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:369
+msgid "There was an error submitting the form."
+msgstr ""
+
+#: widgets/class-people-contact-widgets.php:437
+msgid "Title:"
+msgstr ""
