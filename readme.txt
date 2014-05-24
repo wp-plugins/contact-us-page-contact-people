@@ -2,9 +2,9 @@
 
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
-Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 1.1.4.1
+Requires at least: 3.7
+Tested up to: 3.9
+Stable tag: 1.1.4.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,7 +12,7 @@ Easily and instantly create an interesting, stylish, professional and highly fun
   
 == Description ==
 
-Contact Us Page - Contact People allows you transform your themes dull and boring contact us page into a stunning and vibrant, ultra professional Contact Us Page not only for your General site contact us but for individual profiles (people, positions, Stores) within an organization . Features include:
+Contact Us Page - Contact People allows you to easily transform your themes dull and boring contact us page into a stunning and vibrant, ultra professional Contact Us Page not only for your General sites contact us but for individual profiles (people, positions, Stores) within an organization . Features include:
 
 = Contact Us Page =
 
@@ -27,8 +27,8 @@ The plugin when installed auto creates a stunning contact us page with these fea
 * Stores and branches local or world wide - show on Google map.
 * Add and edit profiles - Add profiles with all their contact details, profile image or add a department (e.g. Sales, Support, Despatch) or branch offices.
 * Contact Profiles show stylish Contact cards on the Contact us page. 
-* Contact Us Page dispaly is fully mobile responsive using JQuery masonry.
-* Fully cross browser compliant including IE7 to IE10.
+* Contact Us Page display is fully mobile responsive using JQuery masonry.
+* Fully cross browser compliant including IE7 to IE11.
 * Mobile device optimized, all tablets and phones. 
 * Sort profile card position on Contact us page by using drag and droping the Profiles admin menu.
 * Set the number of profile Cards to show per row. Display up to 5 Cards per row.
@@ -52,8 +52,8 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 
 Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
 
-* 100% compatible with WordPress v3.8.0 admin interface.
-* Backward compatibility to WordPress v3.5.0
+* 100% compatible with WordPress v3.9.0 admin interface.
+* Backward compatibility to WordPress v3.7
 * App style admin interface.
 * Admin app interface is fully mobile and tablet responsive.
 
@@ -63,7 +63,7 @@ All a3rev Lite Version plugins have exactly the same admin interface as the Pro 
 
 = Lite Version Support =
 
-As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
+As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version License gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
 
 = Pro Version Additional functionality =
 
@@ -92,17 +92,18 @@ This great feature enables you to add any profile card to any post or page via t
 * Set Profile card padding top, bottom, left and right.
 
 = Contact People Ultimate =
-The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations â€“ just about any Grouping that you want to create
+
+The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations and just about any Grouping that you want to create
 
 * Create unlimited Groups and assign Profiles to Groups
 * Assign a single Profile to any number of Groups
 * Sort Profile order within each Group
-* Groups shortcode â€“ Insert Groups in any page or post.
+* Groups shortcode. Insert Groups in any page or post.
 * Insert multiple groups per pages or posts.
 * Shortcode point and click display editor.
 * Set the number of Profiles per row in each group
-* Show or donâ€™t show Google map with Group
-* Show or donâ€™t show Group title above Profiles
+* Show or no show Google map with Group
+* Show or no show Group title above Profiles
 
 = Localization =
 
@@ -119,7 +120,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
 
 = Minimum Requirements =
 
-* WordPress 3.5
+* WordPress 3.7
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
  
@@ -167,6 +168,10 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.4.2 - 2014/04/14 =
+* Tweak - Tested and updated for full WordPress version 3.9 compatibility.
+* Tweak - Updated Masonry script to work with WP 3.9 with backward compatibility to WP v 3.7
 
 = 1.1.4.1 - 2014/02/11 =
 * Tweak - Stricter sanitization of Default Form Message input field. Only allow input of plain text with auto paragraph on line break.
@@ -289,6 +294,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4.2 =
+Important Upgrade! Upgrade now for full compatibility with WordPress version 3.9 and backwards to WP v3.7
 
 = 1.1.4.1 =
 Security upgrade. Please update now, 5 security Tweaks, 1 performance Tweak, 1 bug fix and full compatibility with WordPress Version 3.8.1.
