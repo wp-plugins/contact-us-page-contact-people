@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Contact Us page - Contact people LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 18:07+0700\n"
-"PO-Revision-Date: 2014-02-11 18:08+0700\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2014-05-24 13:59+0700\n"
+"PO-Revision-Date: 2014-05-24 13:59+0700\n"
+"Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
@@ -84,8 +84,8 @@ msgstr ""
 msgid "Outset"
 msgstr ""
 
-#: admin/admin-interface.php:1296 admin/admin-interface.php:1386
-#: admin/admin-interface.php:1415
+#: admin/admin-interface.php:1298 admin/admin-interface.php:1388
+#: admin/admin-interface.php:1417
 #: admin/settings/contact-page-global-settings.php:246
 #: admin/settings/contact-page-location-map-settings.php:192
 #: admin/settings/contact-widget-email-contact-settings.php:212
@@ -103,8 +103,8 @@ msgstr ""
 msgid "ON"
 msgstr ""
 
-#: admin/admin-interface.php:1297 admin/admin-interface.php:1387
-#: admin/admin-interface.php:1416
+#: admin/admin-interface.php:1299 admin/admin-interface.php:1389
+#: admin/admin-interface.php:1418
 #: admin/settings/contact-page-global-settings.php:247
 #: admin/settings/contact-page-location-map-settings.php:193
 #: admin/settings/contact-widget-email-contact-settings.php:213
@@ -122,63 +122,63 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: admin/admin-interface.php:1457
+#: admin/admin-interface.php:1459
 msgid "Width"
 msgstr ""
 
-#: admin/admin-interface.php:1459
+#: admin/admin-interface.php:1461
 msgid "Height"
 msgstr ""
 
-#: admin/admin-interface.php:1461
+#: admin/admin-interface.php:1463
 msgid "Hard Crop"
 msgstr ""
 
-#: admin/admin-interface.php:1539
+#: admin/admin-interface.php:1541
 msgid "-- Default Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1550
+#: admin/admin-interface.php:1552
 msgid "-- Google Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1591
+#: admin/admin-interface.php:1593
 msgid "Preview your customized typography settings"
 msgstr ""
 
-#: admin/admin-interface.php:1725 admin/admin-interface.php:1984
+#: admin/admin-interface.php:1727 admin/admin-interface.php:1986
 msgid "Preview your customized border settings"
 msgstr ""
 
-#: admin/admin-interface.php:1734 admin/admin-interface.php:1975
+#: admin/admin-interface.php:1736 admin/admin-interface.php:1977
 msgid "Rounded"
 msgstr ""
 
-#: admin/admin-interface.php:1735 admin/admin-interface.php:1976
+#: admin/admin-interface.php:1737 admin/admin-interface.php:1978
 msgid "Square"
 msgstr ""
 
-#: admin/admin-interface.php:1745 admin/admin-interface.php:1989
+#: admin/admin-interface.php:1747 admin/admin-interface.php:1991
 msgid "Top Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1765 admin/admin-interface.php:2009
+#: admin/admin-interface.php:1767 admin/admin-interface.php:2011
 msgid "Top Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1785 admin/admin-interface.php:2029
+#: admin/admin-interface.php:1787 admin/admin-interface.php:2031
 msgid "Bottom Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1805 admin/admin-interface.php:2049
+#: admin/admin-interface.php:1807 admin/admin-interface.php:2051
 msgid "Bottom Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1898
+#: admin/admin-interface.php:1900
 msgid "Preview your customized border styles settings"
 msgstr ""
 
-#: admin/admin-interface.php:2110
+#: admin/admin-interface.php:2112
 #: admin/classes/class-people-category-manager-panel.php:144
 #: admin/classes/class-people-contact-addnew.php:200
 #: admin/settings/contact-widget-email-contact-settings.php:280
@@ -187,7 +187,7 @@ msgstr ""
 msgid "YES"
 msgstr ""
 
-#: admin/admin-interface.php:2111
+#: admin/admin-interface.php:2113
 #: admin/classes/class-people-category-manager-panel.php:145
 #: admin/classes/class-people-contact-addnew.php:201
 #: admin/settings/contact-widget-email-contact-settings.php:281
@@ -196,39 +196,39 @@ msgstr ""
 msgid "NO"
 msgstr ""
 
-#: admin/admin-interface.php:2125
+#: admin/admin-interface.php:2127
 msgid "Horizontal Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2143
+#: admin/admin-interface.php:2145
 msgid "Vertical Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2161
+#: admin/admin-interface.php:2163
 msgid "Blur Distance"
 msgstr ""
 
-#: admin/admin-interface.php:2179
+#: admin/admin-interface.php:2181
 msgid "Spread Size"
 msgstr ""
 
-#: admin/admin-interface.php:2197
+#: admin/admin-interface.php:2199
 msgid "INNER"
 msgstr ""
 
-#: admin/admin-interface.php:2198
+#: admin/admin-interface.php:2200
 msgid "OUTER"
 msgstr ""
 
-#: admin/admin-interface.php:2216
+#: admin/admin-interface.php:2218
 msgid "Preview your customized box shadow settings"
 msgstr ""
 
-#: admin/admin-interface.php:2405
+#: admin/admin-interface.php:2407
 msgid "Save changes"
 msgstr ""
 
-#: admin/admin-interface.php:2406
+#: admin/admin-interface.php:2408
 msgid "Reset Settings"
 msgstr ""
 
@@ -248,27 +248,27 @@ msgid "Settings"
 msgstr ""
 
 #: admin/admin-ui.php:129
-#, php-format
-msgid "Settings inside this yellow border are %s Features."
+msgid ""
+"Advanced settings inside this yellow border are not activated on the Lite "
+"Version."
 msgstr ""
 
 #: admin/admin-ui.php:131
 #, php-format
 msgid ""
-"Upgrade to the <a href=\"%s\" target=\"_blank\">%s</a> to activate these "
-"settings."
+"The fully featured %s in availble for <a href=\"%s\" target=\"_blank\">Free "
+"Evaluation Trail Here</a>. No credit card required."
 msgstr ""
 
-#: admin/admin-ui.php:133 admin/admin-ui.php:135
-#: admin/classes/class-people-contact-addnew.php:125
+#: admin/admin-ui.php:133 admin/classes/class-people-contact-addnew.php:125
 #: admin/classes/class-people-contact-addnew.php:163
-#: classes/class-people-contact-functions.php:323
+#: classes/class-people-contact-functions.php:329
 msgid "Pro Version"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:13
 #: admin/classes/class-people-contact-addnew.php:187
-#: classes/class-people-contact-functions.php:329
+#: classes/class-people-contact-functions.php:335
 msgid "Ultimate Version"
 msgstr ""
 
@@ -1480,7 +1480,7 @@ msgid "Set hyperlink text that shows to the right of the Email icon. Default"
 msgstr ""
 
 #: admin/settings/grid-view-contact-icons-settings.php:238
-#: classes/class-people-contact.php:235 classes/class-people-contact.php:474
+#: classes/class-people-contact.php:235 classes/class-people-contact.php:480
 msgid "Click Here"
 msgstr ""
 
@@ -1768,112 +1768,122 @@ msgid "Contact Us Page - Contact People Pro"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:283
+#: classes/class-people-contact-functions.php:299
+#, php-format
+msgid "Trial the <a href=\"%s\" target=\"_blank\">Pro Version for Free</a>"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:285
 msgid "Pro Version Features"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:286
+#: classes/class-people-contact-functions.php:288
 msgid "Profile Contact Grid WYSIWYG Style & Layout editor."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:287
+#: classes/class-people-contact-functions.php:289
 msgid "Upload custom icons - 'No Image' and contact icons."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:288
+#: classes/class-people-contact-functions.php:290
 msgid "Profile Short Description feature."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:289
+#: classes/class-people-contact-functions.php:291
 msgid "Individual Profile Contact Profile Shortcode feature."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:290
+#: classes/class-people-contact-functions.php:292
 msgid "Create custom contact form for Profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:291
+#: classes/class-people-contact-functions.php:293
 msgid "Integration with Contact Form 7 & Gravity Forms."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:292
+#: classes/class-people-contact-functions.php:294
 msgid "Add unique contact forms for individual profiles."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:295
+#: classes/class-people-contact-functions.php:297
 msgid "Contact People Ultimate"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:296
+#: classes/class-people-contact-functions.php:301
 msgid "Ultimate Version Features"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:299
+#: classes/class-people-contact-functions.php:304
 msgid "Includes all Contact Us Page Pro features plus."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:300
+#: classes/class-people-contact-functions.php:305
 msgid "Groups - Create groups and assign Profiles to groups."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:301
+#: classes/class-people-contact-functions.php:306
 msgid "Add Groups to posts and page via shortcode."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:302
+#: classes/class-people-contact-functions.php:307
 msgid "Show Group with or without Google map."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:303
+#: classes/class-people-contact-functions.php:308
 msgid "Set Group Column layout display."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:304
+#: classes/class-people-contact-functions.php:309
 msgid "Show or don't show Group title."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:305
+#: classes/class-people-contact-functions.php:310
 msgid "Sort Profile Order within groups."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:306
+#: classes/class-people-contact-functions.php:311
 msgid "Show multiple groups on the same page."
 msgstr ""
 
-#: classes/class-people-contact-functions.php:309
+#: classes/class-people-contact-functions.php:314
 msgid "View this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:309
+#: classes/class-people-contact-functions.php:314
 msgid "documentation"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:310
+#: classes/class-people-contact-functions.php:315
 msgid "Visit this plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:310
+#: classes/class-people-contact-functions.php:315
 msgid "support forum"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:311
+#: classes/class-people-contact-functions.php:316
 msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:314
+#: classes/class-people-contact-functions.php:319
+msgid "a3 Responsive Slider"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:320
 msgid "WordPress Email Template"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:315
+#: classes/class-people-contact-functions.php:321
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:323
 #: classes/class-people-contact-functions.php:329
+#: classes/class-people-contact-functions.php:335
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:323
 #: classes/class-people-contact-functions.php:329
+#: classes/class-people-contact-functions.php:335
 msgid "activates this shortcode feature as well."
 msgstr ""
 

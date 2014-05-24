@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.7
-Tested up to: 3.9
-Stable tag: 1.1.4.2
+Tested up to: 3.9.1
+Stable tag: 1.1.4.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -16,7 +16,7 @@ Contact Us Page - Contact People allows you to easily transform your themes dull
 
 = Contact Us Page =
 
-The plugin when installed auto creates a stunning contact us page with these features:
+The plugin when installed auto creates a stunning contact us page with this huge list of features:
 
 * Enable/Disable Google Location Map - Show main location and each profiles location on map.
 * Create unlimited Contact Profile Cards. Display each person, department, store or branch office on a profile card.
@@ -50,24 +50,32 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 
 = Mobile Responsive App style admin interface =
 
-Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
-
-* 100% compatible with WordPress v3.9.0 admin interface.
-* Backward compatibility to WordPress v3.7
+* 100% compatible with WordPress v3.8.0 and later admin interface.
+* Backward compatibility to WordPress v3.5.0
 * App style admin interface.
 * Admin app interface is fully mobile and tablet responsive.
 
-= Lite & Pro Version Admin Interface =
+= a3rev Plugins Lite & Pro Version Admin Interface =
 
-All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. Pro Version features and settings are easy to spot on the admin dashboard as they are inside of a Yellow border. The Pro Version settings are all active on the admin panels so they can be used to get a great idea of how they work and what is available BUT the settings do not save when changes are saved and hence are not applied to the front end. Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+* All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version.
+* Pro Version features and settings are inside of a Yellow border.
+* The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
+* Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
 = Lite Version Support =
 
-As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version License gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
+* As a Lite Version user please post all support requests to the plugins WordPress Support forum.
+* We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member.
+* Upgrading to a Pro Version Trail Licence gives 'write' access to the a3rev support forum.e.
 
 = Pro Version Additional functionality =
 
 This plugin features a Pro version and Ultimate version upgrades that add tonnes of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
+
+* Industry leading - Full Pro Version Free Evaluation Trails. No Credit Card Required.
+* Contact Us Page - Contact People Pro - [Free Evaluation Trial](http://a3rev.com/shop/contact-us-page-contact-people/). 
+* Contact People Ultimate - [Free Evaluation Trial](http://a3rev.com/shop/contact-people-ultimate/)
+* Immediate access at start of Trail to support from developers on the plugins [a3rev support forums](https://a3rev.com/forums/forum/wordpress-plugins/).
 
 = Contact Form 7 & Gravity Forms Integration =
 
@@ -113,7 +121,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
 
 = Plugin Resources =
 
-[PRO Version]( http://a3rev.com/shop/contact-us-page-contact-people/) |
+[PRO Version](http://a3rev.com/shop/contact-us-page-contact-people/) |
 [Documentation](http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/email-inquiry-ultimatehttp://docs.a3rev.com/user-guides/plugins-extensions/wordpress/contact-us-page-contact-people/) |
 
 == Installation ==
@@ -126,7 +134,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
  
 = Automatic installation =
 
-Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us page, Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
+Automatic installation is the easiest option as WordPress handles the file transfers itself and you don't even need to leave your web browser. To do an automatic install of Contact Us Page, Contact People, log in to your WordPress admin panel, navigate to the Plugins menu and click Add New. 
 
 = Manual installation =
 
@@ -168,6 +176,13 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.4.3 - 2014/05/25 =
+* Tweak - Changed add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
+* Tweak - Update change_button_text() function from ( $original == 'Insert into Post' ) to ( is_admin() && $original === 'Insert into Post' )
+* Tweak - Checked and updated for full compatibility with WordPress version 3.9.1
+* Tweak - Updated plugins description text and admin panel yellow sidebar text.
+* Fix - Code tweaks to fix a3 Plugins Framework conflict with WP e-Commerce tax rates.
 
 = 1.1.4.2 - 2014/04/14 =
 * Tweak - Tested and updated for full WordPress version 3.9 compatibility.
@@ -294,6 +309,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4.3 = 
+Upgrade now for full compatibility with WordPress version 3.9.1 and launch of Pro Version Free Trail Evaluations.
 
 = 1.1.4.2 =
 Important Upgrade! Upgrade now for full compatibility with WordPress version 3.9 and backwards to WP v3.7
