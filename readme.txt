@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.1.4.3
+Stable tag: 1.1.4.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -66,16 +66,21 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 
 * As a Lite Version user please post all support requests to the plugins WordPress Support forum.
 * We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member.
-* Upgrading to a Pro Version Trail Licence gives 'write' access to the a3rev support forum.e.
+* Upgrading to a Pro Version gives 'write' access to the a3rev support forums.
+
+>= Premium Support = 
+>
+>The a3rev team does not provide support for the Contact Us Page - Contact People plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/wordpress-plugins/contact-us-page-contact-people/) to people who have purchased a [Contact Us Page - Contact People Pro](http://a3rev.com/shop/contact-us-page-contact-people/) plugin Lifetime License. 
+>
+>The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
 
 = Pro Version Additional functionality =
 
-This plugin features a Pro version and Ultimate version upgrades that add tonnes of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
+This plugin features a Pro version and Ultimate version upgrades that add tones of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
 
-* Industry leading - Full Pro Version Free Evaluation Trails. No Credit Card Required.
-* Contact Us Page - Contact People Pro - [Free Evaluation Trial](http://a3rev.com/shop/contact-us-page-contact-people/). 
-* Contact People Ultimate - [Free Evaluation Trial](http://a3rev.com/shop/contact-people-ultimate/)
-* Immediate access at start of Trail to support from developers on the plugins [a3rev support forums](https://a3rev.com/forums/forum/wordpress-plugins/).
+* [Contact Us Page - Contact People Pro](http://a3rev.com/shop/contact-us-page-contact-people/). 
+* [Contact People Ultimate](http://a3rev.com/shop/contact-people-ultimate/)
+* Immediate access at start of support from developers on the plugins [a3rev support forums](https://a3rev.com/forums/forum/wordpress-plugins/).
 
 = Contact Form 7 & Gravity Forms Integration =
 
@@ -122,7 +127,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
 = Plugin Resources =
 
 [PRO Version](http://a3rev.com/shop/contact-us-page-contact-people/) |
-[Documentation](http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/email-inquiry-ultimatehttp://docs.a3rev.com/user-guides/plugins-extensions/wordpress/contact-us-page-contact-people/) |
+[Documentation](http://docs.a3rev.com/user-guides/plugins-extensions/wordpress/contact-us-page-contact-people/) |
 
 == Installation ==
 
@@ -176,6 +181,11 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.4.4 - 2014/06/21 = 
+* Tweak - Updated chosen js script to latest version 1.1.0 on the a3rev Plugin Framework 
+* Tweak - Added support for placeholder feature for input, email , password , text area types 
+* Tweak - Updated plugins description text and admin panel yellow sidebar text.
 
 = 1.1.4.3 - 2014/05/25 =
 * Tweak - Changed add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
@@ -309,6 +319,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4.4 =
+Update now for 2 important framework code tweaks to keep you plugin in tip top running order.
 
 = 1.1.4.3 = 
 Upgrade now for full compatibility with WordPress version 3.9.1 and launch of Pro Version Free Trail Evaluations.
