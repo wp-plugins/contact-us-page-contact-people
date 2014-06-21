@@ -279,7 +279,9 @@ class People_Contact_Functions
 		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><div class="a3-plugin-ui-icon a3-plugin-ui-a3-rev-logo"></div></a>';
 		$html .= '<h3>'.__('Upgrade available for Extra Functionality', 'cup_cp').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins", 'cup_cp').':</p>';
-		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'.__('Contact Us Page - Contact People Pro', 'cup_cp').'</a></h3>';
+		$html .= '<h3>* '.__('Contact Us Page - Contact People Pro', 'cup_cp').'</h3>';
+		$html .=  sprintf( __('Trial the <a href="%s" target="_blank">Pro Version for Free</a>', 'cup_cp'), PEOPLE_CONTACT_AUTHOR_URI ).'<br />';
+		
 		$html .= '<h3>'.__('Pro Version Features', 'cup_cp').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
@@ -292,7 +294,10 @@ class People_Contact_Functions
 		$html .= '<li>7. '.__("Add unique contact forms for individual profiles.", 'cup_cp').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_ULTIMATE_URI.'" target="_blank">'.__('Contact People Ultimate', 'cup_cp').'</a></h3>';
+		$html .= '<h3>* '.__('Contact People Ultimate', 'cup_cp').'</h3>';
+		$html .= '<p>';
+		$html .=  sprintf( __('Trial the <a href="%s" target="_blank">Pro Version for Free</a>', 'cup_cp'), PEOPLE_CONTACT_ULTIMATE_URI ).'<br />';
+		$html .= '</p>';
 		$html .= '<h3>'.__('Ultimate Version Features', 'cup_cp').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
@@ -311,6 +316,7 @@ class People_Contact_Functions
 		$html .= '<h3>'.__('More FREE a3rev WordPress plugins', 'cup_cp').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/a3-responsive-slider/" target="_blank">'.__('a3 Responsive Slider', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-email-template/" target="_blank">'.__('WordPress Email Template', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'cup_cp').'</a></li>';
 		$html .= '</ul>';
