@@ -2,9 +2,9 @@
 
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
-Requires at least: 3.7
-Tested up to: 3.9.1
-Stable tag: 1.1.4.4
+Requires at least: 3.8
+Tested up to: 4.0
+Stable tag: 1.1.4.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -133,7 +133,7 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
 
 = Minimum Requirements =
 
-* WordPress 3.7
+* WordPress 3.8
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
  
@@ -181,6 +181,10 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 1.1.4.5 - 2014/09/10 =
+* Tweak - Updated google font face in plugin framework.
+* Tweak - Tested 100% compatible with WordPress Version 4.0
 
 = 1.1.4.4 - 2014/06/21 = 
 * Tweak - Updated chosen js script to latest version 1.1.0 on the a3rev Plugin Framework 
@@ -319,6 +323,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.1.4.5 =
+Upgrade your plugin now for a Framework code tweak and full compatibility with WordPress Version 4.0
 
 = 1.1.4.4 =
 Update now for 2 important framework code tweaks to keep you plugin in tip top running order.
