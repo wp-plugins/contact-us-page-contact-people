@@ -279,8 +279,8 @@ class People_Contact_Functions
 		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><div class="a3-plugin-ui-icon a3-plugin-ui-a3-rev-logo"></div></a>';
 		$html .= '<h3>'.__('Upgrade available for Extra Functionality', 'cup_cp').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border are extra functionality that is only available by upgrading to one of 2 fully supported Pro Version plugins", 'cup_cp').':</p>';
-		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'.__('Contact Us Page - Contact People Pro', 'cup_cp').'</a></h3>';
-		$html .= '<h3>'.__('Pro Version Features', 'cup_cp').':</h3>';
+		
+		$html .= '<h3>'.__('Contact Us Page - Contact People Pro Features', 'cup_cp').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__("Profile Contact Grid WYSIWYG Style & Layout editor.", 'cup_cp').'</li>';
@@ -290,10 +290,11 @@ class People_Contact_Functions
 		$html .= '<li>5. '.__('Create custom contact form for Profiles.', 'cup_cp').'</li>';
 		$html .= '<li>6. '.__("Integration with Contact Form 7 & Gravity Forms.", 'cup_cp').'</li>';
 		$html .= '<li>7. '.__("Add unique contact forms for individual profiles.", 'cup_cp').'</li>';
+		$html .= '<li>8. <a href="'.PEOPLE_CONTACT_AUTHOR_URI.'" target="_blank">'. __('See Full details and demo here', 'cup_cp').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '<h3>* <a href="'.PEOPLE_CONTACT_ULTIMATE_URI.'" target="_blank">'.__('Contact People Ultimate', 'cup_cp').'</a></h3>';
-		$html .= '<h3>'.__('Ultimate Version Features', 'cup_cp').':</h3>';
+		
+		$html .= '<h3>'.__('Contact People Ultimate Features', 'cup_cp').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__("Includes all Contact Us Page Pro features plus.", 'cup_cp').'</li>';
@@ -304,13 +305,24 @@ class People_Contact_Functions
 		$html .= '<li>6. '.__("Show or don't show Group title.", 'cup_cp').'</li>';
 		$html .= '<li>7. '.__("Sort Profile Order within groups.", 'cup_cp').'</li>';
 		$html .= '<li>8. '.__("Show multiple groups on the same page.", 'cup_cp').'</li>';
+		$html .= '<li>9. <a href="'.PEOPLE_CONTACT_ULTIMATE_URI.'" target="_blank">'. __('See Full details and demo here', 'cup_cp').'</a></li>';
 		$html .= '</ul>';
 		$html .= '</p>';
-		$html .= '<h3>'.__('View this plugins', 'cup_cp').' <a href="http://docs.a3rev.com/user-guides/plugins-extensions/woocommerce/contact-us-page-contact-people/" target="_blank">'.__('documentation', 'cup_cp').'</a></h3>';
-		$html .= '<h3>'.__('Visit this plugins', 'cup_cp').' <a href="http://wordpress.org/support/plugin/contact-us-page-contact-people/" target="_blank">'.__('support forum', 'cup_cp').'</a></h3>';
+		
+		$html .= '<h3>'.__('Important!', 'cup_cp').'</h3>';
+		$html .= '<p>'.__("If upgrading to Contact People Pro or Ultimate plugins:", 'cup_cp').'<br />';
+		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>1. '.__('DEACTIVATE this plugin BEFORE installing the Upgrade version.', 'cup_cp').'</li>';
+		$html .= '<li>2. '.__("If you don't you will get a FATAL ERROR.", 'cup_cp').'</li>';
+		$html .= '<li>3. '.__('All data - profiles, settings and activations will be present in the newly activated version.', 'cup_cp').'</li>';
+		$html .= '<li>4. '.__('WARNING - If you DELETE this plugin BEFORE you activate and upgrade version, all existing profiles and settings will be lost.', 'cup_cp').'</li>';
+		$html .= '</ul>';
+		$html .= '</p>';
+		
 		$html .= '<h3>'.__('More FREE a3rev WordPress plugins', 'cup_cp').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="http://wordpress.org/plugins/a3-responsive-slider/" target="_blank">'.__('a3 Responsive Slider', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-email-template/" target="_blank">'.__('WordPress Email Template', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'cup_cp').'</a></li>';
 		$html .= '</ul>';

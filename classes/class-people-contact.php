@@ -365,10 +365,10 @@ class People_Contact {
 			}
 		</script>
     	<?php
-		wp_enqueue_script( 'jquery-masonry', PEOPLE_CONTACT_JS_URL.'/masonry/jquery.masonry.min.js');
+		wp_enqueue_script( 'jquery-masonry');
 		
-		wp_register_script( 'jquery_modernizr', PEOPLE_CONTACT_JS_URL.'/masonry/modernizr-transitions.js');
-    	wp_enqueue_script( 'jquery_modernizr' );
+		global $wp_version;
+		$cur_wp_version = preg_replace('/-.*$/', '', $wp_version);
 		?>
         <script type="text/javascript">
         jQuery(window).load(function(){
@@ -378,10 +378,13 @@ class People_Contact {
 				grid_view_col = 2;
 			}
 			jQuery('.people_box_content<?php echo $unique_id; ?>').imagesLoaded(function(){
-				jQuery(this).masonry({
+				jQuery('.people_box_content<?php echo $unique_id; ?>').masonry({
 					itemSelector: '.people_item<?php echo $unique_id; ?>',
-					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col,
-					isAnimated: !Modernizr.csstransitions
+					<?php if ( version_compare( $cur_wp_version, '3.9', '<' ) ) { ?>
+					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col
+					<?php } else { ?>
+					columnWidth: '.people-grid-sizer'
+					<?php } ?>
 				});
 			});
 		});
@@ -392,10 +395,13 @@ class People_Contact {
 				grid_view_col = 2;
 			}
 			jQuery('.people_box_content<?php echo $unique_id; ?>').imagesLoaded(function(){
-				jQuery(this).masonry({
+				jQuery('.people_box_content<?php echo $unique_id; ?>').masonry({
 					itemSelector: '.people_item<?php echo $unique_id; ?>',
-					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col,
-					isAnimated: !Modernizr.csstransitions
+					<?php if ( version_compare( $cur_wp_version, '3.9', '<' ) ) { ?>
+					columnWidth: jQuery('.people_box_content<?php echo $unique_id; ?>').width()/grid_view_col
+					<?php } else { ?>
+					columnWidth: '.people-grid-sizer'
+					<?php } ?>
 				});
 			});
 		});
@@ -439,7 +445,7 @@ class People_Contact {
 			$html .= '<div class="custom_box_title"><h1 class="p_title">'.$grid_view_team_title.'</h1></div>';
 		}
 		$html .= '<div style="clear:both;margin-bottom:1em;"></div>';
-		$html .= '<div class="people_box_content people_box_content'.$unique_id.' pcol'.$grid_view_col.'">';
+		$html .= '<div class="people_box_content people_box_content'.$unique_id.' pcol'.$grid_view_col.'"><div class="people-grid-sizer"></div>';
 		$i = 0;
 		if(is_array($contacts) && count($contacts) > 0 ){
 			$i++;
