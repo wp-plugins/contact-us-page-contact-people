@@ -947,6 +947,7 @@ class People_Contact_Admin_Interface extends People_Contact_Admin_UI
 			do_action( $this->plugin_name . '_after_settings_save_reset' );
 		}
 		do_action( $this->plugin_name . '-' . trim( $form_key ) . '_settings_init' );
+		do_action( $this->plugin_name . '_settings_init' );
 		
 		$option_values = array();
 		if ( trim( $option_name ) != '' ) {
