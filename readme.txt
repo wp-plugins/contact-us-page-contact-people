@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,10 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.1 - 2014/10/11 =
+* Tweak - Add <div> container for Contact us widget
+* Tweak - Move break points in widget for improved UI
+
 = 1.2.0 - 2014/09/15 =
 * Feature - Converted all front end CSS #dynamic {stylesheets} to Sass #dynamic {stylesheets} for faster loading.
 * Feature - Convert all back end CSS to Sass.
@@ -344,6 +348,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.1 =
+Update now for 2 Contact Us widget code tweaks for improved widget display.
 
 = 1.2.0 =
 Major Version upgrade. Upgrade now for full front end conversion to Sass #dynamic {stylesheets} and admin panel to Sass.
