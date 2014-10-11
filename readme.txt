@@ -200,7 +200,7 @@ On WordPress with any theme.
 == Changelog ==
 
 = 1.2.1 - 2014/10/11 =
-* Tweak - Add <div> container for Contact us widget
+* Tweak - Add [code]<div>[/code] container for Contact us widget
 * Tweak - Move break points in widget for improved UI
 
 = 1.2.0 - 2014/09/15 =
