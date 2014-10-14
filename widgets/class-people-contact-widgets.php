@@ -402,10 +402,12 @@ class People_Contact_Widget extends WP_Widget {
 						</li>
 					  </ol>
 					</form>
-				</div>
 			<?php
 			}
 		}
+		?>
+		</div>
+		<?php
 	}
 
 	/** @see WP_Widget */

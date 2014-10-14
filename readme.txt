@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,9 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.2 - 2014/10/14 =
+* Fix - Add <code></div></code> when using the default contact form on Contact Us widget on left sidebar. Version 1.1.1 only fixed the issue on the right sidebar.
+
 = 1.2.1 - 2014/10/11 =
 * Tweak - Add <code><div></code> container for Contact us widget
 * Tweak - Move break points in widget for improved UI
@@ -348,6 +351,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.2 =
+Update now for small bug fix when Contact Widget is placed in a left aligned sidebar.
 
 = 1.2.1 =
 Update now for 2 Contact Us widget code tweaks for improved widget display.
