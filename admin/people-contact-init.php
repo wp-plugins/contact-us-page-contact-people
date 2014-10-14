@@ -3,9 +3,9 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_lite_version', '1.1.4.1');
-	update_option('a3rev_wp_people_contact_version', '1.1.4.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '1.0.5.1');
+	update_option('a3rev_wp_people_contact_lite_version', '1.2.1');
+	update_option('a3rev_wp_people_contact_version', '1.2.1');
+	update_option('a3rev_wp_people_contact_ultimate_version', '1.1.1');
 	
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), '', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	update_option('contact_us_page_id', $contact_us_page_id);
@@ -14,6 +14,10 @@ function people_contact_install(){
 	// Set Settings Default from Admin Init
 	global $people_contact_admin_init;
 	$people_contact_admin_init->set_default_settings();
+
+	// Build sass
+	global $a3_people_contact_less;
+	$a3_people_contact_less->plugin_build_sass();
 	
 	update_option('a3rev_wp_people_contact_just_installed', true);
 }
@@ -77,10 +81,7 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 	
 	// Include google fonts into header
 	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'add_google_fonts'), 10 );
-		
-	// Add Custom style on frontend
-	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'include_customized_style'), 11);
-	
+
 	// Add script to fix for IE
 	add_action( 'wp_head', array( 'People_Contact_Hook_Filter', 'fix_window_console_ie') );
 	
@@ -133,10 +134,18 @@ function a3_people_contact_lite_upgrade_plugin () {
 		
 		People_Contact_Functions::upgrade_to_lite_1_1_4();
 	}
+
+	// Upgrade to 1.2.0
+	if(version_compare(get_option('a3rev_wp_people_contact_lite_version'), '1.2.0') === -1){
+		// Build sass
+		global $a3_people_contact_less;
+		$a3_people_contact_less->plugin_build_sass();
+		update_option('a3rev_wp_people_contact_lite_version', '1.2.0');
+	}
 	
-	update_option('a3rev_wp_people_contact_lite_version', '1.1.4.1');
-	update_option('a3rev_wp_people_contact_version', '1.1.4.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '1.0.5.1');
+	update_option('a3rev_wp_people_contact_lite_version', '1.2.1');
+	update_option('a3rev_wp_people_contact_version', '1.2.1');
+	update_option('a3rev_wp_people_contact_ultimate_version', '1.1.1');
 	
 }
 ?>
