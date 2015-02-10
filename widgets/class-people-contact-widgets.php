@@ -1,47 +1,46 @@
 <?php
 /**
  * People Contact Widget
- * 
+ *
  * @package		People Contact
  * @category	Widgets
  * @author		A3rev
  */
- 
+
 class People_Contact_Widget extends WP_Widget {
-	
+
 	/** constructor */
 	function __construct() {
 		$widget_ops = array('classname' => 'people_contact_widget', 'description' => __( "Use this widget to add Business / Organization details, contact details, information, location map and a general contact us form as a widget.", 'cup_cp') );
 		parent::__construct('people_contacts', __('Contact Us Widget', 'cup_cp'), $widget_ops);
 	}
-	
+
 	public static function widget_maps_contact_output($args){
 		// No More API Key needed
-		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form;	
-		
+		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form;
+
 		if($people_contact_widget_maps['widget_hide_maps_frontend'] == 1){ return; }
-		
-		if ( !is_array($args) ) 
+
+		if ( !is_array($args) )
 			parse_str( $args, $args );
-			
-		extract($args);	
-		
+
+		extract($args);
+
 		$mode = '';
 		$widget_maps_scroll = 'true';
-		$streetview = 'off';	
+		$streetview = 'off';
 		$map_height = $people_contact_widget_maps['widget_map_height'];
-		
 		$zoom = $people_contact_widget_maps['widget_zoom_level'];
 		$type = $people_contact_widget_maps['widget_map_type'];
 		$marker_title = addslashes( $people_contact_widget_information['widget_info_address'] );
-		if ( $zoom == '' ) { $zoom = 6; }   
+		if ( $zoom == '' ) { $zoom = 6; }
 		$lang = '';
 		$locale = '';
 		if(!empty($lang)){
 			$locale = ',locale :"'.$lang.'"';
 		}
 		$extra_params = ',{travelMode:G_TRAVEL_MODE_WALKING,avoidHighways:true '.$locale.'}';
-		
+
 		if(empty($map_height)) { $map_height = 150;}
 		wp_enqueue_script('maps-googleapis','https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false' );
 		?>
@@ -52,7 +51,7 @@ class People_Contact_Widget extends WP_Widget {
 				function initialize() {
 				<?php if($streetview == 'on'){ ?>
 				<?php } else { ?>
-					
+
 					<?php switch ($type) {
 							case 'G_NORMAL_MAP':
 								$type = 'ROADMAP';
@@ -71,13 +70,13 @@ class People_Contact_Widget extends WP_Widget {
 								break;
 					} ?>
 					<?php
-					
+
 					$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($geocoords).'&sensor=false';
 					$geodata = file_get_contents($url);
 					$geodata = json_decode($geodata);
 					$center_lat = $geodata->results[0]->geometry->location->lat;
 					$center_lng = $geodata->results[0]->geometry->location->lng;
-						
+
 					$latlng_center = $center_lat.','.$center_lng;
 					?>
 					var myLatlng = new google.maps.LatLng(<?php echo $latlng_center; ?>);
@@ -90,14 +89,14 @@ class People_Contact_Widget extends WP_Widget {
 					<?php if($widget_maps_scroll == 'true'){ ?>
 					map.scrollwheel = false;
 					<?php } ?>
-					
+
 					<?php if($mode == 'directions'){ ?>
 					directionsPanel = document.getElementById("featured-route");
 					directions = new GDirections(map, directionsPanel);
 					directions.load("from: <?php echo $from; ?> to: <?php echo $to; ?>" <?php if($walking == 'on'){ echo $extra_params;} ?>);
 					<?php
 					} else { ?>
-				 
+
 						var point = new google.maps.LatLng(<?php echo $latlng_center; ?>);
 						var root = "<?php echo PEOPLE_CONTACT_URL.'/assets'; ?>";
 						var callout = '<?php echo preg_replace("/[\n\r]/","<br/>",$people_contact_widget_maps['widget_maps_callout_text']); ?>';
@@ -106,10 +105,10 @@ class People_Contact_Widget extends WP_Widget {
 						<?php $title = str_replace('&#8211;','-',$title); ?>
 						<?php $title = str_replace('&#8217;',"`",$title); ?>
 						<?php $title = str_replace('&#038;','&',$title); ?>
-						var the_title = '<?php echo html_entity_decode($title) ?>'; 
-						
-					<?php		 	
-					if(is_page()){ 
+						var the_title = '<?php echo html_entity_decode($title) ?>';
+
+					<?php
+					if(is_page()){
 						$custom = get_option('woo_cat_custom_marker_pages');
 						if(!empty($custom)){
 							$color = $custom;
@@ -119,27 +118,27 @@ class People_Contact_Widget extends WP_Widget {
 							if (empty($color)) {
 								$color = 'red';
 							}
-						}			 	
+						}
 					?>
 						var color = '<?php echo $color; ?>';
 						createMarker(map,point,root,the_link,the_title,color,callout);
 					<?php } else { ?>
 						var color = '<?php echo get_option('woo_cat_colors_pages'); ?>';
 						createMarker(map,point,root,the_link,the_title,color,callout);
-					<?php 
+					<?php
 					}
 						if(isset($_POST['woo_maps_directions_search'])){ ?>
-						
+
 						directionsPanel = document.getElementById("featured-route");
 						directions = new GDirections(map, directionsPanel);
 						directions.load("from: <?php echo htmlspecialchars($_POST['woo_maps_directions_search']); ?> to: <?php echo $address; ?>" <?php if($walking == 'on'){ echo $extra_params;} ?>);
-						
-						
-						
+
+
+
 						directionsDisplay = new google.maps.DirectionsRenderer();
 						directionsDisplay.setMap(map);
 						directionsDisplay.setPanel(document.getElementById("featured-route"));
-						
+
 						<?php if($walking == 'on'){ ?>
 						var travelmodesetting = google.maps.DirectionsTravelMode.WALKING;
 						<?php } else { ?>
@@ -148,7 +147,7 @@ class People_Contact_Widget extends WP_Widget {
 						var start = '<?php echo htmlspecialchars($_POST['woo_maps_directions_search']); ?>';
 						var end = '<?php echo $address; ?>';
 						var request = {
-							origin:start, 
+							origin:start,
 							destination:end,
 							travelMode: travelmodesetting
 						};
@@ -156,13 +155,13 @@ class People_Contact_Widget extends WP_Widget {
 							if (status == google.maps.DirectionsStatus.OK) {
 								directionsDisplay.setDirections(response);
 							}
-						});	
-						
-						<?php } ?>			
+						});
+
+						<?php } ?>
 					<?php } ?>
 				<?php } ?>
-				
-	
+
+
 				  }
 				  function handleNoFlash(errorCode) {
 					  if (errorCode == FLASH_UNAVAILABLE) {
@@ -170,32 +169,32 @@ class People_Contact_Widget extends WP_Widget {
 						return;
 					  }
 					 }
-	
-				
-			
+
+
+
 			initialize();
-				
+
 			});
-	
+
 		</script>
-	
+
 	<?php
 	}
 
-	
+
 	public static function widget_contact_form($widget_id = 0){
 		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form, $people_contact_widget_content_before_maps, $people_contact_widget_content_after_maps;
-		
+
 		$enable_widget_send_copy = true;
 		if ( $people_contact_widget_email_contact_form['widget_send_copy'] == 'no') $enable_widget_send_copy = false;
-		
+
 		$nameError = '';
 		$emailError = '';
 		$contactError = '';
 		//If the form is submitted
 		if( isset( $_POST['submitted'] ) ) {
-		
-		
+
+
 				//Check to make sure that the name field is not empty
 				if( trim( $_POST['contactName'] ) === '' ) {
 					$nameError =  __( 'You forgot to enter your name.', 'cup_cp' );
@@ -203,7 +202,7 @@ class People_Contact_Widget extends WP_Widget {
 				} else {
 					$name = trim( $_POST['contactName'] );
 				}
-		
+
 				//Check to make sure sure that a valid email address is submitted
 				if( trim( $_POST['email'] ) === '' )  {
 					$emailError = __( 'You forgot to enter your email address.', 'cup_cp' );
@@ -214,7 +213,7 @@ class People_Contact_Widget extends WP_Widget {
 				} else {
 					$email = trim( $_POST['email'] );
 				}
-		
+
 				//Check to make sure comments were entered
 				if( trim( $_POST['comments'] ) === '' ) {
 					$contactError = __( 'You forgot to enter your comments.', 'cup_cp' );
@@ -222,13 +221,13 @@ class People_Contact_Widget extends WP_Widget {
 				} else {
 					$comments = stripslashes( trim( $_POST['comments'] ) );
 				}
-		
+
 				//If there is no error, send the email
 				if( ! isset( $hasError ) ) {
-		
+
 					$emailTo = $people_contact_widget_information['widget_info_email'];
 					$subject = __( 'Contact Form Submission from', 'cup_cp' ). ' ' .$name;
-					
+
 					$contact_data = array(
 						'subject' 			=> $subject,
 						'to_email' 			=> $emailTo,
@@ -236,16 +235,16 @@ class People_Contact_Widget extends WP_Widget {
 						'contact_email'		=> $email,
 						'message'			=> $comments,
 					);
-					
+
 					$send_copy_yourself = 0;
 					if( isset( $_POST['sendCopy'] ) ) {
-						$send_copy_yourself = 1;	
+						$send_copy_yourself = 1;
 					}
-					
+
 					$email_result = People_Contact_Functions::contact_to_site( $contact_data, $send_copy_yourself );
-		
+
 					$emailSent = true;
-		
+
 				}
 		}
 		?>
@@ -283,19 +282,19 @@ class People_Contact_Widget extends WP_Widget {
 					} else {
 						jQuery( 'form#contactForm input.submit').removeAttr('disabled');
 					}
-			
+
 					return false;
-			
+
 				});
 			});
 			//-->!]]>
 			</script>
             <div class="people_contact_widget_container">
-	            <?php if ($people_contact_widget_content_before_maps != '') { ?>        
+	            <?php if ($people_contact_widget_content_before_maps != '') { ?>
 	            <div class="content_before_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_before_maps ) ) );?></div>
 	            <?php } ?>
-				<?php 
-				$geocoords = $people_contact_widget_maps['widget_location']; 
+				<?php
+				$geocoords = $people_contact_widget_maps['widget_location'];
 				?>
 				<?php if ($geocoords != '') { ?>
 				<div style="clear:both;"></div>
@@ -306,14 +305,14 @@ class People_Contact_Widget extends WP_Widget {
 	            <div class="content_after_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_after_maps ) ) );?></div>
 	            <?php } ?>
 				<?php
-				
+
 				$phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
 				$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
 				$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
 				$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
-				
+
 				if( isset( $emailSent ) && $emailSent == true ) { ?>
-		
+
 					<p class="info">
 					  <?php _e( 'Your email was successfully sent.', 'cup_cp' ); ?>
 					</p>
@@ -347,19 +346,18 @@ class People_Contact_Widget extends WP_Widget {
 						  <?php } ?>
 						</ul>
 					  </section>
-					 
 					  <div class="clear"></div>
 					</div>
 					<!-- /.location-twitter -->
 					<?php
-					
+
 					if( $people_contact_widget_email_contact_form['widget_show_contact_form'] != 1 && trim($people_contact_widget_email_contact_form['widget_input_shortcode']) != ''){
 						echo '<div class="clear" style="clear:both;"></div><div class="people_widget_shortcode">';
 						$widget_input_shortcode = htmlspecialchars_decode($people_contact_widget_email_contact_form['widget_input_shortcode']);
 						echo do_shortcode( $widget_input_shortcode );
 						echo '</div><div class="clear" style="clear:both;"></div>';
 					}
-					
+
 	                if($people_contact_widget_email_contact_form['widget_show_contact_form'] == 1){
 	                ?>
 					<?php if( isset( $hasError ) ) { ?>
@@ -415,7 +413,7 @@ class People_Contact_Widget extends WP_Widget {
 		extract( $args );
 
 		$title = apply_filters('widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base);
-		
+
 		echo $before_widget;
 		if ( trim($title) != '' ) echo $before_title . $title . $after_title;
 		$this->widget_contact_form();
@@ -428,7 +426,7 @@ class People_Contact_Widget extends WP_Widget {
 		$instance['title'] = strip_tags($new_instance['title']);
 		return $instance;
 	}
-	
+
 	/** @see WP_Widget->form */
 	function form( $instance ) {
 		//Defaults
@@ -440,7 +438,7 @@ class People_Contact_Widget extends WP_Widget {
 <?php
 	}
 
-} 
+}
 
 function register_people_contact_widget(){register_widget('People_Contact_Widget');}
 add_action('widgets_init', 'register_people_contact_widget');

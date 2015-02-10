@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Contact Us page - Contact people LITE\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-21 11:19+0700\n"
-"PO-Revision-Date: 2014-06-21 11:19+0700\n"
+"POT-Creation-Date: 2015-02-10 13:18+0700\n"
+"PO-Revision-Date: 2015-02-10 13:19+0700\n"
 "Last-Translator: Nguyen Cong Tuan <mr.nguyencongtuan@gmail.com>\n"
 "Language-Team: a3rev\n"
 "Language: en\n"
@@ -84,8 +84,8 @@ msgstr ""
 msgid "Outset"
 msgstr ""
 
-#: admin/admin-interface.php:1354 admin/admin-interface.php:1444
-#: admin/admin-interface.php:1473
+#: admin/admin-interface.php:1360 admin/admin-interface.php:1450
+#: admin/admin-interface.php:1479
 #: admin/settings/contact-page-global-settings.php:246
 #: admin/settings/contact-page-location-map-settings.php:192
 #: admin/settings/contact-widget-email-contact-settings.php:212
@@ -103,8 +103,8 @@ msgstr ""
 msgid "ON"
 msgstr ""
 
-#: admin/admin-interface.php:1355 admin/admin-interface.php:1445
-#: admin/admin-interface.php:1474
+#: admin/admin-interface.php:1361 admin/admin-interface.php:1451
+#: admin/admin-interface.php:1480
 #: admin/settings/contact-page-global-settings.php:247
 #: admin/settings/contact-page-location-map-settings.php:193
 #: admin/settings/contact-widget-email-contact-settings.php:213
@@ -122,113 +122,113 @@ msgstr ""
 msgid "OFF"
 msgstr ""
 
-#: admin/admin-interface.php:1515
+#: admin/admin-interface.php:1521
 msgid "Width"
 msgstr ""
 
-#: admin/admin-interface.php:1517
+#: admin/admin-interface.php:1523
 msgid "Height"
 msgstr ""
 
-#: admin/admin-interface.php:1519
+#: admin/admin-interface.php:1525
 msgid "Hard Crop"
 msgstr ""
 
-#: admin/admin-interface.php:1596
+#: admin/admin-interface.php:1602
 msgid "-- Default Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1607
+#: admin/admin-interface.php:1613
 msgid "-- Google Fonts --"
 msgstr ""
 
-#: admin/admin-interface.php:1648
+#: admin/admin-interface.php:1654
 msgid "Preview your customized typography settings"
 msgstr ""
 
-#: admin/admin-interface.php:1782 admin/admin-interface.php:2041
+#: admin/admin-interface.php:1788 admin/admin-interface.php:2047
 msgid "Preview your customized border settings"
 msgstr ""
 
-#: admin/admin-interface.php:1791 admin/admin-interface.php:2032
+#: admin/admin-interface.php:1797 admin/admin-interface.php:2038
 msgid "Rounded"
 msgstr ""
 
-#: admin/admin-interface.php:1792 admin/admin-interface.php:2033
+#: admin/admin-interface.php:1798 admin/admin-interface.php:2039
 msgid "Square"
 msgstr ""
 
-#: admin/admin-interface.php:1802 admin/admin-interface.php:2046
+#: admin/admin-interface.php:1808 admin/admin-interface.php:2052
 msgid "Top Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1822 admin/admin-interface.php:2066
+#: admin/admin-interface.php:1828 admin/admin-interface.php:2072
 msgid "Top Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1842 admin/admin-interface.php:2086
+#: admin/admin-interface.php:1848 admin/admin-interface.php:2092
 msgid "Bottom Right Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1862 admin/admin-interface.php:2106
+#: admin/admin-interface.php:1868 admin/admin-interface.php:2112
 msgid "Bottom Left Corner"
 msgstr ""
 
-#: admin/admin-interface.php:1955
+#: admin/admin-interface.php:1961
 msgid "Preview your customized border styles settings"
 msgstr ""
 
-#: admin/admin-interface.php:2167
+#: admin/admin-interface.php:2173
 #: admin/classes/class-people-category-manager-panel.php:144
-#: admin/classes/class-people-contact-addnew.php:200
+#: admin/classes/class-people-contact-addnew.php:195
 #: admin/settings/contact-widget-email-contact-settings.php:280
 #: admin/settings/email-inquiry/contact-form-global-settings.php:230
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:268
 msgid "YES"
 msgstr ""
 
-#: admin/admin-interface.php:2168
+#: admin/admin-interface.php:2174
 #: admin/classes/class-people-category-manager-panel.php:145
-#: admin/classes/class-people-contact-addnew.php:201
+#: admin/classes/class-people-contact-addnew.php:196
 #: admin/settings/contact-widget-email-contact-settings.php:281
 #: admin/settings/email-inquiry/contact-form-global-settings.php:231
 #: admin/settings/email-inquiry/email-inquiry-3rd-contact-form-settings.php:269
 msgid "NO"
 msgstr ""
 
-#: admin/admin-interface.php:2182
+#: admin/admin-interface.php:2188
 msgid "Horizontal Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2200
+#: admin/admin-interface.php:2206
 msgid "Vertical Shadow"
 msgstr ""
 
-#: admin/admin-interface.php:2218
+#: admin/admin-interface.php:2224
 msgid "Blur Distance"
 msgstr ""
 
-#: admin/admin-interface.php:2236
+#: admin/admin-interface.php:2242
 msgid "Spread Size"
 msgstr ""
 
-#: admin/admin-interface.php:2254
+#: admin/admin-interface.php:2260
 msgid "INNER"
 msgstr ""
 
-#: admin/admin-interface.php:2255
+#: admin/admin-interface.php:2261
 msgid "OUTER"
 msgstr ""
 
-#: admin/admin-interface.php:2273
+#: admin/admin-interface.php:2279
 msgid "Preview your customized box shadow settings"
 msgstr ""
 
-#: admin/admin-interface.php:2509
+#: admin/admin-interface.php:2515
 msgid "Save changes"
 msgstr ""
 
-#: admin/admin-interface.php:2510
+#: admin/admin-interface.php:2516
 msgid "Reset Settings"
 msgstr ""
 
@@ -260,22 +260,21 @@ msgid ""
 "settings."
 msgstr ""
 
-#: admin/admin-ui.php:142 admin/classes/class-people-contact-addnew.php:125
-#: admin/classes/class-people-contact-addnew.php:163
-#: classes/class-people-contact-functions.php:335
+#: admin/admin-ui.php:142 admin/classes/class-people-contact-addnew.php:130
+#: classes/class-people-contact-functions.php:337
 msgid "Pro Version"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:13
-#: admin/classes/class-people-contact-addnew.php:187
-#: classes/class-people-contact-functions.php:341
+#: admin/classes/class-people-contact-addnew.php:182
+#: classes/class-people-contact-functions.php:343
 msgid "Ultimate Version"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:55
 #: admin/classes/class-people-category-manager-panel.php:115
 #: admin/classes/class-people-category-manager-panel.php:169
-#: admin/classes/class-people-contact-addnew.php:192
+#: admin/classes/class-people-contact-addnew.php:187
 #: shortcodes/class-people-contact-shortcodes.php:72
 msgid "Profile Group"
 msgstr ""
@@ -305,11 +304,11 @@ msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:67
 #: admin/classes/class-people-category-manager-panel.php:183
-#: admin/classes/class-people-contact-addnew.php:88
+#: admin/classes/class-people-contact-addnew.php:89
 #: admin/classes/class-people-contact-manager-panel.php:40
 #: classes/class-people-contact-functions.php:150
 #: classes/class-people-contact.php:95
-#: widgets/class-people-contact-widgets.php:376
+#: widgets/class-people-contact-widgets.php:372
 msgid "Name"
 msgstr ""
 
@@ -351,12 +350,12 @@ msgid "Are you sure delete this category?"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:96
-#: admin/classes/class-people-contact-addnew.php:211
+#: admin/classes/class-people-contact-addnew.php:206
 msgid "No Groups"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:112
-#: admin/classes/class-people-contact-addnew.php:36
+#: admin/classes/class-people-contact-addnew.php:37
 msgid "Create"
 msgstr ""
 
@@ -369,7 +368,7 @@ msgid "Edit Group"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:120
-#: admin/classes/class-people-contact-addnew.php:66
+#: admin/classes/class-people-contact-addnew.php:67
 msgid "Update"
 msgstr ""
 
@@ -389,7 +388,7 @@ msgid ""
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:157
-#: admin/classes/class-people-contact-addnew.php:48
+#: admin/classes/class-people-contact-addnew.php:49
 #: shortcodes/class-people-contact-shortcodes.php:107
 #: shortcodes/class-people-contact-shortcodes.php:147
 msgid "Cancel"
@@ -403,15 +402,15 @@ msgid ""
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:184
-#: admin/classes/class-people-contact-addnew.php:107
+#: admin/classes/class-people-contact-addnew.php:108
 #: admin/classes/class-people-contact-manager-panel.php:41
 #: classes/class-people-contact.php:98
-#: widgets/class-people-contact-widgets.php:385
+#: widgets/class-people-contact-widgets.php:381
 msgid "Email"
 msgstr ""
 
 #: admin/classes/class-people-category-manager-panel.php:185
-#: admin/classes/class-people-contact-addnew.php:111
+#: admin/classes/class-people-contact-addnew.php:112
 #: admin/classes/class-people-contact-manager-panel.php:42
 #: admin/settings/contact-widget-information-settings.php:190
 #: classes/class-people-contact.php:101
@@ -428,112 +427,110 @@ msgstr ""
 msgid "No Profile for This Group"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:37
+#: admin/classes/class-people-contact-addnew.php:38
 #: classes/class-people-contact-hook.php:27
 msgid "Add New Profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:55
+#: admin/classes/class-people-contact-addnew.php:56
 msgid "Edit Profile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:79
+#: admin/classes/class-people-contact-addnew.php:80
 msgid "Profile Details"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:80
-#: admin/classes/class-people-contact-addnew.php:103
+#: admin/classes/class-people-contact-addnew.php:81
+#: admin/classes/class-people-contact-addnew.php:104
 msgid "&lt;empty&gt; fields don't show on front end."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:84
+#: admin/classes/class-people-contact-addnew.php:85
 msgid "Title / Position"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:92
-#: admin/classes/class-people-contact-addnew.php:97
+#: admin/classes/class-people-contact-addnew.php:93
+#: admin/classes/class-people-contact-addnew.php:98
 msgid "Profile Image"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:97
+#: admin/classes/class-people-contact-addnew.php:98
 msgid "Image format .jpg, .png"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:102
+#: admin/classes/class-people-contact-addnew.php:103
 msgid "Contact Details"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:115
+#: admin/classes/class-people-contact-addnew.php:116
 #: admin/settings/contact-widget-information-settings.php:196
 msgid "Fax"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:119
+#: admin/classes/class-people-contact-addnew.php:120
 #: admin/settings/contact-widget-information-settings.php:202
 msgid "Mobile"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:125
-#: admin/classes/class-people-contact-addnew.php:163
-#: admin/classes/class-people-contact-addnew.php:187
+#: admin/classes/class-people-contact-addnew.php:130
+#: admin/classes/class-people-contact-addnew.php:182
 msgid "Upgrade to"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:125
-#: admin/classes/class-people-contact-addnew.php:163
-#: admin/classes/class-people-contact-addnew.php:187
+#: admin/classes/class-people-contact-addnew.php:130
+#: admin/classes/class-people-contact-addnew.php:182
 msgid "to activate"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:128
+#: admin/classes/class-people-contact-addnew.php:133
 msgid "Website"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:132
+#: admin/classes/class-people-contact-addnew.php:137
 msgid "About"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:140
-msgid "Location Address"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:141
-msgid "&lt;empty&gt; Profile location does not show on the map."
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:145
-#: admin/settings/contact-widget-information-settings.php:184
-msgid "Address"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:149
-msgid "Latitude"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:153
-msgid "Longitude"
-msgstr ""
-
-#: admin/classes/class-people-contact-addnew.php:164
+#: admin/classes/class-people-contact-addnew.php:144
 msgid "Contact Form Shortcode from another Plugin"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:165
+#: admin/classes/class-people-contact-addnew.php:145
 msgid ""
 "Add a unique Contact Form for this profile. Supports Contact Form 7 or "
 "Gravity Forms plugin shortcodes. Feature must be activated in Settings > "
 "Contact Page > Profile Contact Forms."
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:168
+#: admin/classes/class-people-contact-addnew.php:148
 msgid "Enter Form Shortcode"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:188
+#: admin/classes/class-people-contact-addnew.php:162
+msgid "Location Address"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:163
+msgid "&lt;empty&gt; Profile location does not show on the map."
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:167
+#: admin/settings/contact-widget-information-settings.php:184
+msgid "Address"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:171
+msgid "Latitude"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:175
+msgid "Longitude"
+msgstr ""
+
+#: admin/classes/class-people-contact-addnew.php:183
 msgid "Assign Profile to Groups"
 msgstr ""
 
-#: admin/classes/class-people-contact-addnew.php:189
+#: admin/classes/class-people-contact-addnew.php:184
 msgid ""
 "Profile is automatically assigned to the Contact Us Page. Use this setting "
 "to also assign the profile to one or more Groups."
@@ -1480,7 +1477,7 @@ msgid "Set hyperlink text that shows to the right of the Email icon. Default"
 msgstr ""
 
 #: admin/settings/grid-view-contact-icons-settings.php:238
-#: classes/class-people-contact.php:235 classes/class-people-contact.php:480
+#: classes/class-people-contact.php:237 classes/class-people-contact.php:482
 msgid "Click Here"
 msgstr ""
 
@@ -1740,7 +1737,7 @@ msgstr ""
 #: classes/class-people-contact-functions.php:71
 #: classes/class-people-contact-functions.php:162
 #: classes/class-people-contact.php:107
-#: widgets/class-people-contact-widgets.php:394
+#: widgets/class-people-contact-widgets.php:390
 msgid "Message"
 msgstr ""
 
@@ -1869,48 +1866,61 @@ msgid "More FREE a3rev WordPress plugins"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:325
-msgid "a3 Responsive Slider"
+msgid "a3 Lazy Load"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:325
+#: classes/class-people-contact-functions.php:326
+msgid "New Plugin"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:326
-msgid "WordPress Email Template"
+msgid "a3 Portfolio"
 msgstr ""
 
 #: classes/class-people-contact-functions.php:327
+msgid "a3 Responsive Slider"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:328
+msgid "WordPress Email Template"
+msgstr ""
+
+#: classes/class-people-contact-functions.php:329
 msgid "Page View Count"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:335
-#: classes/class-people-contact-functions.php:341
+#: classes/class-people-contact-functions.php:337
+#: classes/class-people-contact-functions.php:343
 msgid "Upgrading to the"
 msgstr ""
 
-#: classes/class-people-contact-functions.php:335
-#: classes/class-people-contact-functions.php:341
+#: classes/class-people-contact-functions.php:337
+#: classes/class-people-contact-functions.php:343
 msgid "activates this shortcode feature as well."
 msgstr ""
 
-#: classes/class-people-contact-hook.php:138
+#: classes/class-people-contact-hook.php:134
 msgid "Please enter your Name"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:142
+#: classes/class-people-contact-hook.php:138
 msgid "Please enter valid Email address"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:146
+#: classes/class-people-contact-hook.php:142
 msgid "Please enter your Phone"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:150
+#: classes/class-people-contact-hook.php:146
 msgid "Please enter your Message"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:232
+#: classes/class-people-contact-hook.php:265
 msgid "Documentation"
 msgstr ""
 
-#: classes/class-people-contact-hook.php:233
+#: classes/class-people-contact-hook.php:266
 msgid "Support"
 msgstr ""
 
@@ -2043,62 +2053,62 @@ msgid ""
 "information, location map and a general contact us form as a widget."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:201
+#: widgets/class-people-contact-widgets.php:200
 msgid "You forgot to enter your name."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:209
+#: widgets/class-people-contact-widgets.php:208
 msgid "You forgot to enter your email address."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:212
+#: widgets/class-people-contact-widgets.php:211
 msgid "You entered an invalid email address."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:220
+#: widgets/class-people-contact-widgets.php:219
 msgid "You forgot to enter your comments."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:230
+#: widgets/class-people-contact-widgets.php:229
 msgid "Contact Form Submission from"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:262
+#: widgets/class-people-contact-widgets.php:261
 msgid "You forgot to enter your"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:269
+#: widgets/class-people-contact-widgets.php:268
 msgid "You entered an invalid"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:280
+#: widgets/class-people-contact-widgets.php:279
 msgid "<strong>Thanks!</strong> Your email was successfully sent."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:318
+#: widgets/class-people-contact-widgets.php:317
 msgid "Your email was successfully sent."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:332
+#: widgets/class-people-contact-widgets.php:329
 msgid "Phone:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:337
+#: widgets/class-people-contact-widgets.php:334
 msgid "Fax:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:342
+#: widgets/class-people-contact-widgets.php:339
 msgid "Mobile:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:347
+#: widgets/class-people-contact-widgets.php:344
 msgid "Email:"
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:369
+#: widgets/class-people-contact-widgets.php:365
 msgid "There was an error submitting the form."
 msgstr ""
 
-#: widgets/class-people-contact-widgets.php:437
+#: widgets/class-people-contact-widgets.php:436
 msgid "Title:"
 msgstr ""

@@ -322,6 +322,8 @@ class People_Contact_Functions
 		$html .= '<h3>'.__('More FREE a3rev WordPress plugins', 'cup_cp').'</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
+		$html .= '<li>* <a href="https://wordpress.org/plugins/a3-lazy-load/" target="_blank">'.__('a3 Lazy Load', 'cup_cp').'</a> &nbsp;&nbsp;&nbsp; <sup>*</sup>'.__( 'New Plugin' , 'cup_cp' ).'</li>';
+		$html .= '<li>* <a href="https://wordpress.org/plugins/a3-portfolio/" target="_blank">'.__('a3 Portfolio', 'cup_cp').'</a> &nbsp;&nbsp;&nbsp; <sup>*</sup>'.__( 'New Plugin' , 'cup_cp' ).'</li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/a3-responsive-slider/" target="_blank">'.__('a3 Responsive Slider', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/wp-email-template/" target="_blank">'.__('WordPress Email Template', 'cup_cp').'</a></li>';
 		$html .= '<li>* <a href="http://wordpress.org/plugins/page-views-count/" target="_blank">'.__('Page View Count', 'cup_cp').'</a></li>';

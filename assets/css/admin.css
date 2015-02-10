@@ -11,8 +11,11 @@ table input[type="text"] {
 	padding-top:5px;
 	padding-bottom:5px;
 }
+.a3rev_panel_container .form-table th {
+    width: 148px;
+}
 .a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
-	width:300px;
+	width:100%;
 }
 .ui-state-highlight {
 	background:#F6F6F6;
@@ -36,11 +39,11 @@ table input[type="text"] {
 
 .col-left {
 	float:left;
-	width:40%;
+	width:49%;
 }
 .col-right {
 	float:right;
-	width:50%;
+	width:49%;
 	margin-top:5px;
 }
 
@@ -51,16 +54,32 @@ table input[type="text"] {
 	border:1px solid #DFDFDF;
 }
 .categories_selection_container {
-	float:right; 
-	width:340px;
+}
+.categories_selection > div {
+    margin-bottom: 2px !important;
+    margin-top: 5px;
 }
 .categories_selection {
 	border:1px solid #DFDFDF;
 	background: #FFF;
-	padding:8px 10px 0;
-	width:300px;
+	padding:7px 10px 7px;
 	max-height:200px;
 	overflow:auto;
+}
+td.profileavatar .description {
+    display: inline-block;
+    padding: 5px;
+}
+
+div.row_mod {
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: left;
+    margin-bottom: 3px;
+}
+div.row_mod label {
+    color: #222;
+    text-shadow: none;
 }
 
 @media screen and (max-width: 890px) {
@@ -87,6 +106,10 @@ table input[type="text"] {
 		float:none;
 		width:100%;
 		margin-top:0px;
+	}
+	.a3rev_panel_container td{
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
 	.categories_selection_container {
 		float:none;
