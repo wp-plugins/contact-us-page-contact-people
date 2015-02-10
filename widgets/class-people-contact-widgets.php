@@ -290,123 +290,124 @@ class People_Contact_Widget extends WP_Widget {
 			});
 			//-->!]]>
 			</script>
-            
-            <?php if ($people_contact_widget_content_before_maps != '') { ?>        
-            <div class="content_before_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_before_maps ) ) );?></div>
-            <?php } ?>
-            <div style="clear:both;"></div>
-			<?php 
-			$geocoords = $people_contact_widget_maps['widget_location']; 
-			?>
-			<?php if ($geocoords != '') { ?>
-			<?php People_Contact_Widget::widget_maps_contact_output("geocoords=$geocoords"); ?>
-			<?php } ?>
-            <div style="clear:both;"></div>
-            <?php if ($people_contact_widget_content_after_maps != '') { ?>
-            <div class="content_after_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_after_maps ) ) );?></div>
-            <?php } ?>
-			<?php
-			
-			$phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
-			$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
-			$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
-			$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
-			
-			if( isset( $emailSent ) && $emailSent == true ) { ?>
-	
-				<p class="info">
-				  <?php _e( 'Your email was successfully sent.', 'cup_cp' ); ?>
-				</p>
-			<?php } else { ?>
+            <div class="people_contact_widget_container">
+	            <?php if ($people_contact_widget_content_before_maps != '') { ?>        
+	            <div class="content_before_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_before_maps ) ) );?></div>
+	            <?php } ?>
+				<?php 
+				$geocoords = $people_contact_widget_maps['widget_location']; 
+				?>
+				<?php if ($geocoords != '') { ?>
 				<div style="clear:both;"></div>
-				<div class="location-twitter">
-				 
-				  <div style="clear:both;"></div>
-				  <section id="office-location">
-					<ul>
-					  <?php if (isset($people_contact_widget_information['widget_info_address']) && $people_contact_widget_information['widget_info_address'] != '' ) { ?>
-					  <li><h4 style="margin-bottom:10px;"><?php echo $people_contact_widget_information['widget_info_address']; ?></h4></li>
-					  <?php } ?>
-					  <?php if (isset($people_contact_widget_information['widget_info_phone']) && $people_contact_widget_information['widget_info_phone'] != '' ) { ?>
-					  <li>
-						<span><img src="<?php echo $phone_icon;?>" /></span><?php _e('Phone:','cup_cp'); ?>
-						<?php echo $people_contact_widget_information['widget_info_phone']; ?></li>
-					  <?php } ?>
-					  <?php if (isset($people_contact_widget_information['widget_info_fax']) && $people_contact_widget_information['widget_info_fax'] != '' ) { ?>
-					  <li>
-						<span><img src="<?php echo $fax_icon;?>" /></span><?php _e('Fax:','cup_cp'); ?>
-						<?php echo $people_contact_widget_information['widget_info_fax']; ?></li>
-					  <?php } ?>
-                      <?php if (isset($people_contact_widget_information['widget_info_mobile']) && $people_contact_widget_information['widget_info_mobile'] != '' ) { ?>
-					  <li>
-						<span><img src="<?php echo $mobile_icon;?>" /></span><?php _e('Mobile:','cup_cp'); ?>
-						<?php echo $people_contact_widget_information['widget_info_mobile']; ?></li>
-					  <?php } ?>
-					  <?php if (isset($people_contact_widget_information['widget_info_email']) && $people_contact_widget_information['widget_info_email'] != '' ) { ?>
-					  <li>
-						<span><img src="<?php echo $email_icon;?>" /></span><?php _e('Email:','cup_cp'); ?>
-						<a href="mailto:<?php echo $people_contact_widget_information['widget_info_email']; ?>"><?php echo $people_contact_widget_information['widget_info_email']; ?></a></li>
-					  <?php } ?>
-					</ul>
-				  </section>
-				 
-				  <div class="clear"></div>
-				</div>
-				<!-- /.location-twitter -->
+				<?php People_Contact_Widget::widget_maps_contact_output("geocoords=$geocoords"); ?>
+				<?php } ?>
+	            <?php if ($people_contact_widget_content_after_maps != '') { ?>
+	            <div style="clear:both;"></div>
+	            <div class="content_after_maps"><?php echo wpautop( wptexturize( stripslashes( $people_contact_widget_content_after_maps ) ) );?></div>
+	            <?php } ?>
 				<?php
 				
-				if( $people_contact_widget_email_contact_form['widget_show_contact_form'] != 1 && trim($people_contact_widget_email_contact_form['widget_input_shortcode']) != ''){
-					echo '<div class="clear" style="clear:both;"></div><div class="people_widget_shortcode">';
-					$widget_input_shortcode = htmlspecialchars_decode($people_contact_widget_email_contact_form['widget_input_shortcode']);
-					echo do_shortcode( $widget_input_shortcode );
-					echo '</div><div class="clear" style="clear:both;"></div>';
-				}
+				$phone_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_phone.png';
+				$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
+				$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
+				$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
 				
-                if($people_contact_widget_email_contact_form['widget_show_contact_form'] == 1){
-                ?>
-				<?php if( isset( $hasError ) ) { ?>
-				<p class="alert">
-				  <?php _e( 'There was an error submitting the form.', 'cup_cp' ); ?>
-				</p>
-				<?php } ?>
-				<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
-				  <ol class="forms">
-					<li>
-					  <label for="contactName">
-						<?php _e( 'Name', 'cup_cp' ); ?> <span class="require">*</span>
-					  </label>
-					  <input type="text" name="contactName" id="contactName" value="<?php if( isset( $_POST['contactName'] ) ) { echo esc_attr( $_POST['contactName'] ); } ?>" class="txt requiredField" />
-					  <?php if($nameError != '') { ?>
-					  <span class="error"><?php echo $nameError;?></span>
-					  <?php } ?>
-					</li>
-					<li>
-					  <label for="email">
-						<?php _e( 'Email', 'cup_cp' ); ?> <span class="require">*</span>
-					  </label>
-					  <input type="text" name="email" id="email" value="<?php if( isset( $_POST['email'] ) ) { echo esc_attr( $_POST['email'] ); } ?>" class="txt requiredField email" />
-					  <?php if($emailError != '') { ?>
-					  <span class="error"><?php echo $emailError;?></span>
-					  <?php } ?>
-					</li>
-					<li class="textarea">
-					  <label for="commentsText">
-						<?php _e( 'Message', 'cup_cp' ); ?> <span class="require">*</span>
-					  </label>
-					  <textarea name="comments" id="commentsText" rows="5" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
-					  <?php if( $contactError != '' ) { ?>
-					  <span class="error"><?php echo $contactError; ?></span>
-					  <?php } ?>
-					</li>
-					<li class="buttons">
-					  <input type="hidden" name="submitted" id="submitted" value="true" />
-					  <input class="submit button" type="submit" value="<?php esc_attr_e( 'Send', 'cup_cp' ); ?>" /> <img class="contact-site-ajax-wait" src="<?php echo PEOPLE_CONTACT_IMAGE_URL; ?>/ajax-loader2.gif" border="0" style="display:none; padding:0; margin:0; vertical-align: middle;" />
-					</li>
-				  </ol>
-				</form>
+				if( isset( $emailSent ) && $emailSent == true ) { ?>
+		
+					<p class="info">
+					  <?php _e( 'Your email was successfully sent.', 'cup_cp' ); ?>
+					</p>
+				<?php } else { ?>
+					<div style="clear:both;"></div>
+					<div class="location-twitter">
+					  <section id="office-location">
+						<ul>
+						  <?php if (isset($people_contact_widget_information['widget_info_address']) && $people_contact_widget_information['widget_info_address'] != '' ) { ?>
+						  <li><h4 style="margin-bottom:10px;"><?php echo $people_contact_widget_information['widget_info_address']; ?></h4></li>
+						  <?php } ?>
+						  <?php if (isset($people_contact_widget_information['widget_info_phone']) && $people_contact_widget_information['widget_info_phone'] != '' ) { ?>
+						  <li>
+							<span><img src="<?php echo $phone_icon;?>" /></span><?php _e('Phone:','cup_cp'); ?>
+							<?php echo $people_contact_widget_information['widget_info_phone']; ?></li>
+						  <?php } ?>
+						  <?php if (isset($people_contact_widget_information['widget_info_fax']) && $people_contact_widget_information['widget_info_fax'] != '' ) { ?>
+						  <li>
+							<span><img src="<?php echo $fax_icon;?>" /></span><?php _e('Fax:','cup_cp'); ?>
+							<?php echo $people_contact_widget_information['widget_info_fax']; ?></li>
+						  <?php } ?>
+	                      <?php if (isset($people_contact_widget_information['widget_info_mobile']) && $people_contact_widget_information['widget_info_mobile'] != '' ) { ?>
+						  <li>
+							<span><img src="<?php echo $mobile_icon;?>" /></span><?php _e('Mobile:','cup_cp'); ?>
+							<?php echo $people_contact_widget_information['widget_info_mobile']; ?></li>
+						  <?php } ?>
+						  <?php if (isset($people_contact_widget_information['widget_info_email']) && $people_contact_widget_information['widget_info_email'] != '' ) { ?>
+						  <li>
+							<span><img src="<?php echo $email_icon;?>" /></span><?php _e('Email:','cup_cp'); ?>
+							<a href="mailto:<?php echo $people_contact_widget_information['widget_info_email']; ?>"><?php echo $people_contact_widget_information['widget_info_email']; ?></a></li>
+						  <?php } ?>
+						</ul>
+					  </section>
+					 
+					  <div class="clear"></div>
+					</div>
+					<!-- /.location-twitter -->
+					<?php
+					
+					if( $people_contact_widget_email_contact_form['widget_show_contact_form'] != 1 && trim($people_contact_widget_email_contact_form['widget_input_shortcode']) != ''){
+						echo '<div class="clear" style="clear:both;"></div><div class="people_widget_shortcode">';
+						$widget_input_shortcode = htmlspecialchars_decode($people_contact_widget_email_contact_form['widget_input_shortcode']);
+						echo do_shortcode( $widget_input_shortcode );
+						echo '</div><div class="clear" style="clear:both;"></div>';
+					}
+					
+	                if($people_contact_widget_email_contact_form['widget_show_contact_form'] == 1){
+	                ?>
+					<?php if( isset( $hasError ) ) { ?>
+					<p class="alert">
+					  <?php _e( 'There was an error submitting the form.', 'cup_cp' ); ?>
+					</p>
+					<?php } ?>
+					<form action="<?php the_permalink(); ?>" id="contactForm" method="post">
+					  <ol class="forms">
+						<li>
+						  <label for="contactName">
+							<?php _e( 'Name', 'cup_cp' ); ?> <span class="require">*</span>
+						  </label>
+						  <input type="text" name="contactName" id="contactName" value="<?php if( isset( $_POST['contactName'] ) ) { echo esc_attr( $_POST['contactName'] ); } ?>" class="txt requiredField" />
+						  <?php if($nameError != '') { ?>
+						  <span class="error"><?php echo $nameError;?></span>
+						  <?php } ?>
+						</li>
+						<li>
+						  <label for="email">
+							<?php _e( 'Email', 'cup_cp' ); ?> <span class="require">*</span>
+						  </label>
+						  <input type="text" name="email" id="email" value="<?php if( isset( $_POST['email'] ) ) { echo esc_attr( $_POST['email'] ); } ?>" class="txt requiredField email" />
+						  <?php if($emailError != '') { ?>
+						  <span class="error"><?php echo $emailError;?></span>
+						  <?php } ?>
+						</li>
+						<li class="textarea">
+						  <label for="commentsText">
+							<?php _e( 'Message', 'cup_cp' ); ?> <span class="require">*</span>
+						  </label>
+						  <textarea name="comments" id="commentsText" rows="5" class="requiredField"><?php if( isset( $_POST['comments'] ) ) { echo esc_textarea( $_POST['comments'] ); } ?></textarea>
+						  <?php if( $contactError != '' ) { ?>
+						  <span class="error"><?php echo $contactError; ?></span>
+						  <?php } ?>
+						</li>
+						<li class="buttons">
+						  <input type="hidden" name="submitted" id="submitted" value="true" />
+						  <input class="submit button" type="submit" value="<?php esc_attr_e( 'Send', 'cup_cp' ); ?>" /> <img class="contact-site-ajax-wait" src="<?php echo PEOPLE_CONTACT_IMAGE_URL; ?>/ajax-loader2.gif" border="0" style="display:none; padding:0; margin:0; vertical-align: middle;" />
+						</li>
+					  </ol>
+					</form>
 			<?php
 			}
 		}
+		?>
+		</div>
+		<?php
 	}
 
 	/** @see WP_Widget */
