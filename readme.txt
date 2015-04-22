@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
-Tested up to: 4.0
-Stable tag: 1.2.2
+Tested up to: 4.1
+Stable tag: 1.2.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,17 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.3 - 2015/02/10 =
+* Tweak - Audit, test and tweak for 100% compatibility with WordPress Version 4.1
+* Tweak - Change layout of Edit Profile page for better UX
+* Tweak - Changed WP_CONTENT_DIR to WP_PLUGIN_DIR. When an admin sets a custom WordPress file structure then it can get the correct path of plugin
+* Tweak - Only load the plugin assets on the Contact Us Page
+* Tweak - Only load the plugin CSS on the Contact Us Page
+* Tweak - Added Link to new plugins a3 Lazy Load and a3 Portfolio to the Free WordPress plugins list in yelow sidebar.
+* Dev - Convert Sass Global .less to simplify compiling style sheet edits.
+* Fix - Added code check id is existed as parameter when add new Profile. Solves the 'Undefined id index' php warning
+* Fix - Sass compile path not saving on windows xampp.
+
 = 1.2.2 - 2014/10/14 =
 * Fix - Add <code></div></code> when using the default contact form on Contact Us widget on left sidebar. Version 1.1.1 only fixed the issue on the right sidebar.
 
@@ -351,6 +362,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.3 =
+Upgrade now for full compatibility with WordPress 4.1.0. Includes Profile page UX tweaks, 2 performance tweaks and 2 bug fixes.
 
 = 1.2.2 =
 Update now for small bug fix when Contact Widget is placed in a left aligned sidebar.
