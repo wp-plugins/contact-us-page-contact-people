@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.2.3
+Tested up to: 4.2.0
+Stable tag: 1.2.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,11 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.4 - 2015/04/21 =
+* Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
+* Tweak - Changed <code>dbDelta()</code> function to <code>$wpdb->query()</code> for creating plugin table database.
+* Tweak - Update style of plugin framework. Removed the [data-icon] selector to prevent conflict with other plugins that have font awesome icons
+
 = 1.2.3 - 2015/02/10 =
 * Tweak - Audit, test and tweak for 100% compatibility with WordPress Version 4.1
 * Tweak - Change layout of Edit Profile page for better UX
@@ -362,6 +367,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.4 =
+Maintenance upgrade! Code tweaks for full compatibility with WordPress 4.2.0
 
 = 1.2.3 =
 Upgrade now for full compatibility with WordPress 4.1.0. Includes Profile page UX tweaks, 2 performance tweaks and 2 bug fixes.
