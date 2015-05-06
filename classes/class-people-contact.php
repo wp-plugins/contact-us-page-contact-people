@@ -28,7 +28,6 @@ class People_Contact {
 	}
 
 	public function send_a_contact(){
-		check_ajax_referer( 'send-a-contact', 'security' );
 		$profile_email = trim($_REQUEST['profile_email']);
 		$profile_name = trim($_REQUEST['profile_name']);
 		$c_name = trim($_REQUEST['c_name']);
@@ -62,7 +61,6 @@ class People_Contact {
 	}
 
 	public function load_ajax_contact_form() {
-		check_ajax_referer( 'ajax-popup-contact', 'security' );
 		global $people_email_inquiry_popup_form_style;
 		global $people_contact_grid_view_icon;
 
