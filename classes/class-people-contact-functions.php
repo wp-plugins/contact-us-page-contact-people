@@ -16,7 +16,9 @@ class People_Contact_Functions
 	 * Set global variable when plugin loaded
 	 */
 	public static function plugins_loaded() {
-		
+		global $contact_people_page_id;
+
+		$contact_people_page_id = People_Contact_Functions::get_page_id_from_shortcode( 'people_contacts', 'contact_us_page_id');
 	}
 	
 	public static function contact_to_people( $profile_data = array(), $send_copy_yourself = 1 ) {
@@ -229,10 +231,18 @@ class People_Contact_Functions
 	public static function create_page( $slug, $option, $page_title = '', $page_content = '', $post_parent = 0 ) {
 		global $wpdb;
 				
-		$page_id = $wpdb->get_var( "SELECT ID FROM `" . $wpdb->posts . "` WHERE `post_content` LIKE '%$page_content%'  AND `post_type` = 'page' ORDER BY ID DESC LIMIT 1" );
-		 
-		if ( $page_id != NULL ) 
+		$option_value = get_option($option);
+
+		if ( $option_value > 0 && get_post( $option_value ) )
+			return $option_value;
+
+		$page_id = $wpdb->get_var( "SELECT ID FROM `" . $wpdb->posts . "` WHERE `post_content` LIKE '%$page_content%'  AND `post_type` = 'page' AND post_status = 'publish' ORDER BY ID ASC LIMIT 1" );
+
+		if ( $page_id != NULL ) :
+			if ( ! $option_value )
+				update_option( $option, $page_id );
 			return $page_id;
+		endif;
 		
 		$page_data = array(
 			'post_status' 		=> 'publish',
@@ -245,10 +255,32 @@ class People_Contact_Functions
 			'comment_status' 	=> 'closed'
 		);
 		$page_id = wp_insert_post( $page_data );
+
+		update_option( $option, $page_id );
 		
 		return $page_id;
 	}
-	
+
+	public static function get_page_id_from_shortcode( $shortcode, $option ) {
+		global $wpdb;
+		global $wp_version;
+		$page_id = get_option($option);
+		if ( version_compare( $wp_version, '4.0', '<' ) ) {
+			$shortcode = esc_sql( like_escape( $shortcode ) );
+		} else {
+			$shortcode = esc_sql( $wpdb->esc_like( $shortcode ) );
+		}
+		$page_data = null;
+		if ($page_id)
+			$page_data = $wpdb->get_row( "SELECT ID FROM " . $wpdb->posts . " WHERE post_content LIKE '%[{$shortcode}]%' AND ID = '".$page_id."' AND post_type = 'page' LIMIT 1" );
+		if ( $page_data == null )
+			$page_data = $wpdb->get_row( "SELECT ID FROM `" . $wpdb->posts . "` WHERE `post_content` LIKE '%[{$shortcode}]%' AND `post_type` = 'page' ORDER BY post_date DESC LIMIT 1" );
+
+		$page_id = $page_data->ID;
+
+		return $page_id;
+	}
+
 	public static function people_contact_register_sidebar() {
 		global $wpdb;
 		register_sidebar(array(

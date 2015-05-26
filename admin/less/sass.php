@@ -25,7 +25,7 @@ class A3_People_Contact_Less
 	{
 		$_upload_dir = wp_upload_dir();
 		if ( file_exists( $_upload_dir['basedir'] . '/sass/' . $this->css_file_name . '.min.css' ) )
-			echo '<link media="screen" type="text/css" href="' . $_upload_dir['baseurl'] . '/sass/' . $this->css_file_name . '.min.css" rel="stylesheet" />' . "\n";
+			echo '<link media="screen" type="text/css" href="' . str_replace(array('http:','https:'), '', $_upload_dir['baseurl'] ) . '/sass/' . $this->css_file_name . '.min.css" rel="stylesheet" />' . "\n";
 	}
 
 	public function plugin_build_sass()
@@ -38,11 +38,11 @@ class A3_People_Contact_Less
     {
 		@ini_set( 'display_errors', false );
         $_upload_dir = wp_upload_dir();
-        @chmod($_upload_dir['basedir'], 0777);
+        @chmod($_upload_dir['basedir'], 0755);
         if (!is_dir($_upload_dir['basedir'] . '/sass')) {
-            @mkdir($_upload_dir['basedir'] . '/sass', 0777);
+            @mkdir($_upload_dir['basedir'] . '/sass', 0755);
         } else {
-            @chmod($_upload_dir['basedir'] . '/sass', 0777);
+            @chmod($_upload_dir['basedir'] . '/sass', 0755);
         }
 
 		if ( trim( $css_file_name ) == '' ) $css_file_name = $this->css_file_name;
@@ -74,7 +74,7 @@ class A3_People_Contact_Less
         ));
         if ($files) {
             foreach ($files as $file) {
-                @chmod($_upload_dir['basedir'] . '/sass/' . $file, 0777);
+                @chmod($_upload_dir['basedir'] . '/sass/' . $file, 0644);
             }
         }
 

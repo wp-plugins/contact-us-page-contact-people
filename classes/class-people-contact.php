@@ -123,8 +123,8 @@ class People_Contact {
 		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon;
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 
-		$contact_us_page_id = get_option('contact_us_page_id');
-		if( !is_page() || ($contact_us_page_id != get_the_ID()) ) return;
+		global $contact_people_page_id;
+		if( !is_page() || ($contact_people_page_id != get_the_ID()) ) return;
 		if( !is_array($contacts) || count ($contacts) <= 0 ) return;
 
 		wp_enqueue_script( 'jquery' );

@@ -3,8 +3,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
-Tested up to: 4.2.1
-Stable tag: 1.2.5
+Tested up to: 4.2.2
+Stable tag: 1.2.6
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,12 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.6 - 2015/05/26 =
+* Tweak - Tested for full compatibility with WordPress Version 4.2.2
+* Tweak - Changed Permission 777 to 755 for style folder inside the uploads folder
+* Tweak - Chmod 644 for dynamic style and .less files from uploads folder
+* Tweak - Update url of dynamic stylesheet in uploads folder to the format //domain.com/ so it's always is correct when loaded as http or https
+
 = 1.2.5 - 2015/05/06 =
 * Tweak - Tested for full compatibility with WordPress Version 4.2.1
 * Fix - Removed check_ajax_referer() call on frontend for compatibility with PHP caching plugins. Was returning -1 to js success call-back.
@@ -371,6 +377,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.6 =
+Maintenance Upgrade. Various Tweaks to harden security plus full compatibility with WordPress Version 4.2.2
 
 = 1.2.5 =
 Maintenance Update. 1 Bug fix for full compatibility with PHP caching plugins and full compatibility with WordPress version 4.2.1

@@ -37,7 +37,7 @@ class People_Contact_Hook_Filter
 
 	public static function frontend_scripts_register() {
 		global $post;
-		$contact_us_page_id = get_option('contact_us_page_id');
+		global $contact_people_page_id;
 
 		if ( is_admin() ) return;
 		global $is_IE;
@@ -47,14 +47,14 @@ class People_Contact_Hook_Filter
 		wp_register_style( 'people_contact_style', PEOPLE_CONTACT_CSS_URL.'/style'.$suffix.'.css' );
 
 		if ( file_exists( $_upload_dir['basedir'] . '/sass/wp_contact_people'.$suffix.'.css' ) ) {
-			wp_register_style( 'wp_contact_people', $_upload_dir['baseurl'] . '/sass/wp_contact_people'.$suffix.'.css' );
+			wp_register_style( 'wp_contact_people', str_replace(array('http:','https:'), '', $_upload_dir['baseurl'] ) . '/sass/wp_contact_people'.$suffix.'.css' );
 		}
 		if ( $is_IE ) {
 			wp_register_script( 'respondjs', PEOPLE_CONTACT_JS_URL . '/respond-ie.js' );
 		}
 
 		if ( $post
-			&& ( $contact_us_page_id == $post->ID
+			&& ( $contact_people_page_id == $post->ID
 				|| has_shortcode( $post->post_content, 'people_contacts' ) ) ) {
 
 			wp_enqueue_style( 'people_contact_style' );
