@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.6
+Stable tag: 1.2.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -199,6 +199,10 @@ On WordPress with any theme.
 
 == Changelog ==
 
+= 1.2.7 - 2015/06/03 =
+* Tweak - Security Hardening. Removed all php file_put_contents functions in the plugin framework and replace with the WP_Filesystem API
+* Tweak - Security Hardening. Removed all php file_get_contents functions in the plugin framework and replace with the WP_Filesystem API
+
 = 1.2.6 - 2015/05/26 =
 * Tweak - Tested for full compatibility with WordPress Version 4.2.2
 * Tweak - Changed Permission 777 to 755 for style folder inside the uploads folder
@@ -377,6 +381,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 1.2.7 =
+Important Maintenance Upgrade. 2 x major a3rev Plugin Framework Security Hardening Tweaks
 
 = 1.2.6 =
 Maintenance Upgrade. Various Tweaks to harden security plus full compatibility with WordPress Version 4.2.2
