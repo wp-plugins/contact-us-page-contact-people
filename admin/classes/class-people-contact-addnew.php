@@ -11,27 +11,28 @@ class People_Contact_AddNew
 {
 	public static function profile_form_action() {
 		if ( !is_admin() ) return ;
-		
-		if ( isset( $_POST['update_contact'] ) ) {			
-						
+
+		if ( isset( $_POST['update_contact'] ) ) {
+
 			$_REQUEST['contact_arr']['c_avatar'] = $_REQUEST['c_avatar'];
-			
+
 			People_Contact_Profile_Data::update_row($_REQUEST['contact_arr']);
+
 			wp_redirect( 'admin.php?page=people-contact-manager&edited_profile=true', 301 );
 			exit();
-		
+
 		} elseif ( isset( $_POST['add_new_contact'] ) ) {
 			$_REQUEST['contact_arr']['c_avatar'] = $_REQUEST['c_avatar'];
 			People_Contact_Profile_Data::insert_row($_REQUEST['contact_arr']);
-			
+
 			wp_redirect( 'admin.php?page=people-contact-manager&created_profile=true', 301 );
 			exit();
 		}
 	}
-	
+
 	public static function admin_screen_add_edit() {
 		global $people_contact_location_map_settings;
-			
+
 		$bt_type = 'add_new_contact';
 		$bt_value = __('Create', 'cup_cp');
 		$title = __('Add New Profile', 'cup_cp');
@@ -46,9 +47,9 @@ class People_Contact_AddNew
 		$center_lng = $geodata->results[0]->geometry->location->lng;
 		$latlng_center = $latlng = $center_lat.','.$center_lng;
 		$bt_cancel = '<input type="button" class="button" onclick="window.location=\'admin.php?page=people-contact-manager\'" value="'.__('Cancel', 'cup_cp').'" />';
-		
+
 		$data = array('c_title' => '', 'c_name' => '', 'c_email' => '', 'c_phone' => '', 'c_fax' => '', 'c_mobile' => '', 'c_website' => '', 'c_address' => '', 'c_latitude' => '', 'c_longitude' => '', 'c_shortcode' => '', 'c_avatar' => '', 'c_about' => '');
-		
+
 		if (isset($_GET['action']) && $_GET['action'] == 'edit' && isset($_GET['id']) && $_GET['id'] >= 0) {
 			$bt_type = 'update_contact';
 			$data = People_Contact_Profile_Data::get_row( $_GET['id'], '', 'ARRAY_A' );
@@ -58,7 +59,7 @@ class People_Contact_AddNew
 				$geodata = file_get_contents($googleapis_url);
 				$geodata = json_decode($geodata);
 				$data['c_latitude'] = $geodata->results[0]->geometry->location->lat;
-				$data['c_longitude'] = $geodata->results[0]->geometry->location->lng;	
+				$data['c_longitude'] = $geodata->results[0]->geometry->location->lng;
 			}
 			if ( trim($data['c_latitude']) != '' && trim($data['c_longitude']) != '' ) {
 				$latlng_center = $latlng = $data['c_latitude'].','.$data['c_longitude'];
@@ -69,12 +70,12 @@ class People_Contact_AddNew
         <div id="htmlForm">
         <div style="clear:both"></div>
 		<div class="wrap">
-        
+
         <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-contact-addnew"><br></div><h2><?php echo $title;?></h2>
           <div style="clear:both;"></div>
 		  <div class="contact_manager a3rev_panel_container a3rev_custom_panel_container">
 			<form action="" name="add_conact" id="add_contact" method="post">
-			<input type="hidden" value="<?php echo $_GET['id'];?>" id="profile_id" name="contact_arr[profile_id]">
+			<input type="hidden" value="<?php if ( isset( $_GET['id'] ) ) echo $_GET['id']; ?>" id="profile_id" name="contact_arr[profile_id]">
             <div class="col-left">
             <h3><?php _e('Profile Details', 'cup_cp'); ?></h3>
             <p><?php _e("&lt;empty&gt; fields don't show on front end.", ''); ?></p>
@@ -90,11 +91,11 @@ class People_Contact_AddNew
 				</tr>
 				<tr valign="top">
 				  <th scope="row"><label for="c_avatar"><?php _e('Profile Image', 'cup_cp') ?></label></th>
-				  <td>
+				  <td class="profileavatar">
                   <?php
 				  global $people_contact_uploader;
 				  ?>
-                  <?php echo $people_contact_uploader->upload_input( 'c_avatar', 'c_avatar', $data['c_avatar'], '', __('Profile Image', 'cup_cp'), '', 'width:230px;', '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>' ); ?>
+                  <?php echo $people_contact_uploader->upload_input( 'c_avatar', 'c_avatar', $data['c_avatar'], '', __('Profile Image', 'cup_cp'), '', 'width:100%;', '<div class="description">'.__("Image format .jpg, .png", 'cup_cp').'</div>' ); ?>
                   </td>
 				</tr>
         	  </tbody>
@@ -121,69 +122,63 @@ class People_Contact_AddNew
 				</tr>
 			  </tbody>
 			</table>
-            
+
+			<style>
+			#a3_plugin_meta_upgrade_area_box { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:10px; position:relative}
+			#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
+			</style>
             <fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
-                <table class="form-table" style="margin-bottom:0;">
-                <tr valign="top">
-				  <th scope="row"><label for="c_website"><?php _e('Website', 'cup_cp') ?></label></th>
-				  <td><input disabled="disabled" type="text" class="regular-text" value="http://" id="c_website" name="contact_arr[c_website]" /></td>
-				</tr>
-                <tr valign="top">
-				  <th scope="row"><label for="c_website"><?php _e('About', 'cup_cp') ?></label></th>
-				  <td class="forminp">
-                  	<?php wp_editor('', 'c_about', array('textarea_name' => 'contact_arr[c_about]', 'wpautop' => true, 'textarea_rows' => 8 ) ); ?>
-                  </td>
-				</tr>
-			</table>
-            </fieldset>
-            
-            <h3><?php _e('Location Address', 'cup_cp'); ?></h3>
-            <p><?php _e("&lt;empty&gt; Profile location does not show on the map.", ''); ?></p>
-			<table class="form-table" style="margin-bottom:0;">
-			  <tbody>
-				<tr valign="top">
-				  <th scope="row"><label for="c_address"><?php _e('Address', 'cup_cp') ?></label></th>
-				  <td><input type="text" class="regular-text" value="<?php if(isset($data['c_address'])){esc_attr_e( stripslashes( $data['c_address']));}?>" id="c_address" name="contact_arr[c_address]"></td>
-				</tr>
-				<tr valign="top">
-				  <th scope="row"><label for="c_latitude"><?php _e('Latitude', 'cup_cp') ?></label></th>
-				  <td><input type="text" readonly="readonly" class="regular-text" value="<?php if(isset($data['c_latitude'])){echo $data['c_latitude'];}?>" id="c_latitude" name="contact_arr[c_latitude]"></td>
-				</tr>
-				<tr valign="top">
-				  <th scope="row"><label for="c_longitude"><?php _e('Longitude', 'cup_cp') ?></label></th>
-				  <td><input type="text" readonly="readonly" class="regular-text" value="<?php if(isset($data['c_longitude'])){echo $data['c_longitude'];}?>" id="c_longitude" name="contact_arr[c_longitude]"></td>
-				</tr>
-			  </tbody>
-			</table>
-            
-		<style>
-		#a3_plugin_meta_upgrade_area_box { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:10px; position:relative}
-		#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
-		</style>
-        <fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_AUTHOR_URI; ?>" target="_blank"><?php _e('Pro Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
-            <h3><?php _e('Contact Form Shortcode from another Plugin', 'cup_cp'); ?></h3>
-            <p><?php _e('Add a unique Contact Form for this profile. Supports Contact Form 7 or Gravity Forms plugin shortcodes. Feature must be activated in Settings > Contact Page > Profile Contact Forms.', 'cup_cp'); ?></p>
-            <table class="form-table" style="margin-bottom:0;">
-            <tr valign="top">
-				  <th scope="row"><label for="c_shortcode"><?php _e('Enter Form Shortcode', 'cup_cp') ?></label></th>
-				  <td>
-                  
-                  <input disabled="disabled" type="text" class="regular-text" value="" id="c_shortcode" name="contact_arr[c_shortcode]"></td>
-				</tr>
-			</table>
-		</fieldset>                
-            
+				<table class="form-table" style="margin-bottom:0;">
+	                <tr valign="top">
+					  <th scope="row"><label for="c_website"><?php _e('Website', 'cup_cp') ?></label></th>
+					  <td><input disabled="disabled" type="text" class="regular-text" value="http://" id="c_website" name="contact_arr[c_website]" /></td>
+					</tr>
+	                <tr valign="top">
+					  <th scope="row"><label for="c_website"><?php _e('About', 'cup_cp') ?></label></th>
+					  <td class="forminp">
+	                  	<?php wp_editor('', 'c_about', array('textarea_name' => 'contact_arr[c_about]', 'wpautop' => true, 'textarea_rows' => 8 ) ); ?>
+	                  </td>
+					</tr>
+				</table>
+
+				<h3><?php _e('Contact Form Shortcode from another Plugin', 'cup_cp'); ?></h3>
+	            <p><?php _e('Add a unique Contact Form for this profile. Supports Contact Form 7 or Gravity Forms plugin shortcodes. Feature must be activated in Settings > Contact Page > Profile Contact Forms.', 'cup_cp'); ?></p>
+	            <table class="form-table" style="margin-bottom:0;">
+	            <tr valign="top">
+					  <th scope="row"><label for="c_shortcode"><?php _e('Enter Form Shortcode', 'cup_cp') ?></label></th>
+					  <td>
+
+	                  <input disabled="disabled" type="text" class="regular-text" value="" id="c_shortcode" name="contact_arr[c_shortcode]"></td>
+					</tr>
+				</table>
+			</fieldset>
+
             </div>
 			<div class="col-right">
 			  <div class="maps_content" style="padding:10px 0px;">
 			    <div id="map_canvas"></div>
               </div>
               <div style="clear:both"></div>
+              <h3><?php _e('Location Address', 'cup_cp'); ?></h3>
+	            <p><?php _e("&lt;empty&gt; Profile location does not show on the map.", ''); ?></p>
+				<table class="form-table" style="margin-bottom:0;">
+				  <tbody>
+					<tr valign="top">
+					  <th scope="row"><label for="c_address"><?php _e('Address', 'cup_cp') ?></label></th>
+					  <td><input type="text" class="regular-text" value="<?php if(isset($data['c_address'])){esc_attr_e( stripslashes( $data['c_address']));}?>" id="c_address" name="contact_arr[c_address]"></td>
+					</tr>
+					<tr valign="top">
+					  <th scope="row"><label for="c_latitude"><?php _e('Latitude', 'cup_cp') ?></label></th>
+					  <td><input type="text" readonly="readonly" class="regular-text" value="<?php if(isset($data['c_latitude'])){echo $data['c_latitude'];}?>" id="c_latitude" name="contact_arr[c_latitude]"></td>
+					</tr>
+					<tr valign="top">
+					  <th scope="row"><label for="c_longitude"><?php _e('Longitude', 'cup_cp') ?></label></th>
+					  <td><input type="text" readonly="readonly" class="regular-text" value="<?php if(isset($data['c_longitude'])){echo $data['c_longitude'];}?>" id="c_longitude" name="contact_arr[c_longitude]"></td>
+					</tr>
+				  </tbody>
+				</table>
+				<div style="clear:both"></div>
               <div class="categories_selection_container">
-              <style>
-				#a3_plugin_meta_upgrade_area_box { border:2px solid #E6DB55;-webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px; border-radius: 10px; padding:10px; position:relative; margin-top:10px; }
-				#a3_plugin_meta_upgrade_area_box legend {margin-left:4px; font-weight:bold;}
-				</style>
 				<fieldset id="a3_plugin_meta_upgrade_area_box"><legend><?php _e('Upgrade to','cup_cp'); ?> <a href="<?php echo PEOPLE_CONTACT_ULTIMATE_URI; ?>" target="_blank"><?php _e('Ultimate Version', 'cup_cp'); ?></a> <?php _e('to activate', 'cup_cp'); ?></legend>
               <h3 style="margin-top:0px;"><?php _e('Assign Profile to Groups', 'cup_cp'); ?></h3>
               <p><?php _e('Profile is automatically assigned to the Contact Us Page. Use this setting to also assign the profile to one or more Groups.', 'cup_cp'); ?></p>
@@ -208,14 +203,14 @@ class People_Contact_AddNew
                 <?php
 					}
 				} else {
-					_e('No Groups', 'cup_cp');	
+					_e('No Groups', 'cup_cp');
 				}
 			  ?>
               </div>
               </fieldset>
               </div>
               <div style="clear:both"></div>
-			</div>   
+			</div>
             <div style="clear:both"></div>
 			<script type="text/javascript" >
 			<?php
@@ -228,11 +223,11 @@ class People_Contact_AddNew
 				$zoom_level = 16;
 			}
 			?>
-			
+
 			var geocoder;
 			var map;
 			var marker;
-		
+
 			function initialize(){
 			//MAP
 			  var latlng = new google.maps.LatLng(<?php echo $latlng;?>);
@@ -240,27 +235,27 @@ class People_Contact_AddNew
 			  var options = {
 				zoom: <?php echo $zoom_level;?>,
 				center: latlng_center,
-			
+
 				mapTypeId: google.maps.MapTypeId.<?php echo $map_type;?>
 			  };
-					
+
 			  map = new google.maps.Map(document.getElementById("map_canvas"), options);
-			
+
 			  //GEOCODER
 			  geocoder = new google.maps.Geocoder();
-					
+
 			  marker = new google.maps.Marker({
 				map: map,
 				draggable: true,
 				position: latlng
 			  });
-							
+
 			}
-			
-			jQuery(document).ready(function ($) { 
-					 
+
+			jQuery(document).ready(function ($) {
+
 			  initialize();
-							  
+
 			  $(function() {
 				$("#c_address").autocomplete({
 				  //This bit uses the geocoder to fetch address values
@@ -286,7 +281,7 @@ class People_Contact_AddNew
 				  }
 				});
 			  });
-				
+
 			  //Add listener to marker for reverse geocoding
 			  google.maps.event.addListener(marker, 'drag', function() {
 				geocoder.geocode({'latLng': marker.getPosition()}, function(results, status) {
@@ -299,7 +294,7 @@ class People_Contact_AddNew
 				  }
 				});
 			  });
-			  
+
 			});
 			</script>
 			<div style="clear:both"></div>
