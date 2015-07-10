@@ -17,13 +17,13 @@ Contact Us Page - Contact People allows you to easily transform your themes dull
 Features include:
 
 = Profiles =
-The first thing the plugin does is allow you to create an unlimited number of profiles. Profiles can be anything you want – People, Head Offices, branch Offices. Profile card are displayed in rows on the Contact Us Page under the Google map if you have activated the map.
+The first thing the plugin does is allow you to create an unlimited number of profiles. Profiles can be anything you want - People, Head Offices, branch Offices. Profile card are displayed in rows on the Contact Us Page under the Google map if you have activated the map.
 
 Profile Features are:
 
 * Title / Position, name, Phone, fax, mobile, web address, and description
 * Profile image or use the default no image
-* Option to show or don’t show profile location on the Contact Us Page Google map
+* Option to show or don't show profile location on the Contact Us Page Google map
 * Option to turn ON | OFF profile display marker on the Contact Us Page map
 * Sort Profile display order on the Contact Us Page by drag and drop on Profiles menu
 * Add Profile unique email address and mail goes directly to them
@@ -116,7 +116,7 @@ This plugin features a Pro version and Ultimate version upgrades that add advanc
 
 = Profile Card Dynamic CSS =
 
-* In the Lite Version the Profile Cards have static style sheets – the Pro version those are Dynamic Stylesheets
+* In the Lite Version the Profile Cards have static style sheets - the Pro version those are Dynamic Stylesheets
 * Create a unique card layout and style without touching the code
 * Profile Card menu has all the settings to create a beautiful card design
 * Upload custom contact icons - Default image and contact icons.
