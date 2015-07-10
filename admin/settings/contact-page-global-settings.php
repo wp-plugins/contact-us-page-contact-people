@@ -82,7 +82,9 @@ class Contact_Page_Global_Settings extends People_Contact_Admin_UI
 				'error_message'		=> __( 'Error: Contact Page Settings can not save.', 'cup_cp' ),
 				'reset_message'		=> __( 'Contact Page Settings successfully reseted.', 'cup_cp' ),
 			);
-			
+		
+		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_end', array( $this, 'include_script' ) );
+
 		add_action( $this->plugin_name . '_set_default_settings' , array( $this, 'set_default_settings' ) );
 		
 		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_init' , array( $this, 'clean_on_deletion' ) );
@@ -189,20 +191,67 @@ class Contact_Page_Global_Settings extends People_Contact_Admin_UI
 		
   		// Define settings			
      	$this->form_fields = apply_filters( $this->option_name . '_settings_fields', array(
-			
+
+			array(
+            	'name' 		=> __( 'Plugin Framework Global Settings', 'cup_cp' ),
+            	'id'		=> 'plugin_framework_global_box',
+                'type' 		=> 'heading',
+                'first_open'=> true,
+                'is_box'	=> true,
+           	),
+           	array(
+           		'name'		=> __( 'Customize Admin Setting Box Display', 'cup_cp' ),
+           		'desc'		=> __( 'By default each admin panel will open with all Setting Boxes in the CLOSED position.', 'cup_cp' ),
+                'type' 		=> 'heading',
+           	),
+           	array(
+				'type' 		=> 'onoff_toggle_box',
+			),
+			array(
+           		'name'		=> __( 'Google Fonts', 'cup_cp' ),
+           		'desc'		=> __( 'By Default Google Fonts are pulled from a static JSON file in this plugin. This file is updated but does not have the latest font releases from Google.', 'cup_cp' ),
+                'type' 		=> 'heading',
+           	),
+           	array(
+                'type' 		=> 'google_api_key',
+           	),
+           	array(
+            	'name' 		=> __( 'House Keeping', 'cup_cp' ),
+                'type' 		=> 'heading',
+            ),
+			array(
+				'name' 		=> __( 'Clean up on Deletion', 'cup_cp' ),
+				'desc' 		=> __( 'On deletion (not deactivate) the plugin will completely remove all tables and data it created, leaving no trace it was ever here.', 'cup_cp'),
+				'id' 		=> 'a3_people_contact_lite_clean_on_deletion',
+				'type' 		=> 'onoff_checkbox',
+				'default'	=> '0',
+				'separate_option'	=> true,
+				'free_version'		=> true,
+				'checked_value'		=> '1',
+				'unchecked_value'	=> '0',
+				'checked_label'		=> __( 'ON', 'cup_cp' ),
+				'unchecked_label' 	=> __( 'OFF', 'cup_cp' ),
+			),
+
 			array(
             	'name' 		=> __( 'Profile Cards Title', 'cup_cp' ),
                 'type' 		=> 'heading',
+                'desc'		=> __( 'Title that shows below the map and above the profile cards', 'cup_cp' ),
+                'id'		=> 'profile_cards_title_box',
+                'is_box'	=> true,
            	),
 			array(  
-				'name' 		=> __( 'Title Before Cards', 'cup_cp' ),
+				'name' 		=> __( 'Title', 'cup_cp' ),
+				'desc'		=> __( 'Leave Empty and no title will show', 'cup_cp' ),
 				'id' 		=> 'grid_view_team_title',
 				'type' 		=> 'text',
-				'default'	=> __( 'Team Contacts', 'cup_cp' ),
+				'default'	=> '',
 			),
 			array(
             	'name' 		=> __( 'Profile Cards Per Row', 'cup_cp' ),
                 'type' 		=> 'heading',
+                'id'		=> 'profile_cards_per_row_box',
+                'is_box'	=> true,
            	),
 			array(  
 				'name' 		=> __( 'Cards Per Row', 'cup_cp' ),
@@ -216,12 +265,14 @@ class Contact_Page_Global_Settings extends People_Contact_Admin_UI
 			),
 			
 			array(
-            	'name' 		=> __( 'Contact Us Page', 'cup_cp' ),
+            	'name' 		=> __( 'Custom Contact Us Page', 'cup_cp' ),
 				'desc'		=> __( 'A "Contact Us Page" was auto created on activation of the plugin. It contains the shortcode [people_contacts] required to show the contact us page. If it was not or you want to change it, create a new page, add the shortcode and then set it here.', 'cup_cp' ),
                 'type' 		=> 'heading',
+                'id'		=> 'contact_us_page_box',
+                'is_box'	=> true,
            	),
 			array(  
-				'name' 		=> __( 'Contact Us', 'cup_cp' ),
+				'name' 		=> __( 'Set Page', 'cup_cp' ),
 				'desc' 		=> __( 'Page contents:', 'cup_cp' ).' [people_contacts]',
 				'id' 		=> 'contact_us_page_id',
 				'type' 		=> 'single_select_page',
@@ -229,24 +280,160 @@ class Contact_Page_Global_Settings extends People_Contact_Admin_UI
 				'separate_option'	=> true,
 				'css'		=> 'width:300px;',
 			),
-			
+
 			array(
-            	'name' 		=> __( 'House Keeping :', 'cup_cp' ),
+            	'name' 		=> __( 'Contact Page Google Map', 'cup_cp' ),
+                'type' 		=> 'heading',
+                'id'		=> 'google_map_settings_box',
+                'is_box'	=> true,
+           	),
+			array(  
+				'name' 		=> __( 'Show Map', 'cup_cp' ),
+				'desc' 		=> __( "ON will show Profiles location map at top of the Contact Us Page.", 'cup_cp' ),
+				'id' 		=> 'people_contact_location_map_settings[hide_maps_frontend]',
+				'class'		=> 'hide_maps_frontend',
+				'type' 		=> 'onoff_checkbox',
+				'default' 	=> 0,
+				'checked_value'		=> 0,
+				'unchecked_value' 	=> 1,
+				'checked_label'		=> __( 'ON', 'cup_cp' ),
+				'unchecked_label' 	=> __( 'OFF', 'cup_cp' ),
+				'separate_option'	=> true,
+			),
+
+			array(
+				'class'		=> 'global_maps_container',
                 'type' 		=> 'heading',
            	),
 			array(  
-				'name' 		=> __( 'Clean up on Deletion', 'cup_cp' ),
-				'desc' 		=> __( "On deletion (not deactivate) the plugin will completely remove all tables and data it created, leaving no trace it was ever here.", 'cup_cp' ),
-				'id' 		=> 'a3_people_contact_lite_clean_on_deletion',
-				'type' 		=> 'onoff_checkbox',
-				'default'	=> '1',
+				'name' 		=> __( 'Maximum Zoom Level', 'cup_cp' ),
+				'desc'		=> '</span></div></div><span class="description" style="clear: both;">' . __( 'The Contact Us Page map feature auto zoom sets the map so all profile markers are visible in the map viewer on first load. Only use this setting if you want to make the first load zoom wider than the focus (the spread of profile location markers). Move the slider to the left to do this with zoom level 1 being the world map.', 'cup_cp' ) . '</span><div><div><span>',
+				'id' 		=> 'people_contact_location_map_settings[zoom_level]',
+				'type' 		=> 'slider',
+				'min'		=> 1,
+				'max'		=> 19,
+				'default'	=> 14,
+				'increment'	=> 1,
 				'separate_option'	=> true,
-				'checked_value'		=> 1,
-				'unchecked_value' 	=> 0,
-				'checked_label'		=> __( 'ON', 'cup_cp' ),
-				'unchecked_label' 	=> __( 'OFF', 'cup_cp' ),
 			),
+			array(  
+				'name' 		=> __( 'Map Type', 'cup_cp' ),
+				'id' 		=> 'people_contact_location_map_settings[map_type]',
+				'type' 		=> 'select',
+				'default'	=> 'ROADMAP',
+				'options'		=> array( 
+					'ROADMAP' 	=> 'ROADMAP', 
+					'SATELLITE' => 'SATELLITE', 
+					'HYBRID' 	=> 'HYBRID',
+					'TERRAIN'	=> 'TERRAIN',
+				),
+				'css' 		=> 'width:120px;',
+				'separate_option'	=> true,
+			),
+			array(  
+				'name' 		=> __( 'Map Width Type', 'cup_cp' ),
+				'id' 		=> 'people_contact_location_map_settings[map_width_type]',
+				'class'		=> 'map_width_type',
+				'type' 		=> 'switcher_checkbox',
+				'default'	=> 'percent',
+				'checked_value'		=> 'percent',
+				'unchecked_value' 	=> 'px',
+				'checked_label'		=> __( 'Responsive', 'cup_cp' ),
+				'unchecked_label' 	=> __( 'Fixed Wide', 'cup_cp' ),
+				'separate_option'	=> true,
+			),
+			array(
+            	'class' 	=> 'map_width_type_percent',
+                'type' 		=> 'heading',
+           	),
+			array(  
+				'name' 		=> '',
+				'id' 		=> 'people_contact_location_map_settings[map_width_responsive]',
+				'desc'		=> '%',
+				'type' 		=> 'slider',
+				'default'	=> 100,
+				'min'		=> 10,
+				'max'		=> 100,
+				'increment'	=> 1,
+				'separate_option'	=> true,
+			),
+			array(
+            	'class' 	=> 'map_width_type_fixed',
+                'type' 		=> 'heading',
+           	),
+			array(  
+				'name' 		=> '',
+				'id' 		=> 'people_contact_location_map_settings[map_width_fixed]',
+				'desc'		=> 'px',
+				'type' 		=> 'text',
+				'default'	=> 400,
+				'css' 		=> 'width:60px;',
+				'separate_option'	=> true,
+			),
+			
+			array(
+				'class'		=> 'global_maps_container',
+                'type' 		=> 'heading',
+           	),
+			array(  
+				'name' 		=> __( 'Map Height', 'cup_cp' ),
+				'desc'		=> 'px',
+				'id' 		=> 'people_contact_location_map_settings[map_height]',
+				'type' 		=> 'text',
+				'default'	=> 400,
+				'css' 		=> 'width:60px;',
+				'separate_option'	=> true,
+			),
+
         ));
+	}
+
+	public function include_script() {
+	?>
+<script type="text/javascript">
+(function($) {
+$(document).ready(function() {
+	if ( $("input.map_width_type:checked").val() == 'percent') {
+		$(".map_width_type_fixed").css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden', 'margin-bottom' : '0px'} );
+	} else {
+		$(".map_width_type_percent").css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden', 'margin-bottom' : '0px'} );
+	}
+	$(document).on( "a3rev-ui-onoff_checkbox-switch", '.map_width_type', function( event, value, status ) {
+		$(".map_width_type_fixed").attr('style','display:none;');
+		$(".map_width_type_percent").attr('style','display:none;');
+		if ( status == 'true' ) {
+			$(".map_width_type_fixed").slideUp();
+			$(".map_width_type_percent").slideDown();
+		} else {
+			$(".map_width_type_fixed").slideDown();
+			$(".map_width_type_percent").slideUp();
+		}
+	});
+
+	if ( $("input.hide_maps_frontend:checked").val() != 0) {
+		$(".global_maps_container").css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden', 'margin-bottom' : '0px'} );
+		$(".map_width_type_fixed").css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden', 'margin-bottom' : '0px'} );
+		$(".map_width_type_percent").css( {'visibility': 'hidden', 'height' : '0px', 'overflow' : 'hidden', 'margin-bottom' : '0px'} );
+	}
+	$(document).on( "a3rev-ui-onoff_checkbox-switch", '.hide_maps_frontend', function( event, value, status ) {
+		$(".global_maps_container").attr('style','display:none;');
+		$(".map_width_type_fixed").attr('style','display:none;');
+		$(".map_width_type_percent").attr('style','display:none;');
+		if ( status == 'true' ) {
+			if ( $("input.map_width_type:checked").val() == 'percent') {
+				$(".map_width_type_percent").slideDown();
+			} else {
+				$(".map_width_type_fixed").slideDown();
+			}
+			$(".global_maps_container").slideDown();
+		} else {
+			$(".global_maps_container").slideUp();
+		}
+	});
+});
+})(jQuery);
+</script>
+    <?php
 	}
 }
 

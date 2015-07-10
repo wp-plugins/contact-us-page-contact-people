@@ -34,18 +34,20 @@ function createMarker(map,point,root,the_link,the_title,color,callout) {
     	title: the_title
   	});
   	
-  	var infowindow = new google.maps.InfoWindow({
-        content: callout
-    });
-    
-  	google.maps.event.addListener(marker, 'click', function() {
-  		if ( callout == '' ) {
-  			window.location = the_link;
-  		} else {
-  			infowindow.open(map,marker);
-  		} 
-  	});
-  	
+  	if ( callout != '' ) {
+	  	var infowindow = new google.maps.InfoWindow({
+	        content: callout
+	    });
+	    
+	  	google.maps.event.addListener(marker, 'click', function() {
+	  		if ( callout == '' ) {
+	  			window.location = the_link;
+	  		} else {
+	  			infowindow.open(map,marker);
+	  		} 
+	  	});
+  	}
+ 
   	return marker;
 	
 }
