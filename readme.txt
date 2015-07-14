@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -202,6 +202,9 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 2.0.1 - 2015/07/14 =
+* Tweak - Changed Update file name syntax from 2.0.0.php to 2.0.php for some servers which have configuration that don't allow syntax 2.0.0.php
 
 = 2.0.0 - 2015/07/10 =
 * Feature - Plugin framework admin panel Mobile First focus upgrade
@@ -425,6 +428,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+Maintenance Upgrade. Version 2.0 upgrade file name change for support for servers that don't support file name syntax 2.0.0.php
 
 = 2.0.0 =
 Major Feature Upgrade. Complete rebuild of the plugin with a massive 30 new Features 6 Tweaks and 1 Bug fix. Check the changelog for full details. Check it out on the all new mobile first admin once you have updated
