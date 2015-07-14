@@ -4,7 +4,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.2.2
-Stable tag: 1.2.7
+Stable tag: 2.0.0
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -12,32 +12,47 @@ Easily and instantly create an interesting, stylish, professional and highly fun
 
 == Description ==
 
-Contact Us Page - Contact People allows you to easily transform your themes dull and boring contact us page into a stunning and vibrant, ultra professional Contact Us Page not only for your General sites contact us but for individual profiles (people, positions, Stores) within an organization . Features include:
+Contact Us Page - Contact People allows you to easily transform your themes dull and boring contact us page into a stunning and vibrant, ultra-professional Contact Us Page not only for your General sites contact us but for individual profiles (people, positions, Stores) within an organization.
+
+Features include:
+
+= Profiles =
+The first thing the plugin does is allow you to create an unlimited number of profiles. Profiles can be anything you want - People, Head Offices, branch Offices. Profile card are displayed in rows on the Contact Us Page under the Google map if you have activated the map.
+
+Profile Features are:
+
+* Title / Position, name, Phone, fax, mobile, web address, and description
+* Profile image or use the default no image
+* Option to show or don't show profile location on the Contact Us Page Google map
+* Option to turn ON | OFF profile display marker on the Contact Us Page map
+* Sort Profile display order on the Contact Us Page by drag and drop on Profiles menu
+* Add Profile unique email address and mail goes directly to them
+* Any Profile Address or contact method can be left off the card
+
 
 = Contact Us Page =
 
 The plugin when installed auto creates a stunning contact us page with this huge list of features:
 
-* Enable/Disable Google Location Map - Show main location and each profiles location on map.
-* Create unlimited Contact Profile Cards. Display each person, department, store or branch office on a profile card.
+* Optional Google Location Map that shows at the top with each contacts location (if required)
+* Create unlimited Contact Profile Cards. Display each person, department, store or branch office on a profile card on the Contact Us Page.
 * Features direct email submission from users to each contact profile card.
 * Email address never visible.
 * Contact Profile cards: Show as much or as little contact information as each profile desires / requires.
-* Department Contact Profiles: Displace each departments contact profile, e.g. support, sales, admin.
-* Stores and branches local or world wide - show on Google map.
-* Add and edit profiles - Add profiles with all their contact details, profile image or add a department (e.g. Sales, Support, Despatch) or branch offices.
-* Contact Profiles show stylish Contact cards on the Contact us page.
+* Department Contact Profiles: Display each departments contact profile, e.g. support, sales, admin.
+* Stores and branches local or worldwide - show on Google map.
+* Google map features auto zoom. Opens to show all the profile location markers in the map viewer
 * Contact Us Page display is fully mobile responsive using JQuery masonry.
-* Fully cross browser compliant including IE7 to IE11.
-* Mobile device optimized, all tablets and phones.
-* Sort profile card position on Contact us page by using drag and droping the Profiles admin menu.
 * Set the number of profile Cards to show per row. Display up to 5 Cards per row.
 * Mouse over profile card and that contact profile auto shows as pop up on map marker.
 * Click map marker to see contact profile as pop-up.
 * Click to email. Contact form with smooth email pop-up forms for easy and quick submission.
 * Pop-up submission success confirmation.
+* Fully cross browser compliant including IE7 to IE11.
+* Mobile device optimized, all tablets and phones.
 
-=  Contact Us Widget =
+
+= Contact Us Widget =
 
 The plugin includes a fully customizable Contact Widget that can be used in any theme widgetized area. Features include
 
@@ -48,7 +63,7 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 * Default widget email contact form
 * Add email contact from any plugin via shortcode.
 
-= Featuring Sass (Simply Awesome Stylesheets)  =
+= Featuring Sass (Simply Awesome Stylesheets) =
 
 * All the front end style display is created via [Sass](http://sass-lang.com/) for faster loader and render.
 * Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
@@ -57,67 +72,61 @@ The plugin includes a fully customizable Contact Widget that can be used in any 
 = Mobile Responsive App style admin interface =
 
 * 100% compatible with WordPress v3.8.0 and later admin interface.
-* Sass app style admin interface.
-* Admin app interface is fully mobile and tablet responsive.
+* Mobile first admin interface
+* Admin panels feature opening and closing setting boxes for ease of navigation
+* Admin interface features smart logic
 
-= a3rev Plugins Lite & Pro Version Admin Interface =
 
-* All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version.
-* Pro Version features and settings are inside of a Yellow border.
-* The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end.
-* Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+= Languages =
+
+* Full support for Right to Left RTL layout on mobile first admin dashboard.
+* Full support for WPML
+* Translation ready
+
 
 = Lite Version Support =
 
 * As a Lite Version user please post all support requests to the plugins WordPress Support forum.
-* We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member.
-* Upgrading to a Pro Version gives 'write' access to the a3rev support forums.
+* We do our best to respond to all support requests when we have time, but please understand this is free software and as such the support will never be as prompt as it is for something that you have paid a fee for.
+* Upgrading to a Pro or Ultimate Version gives 'write' access to the a3rev support forums and priority support from the developers.
 
->= Premium Support =
->
->The a3rev team does not provide support for the Contact Us Page - Contact People plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/wordpress-plugins/contact-us-page-contact-people/) to people who have purchased a [Contact Us Page - Contact People Pro](http://a3rev.com/shop/contact-us-page-contact-people/) plugin Lifetime License.
->
->The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
-
+ 
 = Pro Version Additional functionality =
 
-This plugin features a Pro version and Ultimate version upgrades that add tones of extra functionality. You will see all of the available upgrade features inside of the Yellow border areas on the plugins admin panel. Some of those advanced features include:
+This plugin features a Pro version and Ultimate version upgrades that add advanced functionality. Those advanced features include:
 
 * [Contact Us Page - Contact People Pro](http://a3rev.com/shop/contact-us-page-contact-people/).
 * [Contact People Ultimate](http://a3rev.com/shop/contact-people-ultimate/)
 * Immediate access at start of support from developers on the plugins [a3rev support forums](https://a3rev.com/forums/forum/wordpress-plugins/).
 
-= Contact Form 7 & Gravity Forms Integration =
+= Custom Profile Contact Forms =
 
-* Full integration with the 2 powerful contact form plugins
+* Use Contact Form 7 & Gravity Forms shortcodes to create Profile Contact Forms
 * Use either of this plugins to create a global (applies to all) contact form for profiles.
-* Add unique contact forms for profiles.
-* Use the power of these 2 great contact plugins to create unique contact forms.
+* Add unique contact forms for individual profiles.
 
-= Sass #dynamic {stylesheets} =
+= Profile Cards Shortcode =
 
-* All the front end style display is created via [Sass](http://sass-lang.com/) #dynamic {stylesheets} for faster loader and render.
-* Edit all front layout and style from the plugins admin panel with the Sass #dynamic {stylesheet} settings.
-* Change the layout and style anytime you like - and do it all in Sass without touching the code.
-
-= Profile Card Point and Click Layout and Style =
-
-* Use the Sass #dynamic {stylesheets} editor for creating a unique Profile card style.
-* Upload custom icons - Default image and contact icons.
-
-= People Contact Profile Shortcode =
-
-This great feature enables you to add any profile card to any post or page via the plugins shortcode function. Features:
-
-* Contact Profile shows in the same Card style that is shows on the Contact Us page.
+* Insert Profile cards by shortcode into any post or page
 * Add multiple Contact Profiles cards to a single page.
-* Set width in px for the Contact Profile Card.
+* Set Profile card width in px
 * Set Profile card alignment on page, includes text wrap left or right.
 * Set Profile card padding top, bottom, left and right.
 
+
+= Profile Card Dynamic CSS =
+
+* In the Lite Version the Profile Cards have static style sheets - the Pro version those are Dynamic Stylesheets
+* Create a unique card layout and style without touching the code
+* Profile Card menu has all the settings to create a beautiful card design
+* Upload custom contact icons - Default image and contact icons.
+
+
 = Contact People Ultimate =
 
-The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations and just about any Grouping that you want to create
+The Version has all the features of the Lite and Pro version plus the groups feature.
+
+The Ultimate WordPress plugin for creating and displaying Contact Profiles for Groups of People, Organization, Company Departments, Stores, branch locations and just about any Grouping that you want to create.
 
 * Create unlimited Groups and assign Profiles to Groups
 * Assign a single Profile to any number of Groups
@@ -129,11 +138,6 @@ The Ultimate WordPress plugin for creating and displaying Contact Profiles for G
 * Show or no show Google map with Group
 * Show or no show Group title above Profiles
 
-= Sass #dynamic {stylesheets} =
-
-* All the front end style display is created via [Sass](http://sass-lang.com/) #dynamic {stylesheets} for faster loader and render.
-* Edit all front layout and style from the plugins admin panel with the Sass #dynamic {stylesheet} settings.
-* Change the layout and style anytime you like - and do it all in Sass without touching the code.
 
 = Localization =
 
@@ -179,11 +183,11 @@ The manual installation method involves downloading our plugin and uploading it 
 
 3. Profiles > Add profiles.
 
-4. Settings > Contact Page and configure
+4. Settings > Contact Us Page tab
 
-5. Settings > Grid View and configure
+5. Settings > Profile Email Tab
 
-6. Settings > Contact Widget and configure
+6. Settings > Contact Us Widget tab
 
 7. Appearance > Widgets and add contact widget to sidebar.
 
@@ -198,6 +202,46 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 2.0.0 - 2015/07/10 =
+* Feature - Plugin framework admin panel Mobile First focus upgrade
+* Feature - Massive improvement in admin UI and UX in PC, tablet and mobile browsers
+* Feature - Introducing opening and closing Setting Boxes on admin panels.
+* Feature - Added Plugin Framework Customization settings. Control how the admin panel settings show when editing.
+* Feature - New interface has allowed us to do away with the Email Inquiry menu and its 4 tabs, it has been added as 1 tab on Settings menu
+* Feature - New interface means that all 10 sub menus have been removed from the Setting tabs. 
+* Feature - Includes a script to automatically combine removed tab settings into Tabs main table when upgrading
+* Feature - Added Option to set a Google Fonts API key to directly access latest fonts and font updates from Google
+* Feature - Separated all Google map Settings. Now have 4 map types, Contact Page map, Profile map, Widget Map and Groups Maps
+* Feature - Maps auto zoom feature. Auto sets map zoom to show all profile markers in the map viewer on first load. Removed map centre settings
+* Feature - Full Setting Boxes conditional logic. Switch on an option and only the Setting boxes that have settings for that option show
+* Feature - Contact Widget Map editor Live Preview. See exactly how the map will look on front end as each setting is tweaked
+* Feature - Contact Widget Map Callout Text. Enter Text or HTML that will be output when users click on the map marker
+* Feature - Profile Create / Edit new admin interface featuring 2 column display
+* Feature - Profile Create / Edit - Added option to switch ON | OFF the profile display on the Contact Us Page
+* Feature - Profile Location Address is now required. Profile cannot be created or edited without a map location being set.
+* Feature - Create or update a Profile without a location map generates an error message and instructions to enter an address
+* Feature - Profile location map opens showing world map with drag and drop marker and map zoom for setting location 
+* Feature - Default Email Form. Added Dynamic settings to set custom email From name and From email address
+* Feature - Default Email Form. Added Send a Copy to Sender with ON | OFF switch
+* Feature - Default Email Form. Added Form Background Dynamic colour selector
+* Feature - Default Email Form. Added Form Title and Fonts dynamic text input boxes and font editors
+* Feature - Default Email Form. Added Form Input Fields dynamic style editors, background colour, font colour, borders and border corners
+* Feature - Default Email Form. Added Form Send Button dynamic style editors. Create a beautiful submit button without touching the code
+* Feature - Default Email Form. Added Success Message text editor. Create a customized success message with WordPress text editor
+* Feature - Contact Us Widget. Added Dynamic settings to set custom email From name and From email address
+* Feature - Contact Us Widget. Added Send a Copy to Sender with ON | OFF switch
+* Feature - Contact Us Widget. Added Email Delivery, Inquiry Email goes to and email cc
+* Feature - Full compatibility with WPML
+* Feature - On install plugin detects WPML install and auto creates a Contact Us Page for each language
+* Feature - Added full support for Right to Left RTL layout on plugins admin dashboard.
+* Tweak - Settings menu now has just 4 tabs, Contact Us Page | Profile Cards | Profile Email | Contact us Widget
+* Tweak - Upgraded the Profiles listing page table style
+* Tweak - Upgraded the Groups listing page table style
+* Tweak - All Setting Box Titles updated to be descriptive of the settings in the box for ease of navigation
+* Tweak - All admin panel help text upgraded for the new UI
+* Tweak - Added a 260px wide images to the right sidebar for direct links to support forum and the plugins docs
+* Fix - Check 'request_filesystem_credentials' function, if it does not exists then require the core php lib file from WP where it is defined
 
 = 1.2.7 - 2015/06/03 =
 * Tweak - Security Hardening. Removed all php file_put_contents functions in the plugin framework and replace with the WP_Filesystem API
@@ -382,6 +426,9 @@ On WordPress with any theme.
 
 == Upgrade Notice ==
 
+= 2.0.0 =
+Major Feature Upgrade. Complete rebuild of the plugin with a massive 30 new Features 6 Tweaks and 1 Bug fix. Check the changelog for full details. Check it out on the all new mobile first admin once you have updated
+
 = 1.2.7 =
 Important Maintenance Upgrade. 2 x major a3rev Plugin Framework Security Hardening Tweaks
 
@@ -465,3 +512,4 @@ Important Update! Major bug fix. Please upgrade to this version now to fix this 
 
 = 1.0.1 =
 Update your plugin now for 3 Bug Fixes to initial release.
+

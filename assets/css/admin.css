@@ -14,7 +14,10 @@ table input[type="text"] {
 .a3rev_panel_container .form-table th {
     width: 148px;
 }
-.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
+.a3rev_custom_panel_container input[type="text"],
+.a3rev_custom_panel_container input[type="email"],
+.a3rev_custom_panel_container input[type="number"],
+.a3rev_custom_panel_container input[type="password"] {
 	width:100%;
 }
 .ui-state-highlight {
@@ -50,7 +53,7 @@ table input[type="text"] {
 .contact_manager #map_canvas {
 	width:100%;
 	float:left;
-	height:500px;
+	height:400px;
 	border:1px solid #DFDFDF;
 }
 .categories_selection_container {
@@ -92,8 +95,14 @@ div.row_mod label {
 	.contact_manager #map_canvas {
 		height:300px;
 	}
-	.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
+	.a3rev_custom_panel_container input[type="text"],
+	.a3rev_custom_panel_container input[type="email"],
+	.a3rev_custom_panel_container input[type="number"],
+	.a3rev_custom_panel_container input[type="password"] {
 		max-width:100%;
+	}
+	.a3rev_manager_panel_container .column-shortcode {
+		display:none;
 	}
 }
 
@@ -107,18 +116,27 @@ div.row_mod label {
 		width:100%;
 		margin-top:0px;
 	}
-	.a3rev_panel_container td{
+	.a3rev_panel_container .form-table td{
 		padding-left: 0 !important;
 		padding-right: 0 !important;
 	}
 	.categories_selection_container {
 		float:none;
-		width:100%;	
+		width:100%;
 	}
-	.a3rev_custom_panel_container input[type="text"], .a3rev_custom_panel_container input[type="email"], .a3rev_custom_panel_container input[type="number"], .a3rev_custom_panel_container input[type="password"] {
-		width:100% !important; 
+	.a3rev_custom_panel_container input[type="text"],
+	.a3rev_custom_panel_container input[type="email"],
+	.a3rev_custom_panel_container input[type="number"],
+	.a3rev_custom_panel_container input[type="password"] {
+		width:100% !important;
 	}
-	.a3rev_manager_panel_container .column-email, .a3rev_manager_panel_container .column-phone, .a3rev_manager_panel_container .column-location, .a3rev_manager_panel_container .column-categories, .a3rev_manager_panel_container .column-profiles, .a3rev_manager_panel_container .column-activated {
-		display:none;	
+	.a3rev_manager_panel_container .column-email,
+	.a3rev_manager_panel_container .column-phone,
+	.a3rev_manager_panel_container .column-shortcode,
+	.a3rev_manager_panel_container .column-location,
+	.a3rev_manager_panel_container .column-categories,
+	.a3rev_manager_panel_container .column-profiles,
+	.a3rev_manager_panel_container .column-activated {
+		display:none;
 	}
 }

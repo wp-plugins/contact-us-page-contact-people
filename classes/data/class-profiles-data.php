@@ -40,6 +40,8 @@ class People_Contact_Profile_Data
 				  `c_mobile` varchar(250) NOT NULL,
 				  `c_website` text NOT NULL,
 				  `c_about` blob NOT NULL,
+				  `show_on_main_page` tinyint(1) NOT NULL DEFAULT '1',
+				  `enable_map_marker` tinyint(1) NOT NULL DEFAULT '1',
 				  `c_address` blob NOT NULL,
 				  `c_latitude` varchar(250) NOT NULL,
 				  `c_longitude` varchar(250) NOT NULL,
@@ -47,7 +49,6 @@ class People_Contact_Profile_Data
 				  `c_order` int(11) NOT NULL,
 				  PRIMARY KEY  (`id`)
 				) $collate; ";
-
 			$wpdb->query($sql);
 		}
 	}	
@@ -105,13 +106,17 @@ class People_Contact_Profile_Data
 		$c_phone = strip_tags( addslashes( $c_phone ) );
 		$c_fax = strip_tags( addslashes( $c_fax ) );
 		$c_mobile = strip_tags( addslashes( $c_mobile ) );
+		$c_website = strip_tags( addslashes( $c_website ) );
+		$c_about = addslashes( $c_about );
+		$show_on_main_page = $show_on_main_page;
+		$enable_map_marker = $enable_map_marker;
 		$c_address = strip_tags( addslashes( $c_address ) );
 		$c_latitude = strip_tags( addslashes( $c_latitude ) );
 		$c_longitude = strip_tags( addslashes( $c_longitude ) );
 		
 		$c_order = People_Contact_Profile_Data::get_maximum_order();
 		$c_order++;
-		$query = $wpdb->query("INSERT INTO {$table_name}( c_title, c_name, c_avatar, c_email, c_phone, c_fax, c_mobile, c_address, c_latitude, c_longitude, c_shortcode, c_order ) VALUES('$c_title', '$c_name', '$c_avatar', '$c_email', '$c_phone', '$c_fax', '$c_mobile', '$c_address', '$c_latitude', '$c_longitude', '', '$c_order' )");
+		$query = $wpdb->query("INSERT INTO {$table_name}( c_title, c_name, c_avatar, c_email, c_phone, c_fax, c_mobile, c_website, c_about, show_on_main_page, enable_map_marker, c_address, c_latitude, c_longitude, c_shortcode, c_order ) VALUES('$c_title', '$c_name', '$c_avatar', '$c_email', '$c_phone', '$c_fax', '$c_mobile', '$c_website', '$c_about', '$show_on_main_page', '$enable_map_marker', '$c_address', '$c_latitude', '$c_longitude', '', '$c_order' )");
 		if ($query) {
 			$profile_id = $wpdb->insert_id;
 			return $profile_id;
@@ -131,19 +136,23 @@ class People_Contact_Profile_Data
 		$c_phone = strip_tags( addslashes( $c_phone ) );
 		$c_fax = strip_tags( addslashes( $c_fax ) );
 		$c_mobile = strip_tags( addslashes( $c_mobile ) );
+		$c_website = strip_tags( addslashes( $c_website ) );
+		$c_about = addslashes( $c_about );
+		$show_on_main_page = $show_on_main_page;
+		$enable_map_marker = $enable_map_marker;
 		$c_address = strip_tags( addslashes( $c_address ) );
 		$c_latitude = strip_tags( addslashes( $c_latitude ) );
 		$c_longitude = strip_tags( addslashes( $c_longitude ) );
-		$query = $wpdb->query("UPDATE {$table_name} SET c_title='$c_title', c_name='$c_name', c_avatar='$c_avatar', c_email='$c_email', c_phone='$c_phone', c_fax='$c_fax', c_mobile='$c_mobile', c_address='$c_address', c_latitude='$c_latitude', c_longitude='$c_longitude', c_shortcode='' WHERE id='$profile_id'");
+		$query = $wpdb->query("UPDATE {$table_name} SET c_title='$c_title', c_name='$c_name', c_avatar='$c_avatar', c_email='$c_email', c_phone='$c_phone', c_fax='$c_fax', c_mobile='$c_mobile', c_website='$c_website', c_about='$c_about', show_on_main_page='$show_on_main_page', enable_map_marker='$enable_map_marker', c_address='$c_address', c_latitude='$c_latitude', c_longitude='$c_longitude', c_shortcode='' WHERE id='$profile_id'");
 		return $query;
 
 	}
 	
 	public static function reset_shortcode_to_global() {
 		global $wpdb;
-		global $people_email_inquiry_3rd_contact_form_settings;
+		global $people_email_inquiry_global_settings;
 		$table_name = $wpdb->prefix. "cup_cp_profiles";
-		$query = $wpdb->query("UPDATE {$table_name} SET c_shortcode='".$people_email_inquiry_3rd_contact_form_settings['contact_form_type_shortcode']."' ");
+		$query = $wpdb->query("UPDATE {$table_name} SET c_shortcode='".$people_email_inquiry_global_settings['contact_form_type_shortcode']."' ");
 	}
 
 	public static function update_items_order( $item_orders=array() ) {

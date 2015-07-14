@@ -18,8 +18,9 @@ class People_Contact_Widget extends WP_Widget {
 	public static function widget_maps_contact_output($args){
 		// No More API Key needed
 		global $people_contact_widget_information,$people_contact_widget_maps,$people_contact_grid_view_icon,$people_contact_widget_email_contact_form;
+		global $widget_hide_maps_frontend;
 
-		if($people_contact_widget_maps['widget_hide_maps_frontend'] == 1){ return; }
+		if($widget_hide_maps_frontend == 1){ return; }
 
 		if ( !is_array($args) )
 			parse_str( $args, $args );
@@ -312,7 +313,6 @@ class People_Contact_Widget extends WP_Widget {
 				$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
 
 				if( isset( $emailSent ) && $emailSent == true ) { ?>
-
 					<p class="info">
 					  <?php _e( 'Your email was successfully sent.', 'cup_cp' ); ?>
 					</p>
@@ -394,6 +394,16 @@ class People_Contact_Widget extends WP_Widget {
 						  <span class="error"><?php echo $contactError; ?></span>
 						  <?php } ?>
 						</li>
+						<?php if ($enable_widget_send_copy) { ?>
+						<li class="inline">
+	                     <label>
+						  <span for="sendCopy">
+	                      	<input type="checkbox" name="sendCopy" id="sendCopy" value="true"<?php if( isset( $_POST['sendCopy'] ) && $_POST['sendCopy'] == true ) { echo ' checked="checked"'; } ?> />
+							<?php _e( 'Send a copy of this email to yourself', 'cup_cp' ); ?>
+						  </span>
+						 </label>
+	                    </li>
+	                    <?php } ?>
 						<li class="buttons">
 						  <input type="hidden" name="submitted" id="submitted" value="true" />
 						  <input class="submit button" type="submit" value="<?php esc_attr_e( 'Send', 'cup_cp' ); ?>" /> <img class="contact-site-ajax-wait" src="<?php echo PEOPLE_CONTACT_IMAGE_URL; ?>/ajax-loader2.gif" border="0" style="display:none; padding:0; margin:0; vertical-align: middle;" />

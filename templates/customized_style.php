@@ -15,50 +15,42 @@ global $people_contact_grid_view_layout;
 }
 
 /* Thumb Image Style */
-<?php
-global $people_contact_grid_view_image_style;
-extract( $people_contact_grid_view_image_style );
-?>
 #people_contacts_container .people-entry-item .p_content_left img, .people-entry-item .p_content_left img{
 	width: auto !important;
 	max-width:100% !important;
 }
 
 #people_contacts_container .people-entry-item .p_content_left img, .people-entry-item .p_content_left img, body #people_contacts_container #map_canvas .infowindow .info_avatar img, body #people_contacts_container .map_canvas_container .infowindow .info_avatar img, .custom_contact_popup .people_email_inquiry_default_image_container img {
-	background: <?php echo $people_contact_grid_view_image_style['item_image_background']; ?> !important;
+	background: <?php echo $people_contact_grid_view_layout['item_image_background']; ?> !important;
 	
-	<?php echo $people_contact_admin_interface->generate_border_style_css( $people_contact_grid_view_image_style['item_image_border'] ); ?>
-	padding:<?php echo $item_image_padding;?>px !important;
+	<?php echo $people_contact_admin_interface->generate_border_style_css( $people_contact_grid_view_layout['item_image_border'] ); ?>
+	padding:<?php echo $people_contact_grid_view_layout['item_image_padding'];?>px !important;
 
 	border-radius: 200px !important;
 	-moz-border-radius: 200px !important;
 	-webkit-border-radius: 200px !important;
-	<?php echo $people_contact_admin_interface->generate_shadow_css( $people_contact_grid_view_image_style['item_image_shadow'] ); ?>
+	<?php echo $people_contact_admin_interface->generate_shadow_css( $people_contact_grid_view_layout['item_image_shadow'] ); ?>
 
 	box-sizing:border-box !important;
 	-moz-box-sizing:border-box !important;
 	-webkit-box-sizing:border-box !important;
 }
 
-<?php
-global $people_contact_grid_view_style;
-?>
 #people_contacts_container .people_item .people-entry-item, .people_item .people-entry-item{
-	background-color:<?php echo $people_contact_grid_view_style['grid_view_item_background'];?>;
-	<?php echo $people_contact_admin_interface->generate_border_css( $people_contact_grid_view_style['grid_view_item_border'] ); ?>
-	padding:<?php echo $people_contact_grid_view_style['grid_view_item_padding_top'];?>px <?php echo $people_contact_grid_view_style['grid_view_item_padding_right'];?>px <?php echo $people_contact_grid_view_style['grid_view_item_padding_bottom'];?>px <?php echo $people_contact_grid_view_style['grid_view_item_padding_left'];?>px;
-	
-	<?php echo $people_contact_admin_interface->generate_shadow_css( $people_contact_grid_view_style['grid_view_item_shadow'] ); ?>
+	background-color:<?php echo $people_contact_grid_view_layout['grid_view_item_background'];?>;
+	<?php echo $people_contact_admin_interface->generate_border_css( $people_contact_grid_view_layout['grid_view_item_border'] ); ?>
+	padding:<?php echo $people_contact_grid_view_layout['grid_view_item_padding_top'];?>px <?php echo $people_contact_grid_view_layout['grid_view_item_padding_right'];?>px <?php echo $people_contact_grid_view_layout['grid_view_item_padding_bottom'];?>px <?php echo $people_contact_grid_view_layout['grid_view_item_padding_left'];?>px;
+	<?php echo $people_contact_admin_interface->generate_shadow_css( $people_contact_grid_view_layout['grid_view_item_shadow'] ); ?>
 }
 #people_contacts_container .infowindow{
-	background-color:<?php echo $people_contact_grid_view_style['grid_view_item_background'];?>;
+	background-color:<?php echo $people_contact_grid_view_layout['grid_view_item_background'];?>;
 	padding:10px;
 }
 
 <?php
 // Email Inquiry Form Button Style
-global $people_email_inquiry_popup_form_style;
-extract($people_email_inquiry_popup_form_style);
+global $people_email_inquiry_global_settings;
+extract($people_email_inquiry_global_settings);
 ?>
 
 /* Email Inquiry Form Style */
