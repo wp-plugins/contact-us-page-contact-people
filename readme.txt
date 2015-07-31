@@ -1,6 +1,6 @@
 === Contact Us Page - Contact People ===
 
-Contributors: a3rev, A3 Revolution Software Development team
+Contributors: a3rev, nguyencongtuan, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.2.2
