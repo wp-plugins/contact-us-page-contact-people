@@ -17,7 +17,7 @@ class People_Contact_Shortcode{
 	var $admin_page,$contact_manager;
 	public $template_url = PEOPLE_CONTACT_PATH;
 	
-	public function People_Contact_Shortcode () {
+	public function __construct () {
 		$this->init();
 	}
 	

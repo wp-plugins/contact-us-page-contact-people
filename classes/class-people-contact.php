@@ -14,7 +14,7 @@ class People_Contact {
 	var $admin_page,$contact_manager;
 	public $template_url = PEOPLE_CONTACT_PATH;
 
-	public function People_Contact () {
+	public function __construct () {
 		$this->init();
 	}
 

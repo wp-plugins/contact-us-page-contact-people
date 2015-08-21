@@ -3,9 +3,9 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_lite_version', '2.0.1');
-	update_option('a3rev_wp_people_contact_version', '2.0.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.1');
+	update_option('a3rev_wp_people_contact_lite_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.2');
 
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), 'contact_us_page_id', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	People_Contact_Functions::auto_create_page_for_wpml( $contact_us_page_id, _x('contact-us-page', 'page_slug', 'cup_cp'), __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
@@ -127,9 +127,9 @@ function a3_people_contact_lite_upgrade_plugin () {
 		include( PEOPLE_CONTACT_DIR. '/upgrade/updates/people-contact-update-2.0.1.php' );
 	}
 
-	update_option('a3rev_wp_people_contact_lite_version', '2.0.1');
-	update_option('a3rev_wp_people_contact_version', '2.0.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.1');
+	update_option('a3rev_wp_people_contact_lite_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.2');
 
 }
 ?>

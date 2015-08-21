@@ -3,8 +3,8 @@
 Contributors: a3rev, nguyencongtuan, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
-Tested up to: 4.2.2
-Stable tag: 2.0.1
+Tested up to: 4.3
+Stable tag: 2.0.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -202,6 +202,17 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 2.0.2 - 2015/08/21 =
+* Tweak - include new CSSMin lib from https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port into plugin framework instead of old CSSMin lib from http://code.google.com/p/cssmin/ , to avoid conflict with plugins or themes that have CSSMin lib
+* Tweak - make __construct() function for 'Compile_Less_Sass' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Tweak - change class name from 'lessc' to 'a3_lessc' so that it does not conflict with plugins or themes that have another Lessc lib
+* Tweak - Plugin Framework DB query optimization. Refactored settings_get_option call for dynamic style elements, example typography, border, border_styles, border_corner, box_shadow
+* Tweak - Tested for full compatibility with WordPress major version 4.3.0
+* Fix - Make __construct() function for 'People_Contact_Shortcode' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Fix - Make __construct() function for 'People_Contact' class instead of using a method with the same name as the class for compatibility on WP 4.3 and is deprecated on PHP4
+* Fix - Update the plugin framework for setup correct default settings on first installed
+* Fix - Update the plugin framework for reset to correct default settings when hit on 'Reset Settings' button on each settings tab
 
 = 2.0.1 - 2015/07/14 =
 * Tweak - Changed Update file name syntax from 2.0.0.php to 2.0.php for some servers which have configuration that don't allow syntax 2.0.0.php
@@ -428,6 +439,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 2.0.2 =
+Major Maintenance Upgrade. 5 Code Tweaks plus 4 bug fixes for full compatibility with WordPress v 4.3.0
 
 = 2.0.1 =
 Maintenance Upgrade. Version 2.0 upgrade file name change for support for servers that don't support file name syntax 2.0.0.php
