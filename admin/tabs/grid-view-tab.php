@@ -33,7 +33,7 @@ class People_Contact_Grid_View_Tab extends People_Contact_Admin_UI
 	 * @var string
 	 * You can change the order show of this tab in list tabs
 	 */
-	private $position = 3;
+	private $position = 4;
 	
 	/**
 	 * @var array
@@ -104,9 +104,6 @@ class People_Contact_Grid_View_Tab extends People_Contact_Admin_UI
 		
 		// Includes Settings file
 		include_once( $this->admin_plugin_dir() . '/settings/grid-view-layout-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/grid-view-style-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/grid-view-image-style-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/grid-view-contact-icons-settings.php' );
 		
 	}
 	
@@ -116,9 +113,10 @@ class People_Contact_Grid_View_Tab extends People_Contact_Admin_UI
 	/*-----------------------------------------------------------------------------------*/
 	public function tab_manager() {
 		global $people_contact_admin_init;
-		
-		$people_contact_admin_init->admin_settings_tab( $this->parent_page, $this->tab_data() );
-		
+
+		$this->plugin_extension_start();
+		people_contact_grid_view_layout_settings_form();
+		$this->plugin_extension_end();
 	}
 }
 

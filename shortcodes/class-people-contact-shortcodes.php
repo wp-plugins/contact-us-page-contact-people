@@ -68,7 +68,7 @@ class People_Contact_Shortcode{
 	
 	public function people_contact_generator_popup() {
 		global $people_contact_location_map_settings;
-		$contacts = People_Contact_Profile_Data::get_results('', 'c_order ASC', '', 'ARRAY_A');
+		$contacts = People_Contact_Profile_Data::get_results('show_on_main_page=1', 'c_order ASC', '', 'ARRAY_A');
 		$all_categories = array ( array('id' => 1, 'category_name' => __('Profile Group', 'cup_cp') ) );
 		?>
 		<div id="people-contact-wrap" style="display:none">

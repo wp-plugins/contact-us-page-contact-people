@@ -27,13 +27,13 @@ class People_Email_Inquiry_Settings_Tab extends People_Contact_Admin_UI
 	/**
 	 * @var string
 	 */
-	private $parent_page = 'people-email-inquiry';
+	private $parent_page = 'people-contact-settings';
 	
 	/**
 	 * @var string
 	 * You can change the order show of this tab in list tabs
 	 */
-	private $position = 1;
+	private $position = 2;
 	
 	/**
 	 * @var array
@@ -74,8 +74,8 @@ class People_Email_Inquiry_Settings_Tab extends People_Contact_Admin_UI
 	public function tab_data() {
 		
 		$tab_data = array( 
-			'name'				=> 'settings',
-			'label'				=> __( 'Settings', 'cup_cp' ),
+			'name'				=> 'email-inquiry',
+			'label'				=> __( 'Profile Email', 'cup_cp' ),
 			'callback_function'	=> 'people_email_inquiry_settings_tab_manager',
 		);
 		
@@ -112,16 +112,10 @@ class People_Email_Inquiry_Settings_Tab extends People_Contact_Admin_UI
 	/* Call tab layout from Admin Init 
 	/*-----------------------------------------------------------------------------------*/
 	public function tab_manager() {
-		global $people_contact_email_inquiry_global_settings;
-		
+
 		$this->plugin_extension_start();
-		$people_contact_email_inquiry_global_settings->settings_form();
+		people_contact_email_inquiry_global_settings_form();
 		$this->plugin_extension_end();
-		
-		//global $people_contact_admin_init;
-		
-		//$people_contact_admin_init->admin_settings_tab( $this->parent_page, $this->tab_data() );
-		
 	}
 }
 

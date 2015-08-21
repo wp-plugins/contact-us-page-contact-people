@@ -75,7 +75,7 @@ class People_Contact_Contact_Widget_Tab extends People_Contact_Admin_UI
 		
 		$tab_data = array( 
 			'name'				=> 'contact-widget',
-			'label'				=> __( 'Contact Widget', 'cup_cp' ),
+			'label'				=> __( 'Contact Us Widget', 'cup_cp' ),
 			'callback_function'	=> 'people_contact_contact_widget_tab_manager',
 		);
 		
@@ -104,9 +104,6 @@ class People_Contact_Contact_Widget_Tab extends People_Contact_Admin_UI
 		
 		// Includes Settings file
 		include_once( $this->admin_plugin_dir() . '/settings/contact-widget-global-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/contact-widget-information-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/contact-widget-email-contact-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/contact-widget-maps-settings.php' );
 		
 	}
 	
@@ -116,9 +113,10 @@ class People_Contact_Contact_Widget_Tab extends People_Contact_Admin_UI
 	/*-----------------------------------------------------------------------------------*/
 	public function tab_manager() {
 		global $people_contact_admin_init;
-		
-		$people_contact_admin_init->admin_settings_tab( $this->parent_page, $this->tab_data() );
-		
+
+		$this->plugin_extension_start();
+		people_contact_contact_widget_global_settings_form();
+		$this->plugin_extension_end();
 	}
 }
 
