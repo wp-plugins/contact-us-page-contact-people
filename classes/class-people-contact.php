@@ -14,7 +14,7 @@ class People_Contact {
 	var $admin_page,$contact_manager;
 	public $template_url = PEOPLE_CONTACT_PATH;
 
-	public function People_Contact () {
+	public function __construct () {
 		$this->init();
 	}
 
@@ -38,9 +38,9 @@ class People_Contact {
 		$send_copy = $_REQUEST['send_copy'];
 
 		if(trim($_REQUEST['c_subject']) != ''){
-			$subject = trim($_REQUEST['c_subject']). ' ' . __('from', 'cup_cp'). ' ' .get_bloginfo('name');
+			$subject = trim($_REQUEST['c_subject']). ' ' . people_ict_t__( 'Email Inquiry - from', __('from', 'cup_cp') ) . ' ' . ( function_exists('icl_t') ? icl_t( 'WP',__('Blog Title','wpml-string-translation'), get_option('blogname') ) : get_option('blogname') );
 		}else{
-			$subject = __('Contact from', 'cup_cp').' '.get_bloginfo('name');
+			$subject = people_ict_t__( 'Email Inquiry - Contact from', __('Contact from', 'cup_cp') ).' '. ( function_exists('icl_t') ? icl_t( 'WP',__('Blog Title','wpml-string-translation'), get_option('blogname') ) : get_option('blogname') );
 		}
 
 		$profile_data = array(
@@ -61,13 +61,14 @@ class People_Contact {
 	}
 
 	public function load_ajax_contact_form() {
-		global $people_email_inquiry_popup_form_style;
 		global $people_contact_grid_view_icon;
+		global $people_email_inquiry_global_settings;
 
-		$inquiry_contact_text_button = __('SEND', 'cup_cp');
+		if ( trim( $people_email_inquiry_global_settings['inquiry_contact_text_button'] ) != '') $inquiry_contact_text_button = $people_email_inquiry_global_settings['inquiry_contact_text_button'];
+		else $inquiry_contact_text_button = __('SEND', 'cup_cp');
 
-		$inquiry_contact_button_class = '';
-		$inquiry_contact_form_class = '';
+		$inquiry_contact_button_class = apply_filters( 'people_inquiry_contact_button_class', '' );
+		$inquiry_contact_form_class = apply_filters( 'people_inquiry_contact_form_class', '' );
 
 		$contact_id = $_REQUEST['contact_id'];
 
@@ -76,11 +77,11 @@ class People_Contact {
 		<div class="custom_contact_popup <?php echo $inquiry_contact_form_class; ?>">
         <div style="padding:10px;">
 		<div style="clear:both"></div>
-		<div class="people_email_inquiry_contact_heading" ><?php echo $people_email_inquiry_popup_form_style['inquiry_contact_heading']; ?></div>
+		<div class="people_email_inquiry_contact_heading" ><?php echo $people_email_inquiry_global_settings['inquiry_contact_heading']; ?></div>
 		<div style="clear:both; margin-top:10px"></div>
-        <div class="people_email_inquiry_site_name"><?php echo $people_email_inquiry_popup_form_style['inquiry_form_site_name']; ?></div>
+        <div class="people_email_inquiry_site_name"><?php echo $people_email_inquiry_global_settings['inquiry_form_site_name']; ?></div>
         <div style="clear:both; margin-top:5px"></div>
-		<div style="float:left; margin-right:20px;" class="people_email_inquiry_default_image_container"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo $people_contact_grid_view_icon['default_profile_image'];}?>" width="80" /></div>
+		<div style="float:left; margin-right:20px;" class="people_email_inquiry_default_image_container"><img src="<?php if($data['c_avatar'] != ''){echo $data['c_avatar'];}else{ echo PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';}?>" width="80" /></div>
         <div style="display:block; margin-bottom:10px; padding-left:22%;" class="people_email_inquiry_product_heading_container">
 			<div class="people_email_inquiry_profile_position"><?php esc_attr_e( stripslashes(  $data['c_title']) );?></div>
             <div class="people_email_inquiry_profile_name"><?php esc_attr_e( stripslashes(  $data['c_name']) );?></div>
@@ -90,21 +91,25 @@ class People_Contact {
         	<input type="hidden" value="<?php esc_attr_e( stripslashes( $data['c_email'] ) );?>" id="profile_email_<?php echo $contact_id; ?>" name="profile_email" />
         	<input type="hidden" value="<?php esc_attr_e( stripslashes(  $data['c_title']) );?> <?php esc_attr_e( stripslashes( $data['c_name'] ) );?>" id="profile_name_<?php echo $contact_id; ?>" name="profile_name" />
             <div class="people_email_inquiry_field">
-                <label class="people_email_inquiry_label" for="c_name_<?php echo $contact_id; ?>"><?php _e('Name', 'cup_cp'); ?> <span class="gfield_required">*</span></label>
+                <label class="people_email_inquiry_label" for="c_name_<?php echo $contact_id; ?>"><?php people_ict_t_e( 'Default Form - Contact Name', __('Name', 'cup_cp') ); ?> <span class="gfield_required">*</span></label>
                 <input type="text" name="c_name" id="c_name_<?php echo $contact_id; ?>" value="" /></div>
             <div class="people_email_inquiry_field">
-                <label class="people_email_inquiry_label" for="c_email_<?php echo $contact_id; ?>"><?php _e('Email', 'cup_cp'); ?> <span class="gfield_required">*</span></label>
+                <label class="people_email_inquiry_label" for="c_email_<?php echo $contact_id; ?>"><?php people_ict_t_e( 'Default Form - Contact Email', __('Email', 'cup_cp') ); ?> <span class="gfield_required">*</span></label>
                 <input type="text" name="c_email" id="c_email_<?php echo $contact_id; ?>" value="" /></div>
             <div class="people_email_inquiry_field">
-                <label class="people_email_inquiry_label" for="c_phone_<?php echo $contact_id; ?>"><?php _e('Phone', 'cup_cp'); ?> <span class="gfield_required">*</span></label>
+                <label class="people_email_inquiry_label" for="c_phone_<?php echo $contact_id; ?>"><?php people_ict_t_e( 'Default Form - Contact Phone', __('Phone', 'cup_cp') ); ?> <span class="gfield_required">*</span></label>
                 <input type="text" name="c_phone" id="c_phone_<?php echo $contact_id; ?>" value="" /></div>
             <div class="people_email_inquiry_field">
-                <label class="people_email_inquiry_label" for="c_subject_<?php echo $contact_id; ?>"><?php _e('Subject', 'cup_cp'); ?> </label>
+                <label class="people_email_inquiry_label" for="c_subject_<?php echo $contact_id; ?>"><?php people_ict_t_e( 'Default Form - Contact Subject', __('Subject', 'cup_cp') ); ?> </label>
                 <input type="text" name="c_subject" id="c_subject_<?php echo $contact_id; ?>" value="" /></div>
             <div class="people_email_inquiry_field">
-                <label class="people_email_inquiry_label" for="c_message_<?php echo $contact_id; ?>"><?php _e('Message', 'cup_cp'); ?> <span class="gfield_required">*</span></label>
+                <label class="people_email_inquiry_label" for="c_message_<?php echo $contact_id; ?>"><?php people_ict_t_e( 'Default Form - Contact Message', __('Message', 'cup_cp') ); ?> <span class="gfield_required">*</span></label>
                 <textarea rows="3" name="c_message" id="c_message_<?php echo $contact_id; ?>"></textarea></div>
             <div class="people_email_inquiry_field">
+                <?php if ( $people_email_inquiry_global_settings['send_copy'] != 'no' ) { ?>
+                <label class="people_email_inquiry_label">&nbsp;</label>
+                <label class="people_email_inquiry_send_copy"><input type="checkbox" name="send_copy" id="send_copy_<?php echo $contact_id; ?>" value="1" checked="checked" /> <?php people_ict_t_e( 'Default Form - Send Copy', __('Send a copy of this email to myself.', 'cup_cp') ); ?></label>
+                <?php } ?>
                 <a class="people_email_inquiry_form_button <?php echo $inquiry_contact_button_class; ?>" id="people_email_inquiry_bt_<?php echo $contact_id; ?>" contact_id="<?php echo $contact_id; ?>"><?php echo $inquiry_contact_text_button; ?></a>
             </div>
             <div style="clear:both"></div>
@@ -118,9 +123,9 @@ class People_Contact {
 		die();
 	}
 
-	public function create_contact_maps( $contacts = array() ) {
-		global $people_email_inquiry_fancybox_popup_settings;
-		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_grid_view_style, $people_contact_location_map_settings, $people_contact_grid_view_icon;
+	public function create_contact_maps($contacts = array() ) {
+		global $people_email_inquiry_global_settings;
+		global $people_contact_global_settings, $people_contact_grid_view_layout, $people_contact_location_map_settings, $people_contact_grid_view_icon;
 		$suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 
 		global $contact_people_page_id;
@@ -148,46 +153,57 @@ class People_Contact {
 		$fax_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_fax.png';
 		$mobile_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_mobile.png';
 		$email_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_email.png';
+		$website_icon = PEOPLE_CONTACT_IMAGE_URL.'/p_icon_website.png';
 
-		$center_address = 'Australia';
-		if ( $people_contact_location_map_settings['center_address'] != '') {
-			$center_address = $people_contact_location_map_settings['center_address'];
+			$zoom_level           = $people_contact_location_map_settings['zoom_level'];
+			$map_type             = $people_contact_location_map_settings['map_type'];
+			$map_width_type       = $people_contact_location_map_settings['map_width_type'];
+			$map_width_responsive = $people_contact_location_map_settings['map_width_responsive'];
+			$map_width_fixed      = $people_contact_location_map_settings['map_width_fixed'];
+			$map_height           = $people_contact_location_map_settings['map_height'];
+
+		if ( '' == $map_type ) {
+			$map_type = 'ROADMAP';
+		}
+		if ( $zoom_level <= 0 ) {
+			$zoom_level = 16;
+		}
+		if ( $map_height <= 0 ) {
+			$map_height = '400';
 		}
 
-		$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($center_address).'&sensor=false';
-		$geodata = file_get_contents($url);
-		$geodata = json_decode($geodata);
-		$center_lat = $geodata->results[0]->geometry->location->lat;
-		$center_lng = $geodata->results[0]->geometry->location->lng;
-
-		$latlng_center = $center_lat.','.$center_lng;
-
-		$map_type = $people_contact_location_map_settings['map_type'];
-			if($map_type == ''){
-				$map_type = 'ROADMAP';
+		if ( $map_width_type == 'px' ) {
+			$map_width_type = 'px';
+			if ( $map_width_fixed <= 0 ) {
+				$map_width = 100;
+			} else {
+				$map_width = $map_width_fixed;
 			}
-			$zoom_level = $people_contact_location_map_settings['zoom_level'];
-			if($zoom_level <= 0){
-				$zoom_level = 16;
-			}
-
+		} else {
+			$map_width_type = '%';
+			$map_width = $map_width_responsive;
+		}
 		?>
 		<script type="text/javascript">
 		<?php
 		if ( $show_map != 0 ) {
 			?>
 			var infowindow = null;
+
 			jQuery(document).ready(function() {
 				initialize<?php echo $unique_id; ?>();
 			});
+
 			function initialize<?php echo $unique_id; ?>() {
-				var centerMap = new google.maps.LatLng(<?php echo $latlng_center;?>);
+
+				if ( sites<?php echo $unique_id; ?>.length < 1 ) return false;
+
 				var myOptions = {
 					zoom: <?php echo $zoom_level;?>,
-					center: centerMap,
 					mapTypeId: google.maps.MapTypeId.<?php echo $map_type;?>
 				}
 				var map = new google.maps.Map(document.getElementById("map_canvas<?php echo $unique_id; ?>"), myOptions);
+
 				setMarkers<?php echo $unique_id; ?>(map, sites<?php echo $unique_id; ?>);
 				infowindow = new google.maps.InfoWindow({
 					content: "loading..."
@@ -195,44 +211,61 @@ class People_Contact {
 				var bikeLayer = new google.maps.BicyclingLayer();
 				bikeLayer.setMap(map);
 			}
-			var sites<?php echo $unique_id; ?> = [
-				<?php
-				$i = 0;
-				if(is_array($contacts) && count($contacts) > 0 ){
-					$i++;
-					$notes = '';
-					foreach($contacts as $key=>$value){
-						if($value['c_avatar'] != ''){
-								$src = $value['c_avatar'];
-						}else{
-							$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
-						}
-						if ( (trim($value['c_latitude']) == '' || trim($value['c_longitude']) == '' ) && trim($value['c_address']) != '') {
-							$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($value['c_address']).'&sensor=false';
-							$geodata = file_get_contents($url);
-							$geodata = json_decode($geodata);
-							$value['c_latitude'] = $geodata->results[0]->geometry->location->lat;
-							$value['c_longitude'] = $geodata->results[0]->geometry->location->lng;
-						}
-		echo $notes."['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$value['id'].",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."','".trim(esc_attr( stripslashes( $value['c_email'])))."']";
-						$notes = ',';
+
+			var sites<?php echo $unique_id; ?> = [];
+			<?php
+			$i = 0;
+			if(is_array($contacts) && count($contacts) > 0 ){
+				foreach($contacts as $key=>$value){
+					if ( 0 == $value['enable_map_marker'] ) continue;
+
+					if ( (trim($value['c_latitude']) == '' || trim($value['c_longitude']) == '' ) && trim($value['c_address']) != '') {
+						$url = 'http://maps.googleapis.com/maps/api/geocode/json?address='.urlencode($value['c_address']).'&sensor=false';
+						$geodata = file_get_contents($url);
+						$geodata = json_decode($geodata);
+						$value['c_latitude'] = $geodata->results[0]->geometry->location->lat;
+						$value['c_longitude'] = $geodata->results[0]->geometry->location->lng;
 					}
+
+					if ( trim( $value['c_latitude'] ) == '' || trim( $value['c_longitude'] ) == '' ) continue;
+
+					$i++;
+
+					if ( $value['c_avatar'] != '' ) {
+						$src = $value['c_avatar'];
+					} else {
+						$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
+					}
+
+					if ( class_exists('People_Contact_3RD_ContactForm_Functions') && People_Contact_3RD_ContactForm_Functions::check_enable_3rd_contact_form() ) {
+						if ( '' == trim( $value['c_shortcode'] ) && '' == trim($people_email_inquiry_global_settings['contact_form_type_shortcode']) ) {
+							$value['c_email'] = '';
+						}
+					}
+					$profile_item = "['".esc_attr( stripslashes( $value['c_name']))."',".$value['c_latitude'].",".$value['c_longitude'].",".$i.",'".esc_attr( stripslashes( $value['c_address']))."',".$value['id'].",'".$src."','".trim(esc_attr( stripslashes( $value['c_phone'])))."','".esc_attr( stripslashes( $value['c_title']))."','".trim(esc_attr( stripslashes( $value['c_fax'])))."','".trim(esc_attr( stripslashes( $value['c_mobile'])))."','".trim(esc_url( stripslashes( $value['c_website'])))."','".trim(esc_attr( stripslashes( $value['c_email'])))."']";
+			?>
+			sites<?php echo $unique_id; ?>.push(<?php echo $profile_item; ?>);
+			<?php
 				}
-				?>
-			];
+				if ( $i < 1 ) {
+					$show_map = 0;
+				}
+			} else {
+				$show_map = 0;
+			}
+			?>
 
 			function setMarkers<?php echo $unique_id; ?>(map, markers) {
 				var infotext = '';
-				jQuery("div.people_item<?php echo $unique_id; ?>").each(function(i) {
-					var current_object = jQuery(this);
-					var sites = markers[i];
+				var bounds = new google.maps.LatLngBounds ();
+				jQuery.each( markers, function ( i, sites ) {
+					var current_object = jQuery("div.people_item<?php echo $unique_id; ?>.people_item_id" + sites[5]);
 					var siteLatLng = new google.maps.LatLng(sites[1], sites[2]);
+					bounds.extend (siteLatLng);
 					infotext = '<div class="infowindow"><p class="info_title">'+sites[8]+'</p><div class="info_avatar"><img src="'+sites[6]+'" /></div><div><p class="info_title2">'+sites[0]+'</p>';
-					if (sites[7] != '') infotext += '<p><span class="p_icon_phone"><img src="<?php echo $phone_icon;?>" style="width:auto;height:auto" /></span> '+sites[7]+'</p>';
-					if (sites[9] != '') infotext += '<p><span class="p_icon_fax"><img src="<?php echo $fax_icon;?>" style="width:auto;height:auto" /></span> '+sites[9]+'</p>';
-					if (sites[10] != '') infotext += '<p><span class="p_icon_mobile"><img src="<?php echo $mobile_icon;?>" style="width:auto;height:auto" /></span> '+sites[10]+'</p>';
+					if (sites[4] != '') infotext += '<p class="info_address">'+sites[4]+'</p>';
 
-					if (sites[11] != '') infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email<?php echo $unique_id; ?> direct_email_map" target="_blank" profile-id="'+sites[5]+'" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php _e('Click Here', 'cup_cp'); ?></a></p>';
+					if (sites[12] != '') infotext += '<p><span class="p_icon_email"><img src="<?php echo $email_icon;?>" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email<?php echo $unique_id; ?> direct_email_map" target="_blank" profile-id="'+sites[5]+'" href="<?php echo $profile_email_page_link; ?>'+sites[5]+'"><?php echo ( function_exists('icl_t') ? icl_t( 'a3 Contact People', 'Profile Cards - Email Link Text', __('Click Here', 'cup_cp') ) : __('Click Here', 'cup_cp') ); ?></a></p>';
 					infotext += '</div></div>';
 					var marker = new google.maps.Marker({
 						position: siteLatLng,
@@ -243,7 +276,6 @@ class People_Contact {
 						c_id: sites[5]/*,
 						icon :  "/images/market.png"*/
 					});
-
 					if ( typeof(sites[1]) != 'undefined' && sites[1] != '' && typeof(sites[2]) != 'undefined' && sites[2] != '' ) {
 						current_object.find(".people-entry-item").mouseover(function(i){
 							infowindow.setContent(marker.html);
@@ -255,7 +287,7 @@ class People_Contact {
 						});
 					}
 
-					if (sites[11] != '') {
+					if (sites[12] != '') {
 						google.maps.event.addListener(marker, "click", function () {
 						var c_id = this.c_id;
 							var ajax_url='<?php echo admin_url('admin-ajax.php', 'relative');?>'+'?action=load_ajax_contact_form&contact_id='+c_id+'&security=<?php echo $ajax_popup_contact;?>';
@@ -267,13 +299,13 @@ class People_Contact {
 							jQuery.fancybox({
 								href: ajax_url,
 								//content: ajax_url,
-								centerOnScroll : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_center_on_scroll'];?>,
-								transitionIn : '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_in'];?>',
-								transitionOut: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_out'];?>',
+								centerOnScroll : <?php echo $people_email_inquiry_global_settings['fancybox_center_on_scroll'];?>,
+								transitionIn : '<?php echo $people_email_inquiry_global_settings['fancybox_transition_in'];?>',
+								transitionOut: '<?php echo $people_email_inquiry_global_settings['fancybox_transition_out'];?>',
 								easingIn: 'swing',
 								easingOut: 'swing',
-								speedIn : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_in'];?>,
-								speedOut : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_out'];?>,
+								speedIn : <?php echo $people_email_inquiry_global_settings['fancybox_speed_in'];?>,
+								speedOut : <?php echo $people_email_inquiry_global_settings['fancybox_speed_out'];?>,
 								width: popup_wide,
 								autoScale: true,
 								autoDimensions: true,
@@ -282,7 +314,7 @@ class People_Contact {
 								maxWidth: "95%",
 								maxHeight: "80%",
 								padding: 10,
-								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
+								overlayColor: '<?php echo $people_email_inquiry_global_settings['fancybox_overlay_color'];?>',
 								showCloseButton : true,
 								openEffect	: "none",
 								closeEffect	: "none"
@@ -301,6 +333,14 @@ class People_Contact {
 						});
 					}
 				});
+				map.setCenter(bounds.getCenter());
+				map.fitBounds(bounds);
+
+				google.maps.event.addListenerOnce(map, 'idle', function(){
+					if( map.getZoom() > <?php echo (int) $zoom_level; ?> ){
+						map.setZoom(<?php echo $zoom_level;?>);
+					}
+				});
 			}
 			<?php } ?>
 
@@ -316,13 +356,13 @@ class People_Contact {
 						jQuery.fancybox({
 								href: ajax_url2<?php echo $unique_id; ?>+c_id2,
 								//content: ajax_url,
-								centerOnScroll : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_center_on_scroll'];?>,
-								transitionIn : '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_in'];?>',
-								transitionOut: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_transition_out'];?>',
+								centerOnScroll : <?php echo $people_email_inquiry_global_settings['fancybox_center_on_scroll'];?>,
+								transitionIn : '<?php echo $people_email_inquiry_global_settings['fancybox_transition_in'];?>',
+								transitionOut: '<?php echo $people_email_inquiry_global_settings['fancybox_transition_out'];?>',
 								easingIn: 'swing',
 								easingOut: 'swing',
-								speedIn : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_in'];?>,
-								speedOut : <?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_speed_out'];?>,
+								speedIn : <?php echo $people_email_inquiry_global_settings['fancybox_speed_in'];?>,
+								speedOut : <?php echo $people_email_inquiry_global_settings['fancybox_speed_out'];?>,
 								width: popup_wide2,
 								autoScale: true,
 								autoDimensions: true,
@@ -331,7 +371,7 @@ class People_Contact {
 								maxWidth: "95%",
 								maxHeight: "80%",
 								padding: 10,
-								overlayColor: '<?php echo $people_email_inquiry_fancybox_popup_settings['fancybox_overlay_color'];?>',
+								overlayColor: '<?php echo $people_email_inquiry_global_settings['fancybox_overlay_color'];?>',
 								showCloseButton : true,
 								openEffect	: "none",
 								closeEffect	: "none"
@@ -413,26 +453,6 @@ class People_Contact {
 			$html .= '<div class="people-entry">';
 			$html .= '<div style="clear:both"></div>';
 
-			if($people_contact_location_map_settings['map_height'] <= 0){
-				$map_height = '400';
-			}else{
-				$map_height = $people_contact_location_map_settings['map_height'];
-			}
-
-			$map_width_type = $people_contact_location_map_settings['map_width_type'];
-
-			if($map_width_type == 'px'){
-				$map_width_type = 'px';
-				if($people_contact_location_map_settings['map_width_fixed'] <= 0){
-					$map_width = '100';
-				}else{
-					$map_width = $people_contact_location_map_settings['map_width_fixed'];
-				}
-			}else{
-				$map_width_type = '%';
-				$map_width = $people_contact_location_map_settings['map_width_responsive'];
-			}
-
 			$html .= '<div id="map_canvas'.$unique_id.'" class="map_canvas_container" style="width: '.$map_width.$map_width_type.'; height: '.$map_height.'px;float:left;"></div>';
 			$html .= '<div style="clear:both;margin-bottom:0em;" class="custom_title"></div>';
 			$html .= '<div style="clear:both;height:15px;"></div>';
@@ -446,10 +466,7 @@ class People_Contact {
 		}
 		$html .= '<div style="clear:both;margin-bottom:1em;"></div>';
 		$html .= '<div class="people_box_content people_box_content'.$unique_id.' pcol'.$grid_view_col.'"><div class="people-grid-sizer"></div>';
-		$i = 0;
 		if(is_array($contacts) && count($contacts) > 0 ){
-			$i++;
-			$notes = '';
 			foreach($contacts as $key=>$value){
 				if($value['c_avatar'] != ''){
 					$src = $value['c_avatar'];
@@ -457,7 +474,7 @@ class People_Contact {
 					$src = PEOPLE_CONTACT_IMAGE_URL.'/no-avatar.png';
 				}
 
-				$html .= '<div class="people_item people_item'.$unique_id.'">';
+				$html .= '<div class="people_item people_item'.$unique_id.' people_item_id'.$value['id'].'">';
 				$html .= '<div class="people-entry-item">';
 				$html .= '<div style="clear:both;"></div>';
 				$html .= '<div class="people-content-item">';
@@ -465,6 +482,9 @@ class People_Contact {
 				$html .= '<div class="p_content_left"><img src="'.$src.'" /></div>';
 				$html .= '<div class="p_content_right">';
 				$html .= '<h3 class="p_item_name">'.esc_attr( stripslashes( $value['c_name'])).'</h3>';
+				if ( trim($value['c_about']) != '') {
+				$html .= wpautop(wptexturize( stripslashes( $value['c_about'] ) ) );
+				}
 				if ( trim($value['c_phone']) != '') {
 				$html .= '<p style="margin-bottom:5px;"><span class="p_icon_phone"><img src="'.$phone_icon.'" style="width:auto;height:auto" /></span> '. esc_attr( stripslashes( $value['c_phone'] ) ).'</p>';
 				}
@@ -474,10 +494,13 @@ class People_Contact {
 				if ( trim($value['c_mobile']) != '') {
 				$html .= '<p style="margin-bottom:5px;"><span class="p_icon_mobile"><img src="'.$mobile_icon.'" style="width:auto;height:auto" /></span> '. esc_attr( stripslashes($value['c_mobile'] ) ).'</p>';
 				}
+				if ( trim($value['c_website']) != '') {
+				$html .= '<p style="margin-bottom:5px;"><span class="p_icon_website"><img src="'.$website_icon.'" style="width:auto;height:auto" /></span> <a href="'. esc_url( stripslashes($value['c_website'] ) ).'" target="_blank">'.( function_exists('icl_t') ? icl_t( 'a3 Contact People', 'Profile Cards - Website Link Text', __('Visit Website', 'cup_cp') ) : __('Visit Website', 'cup_cp') ).'</a></p>';
+				}
 
 				if ( trim($value['c_email']) != '') {
 
-					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email'.$unique_id.'" profile-id="'.$value['id'].'" href="#'.$value['id'].'">'.__('Click Here', 'cup_cp').'</a></p>';
+					$html .= '<p style="margin-bottom:0px;"><span class="p_icon_email"><img src="'.$email_icon.'" style="width:auto;height:auto" /></span> <a style="cursor:pointer" class="direct_email direct_email'.$unique_id.'" profile-id="'.$value['id'].'" href="#'.$value['id'].'">'.( function_exists('icl_t') ? icl_t( 'a3 Contact People', 'Profile Cards - Email Link Text', __('Click Here', 'cup_cp') ) : __('Click Here', 'cup_cp') ).'</a></p>';
 				}
 				$html .= '</div>';
 

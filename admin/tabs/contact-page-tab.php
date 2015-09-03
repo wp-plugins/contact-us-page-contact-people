@@ -75,7 +75,7 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 		
 		$tab_data = array( 
 			'name'				=> 'contact-page',
-			'label'				=> __( 'Contact Page', 'cup_cp' ),
+			'label'				=> __( 'Contact Us Page', 'cup_cp' ),
 			'callback_function'	=> 'people_contact_contact_page_tab_manager',
 		);
 		
@@ -104,7 +104,6 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 		
 		// Includes Settings file
 		include_once( $this->admin_plugin_dir() . '/settings/contact-page-global-settings.php' );
-		include_once( $this->admin_plugin_dir() . '/settings/contact-page-location-map-settings.php' );
 		
 	}
 	
@@ -114,9 +113,10 @@ class People_Contact_Contact_Page_Tab extends People_Contact_Admin_UI
 	/*-----------------------------------------------------------------------------------*/
 	public function tab_manager() {
 		global $people_contact_admin_init;
-		
-		$people_contact_admin_init->admin_settings_tab( $this->parent_page, $this->tab_data() );
-		
+
+		$this->plugin_extension_start();
+		contact_page_global_settings_form();
+		$this->plugin_extension_end();
 	}
 }
 

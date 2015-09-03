@@ -31,7 +31,7 @@ class People_Contact_Manager_Panel
         <div class="icon32 icon32-a3rev-ui-settings icon32-a3revpeople-contact-settings" id="icon32-a3revpeople-contact-manager"><br></div><h2><?php _e('Profiles', 'cup_cp'); ?> <a class="add-new-h2" href="<?php echo admin_url('admin.php?page=people-contact', 'relative');?>"><?php _e('Add New', 'cup_cp'); ?></a></h2>
 		<div style="clear:both;height:5px;"></div>
 		<form name="contact_setting" method="post" action="">
-		  <table class="widefat post fixed sorttable people_table">
+		  <table class="wp-list-table widefat fixed striped sorttable">
 			<thead>
 			  <tr>
 				<th width="30" class="manage-column column-sortable" style="text-align:left;white-space:nowrap"></th>
@@ -44,6 +44,18 @@ class People_Contact_Manager_Panel
 				<th width="85" style="text-align:center" class="manage-column column-actions"></th>
 			  </tr>
 			</thead>
+			<tfoot>
+			  <tr>
+				<th class="manage-column column-sortable" style="text-align:left;white-space:nowrap"></th>
+				<th class="manage-column column-number" style="text-align:right;white-space:nowrap"><?php _e('No', 'cup_cp'); ?></th>
+				<th class="manage-column column-image">&nbsp;</th>
+				<th class="manage-column column-title" style="text-align:left;white-space:nowrap"><?php _e('Name', 'cup_cp'); ?></th>
+				<th class="manage-column column-email" style="text-align:left;white-space:nowrap"><?php _e('Email', 'cup_cp'); ?></th>
+				<th class="manage-column column-phone" style="text-align:left;white-space:nowrap"><?php _e('Phone', 'cup_cp'); ?></th>
+				<th style="text-align:left" class="manage-column column-location"><?php _e('Location', 'cup_cp'); ?></th>
+				<th style="text-align:center" class="manage-column column-actions"></th>
+			  </tr>
+			</tfoot>
 			<tbody>
 			<?php 
 			if ( is_array($my_contacts) && count($my_contacts) > 0 ) {

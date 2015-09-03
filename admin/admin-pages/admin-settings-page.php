@@ -96,8 +96,8 @@ class People_Contact_Settings_Page extends People_Contact_Admin_UI
 		
 		include_once( $this->admin_plugin_dir() . '/tabs/contact-page-tab.php' );
 		include_once( $this->admin_plugin_dir() . '/tabs/grid-view-tab.php' );
+		include_once( $this->admin_plugin_dir() . '/tabs/email-inquiry-settings-tab.php' );
 		include_once( $this->admin_plugin_dir() . '/tabs/contact-widget-tab.php' );
-		
 	}
 	
 	/*-----------------------------------------------------------------------------------*/

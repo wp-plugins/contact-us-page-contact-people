@@ -2,11 +2,11 @@
 /*
 Plugin Name: Contact Us page - Contact people LITE
 Description: Instantly and easily create a simply stunning Contact Us page on almost any theme. Google location map, People Contact Profiles and a fully featured Contact Us widget. Fully responsive and easy to customize. Pro Version upgrade for even more features.
-Version: 1.2.7
+Version: 2.0.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 Requires at least: 3.8
-Tested up to: 4.2.2
+Tested up to: 4.3
 License: GPLv2 or later
 */
 
@@ -41,7 +41,8 @@ if (!defined("PEOPLE_CONTACT_DOCS_URI")) define("PEOPLE_CONTACT_DOCS_URI", "http
 include ('admin/admin-ui.php');
 include ('admin/admin-interface.php');
 
-include ('admin/admin-pages/admin-email-inquiry-page.php');
+include ('classes/class-wpml-functions.php');
+
 include ('admin/admin-pages/admin-settings-page.php');
 
 include ('admin/admin-init.php');
@@ -69,46 +70,4 @@ include ('admin/people-contact-init.php');
  * Call when the plugin is activated
  */
 register_activation_hook(__FILE__, 'people_contact_install');
-
-function people_contact_lite_uninstall()
-{
-    if (get_option('a3_people_contact_lite_clean_on_deletion') == 1) {
-        delete_option('people_contact_settings');
-        delete_option('people_contact_global_settings');
-        delete_option('people_contact_location_map_settings');
-        delete_option('people_contact_contact_forms_settings');
-        delete_option('people_contact_popup_style_settings');
-
-        delete_option('people_contact_grid_view_style');
-        delete_option('people_contact_grid_view_layout');
-        delete_option('people_contact_grid_view_icon');
-        delete_option('people_contact_widget_settings');
-        delete_option('people_contact_widget_maps');
-        delete_option('people_contact_widget_information');
-        delete_option('people_contact_widget_email_contact_form');
-
-        delete_option('people_email_inquiry_global_settings');
-        delete_option('people_email_inquiry_contact_form_settings');
-        delete_option('people_email_inquiry_popup_form_style');
-        delete_option('people_email_inquiry_contact_success');
-        delete_option('people_email_inquiry_3rd_contact_form_settings');
-        delete_option('people_email_inquiry_fancybox_popup_settings');
-        delete_option('people_email_inquiry_colorbox_popup_settings');
-
-        delete_option('contact_arr');
-        delete_option('profile_email_page_id');
-        delete_option('a3rev_wp_people_contact_plugin');
-        delete_option('a3rev_wp_people_contact_message');
-        delete_option('contact_us_page_id');
-        delete_option('a3rev_wp_people_contact_version');
-
-        delete_option('a3_people_contact_lite_clean_on_deletion');
-
-        global $wpdb;
-        $wpdb->query('DROP TABLE IF EXISTS ' . $wpdb->prefix . 'cup_cp_profiles');
-    }
-}
-if (get_option('a3_people_contact_lite_clean_on_deletion') == 1) {
-    register_uninstall_hook(__FILE__, 'people_contact_lite_uninstall');
-}
 ?>

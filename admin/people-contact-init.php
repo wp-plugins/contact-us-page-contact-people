@@ -3,16 +3,19 @@
  * Call this function when plugin is deactivated
  */
 function people_contact_install(){
-	update_option('a3rev_wp_people_contact_lite_version', '1.2.7');
-	update_option('a3rev_wp_people_contact_version', '1.3.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '1.2.1');
+	update_option('a3rev_wp_people_contact_lite_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.2');
 
 	$contact_us_page_id = People_Contact_Functions::create_page( esc_sql( 'contact-us-page' ), 'contact_us_page_id', __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
+	People_Contact_Functions::auto_create_page_for_wpml( $contact_us_page_id, _x('contact-us-page', 'page_slug', 'cup_cp'), __('Contact Us Page', 'cup_cp'), '[people_contacts]' );
 	People_Contact_Profile_Data::install_database();
 
 	// Set Settings Default from Admin Init
 	global $people_contact_admin_init;
 	$people_contact_admin_init->set_default_settings();
+
+	delete_metadata( 'user', 0, $people_contact_admin_init->plugin_name . '-' . 'plugin_framework_global_box' . '-' . 'opened', '', true );
 
 	// Build sass
 	global $a3_people_contact_less;
@@ -57,15 +60,10 @@ add_filter( 'plugin_row_meta', array('People_Contact_Hook_Filter', 'plugin_extra
 	$people_contact_admin_init->init();
 
 	// Add upgrade notice to Dashboard pages
-	add_filter( $people_contact_admin_init->plugin_name . '_plugin_extension', array( 'People_Contact_Functions', 'plugin_pro_notice' ) );
+	add_filter( $people_contact_admin_init->plugin_name . '_plugin_extension_boxes', array( 'People_Contact_Hook_Filter', 'plugin_extension_box' ) );
 
-	$admin_pages = $people_contact_admin_init->admin_pages();
-	if ( is_array( $admin_pages ) && count( $admin_pages ) > 0 ) {
-		foreach ( $admin_pages as $admin_page ) {
-			add_action( $people_contact_admin_init->plugin_name . '-' . $admin_page . '_tab_start', array( 'People_Contact_Functions', 'plugin_extension_start' ) );
-			add_action( $people_contact_admin_init->plugin_name . '-' . $admin_page . '_tab_end', array( 'People_Contact_Functions', 'plugin_extension_end' ) );
-		}
-	}
+	// Add extra link on left of Deactivate link on Plugin manager page
+	add_action('plugin_action_links_'.PEOPLE_CONTACT_NAME, array('People_Contact_Hook_Filter', 'settings_plugin_links') );
 
 	add_action('init', array('People_Contact_AddNew', 'profile_form_action') );
 
@@ -95,45 +93,43 @@ function a3_people_contact_lite_upgrade_plugin () {
 	// Upgrade to 1.0.3
 	if(version_compare(get_option('a3rev_wp_people_contact_version'), '1.0.3') === -1){
 		People_Contact_Profile_Data::install_database();
-		People_Contact_Functions::upgrade_to_1_0_3();
 		update_option('a3rev_wp_people_contact_version', '1.0.3');
+
+		include( PEOPLE_CONTACT_DIR. '/upgrade/updates/people-contact-update-1.0.3.php' );
 	}
 
 	// Upgrade to 1.1.1
 	if(version_compare(get_option('a3rev_wp_people_contact_version'), '1.1.1') === -1){
-		$people_contact_grid_view_layout = get_option( 'people_contact_grid_view_layout', array() );
-		$people_contact_global_settings = array(
-			'grid_view_team_title' 	=> $people_contact_grid_view_layout['grid_view_team_title'],
-			'grid_view_col'			=> $people_contact_grid_view_layout['grid_view_col'],
-		);
-		update_option( 'people_contact_global_settings', $people_contact_global_settings );
-
-		$people_contact_location_map_settings = get_option( 'people_contact_location_map_settings', array() );
-		$people_contact_location_map_settings['map_width_responsive'] = $people_contact_location_map_settings['map_width'];
-		$people_contact_location_map_settings['map_width_fixed'] = $people_contact_location_map_settings['map_width'];
-		update_option( 'people_contact_location_map_settings', $people_contact_location_map_settings );
-
 		update_option('a3rev_wp_people_contact_version', '1.1.1');
+
+		include( PEOPLE_CONTACT_DIR. '/upgrade/updates/people-contact-update-1.1.1.php' );
 	}
 
 	// Upgrade to 1.1.4 for Lite version
 	if(version_compare(get_option('a3rev_wp_people_contact_version'), '1.1.4') === -1){
 		update_option('a3rev_wp_people_contact_version', '1.1.4');
 
-		People_Contact_Functions::upgrade_to_lite_1_1_4();
+		include( PEOPLE_CONTACT_DIR. '/upgrade/updates/people-contact-update-1.1.4.php' );
 	}
 
 	// Upgrade to 1.2.0
 	if(version_compare(get_option('a3rev_wp_people_contact_lite_version'), '1.2.0') === -1){
+		update_option('a3rev_wp_people_contact_lite_version', '1.2.0');
+
 		// Build sass
 		global $a3_people_contact_less;
 		$a3_people_contact_less->plugin_build_sass();
-		update_option('a3rev_wp_people_contact_lite_version', '1.2.0');
 	}
 
-	update_option('a3rev_wp_people_contact_lite_version', '1.2.7');
-	update_option('a3rev_wp_people_contact_version', '1.3.1');
-	update_option('a3rev_wp_people_contact_ultimate_version', '1.2.1');
+	if( version_compare(get_option('a3rev_wp_people_contact_lite_version'), '2.0.1') === -1 ){
+		update_option('a3rev_wp_people_contact_lite_version', '2.0.1');
+
+		include( PEOPLE_CONTACT_DIR. '/upgrade/updates/people-contact-update-2.0.1.php' );
+	}
+
+	update_option('a3rev_wp_people_contact_lite_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_version', '2.0.2');
+	update_option('a3rev_wp_people_contact_ultimate_version', '2.0.2');
 
 }
 ?>
