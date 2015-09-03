@@ -4,7 +4,7 @@ Contributors: a3rev, nguyencongtuan, A3 Revolution Software Development team
 Tags: Contact Us, Contact Us Page, WordPress Contact Us, People Contact, Contact Forms
 Requires at least: 3.8
 Tested up to: 4.3
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -202,6 +202,10 @@ The manual installation method involves downloading our plugin and uploading it 
 On WordPress with any theme.
 
 == Changelog ==
+
+= 2.0.3 - 2015/09/03 =
+* Fix - add parse shortcode after header is called for don't get conflict with any SEO plugin that auto generate the description from post content with shortcode of plugin that make javascript error with jQuery is undefined
+* Fix - Added 'box-sizing: initial;' for #fancybox-wrap ID to the Close button show correct on top right corner of Fancybox pop-up
 
 = 2.0.2 - 2015/08/21 =
 * Tweak - include new CSSMin lib from https://github.com/tubalmartin/YUI-CSS-compressor-PHP-port into plugin framework instead of old CSSMin lib from http://code.google.com/p/cssmin/ , to avoid conflict with plugins or themes that have CSSMin lib
@@ -439,6 +443,9 @@ On WordPress with any theme.
 
 
 == Upgrade Notice ==
+
+= 2.0.3 =
+Maintenance Upgrade. 2 bug fixes for full compatibility with SEO plugin
 
 = 2.0.2 =
 Major Maintenance Upgrade. 5 Code Tweaks plus 4 bug fixes for full compatibility with WordPress v 4.3.0

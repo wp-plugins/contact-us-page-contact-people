@@ -22,11 +22,15 @@ class People_Contact_Shortcode{
 	}
 	
 	public function init () {
+		add_action( 'wp_head', array( $this, 'add_shortcodes' ), 100 );
 		add_action( 'media_buttons', array( $this, 'add_people_contact_button'), 100 );
 		add_action( 'admin_footer', array( $this, 'people_contact_generator_popup') );
+	}
+
+	public function add_shortcodes() {
 		add_shortcode( 'people_contacts', array( $this, 'people_contacts_html') );
 	}
-	
+
 	public function add_people_contact_button() {
 		$is_post_edit_page = in_array(basename($_SERVER['PHP_SELF']), array('post.php', 'page.php', 'page-new.php', 'post-new.php'));
         if(!$is_post_edit_page)
